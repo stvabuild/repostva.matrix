@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!--<onload condition="!Skin.HasSetting(FirstTimeRun2)">ActivateWindow(1136)</onload>-->
+	<defaultcontrol>9000</defaultcontrol>
+	<backgroundcolor>background</backgroundcolor>
+	<controls>
+		<control type="group">
+			<left>-155</left>
+			<right>-155</right>
+			<control type="image">
+				<texture>special://skin/extras/home-images/settings.jpg</texture>
+				<bordertexture border="21">overlays/shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+				<left>0</left>
+				<right>0</right>
+				<top>-10%</top>
+				<height>120%</height>
+			</control>
+			<control type="image">
+				<texture colordiffuse="EDFFFFFF">lists/panel.png</texture>
+				<bordertexture border="21">overlays/shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+				<left>0</left>
+				<right>0</right>
+				<top>-10%</top>
+				<height>120%</height>
+			</control>
+		</control>
+		<control type="group">
+			<centerleft>50%</centerleft>
+			<width>1600</width>
+			<top>0</top>
+			<bottom>0</bottom>
+			<include>OpenClose_Right</include>
+			<control type="grouplist">
+				<orientation>vertical</orientation>
+				<height>100%</height>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<itemgap>20</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				<onunfocus>SetProperty(settingsposition,$INFO[Container(9000).Position],home)</onunfocus>
+				<onfocus>Control.Move(9000,-$INFO[Container(9000).Position])</onfocus>
+				<onfocus>Control.Move(9000,$INFO[Window(home).Property(settingsposition)])</onfocus>
+				<control type="panel" id="9000">
+					<left>0</left>
+					<width>100%</width>
+					<top>120</top>
+					<height>950</height>
+					<include>SettingsPanel</include>
+					<content>
+						<item>
+							<label>$LOCALIZE[10003]</label>
+							<onclick>ActivateWindow(filemanager)</onclick>
+							<icon>icons/settings/filemanager.png</icon>
+						</item>
+						<item>
+							<label>$LOCALIZE[24001]</label>
+							<onclick>ActivateWindow(addonbrowser)</onclick>
+							<icon>icons/settings/addons.png</icon>
+						</item>
+						<item>
+							<label>$LOCALIZE[13000]</label>
+							<onclick>ActivateWindow(SystemSettings)</onclick>
+							<icon>icons/settings/system.png</icon>
+						</item>
+						<item>
+							<label>$LOCALIZE[138]</label>
+							<onclick>ActivateWindow(systeminfo)</onclick>
+							<icon>icons/settings/sysinfo.png</icon>
+						</item>
+						<item>
+							<label>$LOCALIZE[166]</label>
+							<onclick>ActivateWindow(SkinSettings)</onclick>
+							<icon>icons/settings/skin.png</icon>
+						</item>
+						<item>
+							<label>$LOCALIZE[14206]</label>
+							<onclick>ActivateWindow(InterfaceSettings)</onclick>
+							<icon>icons/settings/interface.png</icon>
+						</item>
+						<item>
+							<label>$LOCALIZE[14211]</label>
+							<onclick>ActivateWindow(MediaSettings)</onclick>
+							<icon>icons/settings/media.png</icon>
+						</item>
+						<item>
+							<label>$LOCALIZE[20094]</label>
+							<onclick>ActivateWindow(1120)</onclick>
+							<icon>icons/settings/sources.png</icon>
+						</item>
+						<item>
+							<label>$LOCALIZE[14200]</label>
+							<onclick>ActivateWindow(PlayerSettings)</onclick>
+							<icon>icons/settings/player.png</icon>
+						</item>
+						<item>
+							<label>$LOCALIZE[14204]</label>
+							<onclick>ActivateWindow(PVRSettings)</onclick>
+							<icon>icons/settings/livetv.png</icon>
+						</item>
+						<item>
+							<label>$LOCALIZE[14036]</label>
+							<onclick>ActivateWindow(ServiceSettings)</onclick>
+							<icon>icons/settings/network.png</icon>
+						</item>
+						<item>
+							<label>$LOCALIZE[13200]</label>
+							<onclick>ActivateWindow(Profiles)</onclick>
+							<icon>icons/settings/profiles.png</icon>
+						</item>
+						<item>
+							<label>Instalador de Addons</label>
+							<onclick>RunAddon(script.luar)</onclick>
+							<onclick condition="!System.HasAddon(script.luar)">InstallAddon(script.luar)</onclick>																		            						
+							<icon>special://skin/extras/icons/shipping.png</icon>
+						</item>
+						<item>
+							<label>Mantenimiento</label>
+							<onclick>RunAddon(script.limpiarkodi)</onclick>
+							<onclick condition="!System.HasAddon(script.limpiarkodi)">InstallAddon(script.limpiarkodi)</onclick>																		            						
+							<icon>special://skin/extras/icons/wand.png</icon>
+						</item>
+						<item>
+							<label>Buffer</label>
+							<onclick>ActivateWindow(10001,&quot;plugin://script.luar/?eydhY3Rpb24nOiAnaW8xaTFJMUknLCAnZmFuYXJ0JzogJ0M6XFxVc2Vyc1xcSFBcXEFwcERhdGFcXFJvYW1pbmdcXEtvZGlcXGFkZG9uc1xcc2NyaXB0Lmx1YXJcXGZhbmFydC5qcGcnLCAnbGFiZWwnOiAnICAgIEdlc3Rpb25hciBCdWZmZXInLCAnaWNvbic6ICdDOlxcVXNlcnNcXEhQXFxBcHBEYXRhXFxSb2FtaW5nXFxLb2RpXFxhZGRvbnNcXHNjcmlwdC5sdWFyXFxyZXNvdXJjZXNcXG1lZGlhXFxwcm9ncmFtYXMgeSBoZXJyYW1pZW50YXMucG5nJ30%3d&quot;,return)</onclick>
+							<onclick condition="!System.HasAddon(script.luar)">InstallAddon(script.luar)</onclick>																		            						
+							<icon>special://skin/extras/icons/timers.png</icon>
+						</item>
+						<item>
+							<label>Guía Básica</label>
+							<onclick>ActivateWindow(1152)</onclick>
+							<icon>special://skin/extras/icons/info.png</icon>
+						</item>
+						<item>
+							<label>LibreELEC</label>
+							<onclick>RunAddon(service.libreelec.settings)</onclick>
+							<icon>icons/settings/libreelec.png</icon>
+							<visible>System.HasAddon(service.libreelec.settings)</visible>
+						</item>
+						<item>
+							<label>CoreELEC</label>
+							<onclick>RunAddon(service.coreelec.settings)</onclick>
+							<icon>icons/settings/coreelec.png</icon>
+							<visible>System.HasAddon(service.coreelec.settings)</visible>
+						</item>
+					</content>
+				</control>
+			</control>
+		</control>
+		<include content="TopBar">
+			<param name="breadcrumbs_label" value="$LOCALIZE[5]" />
+		</include>
+		<include>BottomBar</include>
+	</controls>
+</window>

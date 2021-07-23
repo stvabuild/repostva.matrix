@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+    <shortcut>
+        <label>427</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>disc</defaultID>
+        <icon>icons/sidemenu/disc.png</icon>
+        <action>PlayDisc</action>
+        <visible>System.HasMediaDVD</visible>
+    </shortcut>
+    <shortcut>
+        <label>31223</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>videolibrary</defaultID>
+        <icon>special://skin/extras/icons/favourites.png</icon>
+        <action>ActivateWindow(Videos,sources://video/,return)</action>
+        <visible>[Library.HasContent(tvshows) | Library.HasContent(movies)] + Skin.HasSetting(balandro-content)</visible>
+    </shortcut>
+    <shortcut>
+        <label>31223</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>videolibrary</defaultID>
+        <icon>special://skin/extras/icons/favourites.png</icon>
+		<action>ActivateWindow(Videos,plugin://plugin.video.balandro/?ewogICAgImFjdGlvbiI6ICJtYWlubGlzdCIsIAogICAgImNhdGVnb3J5IjogIkJhbGFuZHJvIiwgCiAgICAiY2hhbm5lbCI6ICJ0cmFja2luZyIsIAogICAgImluZm9MYWJlbHMiOiB7fSwgCiAgICAidGh1bWJuYWlsIjogIkM6XFxVc2Vyc1xcd2ludHRcXEFwcERhdGFcXFJvYW1pbmdcXEtvZGlcXGFkZG9uc1xccGx1Z2luLnZpZGVvLmJhbGFuZHJvXFxyZXNvdXJjZXNcXG1lZGlhXFx0aGVtZXNcXGRlZmF1bHRcXHN0YXIucG5nIiwgCiAgICAidGl0bGUiOiAiUHJlZmVyaWRvcyIKfQ%3d%3d,return)</action>
+        <visible>![Library.HasContent(tvshows) | Library.HasContent(movies)] + Skin.HasSetting(balandro-content)</visible>
+    </shortcut>
+    <shortcut>
+        <label>20343</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>tvshows</defaultID>
+        <icon>icons/sidemenu/tv.png</icon>
+        <action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action>
+        <visible>Library.HasContent(tvshows) + !Skin.HasSetting(hide_tvshowscategory)</visible>
+    </shortcut>
+    <shortcut>
+        <label>20343</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>tvshows</defaultID>
+        <icon>icons/sidemenu/tv.png</icon>
+        <action>ActivateWindow(Videos,videodb://tvshows/,return)</action>
+        <visible>Library.HasContent(tvshows) + Skin.HasSetting(hide_tvshowscategory)</visible>
+    </shortcut>
+    <shortcut>
+        <label>20343</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>tvshows</defaultID>
+        <icon>icons/sidemenu/tv.png</icon>
+        <action>ActivateWindow(Videos,sources://video/,return)</action>
+        <visible>!Library.HasContent(tvshows) + !Skin.HasSetting(balandro-content)</visible>
+    </shortcut>
+    <shortcut>
+        <label>20343</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>tvshows</defaultID>
+        <icon>icons/sidemenu/tv.png</icon>
+        <action>ActivateWindow(Videos,plugin://plugin.video.balandro/?ewogICAgImFjdGlvbiI6ICJjaGFubmVscyIsIAogICAgImNhdGVnb3J5IjogIkJhbGFuZHJvIiwgCiAgICAiY2hhbm5lbCI6ICJtYWlubWVudSIsIAogICAgImV4dHJhIjogImFsbCIsIAogICAgImluZm9MYWJlbHMiOiB7fSwgCiAgICAidGh1bWJuYWlsIjogIkM6XFxVc2Vyc1xcd2ludHRcXEFwcERhdGFcXFJvYW1pbmdcXEtvZGlcXGFkZG9uc1xccGx1Z2luLnZpZGVvLmJhbGFuZHJvXFxyZXNvdXJjZXNcXG1lZGlhXFx0aGVtZXNcXGRlZmF1bHRcXHN0YWNrLnBuZyIsIAogICAgInRpdGxlIjogIkNhbmFsZXMiCn0%3d,return)</action>
+        <visible>!Library.HasContent(tvshows) + Skin.HasSetting(balandro-content)</visible>
+    </shortcut>
+    <shortcut>
+        <label>342</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>movies</defaultID>
+        <icon>icons/sidemenu/movies.png</icon>
+        <action>ActivateWindow(Videos,videodb://movies/titles/,return)</action>
+        <visible>Library.HasContent(movies) + !Skin.HasSetting(hide_moviescategory)</visible>
+    </shortcut>
+    <shortcut>
+        <label>342</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>movies</defaultID>
+        <icon>icons/sidemenu/movies.png</icon>
+        <action>ActivateWindow(Videos,videodb://movies/,return)</action>
+        <visible>Library.HasContent(movies) + Skin.HasSetting(hide_moviescategory)</visible>
+    </shortcut>
+    <shortcut>
+        <label>342</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>movies</defaultID>
+        <icon>icons/sidemenu/movies.png</icon>
+        <action>ActivateWindow(Videos,plugin://plugin.video.balandro/?ewogICAgImFjdGlvbiI6ICJjaGFubmVscyIsIAogICAgImNhdGVnb3J5IjogIkJhbGFuZHJvIiwgCiAgICAiY2hhbm5lbCI6ICJtYWlubWVudSIsIAogICAgImV4dHJhIjogImFsbCIsIAogICAgImluZm9MYWJlbHMiOiB7fSwgCiAgICAidGh1bWJuYWlsIjogIkM6XFxVc2Vyc1xcd2ludHRcXEFwcERhdGFcXFJvYW1pbmdcXEtvZGlcXGFkZG9uc1xccGx1Z2luLnZpZGVvLmJhbGFuZHJvXFxyZXNvdXJjZXNcXG1lZGlhXFx0aGVtZXNcXGRlZmF1bHRcXHN0YWNrLnBuZyIsIAogICAgInRpdGxlIjogIkNhbmFsZXMiCn0%3d,return)</action>
+        <visible>!Library.HasContent(tvshows) + Skin.HasSetting(balandro-content)</visible>
+    </shortcut>
+    <shortcut>
+        <label>342</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>movies</defaultID>
+        <icon>icons/sidemenu/movies.png</icon>
+        <action>ActivateWindow(Videos,sources://video/,return)</action>
+        <visible>!Library.HasContent(movies) + !Skin.HasSetting(balandro-content</visible>
+    </shortcut>
+    <shortcut>
+        <label>19020</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>livetv</defaultID>
+        <icon>icons/sidemenu/livetv.png</icon>
+        <action>ActivateWindow(TVChannels)</action>
+ 		<visible>System.HasAddon(pvr.iptvsimple)</visible>
+   </shortcut>
+    <shortcut>
+        <label>31188</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>sports</defaultID>
+        <icon>special://skin/extras/icons/genres/sport.png</icon>
+		<action>ActivateWindow(Videos,"plugin://plugin.video.winner",return)</action>
+		<visible>System.HasAddon(plugin.video.winner)</visible>
+    </shortcut>
+     <shortcut>
+        <label>15016</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>games</defaultID>
+        <icon>icons/sidemenu/games.png</icon>
+        <action>ActivateWindow(Games)</action>
+        <visible>System.HasAddon(plugin.program.iagl)</visible>
+    </shortcut>
+   <shortcut>
+        <label>24001</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>addons</defaultID>
+        <icon>icons/sidemenu/addons.png</icon>
+        <action>ActivateWindow(1100)</action>
+    </shortcut>
+        <shortcut>
+        <label>10134</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>favorites</defaultID>
+        <icon>icons/sidemenu/favourites.png</icon>
+        <action>ActivateWindow(favourites)</action>
+    </shortcut>
+    <shortcut>
+        <label>8</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>weather</defaultID>
+        <icon>icons/sidemenu/weather.png</icon>
+        <action>ActivateWindow(Weather)</action>
+        <visible>!String.IsEmpty(Weather.Plugin)</visible>
+    </shortcut>
+    <shortcut>
+        <label>8</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>weather</defaultID>
+        <icon>icons/sidemenu/weather.png</icon>
+        <action>ReplaceWindow(servicesettings,weather)</action>
+        <visible>String.IsEmpty(Weather.Plugin)</visible>
+    </shortcut>
+    <shortcut>
+        <label>LibreELEC</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>libreelec</defaultID>
+        <icon>icons/sidemenu/libreelec.png</icon>
+        <action>RunAddon(service.libreelec.settings)</action>
+        <visible>System.HasAddon(service.libreelec.settings)</visible>
+    </shortcut>
+    <shortcut>
+        <label>CoreELEC</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>coreelec</defaultID>
+        <icon>icons/sidemenu/coreelec.png</icon>
+        <action>RunAddon(service.coreelec.settings)</action>
+        <visible>System.HasAddon(service.coreelec.settings)</visible>
+    </shortcut>
+  </shortcuts>
