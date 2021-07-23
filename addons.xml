@@ -1250,7 +1250,6 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 <addon id="skin.estuary.stva" version="0.9" name="Estuary STVA Matrix" provider-name="STVA">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
-		<import addon="repository.marcelveldt" version="1.0.3"/>
 		<import addon="resource.language.es_es" version="0.0.0"/>
 		<import addon="script.skinshortcuts" version="1.1.5"/>
 		<import addon="script.skin.helper.widgets" version="1.0.45"/>
