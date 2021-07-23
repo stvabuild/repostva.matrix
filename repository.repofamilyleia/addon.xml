@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.repofamilyleia" name="[COLOR aqua]WIZARD LEIA[/COLOR] [COLOR royalblue]REPO[/COLOR]" version="2.0" provider-name="LouFesta y Supertopo">
+    <extension point="xbmc.addon.repository" name="repofamilyleia">
+        <info>https://raw.githubusercontent.com/Leia18/repofamilyleia/master/Repositorio/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/Leia18/repofamilyleia/master/Repositorio/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/Leia18/repofamilyleia/master/Repositorio/</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Repositorio wizards kodileia</summary>
+        <description></description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+    </extension>
+</addon>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.repostva.matrix" name="STVA [COLOR yellow]Repo[/COLOR] Matrix" version="1.0" provider-name="www.stva.ga">
+	<extension point="xbmc.addon.repository" name="STVA Repo Matrix">
+		<info compressed="false">https://raw.githubusercontent.com/stvabuild/repostva.matrix/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/stvabuild/repostva.matrix/master/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/stvabuild/repostva.matrix/master</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>STVA repo Matrix</summary>
+   		<description lang="es">Repositorio de addons STVA para Kodi 19 Matrix</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>

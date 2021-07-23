@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="resource.images.moviegenreicons.estuarystva" name="Movie Genre Icons - Estuary STVA" version="0.0.1" provider-name="STVA">
+	<extension point="kodi.resource.images" compile="true" type="moviegenreicons" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Transparent Movie Genre Icons - Mod of Team Kodi addon</summary>
+		<summary lang="es">Transparent Movie Genre Icons - Mod del addon del Team Kodi</summary>
+		<description lang="en">Movie Genre Icons with a transparent background for Estuary STVA Skin</description>
+		<description lang="es">Iconos de Géneros de Películas con fondo transparente para el skin Estuary STVA</description>
+		<platform>all</platform>
+	</extension>
+</addon>

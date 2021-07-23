@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.balandro" name="Balandro" version="2.0.2" provider-name="Balandro Team">
+  <requires>
+  </requires>
+
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+
+  <extension point="xbmc.addon.metadata">
+    <summary>Balandro es un navegador de páginas webs</summary>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+    <news>
+    [COLOR darkorange]Mayo 2021[/COLOR]
+      Correcciones bugs de la version anterior
+      Configuración opción Descartar búsquedas en canales torrent
+      Nuevo proveedor de proxies: SilverProxies
+      Buscar:
+        Filmaffinitylists - cambio estructura
+        Oscars 2021 - mejorado
+        Descartar canales que pueden contener archivos torrent
+      Canales modificados:
+        AniBox, AnimeFenix, AnimeFlv, Beeg, CiberDocumentales,
+        CineMatteFlix, ClasicoTv, Cliver, DocumaniaTv, DonTorrents,
+        Estrenoscinesaa, HdFull, HdFullSe, InkaPelis, JKanime,
+        LaCartoons, MegadedeLa, MejorTorrents, PctFenix, Pelis24,
+        PelisVips, PornHub, PornTube, SeriesAntiguas, SeriesFlix,
+        SeriesKao, SeriesLan, SeriesPapayaTo, SeriesPapayaXyz,
+        SeriesRetro, SerieZ, Tekilaz, TorrentDivx, TuCineClasico,
+        TupeliculaTv, TuPeliHd, VerPeliculasGratis, XVideos
+      Canales desactivados:
+        AllPeliculas, CineCalidad, PlayDede, RePelis, SeriesBlanco,
+        SeriesFlv
+      Canales nuevos:
+        CumLouder, Hentaisd, MiraDeTodo, MiraPeliculas, MonosChinos,
+        PelisGratis, PelisMaraton, PelisPlanet, PelisXd, SeriesAnimadas,
+        TioAnime, Tubehentai
+      Servidores modificados:
+        Aparat, Clipwatching, Fembed, Gamovideo, Highstream, Mega,
+        PlayTube, Sbembed, Uptobox, Streamsb, YourUpload
+      Servidores nuevos:
+        ShareVid
+    [COLOR darkorange][B]Media Centers soportados[COLOR plum][I] Kodi 19.X, 18.X y 17.X [/I][/B][/COLOR]
+    </news>
+    <summary>Balandro es un navegador de páginas webs</summary>
+    <description>[COLOR yellow][B]Balandro es un MOD derivado de Pelisalacarta y Alfa,[COLOR mediumaquamarine] y Tiene Como Objeto, Permitir Visualizar Películas, Series y Documentales, Todo a Través de Internet y Directamente Desde su Sistema Media Center. [COLOR orchid]Este Add-On es Tan Solo un Mero Ejercicio de Aprendizaje Del Lenguaje de Programación Python y se Distribuye Sin Ningún Contenido Multimedia Adjunto al Mismo [COLOR lightgrey][I]En Consecuencia Solo Las Webs Son Plenamente Responsables de Los Contenidos Que Publiquen.[/I][/B][/COLOR]</description>
+    <disclaimer>[COLOR tan][B]Está Prohibida su Distribución, Solo o Junto Con Contenidos Multimedia Protegidos Por Los Derechos de Autor. [COLOR chocolate]Si Este Tipo de Contenido Está Prohibido en su País, Solamente Usted Será el Responsable de su Uso. [COLOR white]La Vulneración de Estas Prohibiciones Exonerarán de Cualquier Culpa a sus Autores, [COLOR red]Siendo el Único Responsable Quien lo Haya Distribuido o Utilizado Ilegalmente.[/B][/COLOR]</disclaimer>
+    <platform>all</platform>
+    <license>GNU GPL v3</license>
+    <forum>https://www.mimediacenter.info/foro/viewforum.php?f=44</forum>
+    <website>https://balandro.tk</website>
+    <email>my@email.com</email>
+  </extension>
+  <extension point="xbmc.service" library="services.py" start="login|startup"/>
+</addon>
