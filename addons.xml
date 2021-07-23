@@ -779,7 +779,6 @@ v1.0.25 (marcelveldt)
     <addon id="script.skin.helper.service" name="Skin Helper Service" version="1.1.38" provider-name="marcelveldt and others">
     <requires>
 		<import addon="xbmc.python" version="3.0.0"/>
-		<import addon="repository.marcelveldt" version="1.0.3"/>
         <import addon="xbmc.addon" version="12.0.0"/>
         <import addon="script.module.simplejson" version="3.3.0"/>
         <import addon="script.module.simplecache" version="1.0.0"/>
@@ -1247,14 +1246,14 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
     </extension>
 </addon>
 
-<addon id="skin.estuary.stva" version="0.9.1" name="Estuary STVA Matrix" provider-name="STVA">
+<addon id="skin.estuary.stva" version="0.9.1.1" name="Estuary STVA Matrix" provider-name="STVA">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="resource.language.es_es" version="0.0.0"/>
-		<import addon="script.skinshortcuts" version="0.6.5"/>
-		<import addon="script.skin.helper.service" version="1.1.13"/>
-		<import addon="script.skin.helper.widgets" version="1.0.22"/>
-		<import addon="resource.images.studios.coloured" version="0.0.51"/>
+		<import addon="script.skinshortcuts" version="1.1.5"/>
+		<import addon="script.skin.helper.service" version="1.1.38"/>
+		<import addon="script.skin.helper.widgets" version="1.0.45"/>
+		<import addon="resource.images.studios.coloured.stva" version="0.0.51"/>
 		<import addon="repository.repostva.matrix" version="1.0"/>
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
