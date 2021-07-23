@@ -495,6 +495,19 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 	</extension>
 </addon>
 
+<addon id="resource.images.studios.white" name="Studio Icons - White" version="0.0.28" provider-name="Team Kodi">
+	<extension point="kodi.resource.images" compile="true" type="studios" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">White Studio Icons</summary>
+		<description lang="en">White Studio Icons</description>
+		<platform>all</platform>
+		<license>Creative Commons Attribution-Share Alike 3.0 United States</license>
+	</extension>
+</addon>
+
 <addon id="script.bingie.helper" name="Bingie Helper" version="1.1.0" provider-name="cartman.dos, Matke">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
@@ -611,6 +624,28 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
   </extension>
 </addon>
 
+<addon id="script.module.kodi65" name="Kodi65 Library" version="1.2.1+matrix.3" provider-name="Philipp Temminghoff (phil65)">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.youtube.dl" version="21.204.0+matrix.1"/>
+		<import addon="script.module.pil" version="5.1.0"/>
+		<import addon="script.module.autocompletion" version="2.0.2"/>
+		<import addon="script.module.requests" version="2.22.0+matrix.1"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Helper module</summary>
+		<description lang="en">Helper module for all kind of stuff</description>
+		<platform>all</platform>
+		<license>GPL-2.1</license>
+		<source>https://github.com/phil65/script.module.kodi65</source>
+		<news>Python3 ver Adjust to latest core changes, bugfixes, API extensions by scott967</news>
+	</extension>
+	<assets>
+		<icon>resources/icon.png</icon>
+	</assets>
+</addon>
+
 <addon id="script.module.metadatautils"
        name="Metadata and Artwork module"
        version="1.0.42"
@@ -723,6 +758,28 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
+<addon id="script.module.requests" name="requests" version="2.25.1+matrix.1" provider-name="Python Software Foundation">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.certifi" version="2020.12.05+matrix.1"/>
+    <import addon="script.module.chardet" version="4.0.0+matrix.1"/>
+    <import addon="script.module.idna" version="2.10.0+matrix.1"/>
+    <import addon="script.module.urllib3" version="1.26.4+matrix.1"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Requests is an elegant and simple HTTP library for Python, built for human beings.</summary>
+    <description lang="en_GB">Requests is an elegant and simple HTTP library for Python, built for human beings.</description>
+    <license>Apache-2.0</license>
+    <platform>all</platform>
+    <website>https://requests.readthedocs.io/</website>
+    <source>https://github.com/psf/requests</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
 <addon id="script.module.resolveurl" name="ResolveURL" version="5.1.28" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
@@ -748,6 +805,24 @@ v1.0.25 (marcelveldt)
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="script.module.routing" name="Plugin routing" version="0.2.3+matrix.1" provider-name="takoi,Team Kodi">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">Routing module for plugins</summary>
+        <description lang="en_GB">Library for building and parsing plugin URLs.</description>
+        <license>GPL-3.0</license>
+        <platform>all</platform>
+        <language>en_GB</language>
+        <source>https://github.com/tamland/kodi-plugin-routing</source>
+        <assets>
+            <icon>resources/icon.png</icon>
         </assets>
     </extension>
 </addon>
