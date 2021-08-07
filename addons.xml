@@ -83,7 +83,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.balandro" name="Balandro" version="2.0.2" provider-name="Balandro Team">
+<addon id="plugin.video.balandro" name="Balandro" version="2.0.5" provider-name="Balandro Team">
   <requires>
   </requires>
 
@@ -97,35 +97,11 @@
       <icon>icon.png</icon>
     </assets>
     <news>
-    [COLOR darkorange]Mayo 2021[/COLOR]
-      Correcciones bugs de la version anterior
-      Configuración opción Descartar búsquedas en canales torrent
-      Nuevo proveedor de proxies: SilverProxies
-      Buscar:
-        Filmaffinitylists - cambio estructura
-        Oscars 2021 - mejorado
-        Descartar canales que pueden contener archivos torrent
+    [COLOR darkorange] Agosto 2021[/COLOR]
       Canales modificados:
-        AniBox, AnimeFenix, AnimeFlv, Beeg, CiberDocumentales,
-        CineMatteFlix, ClasicoTv, Cliver, DocumaniaTv, DonTorrents,
-        Estrenoscinesaa, HdFull, HdFullSe, InkaPelis, JKanime,
-        LaCartoons, MegadedeLa, MejorTorrents, PctFenix, Pelis24,
-        PelisVips, PornHub, PornTube, SeriesAntiguas, SeriesFlix,
-        SeriesKao, SeriesLan, SeriesPapayaTo, SeriesPapayaXyz,
-        SeriesRetro, SerieZ, Tekilaz, TorrentDivx, TuCineClasico,
-        TupeliculaTv, TuPeliHd, VerPeliculasGratis, XVideos
-      Canales desactivados:
-        AllPeliculas, CineCalidad, PlayDede, RePelis, SeriesBlanco,
-        SeriesFlv
-      Canales nuevos:
-        CumLouder, Hentaisd, MiraDeTodo, MiraPeliculas, MonosChinos,
-        PelisGratis, PelisMaraton, PelisPlanet, PelisXd, SeriesAnimadas,
-        TioAnime, Tubehentai
+        CineLibreOnline, DonTorrents, MundoKaos, Ppeliculas
       Servidores modificados:
-        Aparat, Clipwatching, Fembed, Gamovideo, Highstream, Mega,
-        PlayTube, Sbembed, Uptobox, Streamsb, YourUpload
-      Servidores nuevos:
-        ShareVid
+        Evoload, FastStream
     [COLOR darkorange][B]Media Centers soportados[COLOR plum][I] Kodi 19.X, 18.X y 17.X [/I][/B][/COLOR]
     </news>
     <summary>Balandro es un navegador de páginas webs</summary>
