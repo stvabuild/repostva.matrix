@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.balandro" name="Balandro" version="2.0.5" provider-name="Balandro Team">
+<addon id="plugin.video.balandro" name="Balandro" version="2.0.6" provider-name="Balandro Team">
   <requires>
   </requires>
 
@@ -13,11 +13,43 @@
       <icon>icon.png</icon>
     </assets>
     <news>
-    [COLOR darkorange] Agosto 2021[/COLOR]
+    [COLOR darkorange] Septiembre 2021[/COLOR]
       Canales modificados:
-        CineLibreOnline, DonTorrents, MundoKaos, Ppeliculas
+        AniBox, AnimeFenix, AnimeFlv, AreaDocumental,
+        AresHd, Beeg, CaricaturasHd, Ciberdocumentales,
+        CineCalidad, CineTux, ClasicoTv, Cliver, CliverSite,
+        ClubCine, Cuevana2Esp, Cuevana3, Cuevana3Mobi,
+        Cuevana3Video, CumLoader, DaftSex, Dilo, DixmaxLive,
+        DocumaniaTv, DocumentalesOnline, DonTorrents,
+        EntrePeliculasySeries, EstrenosCinesaa, Gnula,
+        GranTorrent, HdFull, HdFullCom, HdFullSe, HentaiSd,
+        HomeCine, InkaPelis, JKanime, LaCartoons,
+        LegalmenteGratis, Mega1link, Megadede2, MegaSerie,
+        MejorTorrents, MiraDeTodo, MiraDocumentales,
+        MiraPeliculas, MonosChinos, MovidyMobi, MundoKaos,
+        NewPct1, PctFenix, PeliculasFlix, PeliculasFlv,
+        Pelis24, PelisForte, PelisGratis, PelisHouse,
+        PelisPedia, PelisPlanet, PelisPlay, PelisRetro,
+        PepeCinePro, PelisXd, PlayDede, PlayView, PornHd,
+        PornHub, PornTube, Ppeliculas, SeriesAnimadas,
+        SeriesAntiguas, SeriesFlix, SeriesFlixIo, SeriesKao,
+        SeriesLan, SeriesManta, SeriesMetro, SeriesPapayaTo,
+        SeriesPapayaXyz, SeriesRetro, SeriesYonkis, SerieZ,
+        SigloXX, SubTorrents, Tekilaz, TioAnime,
+        TorrentDivx, TubeHentai, TuCineClasico,
+        TuPeliculaTv, TuPeliHd, TvSeries,
+        VerDocumentalesOnline, VerPeliculasGratis, XVideos,
+        Zoowoman
+      Canales nuevos:
+        MundoDesconocido, RePelis24, RepelisHd
       Servidores modificados:
-        Evoload, FastStream
+        Clicknupload, DoodStream, Evoload, Fastplay,
+        Fastream, Fembed, Gvideo, Mega, Sbembed, Streams3,
+        Streamsb, Streamtape, Uptobox, Uptostream, Vidoza,
+        Zplayer
+      Servidores nuevos:
+        Highload, Stream2, Streamlare, Streamty, Upvideo,
+        Viwol, Voe
     [COLOR darkorange][B]Media Centers soportados[COLOR plum][I] Kodi 19.X, 18.X y 17.X [/I][/B][/COLOR]
     </news>
     <summary>Balandro es un navegador de páginas webs</summary>
