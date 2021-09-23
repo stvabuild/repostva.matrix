@@ -11,8 +11,9 @@
   </extension>
 </addon>
 
-<addon id="plugin.program.autocompletion" name="AutoCompletion for virtual keyboard" version="2.0.1" provider-name="Philipp Temminghoff (phil65), xulek, domb84">
+<addon id="plugin.program.autocompletion" name="AutoCompletion for virtual keyboard" version="2.0.1.1" provider-name="Philipp Temminghoff (phil65), xulek, domb84">
     <requires>
+		<import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.autocompletion" version="1.0.0"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="plugin.py"/>
@@ -922,7 +923,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.36" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.43" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six" />
@@ -1471,7 +1472,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
     </extension>
 </addon>
 
-<addon id="skin.estuary.stva" version="0.9.5.1" name="Estuary STVA Matrix" provider-name="STVA">
+<addon id="skin.estuary.stva" version="0.9.6" name="Estuary STVA Matrix" provider-name="STVA">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="resource.language.es_es" version="0.0.0"/>
