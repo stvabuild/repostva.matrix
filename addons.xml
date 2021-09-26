@@ -321,6 +321,43 @@ Testers: Luisma, Toni, Zarat, SuperTopo, Jorge, Bojbit, MiKeL, Chikiry, Pau, Ale
     </extension>
 </addon>
 
+<addon id="repository.festa" name="[COLOR blue]REPOSITORIO[/COLOR][COLOR lime] FESTA[/COLOR]" version="1.0.1" provider-name="Yo Mismo">
+    <extension point="xbmc.addon.repository" name="Festa">
+        <info>https://raw.githubusercontent.com/picapaujulen/repositorio/master/Repositorio/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/picapaujulen/repositorio/master/Repositorio/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/picapaujulen/repositorio/master/Repositorio/</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Repositorio Festa</summary>
+        <description></description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="repository.github" name="GitHub Add-on repository"  version="0.0.6" provider-name="i96751414">
+    <extension point="xbmc.addon.repository">
+        <info>http://127.0.0.1:61234/addons.xml</info>
+        <checksum>http://127.0.0.1:61234/addons.xml.md5</checksum>
+        <datadir>http://127.0.0.1:61234/</datadir>
+    </extension>
+    <extension point="xbmc.python.script" library="default.py"/>
+    <extension point="xbmc.service" library="service.py"/>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <license>See https://github.com/i96751414/repository.github/blob/master/LICENSE</license>
+        <source>https://github.com/i96751414/repository.github</source>
+        <summary lang="en">GitHub virtual Add-on repository</summary>
+        <description lang="en">Customizable repository which acts as a proxy for defined GitHub users' add-ons updates.</description>
+        <news>
+            - Add support to Kodi 19
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon>
+
 <addon id="repository.hirayasoftware" name="Hiraya Software" version="1.0.1" provider-name="Alex303 - Hiraya Software">
 	<extension point="xbmc.addon.repository" name="Hiraya Software">
 		<info>https://hirayasoftware.github.io/addons.xml</info>
