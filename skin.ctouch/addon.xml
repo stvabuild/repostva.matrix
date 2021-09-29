@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<addon id="skin.ctouch"  version="1.5" name="Cristal Touch" provider-name="STVA">
+	<requires>
+		<import addon="resource.language.es_es" version="0.0.0"/>		
+	</requires>
+	<extension debugging="false" effectslowdown="1" point="xbmc.gui.skin">
+		<res aspect="16:9" default="true" folder="xml" height="1080" width="1920" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="es_ES">Skin para Cristal Azul</summary>
+		<summary lang="en_GB">Skin para Cristal Azul</summary>				
+		<description lang="es_ES">CTouch es un mod de skin realizado por STVA para Cristal Azul.</description>
+		<description lang="en_GB">CTouch es un mod de skin realizado por STVA para Cristal Azul.</description>		
+		<disclaimer lang="en_GB">Para dudas, preguntas o sugerencias [CR]Telegram: @kodi18</disclaimer>
+		<disclaimer lang="es_ES">Para dudas, preguntas o sugerencias [CR]Telegram: @kodi18</disclaimer>		
+		<platform>all</platform>
+		<license></license>
+		<website />
+		<email />
+		<news>Versión 1.5 - 29/9/21
+- Adaptado para Kodi 19 Matrix.
+- Agregados 3 inicios distintos, cristal azul, stva y personal.
+- Corregidos Algunos errores.
+- Reparados y cambiados algunos items del Inicio Cristal Azul.
+- Ahora se pueden agregar items al Inicio desde el menú contextual.
+- Agregada mini guía de ayuda en Ajustes de Skin.
+		</news>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshot001.jpg</screenshot>
+			<screenshot>resources/screenshot002.jpg</screenshot>
+			<screenshot>resources/screenshot003.jpg</screenshot>
+			<screenshot>resources/screenshot004.jpg</screenshot>
+		</assets>
+	</extension>
+</addon>

@@ -36,6 +36,40 @@
     </extension>
 </addon>
 
+<addon id="plugin.program.kodileiawizard.matrix" name="[COLOR white]Kodileia Wizard [COLOR chartreuse]Matrix[/COLOR]" version="1.0" provider-name="Grupo Kodileia">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.six" />
+        <import addon="script.kodi.android.update" optional="true" version="1.1.7" />
+    </requires>
+
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+    </extension>
+
+	<extension point="xbmc.addon.repository" name="repofamilyleia">
+        <info>https://raw.githubusercontent.com/Leia18/repofamilyleia/master/Repositorio/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/Leia18/repofamilyleia/master/Repositorio/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/Leia18/repofamilyleia/master/Repositorio/</datadir>
+    </extension>
+
+    <extension point="xbmc.service" library="startup.py" start="startup" />
+
+    <extension point="xbmc.addon.metadata">
+    <summary lang="en">Wizard</summary>
+    <description lang="en">Grupo Kodileia. Consultas en telegram @kodi18.</description>
+        <platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+
+
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
 <addon id="plugin.video.alfa" name="Alfa" version="3.4.5" provider-name="Alfa Addon">
   <requires>
     <import addon="script.module.requests"/>
@@ -200,6 +234,36 @@
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
+</addon>
+
+<addon id="plugin.video.moestv" name="Moe's TV" version="0.0.7" provider-name="La taberna">
+  <requires>
+    <import addon="script.module.six" version="1.11.0"/>
+    <import addon="script.module.simplecache"/>
+    <import addon="script.module.inputstreamhelper" version="0.5.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+
+  <extension point="xbmc.addon.metadata">
+    <summary>Televisión a la carta</summary>
+    <description></description>
+    <disclaimer>Este es un software [COLOR red][B]gratuito[/B][/COLOR][CR][COLOR red][B]Pero no se permite[/B][/COLOR] su distribuición preinstalada en ningún tipo de dispositivo ni tampoco su inclusión total o parcial en cualquier paquete de software y/o hardware por el que el usuario final deba [COLOR red][B]pagar o hacer una donación[/B][/COLOR], por su adquisición, por su uso o por recibir asistencia.[CR]Si cree que alguna de estas normas no se está cumpliendo póngase en contacto con nosotros.</disclaimer>
+    <platform>all</platform>
+    <assets>
+        <icon>icon.jpg</icon>
+        <fanart>fanart.jpg</fanart>
+        <!--screenshot>resources/media/Captura1.png</screenshot>
+        <screenshot>resources/media/Captura2.png</screenshot>
+        <screenshot>resources/media/Captura3.png</screenshot>
+        <screenshot>resources/media/Captura4.png</screenshot-->
+    </assets>
+    <license>[B]Este es un software gratuito[/B]</license>
+    <news>- Versión inicial
+    </news>
+    <forum></forum>
+  </extension>
 </addon>
 
 <addon id="plugin.video.winner" name="[B][/B][COLOR aqua][/COLOR]WINNER" version="1.0.7" provider-name="Camaradas">
@@ -1507,6 +1571,43 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
   * results ordering with preferred language ordered first
         </news>
     </extension>
+</addon>
+
+<addon id="skin.ctouch"  version="1.5" name="Cristal Touch" provider-name="STVA">
+	<requires>
+		<import addon="resource.language.es_es" version="0.0.0"/>
+	</requires>
+	<extension debugging="false" effectslowdown="1" point="xbmc.gui.skin">
+		<res aspect="16:9" default="true" folder="xml" height="1080" width="1920" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="es_ES">Skin para Cristal Azul</summary>
+		<summary lang="en_GB">Skin para Cristal Azul</summary>
+		<description lang="es_ES">CTouch es un mod de skin realizado por STVA para Cristal Azul.</description>
+		<description lang="en_GB">CTouch es un mod de skin realizado por STVA para Cristal Azul.</description>
+		<disclaimer lang="en_GB">Para dudas, preguntas o sugerencias [CR]Telegram: @kodi18</disclaimer>
+		<disclaimer lang="es_ES">Para dudas, preguntas o sugerencias [CR]Telegram: @kodi18</disclaimer>
+		<platform>all</platform>
+		<license></license>
+		<website />
+		<email />
+		<news>Versión 1.5 - 29/9/21
+- Adaptado para Kodi 19 Matrix.
+- Agregados 3 inicios distintos, cristal azul, stva y personal.
+- Corregidos Algunos errores.
+- Reparados y cambiados algunos items del Inicio Cristal Azul.
+- Ahora se pueden agregar items al Inicio desde el menú contextual.
+- Agregada mini guía de ayuda en Ajustes de Skin.
+		</news>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshot001.jpg</screenshot>
+			<screenshot>resources/screenshot002.jpg</screenshot>
+			<screenshot>resources/screenshot003.jpg</screenshot>
+			<screenshot>resources/screenshot004.jpg</screenshot>
+		</assets>
+	</extension>
 </addon>
 
 <addon id="skin.estuary.stva" version="0.9.6" name="Estuary STVA Matrix" provider-name="STVA">
