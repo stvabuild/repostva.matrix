@@ -1510,7 +1510,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
     </extension>
 </addon>
 
-<addon id="skin.ctouch"  version="1.5" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="1.6" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>
 	</requires>
@@ -1528,13 +1528,8 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 1.5 - 29/9/21
-- Adaptado para Kodi 19 Matrix.
-- Agregados 3 inicios distintos, cristal azul, stva y personal.
-- Corregidos Algunos errores.
-- Reparados y cambiados algunos items del Inicio Cristal Azul.
-- Ahora se pueden agregar items al Inicio desde el menú contextual.
-- Agregada mini guía de ayuda en Ajustes de Skin.
+		<news>Versión 1.6 - 10/10/21
+- Reparados errores menores
 		</news>
 		<assets>
 			<icon>icon.png</icon>
@@ -1547,7 +1542,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 	</extension>
 </addon>
 
-<addon id="skin.estuary.stva" version="0.9.6" name="Estuary STVA Matrix" provider-name="STVA">
+<addon id="skin.estuary.stva" version="0.9.7" name="Estuary STVA Matrix" provider-name="STVA">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="resource.language.es_es" version="0.0.0"/>
