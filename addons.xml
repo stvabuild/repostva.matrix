@@ -11,9 +11,8 @@
   </extension>
 </addon>
 
-<addon id="plugin.program.autocompletion" name="AutoCompletion for virtual keyboard" version="2.0.1.1" provider-name="Philipp Temminghoff (phil65), xulek, domb84">
+<addon id="plugin.program.autocompletion" name="AutoCompletion for virtual keyboard" version="2.0.1" provider-name="Philipp Temminghoff (phil65), xulek, domb84">
     <requires>
-		<import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.autocompletion" version="1.0.0"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="plugin.py"/>
@@ -70,55 +69,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.alfa" name="Alfa" version="3.4.5" provider-name="Alfa Addon">
-  <requires>
-    <import addon="script.module.requests"/>
-    <import addon="script.module.beautifulsoup4" version="4.5.3"/>
-    <import addon="script.module.html5lib" version="0.999.0"/>
-    <import addon="script.alfa-update-helper" optional="true"/>
-    <import addon="repository.alfa-addon"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="es">Navega con Kodi por páginas web.</summary>
-    <assets>
-      <icon>resources/icono_3.png</icon>
-      <fanart>resources/fanart1.jpg</fanart>
-      <screenshot>resources/media/themes/ss/1.jpg</screenshot>
-      <screenshot>resources/media/themes/ss/2.jpg</screenshot>
-      <screenshot>resources/media/themes/ss/3.jpg</screenshot>
-      <screenshot>resources/media/themes/ss/4.jpg</screenshot>
-    </assets>
-      <news>[B]Estos son los cambios para esta versión:[/B]
-
-      [COLOR green][B]Arreglos[/B][/COLOR]
-      ¤ Estrenoscinesaa                 ¤ JKAnime                       ¤ VerAnime
-      ¤ Pelispop                              ¤ Mirapeliculas               ¤ Pelisplus
-      ¤ 18+
-
-      [COLOR green][B]Novedades[/B][/COLOR]
-      ¤ Cuevana3.video                 ¤ Allpeliculastv, Repelis (Deshabilitado)
-      ¤ HDVid (servidor)
-
-    </news>
-    <description lang="es">Navega con Kodi por páginas web para ver sus videos de manera fácil.</description>
-    <summary lang="en">Browse web pages using Kodi</summary>
-    <description lang="en">Browse web pages using Kodi, you can easily watch their video content.</description>
-    <disclaimer>[COLOR red]The owners and submitters to this addon do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.[/COLOR]</disclaimer>
-    <platform>all</platform>
-    <license>GNU GPL v3</license>
-    <forum>foro</forum>
-    <website>web</website>
-    <email>my@email.com</email>
-    <source>https://github.com/alfa-addon/addon</source>
-  </extension>
-  <extension point="xbmc.service" library="videolibrary_service.py" start="login|startup">
-  </extension>
-</addon>
-
-<addon id="plugin.video.balandro" name="Balandro" version="2.0.6" provider-name="Balandro Team">
+<addon id="plugin.video.balandro" name="Balandro" version="2.1.0" provider-name="Balandro Team">
   <requires>
   </requires>
 
@@ -132,43 +83,29 @@
       <icon>icon.png</icon>
     </assets>
     <news>
-    [COLOR darkorange] Septiembre 2021[/COLOR]
+    [COLOR darkorange] Octubre 2021[/COLOR]
+      Agradecimientos:
+        Mencion especial al grupo de Checkers
       Canales modificados:
-        AniBox, AnimeFenix, AnimeFlv, AreaDocumental,
-        AresHd, Beeg, CaricaturasHd, Ciberdocumentales,
-        CineCalidad, CineTux, ClasicoTv, Cliver, CliverSite,
-        ClubCine, Cuevana2Esp, Cuevana3, Cuevana3Mobi,
-        Cuevana3Video, CumLoader, DaftSex, Dilo, DixmaxLive,
-        DocumaniaTv, DocumentalesOnline, DonTorrents,
-        EntrePeliculasySeries, EstrenosCinesaa, Gnula,
-        GranTorrent, HdFull, HdFullCom, HdFullSe, HentaiSd,
-        HomeCine, InkaPelis, JKanime, LaCartoons,
-        LegalmenteGratis, Mega1link, Megadede2, MegaSerie,
-        MejorTorrents, MiraDeTodo, MiraDocumentales,
-        MiraPeliculas, MonosChinos, MovidyMobi, MundoKaos,
-        NewPct1, PctFenix, PeliculasFlix, PeliculasFlv,
-        Pelis24, PelisForte, PelisGratis, PelisHouse,
-        PelisPedia, PelisPlanet, PelisPlay, PelisRetro,
-        PepeCinePro, PelisXd, PlayDede, PlayView, PornHd,
-        PornHub, PornTube, Ppeliculas, SeriesAnimadas,
-        SeriesAntiguas, SeriesFlix, SeriesFlixIo, SeriesKao,
-        SeriesLan, SeriesManta, SeriesMetro, SeriesPapayaTo,
-        SeriesPapayaXyz, SeriesRetro, SeriesYonkis, SerieZ,
-        SigloXX, SubTorrents, Tekilaz, TioAnime,
-        TorrentDivx, TubeHentai, TuCineClasico,
-        TuPeliculaTv, TuPeliHd, TvSeries,
-        VerDocumentalesOnline, VerPeliculasGratis, XVideos,
-        Zoowoman
+        Beeg, Cliver, DixmaxLive, Gnula,
+        EstrenosCinesaa, GranTorrent, HdFull,
+        HdFullCom, Cuevana3, Cuevana3Video,
+        Jkanime, MegaDede2, MegaSerie,
+        MejorTorrent, MonosChinos, PornHub,
+        SeriesFlix, SeriesFlvXyz, SeriesLan,
+        SeriesYonkis, TuPeliculaTv, TorrentDivx,
+        TuPeliHd, Xvideos
       Canales nuevos:
-        MundoDesconocido, RePelis24, RepelisHd
+        GenteClic, FullSerieHd, Gnula24,
+        GranTorrents, Kindor, PasateaTorrent,
+        PeliculasPro, PelisPlus24,
+        SeriesFlixVideo, SeriesFlvXyz,
+        YesTorrent
       Servidores modificados:
-        Clicknupload, DoodStream, Evoload, Fastplay,
-        Fastream, Fembed, Gvideo, Mega, Sbembed, Streams3,
-        Streamsb, Streamtape, Uptobox, Uptostream, Vidoza,
-        Zplayer
+        Bdupload, Streamsb, Streamtape, Upstream,
+        Uptobox, Zplayer
       Servidores nuevos:
-        Highload, Stream2, Streamlare, Streamty, Upvideo,
-        Viwol, Voe
+        Nupload, Nuvid
     [COLOR darkorange][B]Media Centers soportados[COLOR plum][I] Kodi 19.X, 18.X y 17.X [/I][/B][/COLOR]
     </news>
     <summary>Balandro es un navegador de páginas webs</summary>
