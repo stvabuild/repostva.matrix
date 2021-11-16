@@ -125,7 +125,7 @@
   <extension point="xbmc.service" library="videolibrary_service.py" start="login|startup"></extension>
 </addon>
 
-<addon id="plugin.video.balandro" name="Balandro" version="2.1.0" provider-name="Balandro Team">
+<addon id="plugin.video.balandro" name="Balandro" version="2.1.2" provider-name="Balandro Team">
   <requires>
   </requires>
 
@@ -139,39 +139,35 @@
       <icon>icon.png</icon>
     </assets>
     <news>
-    [COLOR darkorange] Octubre 2021[/COLOR]
+    [COLOR yellow]Octubre 2021[/COLOR]
       Agradecimientos:
         Mencion especial al grupo de Checkers
       Canales modificados:
-        Beeg, Cliver, DixmaxLive, Gnula,
-        EstrenosCinesaa, GranTorrent, HdFull,
-        HdFullCom, Cuevana3, Cuevana3Video,
-        Jkanime, MegaDede2, MegaSerie,
-        MejorTorrent, MonosChinos, PornHub,
-        SeriesFlix, SeriesFlvXyz, SeriesLan,
-        SeriesYonkis, TuPeliculaTv, TorrentDivx,
-        TuPeliHd, Xvideos
+        AniBox, CineCalidad, CineDeAntes,
+        CineLibreOnline, CineMatteFlix,
+        ClubCine, DixMaxLive, DocumaniaTv,
+        DonTorrents, HdFull, HdFullCom, HdFullSe,
+        MegaDede2, NewPct1, PelisMaraton,
+        PlayDede, Ppeliculas, PonnHd, PornHub,
+        Repeli24, SeriesKao, YesTorrent
+      Canales anulados:
+        PctFenix, PelisPlus24
       Canales nuevos:
-        GenteClic, FullSerieHd, Gnula24,
-        GranTorrents, Kindor, PasateaTorrent,
-        PeliculasPro, PelisPlus24,
-        SeriesFlixVideo, SeriesFlvXyz,
-        YesTorrent
+        Ievenn, PelisEnCastellano
       Servidores modificados:
-        Bdupload, Streamsb, Streamtape, Upstream,
-        Uptobox, Zplayer
+        Fembed, Streamsb, Upstream, Uptobox,
+        Vshare, Vup
       Servidores nuevos:
-        Nupload, Nuvid
-    [COLOR darkorange][B]Media Centers soportados[COLOR plum][I] Kodi 19.X, 18.X y 17.X [/I][/B][/COLOR]
+        Streamon, Vidhd
+    [COLOR darkorange]Media Centers soportados[COLOR plum][B][I] 19.X, 18.X y 17.X [/I][/B][/COLOR]
     </news>
     <summary>Balandro es un navegador de páginas webs</summary>
     <description>[COLOR yellow][B]Balandro es un MOD derivado de Pelisalacarta y Alfa,[COLOR mediumaquamarine] y Tiene Como Objeto, Permitir Visualizar Películas, Series y Documentales, Todo a Través de Internet y Directamente Desde su Sistema Media Center. [COLOR orchid]Este Add-On es Tan Solo un Mero Ejercicio de Aprendizaje Del Lenguaje de Programación Python y se Distribuye Sin Ningún Contenido Multimedia Adjunto al Mismo [COLOR lightgrey][I]En Consecuencia Solo Las Webs Son Plenamente Responsables de Los Contenidos Que Publiquen.[/I][/B][/COLOR]</description>
     <disclaimer>[COLOR tan][B]Está Prohibida su Distribución, Solo o Junto Con Contenidos Multimedia Protegidos Por Los Derechos de Autor. [COLOR chocolate]Si Este Tipo de Contenido Está Prohibido en su País, Solamente Usted Será el Responsable de su Uso. [COLOR white]La Vulneración de Estas Prohibiciones Exonerarán de Cualquier Culpa a sus Autores, [COLOR red]Siendo el Único Responsable Quien lo Haya Distribuido o Utilizado Ilegalmente.[/B][/COLOR]</disclaimer>
     <platform>all</platform>
     <license>GNU GPL v3</license>
+    <source>https://balandro-tk.github.io/balandro/</source>
     <forum>https://www.mimediacenter.info/foro/viewforum.php?f=44</forum>
-    <website>https://balandro.tk</website>
-    <email>my@email.com</email>
   </extension>
   <extension point="xbmc.service" library="services.py" start="login|startup"/>
 </addon>
@@ -342,26 +338,34 @@ Testers: Luisma, Toni, Zarat, SuperTopo, Jorge, Bojbit, MiKeL, Chikiry, Pau, Ale
     </extension>
 </addon>
 
-<addon id="repository.balandro" name="Balandro Repo" version="1.0.5" provider-name="Balandro">
-	<requires>
-	</requires>
+<addon id="repository.balandro" name="Balandro Repo" version="2.0.0" provider-name="Balandro Team">
 
-    <extension point="xbmc.addon.repository" name="Balandro Repo">
-        <info>https://balandro.tk/repo3/addons.xml</info>
-        <checksum>https://balandro.tk/repo3/addons.xml.md5</checksum>
-        <datadir zip="true">https://balandro.tk/repo3</datadir>
-    </extension>
+	<extension point="xbmc.addon.repository" name="balandro repo">
+		<info>https://raw.githubusercontent.com/balandro-tk/balandro/main/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/balandro-tk/balandro/main/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/balandro-tk/balandro/main/</datadir>
+	</extension>
 
-    <extension point="xbmc.addon.metadata">
-        <summary>Repositorio para Balandro</summary>
-        <description>Balandro es un navegador para webs con vídeos de películas y series.</description>
-        <disclaimer>The owners and submitters to this repository do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.</disclaimer>
-        <platform>all</platform>
+    <extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.addon.metadata">
+        <summary>Repositorio de Balandro</summary>
         <assets>
             <icon>icon.png</icon>
         </assets>
-    </extension>
+        <news>
+        [COLOR darkorange] Octubre 2021[/COLOR]
+          Fuente:
+            https://balandro-tk.github.io/balandro/
 
+        [COLOR darkorange][B]Media Centers soportados[COLOR plum][I] Kodi 19.X, 18.X y 17.X [/I][/B][/COLOR]
+        </news>
+        <description>[COLOR yellow][B]Balandro es un MOD derivado de Pelisalacarta y Alfa,[COLOR mediumaquamarine] y Tiene Como Objeto, Permitir Visualizar Películas, Series y Documentales, Todo a Través de Internet y Directamente Desde su Sistema Media Center. [COLOR orchid]Este Add-On es Tan Solo un Mero Ejercicio de Aprendizaje Del Lenguaje de Programación Python y se Distribuye Sin Ningún Contenido Multimedia Adjunto al Mismo [COLOR lightgrey][I]En Consecuencia Solo Las Webs Son Plenamente Responsables de Los Contenidos Que Publiquen.[/I][/B][/COLOR]</description>
+        <disclaimer>[COLOR tan][B]Está Prohibida su Distribución, Solo o Junto Con Contenidos Multimedia Protegidos Por Los Derechos de Autor. [COLOR chocolate]Si Este Tipo de Contenido Está Prohibido en su País, Solamente Usted Será el Responsable de su Uso. [COLOR white]La Vulneración de Estas Prohibiciones Exonerarán de Cualquier Culpa a sus Autores, [COLOR red]Siendo el Único Responsable Quien lo Haya Distribuido o Utilizado Ilegalmente.[/B][/COLOR]</disclaimer>
+        <platform>all</platform>
+        <license>GNU GPL v3</license>
+        <source>https://balandro-tk.github.io/balandro/</source>
+        <forum>https://www.mimediacenter.info/foro/viewforum.php?f=44</forum>
+	</extension>
 </addon>
 
 <addon id="repository.camaradas.repo" name="[COLOR orangered]camaradas.repo[/COLOR]" version="2.0" provider-name="Team Camaradas">
@@ -1599,7 +1603,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 	</extension>
 </addon>
 
-<addon id="skin.estuary.stva" version="0.9.9" name="Estuary STVA Matrix" provider-name="STVA">
+<addon id="skin.estuary.stva" version="0.9.10" name="Estuary STVA Matrix" provider-name="STVA">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="resource.language.es_es" version="0.0.0"/>
