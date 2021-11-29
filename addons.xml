@@ -125,7 +125,7 @@
   <extension point="xbmc.service" library="videolibrary_service.py" start="login|startup"></extension>
 </addon>
 
-<addon id="plugin.video.balandro" name="Balandro" version="2.1.2" provider-name="Balandro Team">
+<addon id="plugin.video.balandro" name="Balandro" version="2.1.3" provider-name="Balandro Team">
   <requires>
   </requires>
 
@@ -139,26 +139,35 @@
       <icon>icon.png</icon>
     </assets>
     <news>
-    [COLOR yellow]Octubre 2021[/COLOR]
+    [COLOR yellow]Noviembre 2021[/COLOR]
       Agradecimientos:
         Mencion especial al grupo de Checkers
       Canales modificados:
-        AniBox, CineCalidad, CineDeAntes,
-        CineLibreOnline, CineMatteFlix,
-        ClubCine, DixMaxLive, DocumaniaTv,
-        DonTorrents, HdFull, HdFullCom, HdFullSe,
-        MegaDede2, NewPct1, PelisMaraton,
-        PlayDede, Ppeliculas, PonnHd, PornHub,
-        Repeli24, SeriesKao, YesTorrent
+        AnimeFlv, CineCalidad, CineDeAntes,
+        CliverSite, Cuevana3, Cuevana3Video,
+        DixMaxLive, DonTorrents, Gnula,
+        GranTorrents, HdFull, HdFullCom,
+        Kindor, MegaDede2, MejorTorrents,
+        MovidyMobi, NewPct1, PasateaTorrent,
+        PeliculasFlix, PelisEnCastellano,
+        PelisHouse, PelisMart, PelisPedia,
+        PeliSeries, PepeCinePro, PlayDede,
+        RepelisHd, RetroTv, SeriesFlixVideo,
+        SeriesFlvXyz, SeriesMetro,
+        SeriesRetro, SigloXX, SubTorrents,
+        TorrentDivx, TuPeliculaTv, TuPeliHd,
+        YesTorrent
       Canales anulados:
-        PctFenix, PelisPlus24
+        PctFenix
       Canales nuevos:
-        Ievenn, PelisEnCastellano
+        EspaPelis, MejorTorrentLa, MovidyTv,
+        PelisPedia2, TodoTorrents,
+        VerPeliculasRd
       Servidores modificados:
-        Fembed, Streamsb, Upstream, Uptobox,
-        Vshare, Vup
+        Doodstream, Fembed, Highload, Mega,
+        Nupload, Streamsb, Streamtape, Upvideo,
+        Vidoza
       Servidores nuevos:
-        Streamon, Vidhd
     [COLOR darkorange]Media Centers soportados[COLOR plum][B][I] 19.X, 18.X y 17.X [/I][/B][/COLOR]
     </news>
     <summary>Balandro es un navegador de páginas webs</summary>
@@ -1603,7 +1612,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 	</extension>
 </addon>
 
-<addon id="skin.estuary.stva" version="0.9.10" name="Estuary STVA Matrix" provider-name="STVA">
+<addon id="skin.estuary.stva" version="0.9.11" name="Estuary STVA Matrix" provider-name="STVA">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="resource.language.es_es" version="0.0.0"/>
