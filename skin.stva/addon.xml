@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<addon id="skin.stva"  version="1.1" name="STVA" provider-name="STVA">
+	<requires>
+		<import addon="resource.language.es_es" />
+	</requires>
+	<extension debugging="false" effectslowdown="1" point="xbmc.gui.skin">
+		<res aspect="16:9" default="true" folder="xml" height="1080" width="1920" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="es_ES">Skin para Kodi con menús y widgets ya creados, se instalará todo lo necesario para funcionar.</summary>
+		<summary lang="en_GB">Skin para Kodi con menús y widgets ya creados, se instalará todo lo necesario para funcionar.</summary>				
+		<description lang="en_GB">STVA es una mod del skin AppTV de Wyrm e inspirado en el skin Aura de jurialmunkey.[CR]Todos los agradecimientos a ellos.[CR]Completamente optimizado para ser utilizado en Móvil y Tablet, TV y TV Box con mando, PC con ratón y/o teclado, consola con mando o gamepad.</description>
+		<description lang="es_ES">STVA es una mod del skin AppTV de Wyrm e inspirado en el skin Aura de jurialmunkey.[CR]Todos los agradecimientos a ellos.[CR]Completamente optimizado para ser utilizado en Móvil y Tablet, TV y TV Box con mando, PC con ratón y/o teclado, consola con mando o gamepad.</description>		
+		<disclaimer lang="en_GB">Para más información, dudas o consultas [CR][B]web:[/B] http://stva.ga[CR]</disclaimer>
+		<disclaimer lang="es_ES">Para más información, dudas o consultas [CR][B]web:[/B] http://stva.ga[CR]</disclaimer>
+		<platform>all</platform>
+		<license></license>
+		<website>stva.ga</website>
+		<email />
+<news>
+Versión Final, 1.1.
+Corregidos la mayoría de errores. No habrá más actualizaciones
+</news>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshot001.jpg</screenshot>
+			<screenshot>resources/screenshot000.jpg</screenshot>
+			<screenshot>resources/screenshot002.jpg</screenshot>
+			<screenshot>resources/screenshot003.jpg</screenshot>
+		</assets>
+	</extension>
+</addon>

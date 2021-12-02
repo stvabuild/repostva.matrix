@@ -7,7 +7,6 @@
 		<datadir zip="true">https://raw.githubusercontent.com/balandro-tk/balandro/main/</datadir>
 	</extension>
 
-    <extension point="xbmc.service" library="service.py" start="startup" />
 	<extension point="xbmc.addon.metadata">
         <summary>Repositorio de Balandro</summary>
         <assets>
