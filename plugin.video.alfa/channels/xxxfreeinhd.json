@@ -1,0 +1,26 @@
+{
+  "id": "xxxfreeinhd",
+  "name": "xxxfreeinhd",
+  "active": false,
+  "adult": true,
+  "language": ["*"],
+  "thumbnail": "https://watchxxxfree.xyz/wp-content/uploads/2020/01/goo.png",
+  "banner": "",
+  "fanart": "",
+  "categories": [
+    "adult"
+  ],
+  "settings": [
+    {
+      "id": "filter_languages",
+      "type": "list",
+      "label": "Mostrar enlaces en idioma...",
+      "default": 0,
+      "enabled": true,
+      "visible": true,
+      "lvalues": [
+        "No filtrar"
+      ]
+    }
+  ]
+}

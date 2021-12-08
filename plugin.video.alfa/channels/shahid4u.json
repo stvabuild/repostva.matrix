@@ -1,0 +1,25 @@
+{
+  "id": "shahid4u",
+  "name": "Shahid4u",
+  "active": true,
+  "adult": false,
+  "language": [],
+  "thumbnail": "https://shahid4u.io/wp-content/uploads/2015/07/shahid4u-1-1-1.png",
+  "banner": "",
+  "fanart": "",
+  "categories": [
+    "movie",
+    "tvshow",
+    "vos"
+  ],
+  "settings":[
+    {
+      "id": "include_in_global_search",
+      "type": "bool",
+      "label": "Incluir en busqueda global",
+      "default": false,
+      "enabled": true,
+      "visible": true
+    }
+  ]
+}

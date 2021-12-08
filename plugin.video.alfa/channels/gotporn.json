@@ -1,0 +1,15 @@
+{
+  "id": "gotporn",
+  "name": "gotporn",
+  "active": true,
+  "adult": true,
+  "language": ["*"],
+  "thumbnail": "https://i.postimg.cc/Jz3fYpwL/gotporn-logo.png",
+  "banner": "",
+  "fanart": "",
+  "categories": [
+    "adult"
+  ],
+  "settings": [
+  ]
+}

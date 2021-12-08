@@ -1,0 +1,15 @@
+{
+  "id": "mporno",
+  "name": "mporno",
+  "active": true,
+  "adult": true,
+  "language": ["*"],
+  "thumbnail": "http://mporno.tv/templates/fluidporn/img/logo.png",
+  "banner": "",
+  "fanart": "",
+  "categories": [
+    "adult"
+  ],
+  "settings": [
+  ]
+}

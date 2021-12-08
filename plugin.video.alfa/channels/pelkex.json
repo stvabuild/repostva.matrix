@@ -1,0 +1,67 @@
+{
+  "id": "pelkex",
+  "name": "Pelkex",
+  "active": true,
+  "adult": false,
+  "language": ["lat"],
+  "thumbnail": "http://newpelis.nl/wp-content/uploads/2018/06/35227842_1998485733529574_5906247779155443712_n.png",
+  "banner": "",
+  "fanart": "",
+  "categories": [
+    "movie"
+  ],
+  "settings": [
+    {
+      "id": "include_in_global_search",
+      "type": "bool",
+      "label": "Incluir en busqueda global",
+      "default": false,
+      "enabled": false,
+      "visible": false
+    },
+    {
+      "id": "include_in_newest_peliculas",
+      "type": "bool",
+      "label": "Incluir en Novedades - Peliculas",
+      "default": true,
+      "enabled": true,
+      "visible": true
+    },
+    {
+      "id": "include_in_newest_latino",
+      "type": "bool",
+      "label": "Incluir en Novedades - Latino",
+      "default": true,
+      "enabled": true,
+      "visible": true
+    },
+    {
+      "id": "include_in_newest_infantiles",
+      "type": "bool",
+      "label": "Incluir en Novedades - Infantiles",
+      "default": true,
+      "enabled": true,
+      "visible": true
+    },
+    {
+      "id": "include_in_newest_terror",
+      "type": "bool",
+      "label": "Incluir en Novedades - terror",
+      "default": true,
+      "enabled": true,
+      "visible": true
+    },
+    {
+      "id": "filter_languages",
+      "type": "list",
+      "label": "Mostrar enlaces en idioma...",
+      "default": 0,
+      "enabled": true,
+      "visible": true,
+      "lvalues": [
+        "No filtrar",
+        "LAT"
+      ]
+    }
+  ]
+}
