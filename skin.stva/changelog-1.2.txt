@@ -1,0 +1,24 @@
+1.2 - /12/21
+- Se añade función para desactivar los items predefinidos
+- Se añade un inicio personalizado eligiendo inicio Táctil y addon de contenido, ninguno
+- Pequeños arreglos
+- No se actualizará más
+
+1.1 - 2/12/21
+- Corregidos la mayoría de errores
+
+1.0.2 - 16/2/21
+- Ajustado menú iconos Inicio Táctil
+- Eliminados items menús Deportes Cristal, Directos y Agendas sin acestream en Inicio Táctil
+- Agregados items menú Winner, En Vivo y Fútbol en Inicio Táctil
+
+1.0.1 - 15/2/21
+- Reajuste de DialogVideoInfo
+- Reparada categoría Géneros de Películas del addon Palantir2
+- Añadido al menú apagado, forzar cierre (plugin.close.kodi)
+- Ajustado menú superior de iconos
+- Eliminadas Categorías de Deportes, Directos Cristal y Agendas sin acestream
+- Agregadas Categorías de Deportes, Winner y En vivo, ambas secciones del addon winner
+
+1.0.0 - 7/2/21
+- Versión inicial

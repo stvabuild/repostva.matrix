@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addon id="skin.stva"  version="1.1" name="STVA" provider-name="STVA">
+<addon id="skin.stva"  version="1.2" name="STVA" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" />
 	</requires>
@@ -18,8 +18,11 @@
 		<website>stva.ga</website>
 		<email />
 <news>
-Versión Final, 1.1.
-Corregidos la mayoría de errores. No habrá más actualizaciones
+Versión Final, 1.2.
+- Se añade función para desactivar los items predefinidos.
+- Se añade un inicio personalizado eligiendo inicio Táctil y addon de contenido, ninguno.
+- Pequeños arreglos.
+- No se actualizará más.
 </news>
 		<assets>
 			<icon>icon.png</icon>
