@@ -38,15 +38,12 @@ def get_video_url(page_url, user="", password="", video_password=""):
     for url in data["data"]:
         try:
             if sys.version_info[0] >= 3:
-                for x in range(5):
-                    location = httptools.downloadpage(
-                        url["file"], only_headers=True, follow_redirects=False)
-
-                    if 'Location' in location.headers:
-                        url["file"] = location.headers['Location']
-                    else:
-                        url["file"] = url["file"].replace('https', 'http')
-                        break
+                url["file"] = url["file"].replace('https', 'http')
+                ua = httptools.ua
+                headers = httptools.default_headers.copy()
+                headers['Range'] = ''
+                header_str = "&".join(["%s=%s" % (x, y) for x, y in list(headers.items())])
+                url["file"] += "|User-Agent=%s&verifypeer=false&%s" % (ua, header_str)
         except:
             pass
         video_urls.append(

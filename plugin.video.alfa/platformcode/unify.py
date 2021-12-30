@@ -345,7 +345,7 @@ def title_format(item, c_file=colors_file, srv_lst={}):
     # Ignored actions
 
     if item.action in ["mainlist", "submenu_tools", "setting_torrent", "channel_config", "buscartrailer",
-                       "actualizar_titulos", "no_filter"] or item.channel in ["downloads"]:
+                       "actualizar_titulos", "no_filter"] or item.channel in ["downloads"] or item.unify == False:
         return item
 
     # Define Content type

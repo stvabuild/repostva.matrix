@@ -488,10 +488,17 @@ def unshorten(uri, type=None, timeout=10):
 
 
 def sortened_urls(url, url_base64, host):
+    # https://unicode-table.com/es/#basic-latin
+    # https://www.ionos.es/digitalguide/servidores/know-how/ascii-american-standard-code-for-information-interchange/
 
     sortened_domains = {'acortalink.me': ['linkser=uggcf%3A%2F%2Flrfgbeerag.arg', "TTTOzBmk\s*=\s*'(.*?)'", 14, 8, False], 
+                        'acortaenlace.com': ['linkser=uggcf%3A%2F%2Fzntargcryvf.pbz', "TTTOzBmk\s*=\s*'(.*?)'", 14, 8, False], 
                         'short-link.one': ['linkser=uggcf%3A%2F%2Fzntargcryvf.pbz', "TTTOzBmk\s*=\s*'(.*?)'", 14, 8, False], 
-                        'mediafire.com': [None, '(?i)=\s*"Download file"\s*href="([^"]+)"\s*id\s*=\s*"downloadButton"', 0, 0, False]}
+                        'mediafire.com': [None, '(?i)=\s*"Download file"\s*href="([^"]+)"\s*id\s*=\s*"downloadButton"', 0, 0, False], 
+                        'sub-short.link': [None, [64, 123 ,77, 91, 96, 109, 13, 13], 0, 0, False], 
+                        'divxto.site': [None, [64, 123 ,77, 91, 96, 109, 13, 13], 0, 0, False] , 
+                        'ddtorrent.live': [None, [64, 123 ,77, 91, 96, 109, 13, 13], 0, 0, False]
+                        }
 
     patron_domain = '(?:http.*\:)?\/\/(?:.*ww[^\.]*)?\.?(?:[^\.]+\.)?([\w|\-]+\.\w+)(?:\/|\?|$)'
     patron_host = '((?:http.*\:)?\/\/(?:.*ww[^\.]*)?\.?(?:[^\.]+\.)?[\w|\-]+\.\w+)(?:\/|\?|$)'
@@ -500,8 +507,34 @@ def sortened_urls(url, url_base64, host):
     if sortened_domains.get(domain, False) == False or not url_base64 or url_base64.startswith('magnet'):
         return url_base64
 
+    from lib.pyberishaes import GibberishAES
     key = config.get_setting(domain, server='torrent', default='')
     key_saved = key
+    if not key and '://' in url_base64 and not (url_base64.startswith('magnet') or url_base64.startswith('http')):
+        try:
+            chars = GibberishAES.s2a(GibberishAES(), url_base64)
+            chers = []
+            chors = sortened_domains[domain][1]
+
+            for c in chars:
+                if chors[0] < c < chors[1]:
+                    if chors[2] < c < chors[3]:
+                        chers.append(c - chors[6])
+                    elif c > chors[5]:
+                        chers.append(c - chors[6])
+                    elif chors[3] <= c <= chors[4]:
+                        chers.append(c)
+                    else:
+                        chers.append(c + chors[7])
+                else:
+                    chers.append(c)
+
+            url_base64 = "".join([chr(x) for x in chers])
+        except:
+            logger.error('ERROR en GibberishAES: translación: %s' % url_base64)
+            logger.error(traceback.format_exc())
+        return url_base64
+    
     if not key:
         post = sortened_domains[domain][0]
         host_name = scrapertools.find_single_match(url, patron_host)
@@ -525,9 +558,8 @@ def sortened_urls(url, url_base64, host):
                 return url_base64
     
     try:
-        from lib import pyberishaes
         url_base64_bis = None
-        url_base64_bis = pyberishaes.GibberishAES(string=url_base64, pass_=key, 
+        url_base64_bis = GibberishAES(string=url_base64, pass_=key, 
                          Nr=sortened_domains[domain][2], Nk=sortened_domains[domain][3], 
                          Decrypt=sortened_domains[domain][4])
         if url_base64_bis.result and (url_base64_bis.result.startswith('magnet') or url_base64_bis.result.startswith('http')):

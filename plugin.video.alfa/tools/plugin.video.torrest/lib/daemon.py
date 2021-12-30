@@ -1,3 +1,4 @@
+import hashlib
 import logging
 import os
 import pipes
@@ -12,6 +13,14 @@ from io import FileIO
 
 from lib.os_platform import PLATFORM, System
 from lib.utils import bytes_to_str, PY3
+
+
+def compute_hex_digest(file_path, hash_type, buff_size=4096):
+    h = hash_type()
+    with open(file_path, "rb") as f:
+        for chunk in iter(lambda: f.read(buff_size), b""):
+            h.update(chunk)
+    return h.hexdigest()
 
 
 def get_current_app_id():
@@ -163,12 +172,13 @@ class DaemonNotFoundError(Exception):
 
 class Daemon(object):
     def __init__(self, name, daemon_dir, work_dir=None, android_find_dest_dir=True,
-                 android_extra_dirs=(), dest_dir=None, pid_file=None, root=False):
+                 android_extra_dirs=(), dest_dir=None, pid_file=None, root=False, contains_sha1=False):
         self._name = name
         self._work_dir = work_dir
         self._pid_file = pid_file
         self._root = root
         self._root_pid = -1
+        self._contains_sha1 = contains_sha1
         if PLATFORM.system == System.windows:
             self._name += ".exe"
 
@@ -192,7 +202,7 @@ class Daemon(object):
         self._path = os.path.join(self._dir, self._name)
 
         if self._dir is not daemon_dir:
-            if not os.path.exists(self._path) or self._get_sha1(src_path) != self._get_sha1(self._path):
+            if not os.path.exists(self._path) or self._compute_sha1(src_path) != self._compute_sha1(self._path):
                 logging.info("Updating %s daemon '%s'", PLATFORM.system, self._path)
                 try:
                     if os.path.exists(self._dir):
@@ -205,13 +215,18 @@ class Daemon(object):
         self._p = None  # type: subprocess.Popen or None
         self._logger = None  # type: DaemonLogger or None
 
-    @staticmethod
-    def _get_sha1(path):
-        # Using FileIO instead of open as fseeko with OFF_T=64 is broken in android NDK
-        # See https://trac.kodi.tv/ticket/17827
-        with FileIO(path) as f:
-            f.seek(-40, os.SEEK_END)
-            return f.read()
+    def _compute_sha1(self, path):
+        if self._contains_sha1:
+            # Legacy code
+            # Using FileIO instead of open as fseeko with OFF_T=64 is broken in android NDK
+            # See https://trac.kodi.tv/ticket/17827
+            with FileIO(path) as f:
+                f.seek(-40, os.SEEK_END)
+                digest = f.read()
+        else:
+            digest = compute_hex_digest(path, hashlib.sha1)
+
+        return digest
 
     def kill_leftover_process(self):
         if self._pid_file and os.path.exists(self._pid_file):
@@ -702,13 +717,13 @@ def call_binary(function, cmd, retry=False, p=None, **kwargs):
             if status_code != 200 and not retry:
                 logging.info("## Calling/Killing Torrest: Invalid app requests response: %s.  Closing Assistant (1)", status_code)
                 xbmc.executebuiltin(cmd_android_close)
-                time.sleep(5)
+                time.sleep(4)
                 return call_binary(function, cmd, retry=True, **kwargs)
             elif status_code != 200 and retry:
                 logging.info("## Calling/Killing Torrest: Invalid app requests response: %s.  Closing Assistant (2)", status_code)
                 launch_status = False
                 xbmc.executebuiltin(cmd_android_close)
-                time.sleep(5)
+                time.sleep(4)
             try:
                 app_response = resp.content
                 if launch_status:
@@ -837,6 +852,7 @@ def binary_stat(p, action, retry=False, init=False, app_response={}):
                 if resp.status_code != 200 and not retry_req:
                     if action == 'killBinary' or p.monitor.abortRequested():
                         app_response = {'pid': p.pid, 'retCode': 998}
+                        retry_req = False
                     else:
                         logging.info("## Binary_stat: Invalid app requests response for PID: %s: %s - retry: %s - awake: %s", \
                                     p.pid, resp.status_code, retry_req, p.binary_awake)
@@ -850,16 +866,16 @@ def binary_stat(p, action, retry=False, init=False, app_response={}):
                             binary_awake = 0
                         logging.info('## Time.awake: %s; binary_awake: %s; p.binary_awake: %s', \
                                     (int(time.time()) - int(p.binary_time))*1000, binary_awake, p.binary_awake)
-                        time.sleep(5)
+                        time.sleep(4)
                         continue
-                if resp.status_code != 200 and retry_req and app_response.get('retCode', 0) != 999:
+                if resp.status_code != 200 and retry_req and app_response.get('retCode', 0) != 999 and not p.monitor.abortRequested():
                     logging.info("## Binary_stat: Invalid app requests response for PID: %s: %s - retry: %s - awake: %s.  Closing Assistant", \
                                     p.pid, resp.status_code, retry_req, p.binary_awake)
                     msg += str(resp.status_code)
                     stdout_acum += str(resp.status_code)
                     app_response = {'pid': p.pid, 'retCode': 999}
                     xbmc.executebuiltin(cmd_android_close)
-                    time.sleep(5)
+                    time.sleep(4)
                     xbmc.executebuiltin(cmd_android)
                     binary_awake = (int(time.time()) - int(p.binary_time)) * 1000 - binary_awake_safe
                     if binary_awake > binary_awake_safe:
@@ -867,7 +883,7 @@ def binary_stat(p, action, retry=False, init=False, app_response={}):
                             if binary_awake < p.binary_awake: p.binary_awake = binary_awake
                         else:
                             p.binary_awake = binary_awake
-                        time.sleep(5)
+                        time.sleep(4)
                         logging.info('## Time.awake: %s; binary_awake: %s; p.binary_awake: %s; awakingInterval: True', \
                                     (int(time.time()) - int(p.binary_time))*1000, binary_awake, p.binary_awake)
                         try:
@@ -878,7 +894,7 @@ def binary_stat(p, action, retry=False, init=False, app_response={}):
                             pass
                         time.sleep(1)
                         continue
-                    time.sleep(5)
+                    time.sleep(4)
                     continue
 
                 if resp.status_code == 200:
@@ -934,11 +950,12 @@ def binary_stat(p, action, retry=False, init=False, app_response={}):
                 if 'permission denied' in msg:
                     from lib import kodi
                     kodi.notification('Accept Assitant permissions', time=15000)
-                    time.sleep(5)
+                    if not p.monitor.abortRequested(): time.sleep(4)
                     xbmc.executebuiltin(cmd_android_permissions)
-                    time.sleep(10)
+                    if not p.monitor.abortRequested(): time.sleep(4)
+                    if not p.monitor.abortRequested(): time.sleep(4)
                     xbmc.executebuiltin(cmd_android_quit)
-                    time.sleep(3)
+                    if not p.monitor.abortRequested(): time.sleep(3)
                 
                 if msg:
                     try:
@@ -986,7 +1003,7 @@ def binary_stat(p, action, retry=False, init=False, app_response={}):
                             pass
                     elif p.returncode == 998:
                         xbmc.executebuiltin(cmd_android_close)
-                        time.sleep(5)
+                        time.sleep(4)
                 except:
                     logging.info(traceback.format_exc())
                     time.sleep(1)
@@ -994,7 +1011,10 @@ def binary_stat(p, action, retry=False, init=False, app_response={}):
                     time.sleep(2)
                 return p
             
-            time.sleep(5)
+            if not p.monitor.abortRequested():
+                time.sleep(4)
+            else:
+                return p
             msg = ''
             app_response = {}
 
@@ -1069,7 +1089,7 @@ def install_app(APP_PARAMS):
                         logging.info("## Install_app: APP installed: %s", user_params['USER_APP'])
                         kodi.notification('Accept Assistant permissions')
                         logging.info("## Install_app: Requesting permissions: %s", user_params['USER_APP'])
-                        time.sleep(5)
+                        time.sleep(4)
                         xbmc.executebuiltin(cmd_android_permissions)
                         time.sleep(15)
                         logging.info("## Install_app: closing APP: %s", user_params['USER_APP'])

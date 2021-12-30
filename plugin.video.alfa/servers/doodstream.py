@@ -19,7 +19,8 @@ def test_video_exists(page_url):
     logger.info("(page_url='%s')" % page_url)
     #response = httptools.downloadpage(page_url, headers={"referer": host})
     response = httptools.downloadpage(page_url)
-    if response.code == 404:
+
+    if response.code == 404 or "Video not found" in response.data:
         return False, "[Doodstream] El archivo no existe o ha sido borrado"
     elif not scrapertools.find_single_match(response.data, ("(function\s?makePlay.*?;})")):
         test_video_exists(page_url)
@@ -43,7 +44,7 @@ def get_video_url(page_url, premium=False, user="", password="", video_password=
 
     new_data = httptools.downloadpage("%s%s" % (host, base_url), add_referer=True).data
     retries = 0
-    while "We are checking your browser" in new_data and retries < 3:
+    while ("We are checking your browser" in new_data or "5xx-error-landing" in new_data) and retries < 3:
         new_data = httptools.downloadpage("%s%s" % (host, base_url), add_referer=True).data
         retries += 1
     if retries > 3:

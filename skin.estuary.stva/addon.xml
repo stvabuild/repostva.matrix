@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.stva" version="0.9.12" name="Estuary STVA Matrix" provider-name="STVA">
+<addon id="skin.estuary.stva" version="0.9.13" name="Estuary STVA Matrix" provider-name="STVA">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="resource.language.es_es" version="0.0.0"/>		
@@ -43,6 +43,9 @@
 				<screenshot>resources/screenshot-10.jpg</screenshot>
 				<screenshot>resources/screenshot-11.jpg</screenshot>
 			</assets>
-			<news>Agradecimientos a todos los que han participado en el skin Estuary MOD, gracias a ellos es posible Estuary STVA.</news>
+			<news>- Reparado tercer widget de Películas.
+			- Cambiado segundo widget de Películas.
+			- Tercer widget de Series cambiado.
+			- Cambiado primer por tercer widget en Series.</news>
 	</extension>
 </addon>

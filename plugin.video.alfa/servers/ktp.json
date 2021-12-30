@@ -24,7 +24,7 @@
         "url": "\\1"
       },
       {
-        "pattern": "(https://(?:severeporn|anon-v|myporntape).com/embed/\\w+)",
+        "pattern": "(https://(?:www.|)(?:severeporn|anon-v|myporntape).com/embed/\\w+)",
         "url": "\\1"
       },
       {

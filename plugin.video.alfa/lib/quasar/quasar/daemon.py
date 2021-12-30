@@ -667,13 +667,13 @@ def call_binary(function, cmd, retry=False, p=None, **kwargs):
                     time.sleep(10)          # let Torrest starts first
                 else:
                     xbmc.executebuiltin(cmd_android_close)
-                    time.sleep(5)
+                    time.sleep(4)
                 return call_binary(function, cmd, retry=True, **kwargs)
             elif status_code != 200 and retry:
                 log.error("## Calling/Killing Quasar: Invalid app requests response: %s.  Closing Assistant (1)" % status_code)
                 launch_status = False
                 xbmc.executebuiltin(cmd_android_close)
-                time.sleep(5)
+                time.sleep(4)
             try:
                 app_response = resp.content
                 if launch_status:
@@ -799,6 +799,7 @@ def binary_stat(p, action, retry=False, init=False, app_response={}):
                 if resp.status_code != 200 and not retry_req:
                     if action == 'killBinary' or p.monitor.abortRequested():
                         app_response = {'pid': p.pid, 'retCode': 998}
+                        retry_req = False
                     else:
                         log.error("## Binary_stat: Invalid app requests response for PID: %s: %s - retry: %s - awake: %s" % \
                                     (p.pid, resp.status_code, retry_req, p.binary_awake))
@@ -812,9 +813,9 @@ def binary_stat(p, action, retry=False, init=False, app_response={}):
                             binary_awake = 0
                         log.info('## Time.awake: %s; binary_awake: %s; p.binary_awake: %s' % \
                                     ((int(time.time()) - int(p.binary_time))*1000, binary_awake, p.binary_awake))
-                        time.sleep(5)
+                        time.sleep(4)
                         continue
-                if resp.status_code != 200 and retry_req and app_response.get('retCode', 0) != 999:
+                if resp.status_code != 200 and retry_req and app_response.get('retCode', 0) != 999 and not p.monitor.abortRequested():
                     log.error("## Binary_stat: Invalid app requests response for PID: %s: %s - retry: %s - awake: %s.  Closing Assistant" % \
                                     (p.pid, resp.status_code, retry_req, p.binary_awake))
                     msg += str(resp.status_code)
@@ -824,14 +825,14 @@ def binary_stat(p, action, retry=False, init=False, app_response={}):
                         time.sleep(10)      # let Torrest recover first
                     else:
                         xbmc.executebuiltin(cmd_android_close)
-                        time.sleep(5)
+                        time.sleep(4)
                         xbmc.executebuiltin(cmd_android)
                         if binary_awake > binary_awake_safe:
                             if p.binary_awake:
                                 if binary_awake < p.binary_awake: p.binary_awake = binary_awake
                             else:
                                 p.binary_awake = binary_awake
-                                time.sleep(5)
+                                time.sleep(4)
                                 log.info('## Time.awake: %s; binary_awake: %s; p.binary_awake: %s' % \
                                             ((int(time.time()) - int(p.binary_time))*1000, binary_awake, p.binary_awake))
                                 try:
@@ -842,7 +843,7 @@ def binary_stat(p, action, retry=False, init=False, app_response={}):
                                     pass
                                 time.sleep(1)
                                 continue
-                        time.sleep(5)
+                        time.sleep(4)
                         continue
 
                 if resp.status_code == 200:
@@ -897,11 +898,12 @@ def binary_stat(p, action, retry=False, init=False, app_response={}):
                 # If still app permissions not allowed, give it a retry
                 if 'permission denied' in msg:
                     notify('Accept Assitant permissions', time=15000)
-                    time.sleep(5)
+                    if not p.monitor.abortRequested(): time.sleep(4)
                     xbmc.executebuiltin(cmd_android_permissions)
-                    time.sleep(10)
+                    if not p.monitor.abortRequested(): time.sleep(4)
+                    if not p.monitor.abortRequested(): time.sleep(4)
                     xbmc.executebuiltin(cmd_android_quit)
-                    time.sleep(5)
+                    if not p.monitor.abortRequested(): time.sleep(4)
                 
                 if msg:
                     try:
@@ -951,7 +953,7 @@ def binary_stat(p, action, retry=False, init=False, app_response={}):
                     elif p.returncode == 998:
                         if not p.torrest:
                             xbmc.executebuiltin(cmd_android_close)
-                        time.sleep(10)
+                        time.sleep(4)
                 except:
                     logging.info(traceback.format_exc())
                     time.sleep(1)
@@ -960,7 +962,10 @@ def binary_stat(p, action, retry=False, init=False, app_response={}):
                     time.sleep(2)
                 return p
             
-            time.sleep(5)
+            if not p.monitor.abortRequested():
+                time.sleep(4)
+            else:
+                return p
             msg = ''
             app_response = {}
 

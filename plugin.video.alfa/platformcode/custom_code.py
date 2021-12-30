@@ -31,6 +31,7 @@ ADDON_USERDATA_PATH = config.get_data_path()
 ADDON_USERDATA_BIN_PATH = filetools.join(ADDON_USERDATA_PATH, 'bin')
 ADDON_VERSION = config.get_addon_version(with_fix=False, from_xml=True)
 ADDON_CUSTOMCODE_JSON = filetools.join(ADDON_PATH, json_data_file_name)
+ADDON_PLATFORM = config.get_system_platform()
 
 
 def init():
@@ -500,14 +501,12 @@ def init_version(json_data):
         if config.get_setting('alfa_version', default='') == ADDON_VERSION:
             logger.info('### Reinstalación de versión Alfa %s' % ADDON_VERSION, force=True)
             return True
-        
-        categoria = config.get_system_platform()
 
         kodi = config.get_platform(full_version=True)
         kodi = ',k%s' % str(kodi.get('num_version')).split('.')[0]
         
         assistant = ''
-        if categoria == 'android':
+        if ADDON_PLATFORM in ['android', 'atv2']:
             assistant = config.get_setting('assistant_binary', default=False)
             if assistant and assistant != True:
                 assistant = ',%s' % assistant
@@ -536,7 +535,7 @@ def init_version(json_data):
             if not PY3: from lib import alfaresolver
             else: from lib import alfaresolver_py3 as alfaresolver
             threading.Thread(target=alfaresolver.frequency_count, args=(Item(), \
-                        [ADDON_VERSION, categoria + kodi + assistant])).start()
+                        [ADDON_VERSION, ADDON_PLATFORM + kodi + assistant])).start()
             config.set_setting('alfa_version', ADDON_VERSION)
             ret = True
         except:
@@ -666,16 +665,15 @@ def update_libtorrent():
         
     if not filetools.exists(ADDON_CUSTOMCODE_JSON) or not config.get_setting("unrar_path", server="torrent", default="") \
                     or (not 'unrar' in str(filetools.listdir(ADDON_USERDATA_BIN_PATH)).lower() and \
-                    not xbmc.getCondVisibility("system.platform.android")) \
-                    or xbmc.getCondVisibility("system.platform.android"):
-    
+                    ADDON_PLATFORM not in ["android", "atv2"]) or ADDON_PLATFORM in ["android", "atv2"]:
+
         path = filetools.join(ADDON_PATH, 'lib', 'rarfiles')
         sufix = ''
         unrar = ''
         for device in filetools.listdir(path):
-            if xbmc.getCondVisibility("system.platform.android") and 'android' not in device: continue
-            if xbmc.getCondVisibility("system.platform.windows") and 'windows' not in device: continue
-            if not xbmc.getCondVisibility("system.platform.windows") and not  xbmc.getCondVisibility("system.platform.android") \
+            if ADDON_PLATFORM in ["android", "atv2"] and 'android' not in device: continue
+            if ADDON_PLATFORM in ['windows', 'xbox'] and 'windows' not in device: continue
+            if ADDON_PLATFORM not in ['windows', 'xbox'] and ADDON_PLATFORM not in ["android", "atv2"] \
                         and ('android' in device or 'windows' in device): continue
             if 'windows' in device:
                 sufix = '.exe'
@@ -686,9 +684,9 @@ def update_libtorrent():
             if not filetools.exists(unrar): unrar = ''
             
             if unrar:
-                if not xbmc.getCondVisibility("system.platform.windows"):
+                if ADDON_PLATFORM not in ['windows', 'xbox']:
                     try:
-                        if xbmc.getCondVisibility("system.platform.android"):
+                        if ADDON_PLATFORM in ["android", "atv2"]:
                             # Para Android copiamos el binario a la partición del sistema
                             unrar_org = unrar
                             unrar = filetools.join('special://xbmc/', 'files').replace('/cache/apk/assets', '')
@@ -702,7 +700,7 @@ def update_libtorrent():
                     except:
                         logger.info('######## UnRAR ERROR in path: %s' % str(unrar), force=True)
                         logger.error(traceback.format_exc())
-                if not xbmc.getCondVisibility("system.platform.android"):
+                if ADDON_PLATFORM not in ["android", "atv2"]:
                     res = filetools.copy(unrar, unrar_dest, ch_mod='777', silent=True)
                     if not res:
                         logger.info('######## UnRAR ERROR in path: %s' % str(unrar_dest), force=True)
@@ -739,7 +737,7 @@ def update_libtorrent():
     # Ahora descargamos la última versión disponible de Libtorrent para esta plataforma
     try:
         # Saltamos plataformas no soportadas
-        if PY3 and (xbmc.getCondVisibility("system.platform.Windows") or xbmc.getCondVisibility("system.platform.android")):
+        if PY3 and (ADDON_PLATFORM in ['windows', 'xbox'] or ADDON_PLATFORM in ["android", "atv2"]):
             config.set_setting("libtorrent_path", "", server="torrent")
             config.set_setting("libtorrent_version", "ERROR/UNSUPPORTED", server="torrent")
             return
@@ -747,7 +745,7 @@ def update_libtorrent():
         version_base = filetools.join(ADDON_PATH, 'lib', 'python_libtorrent')
         libt_dir = filetools.listdir(filetools.join(ADDON_USERDATA_PATH, 'custom_code', 'lib'))
         if 'libtorrent' in str(libt_dir) or (not 'libtorrent' in str(filetools.listdir(ADDON_USERDATA_BIN_PATH)) and \
-                    not xbmc.getCondVisibility("system.platform.android")):
+                    ADDON_PLATFORM not in ["android", "atv2"]):
             for libt_file in libt_dir:
                 if 'libtorrent' in libt_file:
                     filetools.remove(filetools.join(ADDON_USERDATA_PATH, 'custom_code', 'lib', libt_file), silent=True)
@@ -886,6 +884,7 @@ def reactivate_unrar(init=False, mute=True):
 
 def search_for_unrar_in_error(download_paths, init=False):
     logger.info(str(init) + ' / ' + str(download_paths))
+    from servers.torrent import check_rar_control
     
     rar_processed = []
     
@@ -903,29 +902,9 @@ def search_for_unrar_in_error(download_paths, init=False):
             if folder in rar_processed:
                 continue
             rar_processed += [folder]
-            
-            rar_control = jsontools.load(filetools.read(filetools.join(folder, '_rar_control.json')))
-            rar_control['status'] += ': Recovery'
-            if ('UnRARing' in rar_control['status'] or 'RECOVERY' in rar_control['status']) and not init:
-                continue
-            if 'UnRARing' in rar_control['status'] or 'ERROR' in rar_control['status']:
-                rar_control['status'] = 'RECOVERY: ' + rar_control['status']
-            rar_control['download_path'] = folder
-            rar_control['torr_client'] = torrent_client
-            if 'ERROR' in rar_control['status'] or 'UnRARing' in rar_control['status'] \
-                        or 'RECOVERY' in rar_control['status']:
-                rar_control['error'] += 1
-            ret = filetools.write(filetools.join(rar_control['download_path'], '_rar_control.json'), jsontools.dump(rar_control))
-            logger.debug('%s, %s, %s, %s, %s, %s' % (rar_control['download_path'], \
-                        rar_control['rar_names'][0], rar_control['password'], \
-                        str(rar_control['error']), rar_control['error_msg'], rar_control['status']))
-            if ('ERROR' in rar_control['status'] and rar_control['error'] > 2) \
-                        or ('UnRARing' in rar_control['status'] and rar_control['error'] > 3) \
-                        or ('RECOVERY' in rar_control['status'] and rar_control['error'] > 3)  \
-                        or 'DONE' in rar_control['status']:
-                continue
-            
-            if ret:
+
+            rar_control = check_rar_control(folder, torr_client=torrent_client, init=init)
+            if rar_control:
                 try:
                     threading.Thread(target=call_unrar, args=(rar_control,)).start()    # Creamos un Thread independiente por UnRAR
                     time.sleep(1)                                               # Dejamos terminar la inicialización...

@@ -23,6 +23,8 @@ from core import downloadtools
 from core import scrapertools
 from core import ziptools
 
+ALFA_DEPENDENCIES = 'alfa_dependencies.json'
+
 
 def check_addon_init():
     logger.info()
@@ -131,12 +133,12 @@ def check_addon_updates(verbose=False):
         # -----------------------------------------------
         resp = httptools.downloadpage(ADDON_UPDATES_JSON, timeout=5, ignore_response_code=True)
         if not resp.sucess and resp.code != 404:
-            logger.info('ERROR en la descarga de actualizaciones: %s' % resp.code)
+            logger.info('ERROR en la descarga de actualizaciones: %s' % resp.code, force=True)
             if verbose:
                 dialog_notification('Alfa: error en la actualización', 'Hay un error al descargar la actualización')
             return False
         if not resp.data:
-            logger.info('No se encuentran actualizaciones del addon')
+            logger.info('No se encuentran actualizaciones del addon', force=True)
             if verbose:
                 dialog_notification('Alfa ya está actualizado', 'No hay ninguna actualización urgente')
             check_update_to_others(verbose=verbose)  # Comprueba las actualuzaciones de otros productos
@@ -144,7 +146,7 @@ def check_addon_updates(verbose=False):
 
         data = jsontools.load(resp.data)
         if 'addon_version' not in data or 'fix_version' not in data:
-            logger.info('No hay actualizaciones del addon')
+            logger.info('No hay actualizaciones del addon', force=True)
             if verbose:
                 dialog_notification('Alfa ya está actualizado', 'No hay ninguna actualización urgente')
             check_update_to_others(verbose=verbose)  # Comprueba las actualuzaciones de otros productos
@@ -154,7 +156,7 @@ def check_addon_updates(verbose=False):
         # --------------------------------------------------------------------------------
         current_version = config.get_addon_version(with_fix=False, from_xml=True)
         if current_version != data['addon_version']:
-            logger.info('No hay actualizaciones para la versión %s del addon' % current_version)
+            logger.info('No hay actualizaciones para la versión %s del addon' % current_version, force=True)
             if verbose:
                 dialog_notification('Alfa ya está actualizado', 'No hay ninguna actualización urgente')
             check_update_to_others(verbose=verbose)  # Comprueba las actualuzaciones de otros productos
@@ -166,7 +168,7 @@ def check_addon_updates(verbose=False):
                 lastfix = jsontools.load(open(last_fix_json, "r").read())
                 if lastfix['addon_version'] == data['addon_version'] and lastfix['fix_version'] == data['fix_version']:
                     logger.info('Ya está actualizado con los últimos cambios. Versión %s.fix%d' % (
-                    data['addon_version'], data['fix_version']))
+                    data['addon_version'], data['fix_version']), force=True)
                     if verbose:
                         dialog_notification('Alfa ya está actualizado',
                                             'Versión %s.fix%d' % (data['addon_version'], data['fix_version']))
@@ -239,7 +241,7 @@ def check_addon_updates(verbose=False):
         except:
             pass
 
-        logger.info('Addon actualizado correctamente a %s.fix%d' % (data['addon_version'], data['fix_version']))
+        logger.info('Addon actualizado correctamente a %s.fix%d' % (data['addon_version'], data['fix_version']), force=True)
 
         if verbose and not config.get_setting("show_fixes", default=True):
             dialog_notification('Alfa actualizado a', 'Versión %s.fix%d' % (data['addon_version'], data['fix_version']))
@@ -265,12 +267,16 @@ def check_update_to_others(verbose=False, app=True):
             in_folder = os.path.join(config.get_runtime_path(), 'tools', folder)
             if not os.path.isdir(in_folder):
                 continue
+            if not check_dependencies(in_folder):
+                continue
 
             out_folder = os.path.join(config.translatePath('special://home/addons'), folder)
             if os.path.exists(out_folder):
                 copytree(in_folder, out_folder)
+                if os.path.exists(os.path.join(out_folder, ALFA_DEPENDENCIES)):
+                    os.remove(os.path.join(out_folder, ALFA_DEPENDENCIES))
 
-                logger.info('%s updated' % folder)
+                logger.info('%s updated' % folder, force=True)
     except:
         logger.error('Error al actualizar OTROS paquetes')
         logger.error(traceback.format_exc())
@@ -282,6 +288,80 @@ def check_update_to_others(verbose=False, app=True):
         except:
             logger.error("Alfa Assistant.  Error en actualización")
             logger.error(traceback.format_exc())
+
+
+def check_dependencies(in_folder):
+    """ Check is patch applies to current installed version
+    Dependencies file is optional and named alfa_dependencies.json
+    
+    Optional paramenters:
+    
+    - patch_platforms: [list of patch-supportted platforms]
+    - patch_python: python version i.e. Py2, Py3
+    - patch_version_high: version number for patch to apply.  If patch_version_low param exists, it marks the highest version applicable
+    - patch_version_low: marks the lowest version applicable for the patch.  It requires patch_version_high set
+    
+    Note:   version and sub-versions are separated by "." (slots).  Any version/sub-versions number can be a wild character "*"
+            version/sub-versions slots number must be the same as the add-on to be patched
+    
+    """
+
+    res = True
+    dep_path = os.path.join(in_folder, ALFA_DEPENDENCIES)
+
+    if not os.path.exists(dep_path):
+        return res
+
+    try:
+        import xbmcaddon
+        addon_name = os.path.split(in_folder)[1]
+        __settings__ = xbmcaddon.Addon(id="{}".format(addon_name))
+        addon_version = __settings__.getAddonInfo('version').split('.')
+
+        with open(dep_path, "r") as f:
+            dep_json = jsontools.load(f.read())
+
+        if dep_json.get('patch_platforms', []):
+            # Check for PLATFORM
+            if config.get_system_platform() not in dep_json['patch_platforms']:
+                return False
+
+        if dep_json.get('patch_python', '') and dep_json['patch_python'] in ['Py2', 'Py3']:
+            # Check for PYTHON version
+            if PY3 and dep_json['patch_python'] != 'Py3':
+                return False
+            if not PY3 and dep_json['patch_python'] == 'Py3':
+                return False
+
+        if dep_json.get('patch_version_high', []):
+            # Check for Version or Vesion highest
+            for x, ver in enumerate(addon_version):
+                if dep_json['patch_version_high'].split('.')[x] == ver or dep_json['patch_version_high'].split('.')[x] == '*':
+                    continue
+                elif dep_json['patch_version_high'].split('.')[x] > ver and dep_json.get('patch_version_low', []):
+                    break
+                elif dep_json['patch_version_high'].split('.')[x] > ver:
+                    return False
+                elif not dep_json.get('patch_version_low', []):
+                    return res
+                elif dep_json.get('patch_version_low', []):
+                    break
+            else:
+                return res
+
+            # Check for Version lowest
+            if dep_json.get('patch_version_low', []):
+                for x, ver in enumerate(addon_version):
+                    if dep_json['patch_version_low'].split('.')[x] == ver or dep_json['patch_version_low'].split('.')[x] == '*':
+                        continue
+                    elif dep_json['patch_version_low'].split('.')[x] > ver:
+                        return False
+                    return res
+
+    except:
+        logger.error(traceback.format_exc())
+
+    return res
 
 
 def copytree(src, dst, symlinks=False, ignore=None):

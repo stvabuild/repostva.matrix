@@ -2061,6 +2061,7 @@ def rar_control_mng(item, xlistitem, mediaurl, rar_files, torr_client, password,
     try:
         torrent_paths = torrent.torrent_dirs()
         rar = False
+        video_path = ''
 
         # Si es un archivo RAR, monitorizamos el cliente Torrent hasta que haya descargado el archivo,
         # y después lo extraemos, incluso con RAR's anidados y con contraseña
@@ -2098,9 +2099,10 @@ def rar_control_mng(item, xlistitem, mediaurl, rar_files, torr_client, password,
                 playlist.add(video_play, xlistitem)
                 xbmc_player.play(playlist)
 
-            item.downloadFilename = video_path.replace(save_path_videos, '')
-            item.downloadFilename = filetools.join(item.downloadFilename, video_file)
-            item.downloadFilename = ':%s: %s' % (torr_client.upper(), item.downloadFilename)
+            if video_path:
+                item.downloadFilename = video_path.replace(save_path_videos, '')
+                item.downloadFilename = filetools.join(item.downloadFilename, video_file)
+                item.downloadFilename = ':%s: %s' % (torr_client.upper(), item.downloadFilename)
 
         path = filetools.join(config.get_setting("downloadlistpath"), item.path)
         if filetools.exists(path):
@@ -2111,8 +2113,10 @@ def rar_control_mng(item, xlistitem, mediaurl, rar_files, torr_client, password,
 
         if item_down.downloadProgress == -1:
             item.downloadProgress = -1
-        elif save_path_videos and item_down.downloadProgress > 0:
+        elif video_path and save_path_videos and item_down.downloadProgress > 0:
             item.downloadProgress = 100
+        elif not video_path and item_down.downloadProgress == 99:
+            item.downloadProgress = 99
         else:
             if torrent_paths[torr_client.upper() + '_web']:  # Es un cliente monitorizable?
                 if path:
