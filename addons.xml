@@ -69,7 +69,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.alfa" name="Alfa" version="3.5.6" provider-name="Alfa Addon">
+<addon id="plugin.video.alfa" name="Alfa" version="3.5.8" provider-name="Alfa Addon">
   <requires>
     <import addon="script.module.requests"/>
     <import addon="script.module.beautifulsoup4" version="4.5.3"/>
@@ -101,9 +101,12 @@
     <news>[B]Estos son los cambios para esta versión:[/B]
 
       [COLOR green][B]Arreglos[/B][/COLOR]
-      ¤ Pelisflix                       ¤ TvAnime                       ¤ CrunchyRoll
-      ¤ Cliver                          ¤ Divxtotal                       ¤ Dontorrent
-      ¤ Mejortorrent              ¤ Newpct1                       ¤ 18+
+      ¤ CineCalidad                     ¤ DoramasYT                     ¤ HDFull
+      ¤ HDFullS                            ¤ InkaPelis                         ¤ MiraDeTodo
+      ¤ Allcalidad                         ¤ Cuevana3                        ¤ Cuevana3Video
+      ¤ Divxtotal                          ¤ Dontorrent                      ¤ Entrepeliculasyseries
+      ¤ Grantorrent                     ¤ Mitorrent                        ¤ Newpct1
+      ¤ Subtorrents
 
       [COLOR green][B]Novedades[/B][/COLOR]
 
@@ -1710,7 +1713,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 	</extension>
 </addon>
 
-<addon id="skin.estuary.stva" version="0.9.12" name="Estuary STVA Matrix" provider-name="STVA">
+<addon id="skin.estuary.stva" version="0.9.13" name="Estuary STVA Matrix" provider-name="STVA">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="resource.language.es_es" version="0.0.0"/>
@@ -1754,7 +1757,10 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 				<screenshot>resources/screenshot-10.jpg</screenshot>
 				<screenshot>resources/screenshot-11.jpg</screenshot>
 			</assets>
-			<news>Agradecimientos a todos los que han participado en el skin Estuary MOD, gracias a ellos es posible Estuary STVA.</news>
+			<news>- Reparado tercer widget de Películas.
+			- Cambiado segundo widget de Películas.
+			- Tercer widget de Series cambiado.
+			- Cambiado primer por tercer widget en Series.</news>
 	</extension>
 </addon>
 
