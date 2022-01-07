@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.embuary.stva" version="1.0.0" name="Embuary STVA" provider-name="stva">
+<addon id="skin.embuary.stva" version="1.0.1" name="Embuary STVA" provider-name="stva,sualfred">
 	<requires>
 		<import addon="resource.language.es_es" />
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -20,7 +20,7 @@
 		<disclaimer lang="es_ES">No es compatible con mouse. Optimizado para TV con mando. El addon presenta accesos a otros addons que no tienen nada que ver con STVA. STVA no se hace responsable del contenido que ofrezcan dichos addons.</disclaimer>
 		<platform>all</platform>
 		<license>CC-BY-NC-ND-4.0</license>
-		<forum>https://emby.media/community/index.php?/topic/49724-beta-embuary-the-emby-kodi-skin/</forum>
+		<forum>https://stva.ga/foro/off-topic/nuevo-skin-embuary-stva/</forum>
 		<source>https://github.com/stvabuild/repostva.matrix/skin.embuary.stva</source>
 		<assets>
 			<icon>resources/icon.png</icon>
@@ -33,8 +33,6 @@
 			<screenshot>resources/screenshot-06.jpg</screenshot>
 			<screenshot>resources/screenshot-07.jpg</screenshot>
 			<screenshot>resources/screenshot-08.jpg</screenshot>
-			<screenshot>resources/screenshot-09.jpg</screenshot>
-			<screenshot>resources/screenshot-10.jpg</screenshot>
 		</assets>
 	</extension>
 </addon>
