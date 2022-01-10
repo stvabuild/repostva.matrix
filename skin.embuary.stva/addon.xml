@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.embuary.stva" version="1.0.2" name="Embuary STVA" provider-name="stva,sualfred">
+<addon id="skin.embuary.stva" version="1.0.3" name="Embuary STVA" provider-name="stva,sualfred">
 	<requires>
 		<import addon="resource.language.es_es" />
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -13,18 +13,18 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en_GB">Embuary STVA It is a mod of Sualfred's Skin Embuary Matrix</summary>
-		<summary lang="es_ES">Embuary STVA es un mod del Skin Embuary Matrix de Sualfred</summary>
-		<description lang="en_GB">Embuary STVA is modified to be able to obtain audiovisual content easily.</description>
-		<description lang="es_ES">Embuary STVA está modificado para poder obtener contenido audiovisual fácilmente.</description>
-		<disclaimer lang="en_GB">It does not support mouse. Optimized for remote control TV. The addon presents accesses to other addons that have nothing to do with STVA. STVA is not responsible for the content offered by said addons.</disclaimer>
-		<disclaimer lang="es_ES">No es compatible con mouse. Optimizado para TV con mando. El addon presenta accesos a otros addons que no tienen nada que ver con STVA. STVA no se hace responsable del contenido que ofrezcan dichos addons.</disclaimer>
+		<summary lang="es_ES">Embuary STVA es un mod del Skin Embuary Matrix de Sualfred. </summary>
+		<description lang="en_GB">Embuary STVA It is a mod of Sualfred's Skin Embuary Matrix.[CR]Embuary STVA is modified to be able to obtain audiovisual content easily.</description>
+		<description lang="es_ES">Embuary STVA es un mod del Skin Embuary Matrix de Sualfred.[CR]Está modificado para poder obtener contenido audiovisual fácilmente.</description>
+		<disclaimer lang="en_GB">It does not support mouse. Optimized for remote control TV.[CR]The Skin presents accesses to other addons that have nothing to do with STVA.[CR]STVA is not responsible for the content offered by said addons.</disclaimer>
+		<disclaimer lang="es_ES">No es compatible con mouse. Optimizado para TV con mando.[CR]El skin presenta accesos a otros addons que no tienen nada que ver con STVA.[CR]STVA no se hace responsable del contenido que ofrezcan dichos addons.</disclaimer>
 		<platform>all</platform>
 		<license>CC-BY-NC-ND-4.0</license>
 		<forum>https://stva.ga/foro/off-topic/nuevo-skin-embuary-stva/</forum>
 		<source>https://github.com/stvabuild/repostva.matrix/skin.embuary.stva</source>
 		<assets>
-			<icon>resources/icon.png</icon>
-			<fanart>resources/fanart.jpg</fanart>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
 			<screenshot>resources/screenshot-01.jpg</screenshot>
 			<screenshot>resources/screenshot-02.jpg</screenshot>
 			<screenshot>resources/screenshot-03.jpg</screenshot>
