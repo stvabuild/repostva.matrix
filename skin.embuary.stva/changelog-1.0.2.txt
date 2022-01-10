@@ -1,0 +1,11 @@
+[B]Version 1.0.2[/B]
+- Añadido estilo de inicio con sinopsis
+- Añadido Auto reproducir Trailer
+- Añadida Calidad de Audio y Vídeo en el OSD
+
+[B]Version 1.0.1[/B]
+- Corregido error menor.
+
+[B]Version 1.0.0[/B]
+- Primera versión del Skin.
+
