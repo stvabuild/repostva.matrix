@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="repository.github" name="GitHub Add-on repository"  version="0.0.6" provider-name="i96751414">
+    <requires>
+        <!--<import addon="xbmc.python" version="3.0.0"/>-->
+    </requires>
     <extension point="xbmc.addon.repository">
         <info>http://127.0.0.1:61234/addons.xml</info>
         <checksum>http://127.0.0.1:61234/addons.xml.md5</checksum>
