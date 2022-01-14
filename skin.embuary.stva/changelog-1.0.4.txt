@@ -1,0 +1,20 @@
+[B]Version 1.0.4[/B] - 10/1/22
+10/1/22
+- Cambiado Overlay y tamaño de los Trailers
+- Corregidos errores relacionados con los trailers
+
+[B]Version 1.0.3[/B] - 10/1/22
+10/1/22
+- Corregidos errores visuales menores
+
+[B]Version 1.0.2[/B] - 10/1/22
+- Agregado estilo de inicio con sinopsis
+- Agregado Auto reproducir Trailer
+- Agregado Calidad de Audio y Video en el OSD
+
+[B]Version 1.0.1[/B] - 9/1/22
+- Corregido error menor
+
+[B]Version 1.0.0[/B] - 9/1/22
+- Primera version del Skin
+

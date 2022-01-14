@@ -1831,7 +1831,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 	</extension>
 </addon>
 
-<addon id="skin.embuary.stva" version="1.0.3" name="Embuary STVA" provider-name="stva,sualfred">
+<addon id="skin.embuary.stva" version="1.0.4" name="Embuary STVA" provider-name="stva,sualfred">
 	<requires>
 		<import addon="resource.language.es_es" />
 		<import addon="xbmc.gui" version="5.15.0"/>
