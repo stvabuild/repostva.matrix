@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.cristalazul" name="[B][/B][COLOR aqua]CRISTAL AZUL 3.0[/COLOR]" version="3.0.0" provider-name="PICAPAU, LOURDES, SUPERTOPO, LUISMA">
+<addon id="plugin.video.cristalazul" name="[B][/B][COLOR aqua]CRISTAL AZUL 3.0.2[/COLOR]" version="3.0.2" provider-name="PICAPAU, LOURDES, SUPERTOPO, LUISMA">
     <requires>
         <import addon="script.module.six"/>
         <import addon="script.module.kodi-six"/>
@@ -7,6 +7,7 @@
         <import addon="script.module.websocket" optional="true" />
         <import addon="script.module.youtube.dl" optional="true" />
         <import addon="plugin.video.youtube" />
+		<import addon="plugin.video.duffyou" optional="true" />
         <import addon="script.module.dateutil" optional="true" />
         <import addon="script.module.resolveurl" optional="true" />
         <import addon="script.module.cloudscraper" optional="true" />
@@ -44,6 +45,7 @@
         <summary>creado por picapau, lourdes, supertopo y luisma</summary>
         <description>ESTE ADDON NO CONTIENE ENLACES PROPIOS,SON RECOPILACIONES DE LA RED, SOLO SE FACILITA EL ACESSO A ESAS WEBS, ESTAS WEBS SON LAS RESPONSABLES DE LOS CONTENIDOS
         </description>
+		<disclaimer>Este es un software [COLOR red][B]gratuito[/B][/COLOR][CR][COLOR red][B]Pero no se permite[/B][/COLOR] su distribuición preinstalada en ningún tipo de dispositivo ni tampoco su inclusión total o parcial en cualquier paquete de software y/o hardware por el que el usuario final deba [COLOR red][B]pagar o hacer una donación[/B][/COLOR], por su adquisición, por su uso o por recibir asistencia.[CR]Si cree que alguna de estas normas no se está cumpliendo póngase en contacto con nosotros.</disclaimer>
         <platform>all</platform>
         <assets>
             <icon>icon.gif</icon>
