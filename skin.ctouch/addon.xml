@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addon id="skin.ctouch"  version="1.7" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="1.8" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>		
 	</requires>
@@ -17,9 +17,11 @@
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 1.7 - 11/10/21
-- Reparados errores menores.
-- Reparado error que pedía emulador en la versión Matrix.
+		<news>Versión 1.8 - 30/1/22
+- Cambiado Buscador del Inicio Cristal
+- En el inicio STVA, cambiados enlaces a Balandro por Alfa
+- Agregado enlace a colección de Kodi en el inicio STVA
+- Cambios internos menores
 		</news>
 		<assets>
 			<icon>icon.png</icon>

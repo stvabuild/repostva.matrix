@@ -1834,7 +1834,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
     </extension>
 </addon>
 
-<addon id="skin.ctouch"  version="1.7" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="1.8" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>
 	</requires>
@@ -1852,9 +1852,11 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 1.7 - 11/10/21
-- Reparados errores menores.
-- Reparado error que pedía emulador en la versión Matrix.
+		<news>Versión 1.8 - 30/1/22
+- Cambiado Buscador del Inicio Cristal
+- En el inicio STVA, cambiados enlaces a Balandro por Alfa
+- Agregado enlace a colección de Kodi en el inicio STVA
+- Cambios internos menores
 		</news>
 		<assets>
 			<icon>icon.png</icon>
@@ -1867,7 +1869,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 	</extension>
 </addon>
 
-<addon id="skin.embuary.stva" version="1.0.4" name="Embuary STVA" provider-name="stva,sualfred">
+<addon id="skin.embuary.stva" version="1.0.5" name="Embuary STVA" provider-name="stva,sualfred">
 	<requires>
 		<import addon="resource.language.es_es" />
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -1903,57 +1905,19 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 			<screenshot>resources/screenshot-08.jpg</screenshot>
 			<screenshot>resources/screenshot-09.jpg</screenshot>
 		</assets>
-	</extension>
-</addon>
-
-<addon id="skin.estuary.stva" version="0.9.13" name="Estuary STVA Matrix" provider-name="STVA">
-	<requires>
-		<import addon="xbmc.gui" version="5.15.0"/>
-		<import addon="resource.language.es_es" version="0.0.0"/>
-		<import addon="script.skinshortcuts" version="1.1.5"/>
-		<import addon="script.skin.helper.service" version="1.1.38"/>
-		<import addon="script.skin.helper.widgets" version="1.0.45"/>
-		<import addon="resource.images.studios.coloured.stva" version="0.0.51"/>
-		<import addon="resource.images.moviegenreicons.estuarystva" version="0.0.1"/>
-		<import addon="repository.repostva.matrix" version="1.0"/>
-	</requires>
-	<extension point="xbmc.gui.skin" debugging="false">
-		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
-		<res width="1920" height="1280" aspect="3:2" default="false" folder="xml" />
-		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />
-		<res width="2040" height="1080" aspect="17:9" default="false" folder="xml" />
-		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
-		<res width="2338" height="1080" aspect="19.5:9" default="false" folder="xml" />
- 		<res width="2160" height="1080" aspect="18:9" default="false" folder="xml" />
-		<res width="2560" height="1080" aspect="21:9" default="false" folder="xml" />
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">Estuary STVA skin by STVA</summary>
-		<summary lang="es_ES">Estuar STVA skin de STVA</summary>
-		<description lang="en_GB">Estuary STVA is a mod from Estuary by Guilouz for Kodi 19. It attempts to be easy for first time Kodi users to understand and use.</description>
-		<description lang="es_ES">Estuary STVA es un mod de Estuary MOD hecho por STVA para Kodi 19. Intenta ser fácil de entender y utilizar para nuevos usuarios en Kodi.</description>
-		<disclaimer lang="en_GB">For better experience, be sure to install all addons required by the skin.</disclaimer>
-		<disclaimer lang="es_ES">Para una mejor experiencia, asegúrate de instalar todos los complementos requeridos por el skin.</disclaimer>
-		<platform>all</platform>
-		<license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
-		<source>https://github.com/stvabuild/skin.estuary.modstva</source>
-			<assets>
-				<icon>resources/icon.png</icon>
-				<fanart>resources/fanart.jpg</fanart>
-				<screenshot>resources/screenshot-01.jpg</screenshot>
-				<screenshot>resources/screenshot-02.jpg</screenshot>
-				<screenshot>resources/screenshot-05.jpg</screenshot>
-				<screenshot>resources/screenshot-06.jpg</screenshot>
-				<screenshot>resources/screenshot-07.jpg</screenshot>
-				<screenshot>resources/screenshot-08.jpg</screenshot>
-				<screenshot>resources/screenshot-09.jpg</screenshot>
-				<screenshot>resources/screenshot-10.jpg</screenshot>
-				<screenshot>resources/screenshot-11.jpg</screenshot>
-			</assets>
-			<news>- Reparado tercer widget de Películas.
-			- Cambiado segundo widget de Películas.
-			- Tercer widget de Series cambiado.
-			- Cambiado primer por tercer widget en Series.</news>
+		<news>
+[B]Version 1.0.5[/B] - 30/1/22
+- Cambiadas algunas categorías
+- Cambiado orden de algunos widgets
+- Cambios internos
+- Ahora en las vistas al desplazar a la izquierda aparece el menú contextual de vistas
+- Modificado Startup y Ajustes del Skin
+- Agregada opción en Ajustes de Skin para desactivar el mensaje 'No se ha podido reproducir el trailer'
+- Agregada opción en Ajustes de Skin para restablecer los widgets y categorías por defecto
+- Agregado al menú contextual, Buscar Trailer
+- Agregado estado de la serie en vista Slide para series de la Videoteca
+- Agregado número y título de capítulo en OSD
+- Agregado al startup y Ajustes de Skin, el script.stva.matrix para instalar los ajustes recomendados</news>
 	</extension>
 </addon>
 
