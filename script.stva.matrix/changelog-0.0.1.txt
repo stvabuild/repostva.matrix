@@ -1,0 +1,15 @@
+v0.0.3 - 24/2/21
+- Cambiados Ajustes Balandro
+- Agregado addon idioma Español.
+- Incluído archivo para cambiar el idioma de la aplicación.
+- Agregado addon de subtítulos.
+
+v0.0.2 - 23/2/21
+- Cambiados Ajustes Balandro
+- Agregado addon idioma Español.
+- Incluído archivo para cambiar el idioma de la aplicación.
+- Agregado addon de subtítulos.
+- Agregado archivo con reproductores externos.
+
+v0.0.1 - 7/2/21
+- Version inicial
