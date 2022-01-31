@@ -1869,7 +1869,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 	</extension>
 </addon>
 
-<addon id="skin.embuary.stva" version="1.0.5" name="Embuary STVA" provider-name="stva,sualfred">
+<addon id="skin.embuary.stva" version="1.0.6" name="Embuary STVA" provider-name="stva,sualfred">
 	<requires>
 		<import addon="resource.language.es_es" />
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -1906,6 +1906,11 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 			<screenshot>resources/screenshot-09.jpg</screenshot>
 		</assets>
 		<news>
+[B]Version 1.0.6[/B] - 31/1/22
+- Ajustado tamaño de la ventana del trailer
+- Agregada ayuda botón ok del mando
+- Desactivado por defecto el mensaje de no se puede reproducir el trailer[CR]
+
 [B]Version 1.0.5[/B] - 30/1/22
 - Cambiadas algunas categorías
 - Cambiado orden de algunos widgets
