@@ -1,0 +1,7 @@
+[B]Versión - 0.9.13[/B]
+- Reparado tercer widget de Películas.
+- Cambiado segundo widget de Películas.
+- Tercer widget de Series cambiado.
+- Cambiado primer por tercer widget en Series.
+
+

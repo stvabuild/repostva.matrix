@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="skin.estuary.stva" version="0.9.13" name="Estuary STVA Matrix" provider-name="STVA">
+	<requires>
+		<import addon="xbmc.gui" version="5.15.0"/>
+		<import addon="resource.language.es_es" version="0.0.0"/>		
+		<import addon="script.skinshortcuts" version="1.1.5"/>
+		<import addon="script.skin.helper.service" version="1.1.38"/>
+		<import addon="script.skin.helper.widgets" version="1.0.45"/>
+		<import addon="resource.images.studios.coloured.stva" version="0.0.51"/>
+		<import addon="resource.images.moviegenreicons.estuarystva" version="0.0.1"/>
+		<import addon="repository.repostva.matrix" version="1.0"/>
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false">
+		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
+		<res width="1920" height="1280" aspect="3:2" default="false" folder="xml" />
+		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />
+		<res width="2040" height="1080" aspect="17:9" default="false" folder="xml" />
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
+		<res width="2338" height="1080" aspect="19.5:9" default="false" folder="xml" />
+ 		<res width="2160" height="1080" aspect="18:9" default="false" folder="xml" />
+		<res width="2560" height="1080" aspect="21:9" default="false" folder="xml" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Estuary STVA skin by STVA</summary>
+		<summary lang="es_ES">Estuar STVA skin de STVA</summary>
+		<description lang="en_GB">Estuary STVA is a mod from Estuary by Guilouz for Kodi 19. It attempts to be easy for first time Kodi users to understand and use.</description>
+		<description lang="es_ES">Estuary STVA es un mod de Estuary MOD hecho por STVA para Kodi 19. Intenta ser fácil de entender y utilizar para nuevos usuarios en Kodi.</description>
+		<disclaimer lang="en_GB">For better experience, be sure to install all addons required by the skin.</disclaimer>
+		<disclaimer lang="es_ES">Para una mejor experiencia, asegúrate de instalar todos los complementos requeridos por el skin.</disclaimer>
+		<platform>all</platform>
+		<license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
+		<source>https://github.com/stvabuild/skin.estuary.modstva</source>
+			<assets>
+				<icon>icon.png</icon>
+				<fanart>fanart.jpg</fanart>
+				<screenshot>resources/screenshot-01.jpg</screenshot>
+				<screenshot>resources/screenshot-02.jpg</screenshot>
+				<screenshot>resources/screenshot-05.jpg</screenshot>
+				<screenshot>resources/screenshot-06.jpg</screenshot>
+				<screenshot>resources/screenshot-07.jpg</screenshot>
+				<screenshot>resources/screenshot-08.jpg</screenshot>
+				<screenshot>resources/screenshot-09.jpg</screenshot>
+				<screenshot>resources/screenshot-10.jpg</screenshot>
+				<screenshot>resources/screenshot-11.jpg</screenshot>
+			</assets>
+			<news>- Reparado tercer widget de Películas.
+			- Cambiado segundo widget de Películas.
+			- Tercer widget de Series cambiado.
+			- Cambiado primer por tercer widget en Series.</news>
+	</extension>
+</addon>
