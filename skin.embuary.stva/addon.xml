@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.embuary.stva" version="1.0.6" name="Embuary STVA" provider-name="stva,sualfred">
+<addon id="skin.embuary.stva" version="1.0.7" name="Embuary STVA" provider-name="stva,sualfred">
 	<requires>
 		<import addon="resource.language.es_es" />
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -36,22 +36,9 @@
 			<screenshot>resources/screenshot-09.jpg</screenshot>
 		</assets>
 		<news>
-[B]Version 1.0.6[/B] - 31/1/22
-- Ajustado tamaño de la ventana del trailer
-- Agregada ayuda botón ok del mando
-- Desactivado por defecto el mensaje de no se puede reproducir el trailer[CR]
-
-[B]Version 1.0.5[/B] - 30/1/22
-- Cambiadas algunas categorías
-- Cambiado orden de algunos widgets
-- Cambios internos
-- Ahora en las vistas al desplazar a la izquierda aparece el menú contextual de vistas
-- Modificado Startup y Ajustes del Skin
-- Agregada opción en Ajustes de Skin para desactivar el mensaje 'No se ha podido reproducir el trailer'
-- Agregada opción en Ajustes de Skin para restablecer los widgets y categorías por defecto
-- Agregado al menú contextual, Buscar Trailer
-- Agregado estado de la serie en vista Slide para series de la Videoteca
-- Agregado número y título de capítulo en OSD
-- Agregado al startup y Ajustes de Skin, el script.stva.matrix para instalar los ajustes recomendados</news>
+[B]Version 1.0.7[/B] - 2/2/22
+- Ajustado tamaño y posición de la ventana del trailer
+- Editado widget de inicio, series en tendencia
+- Corregidos errores menores</news>
 	</extension>
 </addon>
