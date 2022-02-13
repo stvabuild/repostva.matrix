@@ -1,0 +1,47 @@
+[B]Version 1.0.8[/B] - 13/2/22
+- Agregada opción para bloquear el tipo de vista
+- Ocultado título de item en widgets personalizados al mostrar sinopsis en el Home
+- Corregidos errores visuales menores
+- Agregada opción de instalar los addons correspondientes al activar secciones Televisión, Deportes y Trailers
+
+[B]Version 1.0.7[/B] - 2/2/22
+- Ajustado tamaño y posición de la ventana del trailer
+- Editado widget de inicio, series en tendencia
+- Corregidos errores menores
+
+[B]Version 1.0.6[/B] - 31/1/22
+- Ajustado tamaño de la ventana del trailer
+- Agregada ayuda botón ok del mando
+- Desactivado por defecto el mensaje de no se puede reproducir el trailer
+
+[B]Version 1.0.5[/B] - 30/1/22
+- Cambiadas algunas categorías
+- Cambiado orden de algunos widgets
+- Cambios internos
+- Ahora en las vistas al desplazar a la izquierda aparece el menú contextual de vistas
+- Modificado Startup y Ajustes del Skin
+- Agregada opción en Ajustes de Skin para desactivar el mensaje 'No se ha podido reproducir el trailer'
+- Agregada opción en Ajustes de Skin para restablecer los widgets y categorías por defecto
+- Agregado al menú contextual, Buscar Trailer
+- Agregado estado de la serie en vista Slide para series de la Videoteca
+- Agregado número y título de capítulo en OSD
+- Agregado al startup y Ajustes de Skin, el script.stva.matrix para instalar los ajustes recomendados
+
+[B]Version 1.0.4[/B] - 10/1/22
+- Cambiado Overlay y tamaño de los Trailers
+- Corregidos errores relacionados con los trailers
+
+[B]Version 1.0.3[/B] - 10/1/22
+- Corregidos errores visuales menores
+
+[B]Version 1.0.2[/B] - 10/1/22
+- Agregado estilo de inicio con sinopsis
+- Agregado Auto reproducir Trailer
+- Agregado Calidad de Audio y Video en el OSD
+
+[B]Version 1.0.1[/B] - 9/1/22
+- Corregido error menor
+
+[B]Version 1.0.0[/B] - 9/1/22
+- Primera version del Skin
+

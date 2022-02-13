@@ -45,7 +45,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.alfa" name="Alfa" version="3.6.1" provider-name="Alfa Addon">
+<addon id="plugin.video.alfa" name="Alfa" version="3.6.2" provider-name="Alfa Addon">
   <requires>
     <import addon="script.module.requests"/>
     <import addon="script.module.beautifulsoup4" version="4.5.3"/>
@@ -77,10 +77,7 @@
     <news>[B]Estos son los cambios para esta versión:[/B]
 
       [COLOR green][B]Arreglos[/B][/COLOR]
-      ¤ Cuevana3                        ¤ Danimados                     ¤ SeoDiv
-      ¤ TvAnime                          ¤ Zonatorrent                    ¤ Newpct1
-      ¤ Fanpelis                           ¤ Dontorrent                      ¤ Divxtotal
-      ¤ 18+
+      ¤ Varios arreglos técnicos
 
       [COLOR green][B]Novedades[/B][/COLOR]
 
@@ -1871,14 +1868,14 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 	</extension>
 </addon>
 
-<addon id="skin.embuary.stva" version="1.0.7" name="Embuary STVA" provider-name="stva,sualfred">
+<addon id="skin.embuary.stva" version="1.0.8" name="Embuary STVA" provider-name="stva,sualfred">
 	<requires>
 		<import addon="resource.language.es_es" />
 		<import addon="xbmc.gui" version="5.15.0"/>
-		<import addon="script.embuary.helper" version="1.3.6"/>
-		<import addon="script.embuary.info" version="1.2.4"/>
-		<import addon="plugin.program.autocompletion" version="1.0.1"/>
-		<import addon="script.skinshortcuts" version="1.0.17"/>
+		<import addon="script.embuary.helper" />
+		<import addon="script.embuary.info" />
+		<import addon="plugin.program.autocompletion" />
+		<import addon="script.skinshortcuts" />
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
@@ -1908,10 +1905,11 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 			<screenshot>resources/screenshot-09.jpg</screenshot>
 		</assets>
 		<news>
-[B]Version 1.0.7[/B] - 2/2/22
-- Ajustado tamaño y posición de la ventana del trailer
-- Editado widget de inicio, series en tendencia
-- Corregidos errores menores</news>
+[B]Version 1.0.8[/B] - 13/2/22
+- Agregada opción para bloquear el tipo de vista
+- Ocultado título de item en widgets personalizados al mostrar sinopsis en el Home
+- Corregidos errores visuales menores
+- Agregada opción de instalar los addons correspondientes al activar secciones Televisión, Deportes y Trailers</news>
 	</extension>
 </addon>
 
