@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.embuary.stva" version="1.0.9" name="Embuary STVA" provider-name="stva,sualfred">
+<addon id="skin.embuary.stva" version="1.1.0" name="Embuary STVA" provider-name="stva,sualfred">
 	<requires>
 		<import addon="resource.language.es_es" />
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -36,8 +36,17 @@
 			<screenshot>resources/screenshot-09.jpg</screenshot>
 		</assets>
 		<news>
-[B]Version 1.0.9[/B] - 19/2/22
-- Corregido error en la vista Detallada
-- Cambiado fondo de la barra de progreso inferior</news>
+[B]Version 1.1.0[/B] - 12/3/22
+- Aumentado el tamaño de algunos textos
+- Cambiada acción al pulsar sobre el icono del buscador
+- Eliminado widget, películas nuevas próximamente
+- Cambiado widget películas mejor valoradas, por películas nuevas
+- Cambiado widget series mejor valoradas por series al azar
+- Eliminada categoría de series, próximas emisiones
+- Agregada categoría en series y películas, canales
+- Elimandos enlaces a cristal azul en deportes y tv
+- Cambiado widget TV Premium por Plataformas TDT
+- Añadida categoría en addons, Instalar desde Luar
+- Añadidos widgets en secciones Películas y Series de los addons Palantir y Cristal Azul</news>
 	</extension>
 </addon>
