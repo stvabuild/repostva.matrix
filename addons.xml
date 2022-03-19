@@ -45,7 +45,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.alfa" name="Alfa" version="3.6.4" provider-name="Alfa Addon">
+<addon id="plugin.video.alfa" name="Alfa" version="3.6.5" provider-name="Alfa Addon">
   <requires>
     <import addon="script.module.requests"/>
     <import addon="script.module.beautifulsoup4" version="4.5.3"/>
@@ -77,10 +77,13 @@
     <news>[B]Estos son los cambios para esta versión:[/B]
 
       [COLOR green][B]Arreglos[/B][/COLOR]
-      ¤ Cinecalidad                     ¤ Allcalidad                    ¤ Newpct1
-      ¤ Varios arreglos técnicos
+      ¤ PelixFlix                       ¤ Fanpelis                      ¤ Cuevana3Video
+      ¤ Cuevana3                    ¤ Newpct1                     ¤ Pelismaraton
+      ¤ Allcalidad                     ¤ Grantorrent               ¤ CineCalidad
+      ¤ HDFull                          ¤ 18+
 
       [COLOR green][B]Novedades[/B][/COLOR]
+      ¤ Dontorrent (2 nuevos clones)        ¤ EliteTorrent (resucitado)
 
     </news>
     <assets>
@@ -1869,7 +1872,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 	</extension>
 </addon>
 
-<addon id="skin.embuary.stva" version="1.1.0" name="Embuary STVA" provider-name="stva,sualfred">
+<addon id="skin.embuary.stva" version="1.1.1" name="Embuary STVA" provider-name="stva,sualfred">
 	<requires>
 		<import addon="resource.language.es_es" />
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -1906,18 +1909,10 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 			<screenshot>resources/screenshot-09.jpg</screenshot>
 		</assets>
 		<news>
-[B]Version 1.1.0[/B] - 12/3/22
-- Aumentado el tamaño de algunos textos
-- Cambiada acción al pulsar sobre el icono del buscador
-- Eliminado widget, películas nuevas próximamente
-- Cambiado widget películas mejor valoradas, por películas nuevas
-- Cambiado widget series mejor valoradas por series al azar
-- Eliminada categoría de series, próximas emisiones
-- Agregada categoría en series y películas, canales
-- Elimandos enlaces a cristal azul en deportes y tv
-- Cambiado widget TV Premium por Plataformas TDT
-- Añadida categoría en addons, Instalar desde Luar
-- Añadidos widgets en secciones Películas y Series de los addons Palantir y Cristal Azul</news>
+[B]Version 1.1.1[/B] - 19/3/22
+- Corregido tamaño de letra del tiempo del reproductor
+- Agregada categoría Canales deportivos en sección Deportes
+- Agregado Cristal Azul en Addons y dependencias del skin en ajustes de skin</news>
 	</extension>
 </addon>
 
