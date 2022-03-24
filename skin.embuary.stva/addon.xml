@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.embuary.stva" version="1.1.1" name="Embuary STVA" provider-name="stva,sualfred">
+<addon id="skin.embuary.stva" version="1.1.2" name="Embuary STVA" provider-name="stva,sualfred">
 	<requires>
 		<import addon="resource.language.es_es" />
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -20,7 +20,7 @@
 		<disclaimer lang="es_ES">No es compatible con mouse. Optimizado para TV con mando.[CR]El skin presenta accesos a otros addons que no tienen nada que ver con STVA.[CR]STVA no se hace responsable del contenido que ofrezcan dichos addons.</disclaimer>
 		<platform>all</platform>
 		<license>CC-BY-NC-ND-4.0</license>
-		<forum>https://stva.ga/foro/off-topic/nuevo-skin-embuary-stva/</forum>
+		<forum>https://stva.ga/foro/embuarystva/</forum>
 		<source>https://github.com/stvabuild/repostva.matrix/skin.embuary.stva</source>
 		<assets>
 			<icon>icon.png</icon>
@@ -36,9 +36,15 @@
 			<screenshot>resources/screenshot-09.jpg</screenshot>
 		</assets>
 		<news>
-[B]Version 1.1.1[/B] - 19/3/22
-- Corregido tamaño de letra del tiempo del reproductor
-- Agregada categoría Canales deportivos en sección Deportes
-- Agregado Cristal Azul en Addons y dependencias del skin en ajustes de skin</news>
+[B]Version 1.1.2[/B] - 24/3/22
+- Corregidos errores tipográficos y gráficos menores
+- Cambiada opacidad del fondo por defecto
+- Añadida categoría Ver Carreras en sección Deportes
+- Agregada categoría Limpiar en Ajustes
+- Tamaño del título de widgets aumentado
+- El Teclado ahora puedes pasar de izquierda a derecha y viceversa
+- Sección Favoritos, activada por defecto
+- Reconfigurada sección de Ajustes
+- Reconfigurados widgets de inicio</news>
 	</extension>
 </addon>
