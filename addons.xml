@@ -45,7 +45,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.alfa" name="Alfa" version="3.6.5" provider-name="Alfa Addon">
+<addon id="plugin.video.alfa" name="Alfa" version="3.6.6" provider-name="Alfa Addon">
   <requires>
     <import addon="script.module.requests"/>
     <import addon="script.module.beautifulsoup4" version="4.5.3"/>
@@ -77,13 +77,13 @@
     <news>[B]Estos son los cambios para esta versión:[/B]
 
       [COLOR green][B]Arreglos[/B][/COLOR]
-      ¤ PelixFlix                       ¤ Fanpelis                      ¤ Cuevana3Video
-      ¤ Cuevana3                    ¤ Newpct1                     ¤ Pelismaraton
-      ¤ Allcalidad                     ¤ Grantorrent               ¤ CineCalidad
-      ¤ HDFull                          ¤ 18+
+      ¤ Cinecalidad                        ¤ Divxtotal                       ¤ Dontorrent
+      ¤ Doramasmp4                    ¤ Estrenospapaya            ¤ Newpct1
+      ¤ Pelisencastellano              ¤ Pelisplus                       ¤ Serieslan
+      ¤ Url                                       ¤ Watchseries                 ¤ 18+
 
       [COLOR green][B]Novedades[/B][/COLOR]
-      ¤ Dontorrent (2 nuevos clones)        ¤ EliteTorrent (resucitado)
+      ¤ MoviesDVDR
 
     </news>
     <assets>
@@ -1006,7 +1006,7 @@ v0.28.0 (2020-02-08)
     </extension>
 </addon>
 
-<addon id="script.module.inputstreamhelper" name="InputStream Helper" version="0.5.8+matrix.1" provider-name="emilsvennesson, dagwieers, mediaminister, horstle">
+<addon id="script.module.inputstreamhelper" name="InputStream Helper" version="0.5.9+matrix.1" provider-name="emilsvennesson, dagwieers, mediaminister, horstle">
   <requires>
     <!--py3 compliant-->
     <import addon="xbmc.python" version="3.0.0"/>
@@ -1018,18 +1018,26 @@ v0.28.0 (2020-02-08)
   </extension>
   <extension point="xbmc.python.module" library="lib"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">Kodi InputStream and DRM playback made easy</summary>
     <summary lang="de_DE">Kodi InputStream und DRM Wiedergabe einfach gemacht</summary>
     <summary lang="el_GR">Βοηθός Inputstream για το Kodi και εύκολη αναπαραγωγή DRM</summary>
-    <summary lang="fr_FR">La lecture Kodi InputStream et DRM en toute simplicité</summary>
+    <summary lang="en_GB">Kodi InputStream and DRM playback made easy</summary>
     <summary lang="es_ES">Kodi InputStream y reproducción DRM echa fácil</summary>
-    <description lang="en_GB">A simple Kodi module that makes life easier for add-on developers relying on InputStream based add-ons and DRM playback.</description>
+    <summary lang="fr_FR">La lecture Kodi InputStream et DRM en toute simplicité</summary>
+    <summary lang="hr_HR">Kodi InputStream olakšava reprodukciju DRM zaštićenog sadržaja</summary>
     <description lang="de_DE">Dieses einfache Kodi-Modul macht das Leben für Addon Entwickler einfacher, die auf InputStream basierte Addons und DRM Wiedergabe angewiesen sind.</description>
     <description lang="el_GR">Μία απλή μονάδα για το Kodi η οποία διευκολύνει την ζωή των προγραμματιστών οι οποίοι εξαρτώνται από τα πρόσθετσ InputStream και αναπαραγωγή τύπου DRM.</description>
-    <description lang="ru_RU">Простой модуль для Kodi, который облегчает жизнь разработчикам дополнений, с использованием InputStream дополнений и воспроизведения DRM контента.</description>
-    <description lang="fr_FR">Un simple module Kodi qui simplifie la vie des développeurs de modules complémentaires en s’appuyant sur des modules complémentaires basés sur InputStream et sur la lecture de DRM.</description>
+    <description lang="en_GB">A simple Kodi module that makes life easier for add-on developers relying on InputStream based add-ons and DRM playback.</description>
     <description lang="es_ES">Un módulo Kodi simple que hace la vida más fácil para los desarrolladores de complementos que dependen de complementos basados en InputStream y reproducción de DRM.</description>
+    <description lang="fr_FR">Un simple module Kodi qui simplifie la vie des développeurs de modules complémentaires en s’appuyant sur des modules complémentaires basés sur InputStream et sur la lecture de DRM.</description>
+    <description lang="hr_HR">Jednostavan Kodi modul koji olakšava razvijanje dodataka koji se temelje na InputStream dodatku i reprodukciji DRM zaštićenog sadržaja.</description>
+    <description lang="ru_RU">Простой модуль для Kodi, который облегчает жизнь разработчикам дополнений, с использованием InputStream дополнений и воспроизведения DRM контента.</description>
     <news>
+v0.5.9 (2022-03-22)
+- Update Croatian translation
+- Replace deprecated LooseVersion
+- Fix http_get decode error
+- Option to install Widevine from specified source
+
 v0.5.8 (2021-09-09)
 - Simplify Widevine CDM installation on ARM hardware
 - Update Chrome OS ARM hardware id's
@@ -1233,7 +1241,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.59" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.63" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six" />
@@ -1872,25 +1880,23 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 	</extension>
 </addon>
 
-<addon id="skin.embuary.stva" version="1.1.3" name="Embuary STVA" provider-name="stva,sualfred">
+<addon id="skin.embuary.stva" version="1.1.4" name="Embuary STVA" provider-name="stva">
 	<requires>
 		<import addon="resource.language.es_es" />
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="script.embuary.helper" />
-		<import addon="script.embuary.info" />
-		<import addon="plugin.program.autocompletion" />
 		<import addon="script.skinshortcuts" />
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">Embuary STVA It is a mod of Sualfred's Skin Embuary Matrix</summary>
-		<summary lang="es_ES">Embuary STVA es un mod del Skin Embuary Matrix de Sualfred. </summary>
-		<description lang="en_GB">Embuary STVA It is a mod of Sualfred's Skin Embuary Matrix.[CR]Embuary STVA is modified to be able to obtain audiovisual content easily.</description>
-		<description lang="es_ES">Embuary STVA es un mod del Skin Embuary Matrix de Sualfred.[CR]Está modificado para poder obtener contenido audiovisual fácilmente.</description>
-		<disclaimer lang="en_GB">It does not support mouse. Optimized for remote control TV.[CR]The Skin presents accesses to other addons that have nothing to do with STVA.[CR]STVA is not responsible for the content offered by said addons.</disclaimer>
-		<disclaimer lang="es_ES">No es compatible con mouse. Optimizado para TV con mando.[CR]El skin presenta accesos a otros addons que no tienen nada que ver con STVA.[CR]STVA no se hace responsable del contenido que ofrezcan dichos addons.</disclaimer>
+		<summary lang="en_GB">Embuary STVA It is a Skin Wizard created from Sualfred's Skin Embuary Matrix</summary>
+		<summary lang="es_ES">Embuary STVA es un Skin Wizard creado a partir del Skin Embuary Matrix de Sualfred. </summary>
+		<description lang="en_GB">Embuary STVA It is a Skin Wizard created from Sualfred's Skin Embuary Matrix.[CR]Embuary STVA is modified to be able to obtain audiovisual content easily.</description>
+		<description lang="es_ES">Embuary STVA es un Skin Wizard creado a partir del Skin Embuary Matrix de Sualfred.[CR]Skin modificado para poder obtener contenido audiovisual fácilmente, ofrece la instalación de varios addons y el skin ya está configurado para acceder a ellos.[CR]No es compatible con mouse. Optimizado para TV con mando.[CR][CR]web: [B]stva.ga[/B][CR]Foro: [B]stva.ga/foro[/B][CR]Telegram: [B]t.me/stvabuild[/B]</description>
+		<disclaimer lang="en_GB">The Skin presents accesses to other addons that have nothing to do with STVA.[CR]STVA is not responsible for the content offered by said addons.</disclaimer>
+		<disclaimer lang="es_ES">El skin presenta accesos a otros addons que no tienen nada que ver con STVA.[CR]STVA no se hace responsable del contenido que ofrezcan dichos addons.</disclaimer>
 		<platform>all</platform>
 		<license>CC-BY-NC-ND-4.0</license>
 		<forum>https://stva.ga/foro/embuarystva/</forum>
@@ -1909,22 +1915,23 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 			<screenshot>resources/screenshot-09.jpg</screenshot>
 		</assets>
 		<news>
-[B]Version 1.1.3[/B] - 25/3/22
-- Corregido orden de widgets del hub de Addons
-- eliminadas flechas de los widgets
-- Corregido bucle en el startup después de una actualización
-- Corregido error que mostraba el mensaje de no hay trailer
-
-[B]Version 1.1.2[/B] - 24/3/22
-- Corregidos errores tipográficos y gráficos menores
-- Cambiada opacidad del fondo por defecto
-- Añadida categoría Ver Carreras en sección Deportes
-- Agregada categoría Limpiar en Ajustes
-- Tamaño del título de widgets aumentado
-- El Teclado ahora puedes pasar de izquierda a derecha y viceversa
-- Sección Favoritos, activada por defecto
-- Reconfigurada sección de Ajustes
-- Reconfigurados widgets de inicio</news>
+[B]Version 1.1.4[/B] - 3/4/22
+- Añadido al Startup la desactivación de los scripts del pack ajustes
+- Añadida Sección, Instalador Pack Ajustes, en Ajustes de Skin
+- Ahora se puede instalar y desactivar los addons instaladores del pack ajustes desde ajustes de Skin
+- Añadida Sección, Canales de Ayuda, en Ajustes de Skin
+- En Ajustes de Skin, Addons y dependencias, ahora torrest primero pide descargar su repositorio
+- Cambiados widgets de inicio, Series en Tendencia, Películas en Tendencia, Series Populares y Películas Populares
+- Cambiados widget Descubrir Series y Descubrir Películas
+- Agregado consejo para usar micrófono en ventana de teclado
+- Cambios en el diseño de los widgets
+- Eliminada opción Esconder Etiquetas de Ajustes de Skin
+- Ahora al llegar al última widget pasa al primero y al pulsar atrás el foco pasa al menú superior
+- Cambiada opacidad del fondo
+- Añadida opción para Activar/Desactivar el Autoplay de Alfa en Ajustes de Skin > General > Setup
+- Reajustada ventana de Trailer Automático
+- Corregido otro bucle en el startup
+- Añadida Lista de Deseos de Alfa como Categoría de Películas</news>
 	</extension>
 </addon>
 
