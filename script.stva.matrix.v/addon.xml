@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.stva.matrix.v" name="Instalador Pack Ajustes [COLOR orange]STVA[/COLOR] MATRIX" version="1.0.3" provider-name="www.stva.ga">
+<addon id="script.stva.matrix.v" name="Instalador Pack Ajustes [COLOR orange]STVA[/COLOR]CON Videoteca" version="1.0.4" provider-name="www.stva.ga">
     <requires>
     </requires>
     <extension point="xbmc.python.script" library="main.py">
@@ -8,7 +8,7 @@
 	<extension point="xbmc.service" library="main.py">
 	</extension>
     <extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">Instalador del Pack Ajustes para los Skins de STVA.</summary>
+        <summary lang="en_GB">Instalador del Pack Ajustes con videoteca configurada, para los Skins de STVA.</summary>
         <description lang="en_GB"></description>
         <language></language>
         <platform>all</platform>
@@ -23,5 +23,9 @@
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
         </assets>
-    </extension>
+		<news>[B]Version 1.0.4[/B] - /4/22
+- Desactivado autoplay en todos los canales y activado el general
+- Cambiados algunos ajustes de canales de Alfa
+- Agregados Ajustes de otras opciones de búsqueda</news>
+   </extension>
 </addon>

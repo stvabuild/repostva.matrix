@@ -1,0 +1,8 @@
+[B]Version 1.0.4[/B] - /4/22
+- Desactivado autoplay en todos los canales y activado el general
+- Cambiados algunos ajustes de canales de Alfa
+- Agregados Ajustes de otras opciones de búsqueda
+
+[B]Version 1.0.3[/B] - 24/3/22
+- Añadida cuenta STVA para el canal HDFull del addon Alfa
+
