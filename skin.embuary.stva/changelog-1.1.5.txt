@@ -1,0 +1,111 @@
+[B]Version 1.1.5[/B] - /4/22
+- Se ha cambiado en todas las ventanas las carátulas poster y anchas a redondeadas
+- Se ha cambiado la sección Limpieza por Útiles en Ajustes
+- Se ha cambiado el foco en el inicio
+- Se han hecho diversos retoques visuales
+- Ahora al pulsar sobre la lupa, pide descargar el addon Autocompletion
+
+[B]Version 1.1.4[/B] - 3/4/22
+- Añadido al Startup la desactivación de los scripts del pack ajustes
+- Añadida Sección, Instalador Pack Ajustes, en Ajustes de Skin
+- Ahora se puede instalar y desactivar los addons instaladores del pack ajustes desde ajustes de Skin
+- Añadida Sección, Canales de Ayuda, en Ajustes de Skin
+- En Ajustes de Skin, Addons y dependencias, ahora torrest primero pide descargar su repositorio
+- Cambiados widgets de inicio, Series en Tendencia, Películas en Tendencia, Series Populares y Películas Populares
+- Cambiados widget Descubrir Series y Descubrir Películas
+- Agregado consejo para usar micrófono en ventana de teclado
+- Cambios en el diseño de los widgets
+- Eliminada opción Esconder Etiquetas de Ajustes de Skin
+- Ahora al llegar al última widget pasa al primero y al pulsar atrás el foco pasa al menú superior
+- Cambiada opacidad del fondo
+- Añadida opción para Activar/Desactivar el Autoplay de Alfa en Ajustes de Skin > General > Setup
+- Reajustada ventana de Trailer Automático
+- Corregido otro bucle en el startup
+- Añadida Lista de Deseos de Alfa como Categoría de Películas
+
+[B]Version 1.1.3[/B] - 25/3/22
+- Corregido orden de widgets del hub de Addons
+- eliminadas flechas de los widgets
+- Corregido bucle en el startup después de una actualización
+- Corregido error que mostraba el mensaje de no hay trailer
+
+[B]Version 1.1.2[/B] - 24/3/22
+- Corregidos errores tipográficos y gráficos menores
+- Cambiada opacidad del fondo por defecto
+- Añadida categoría Ver Carreras en sección Deportes
+- Agregada categoría Limpiar en Ajustes
+- Tamaño del título de widgets aumentado
+- El Teclado ahora puedes pasar de izquierda a derecha y viceversa
+- Sección Favoritos, activada por defecto
+- Reconfigurada sección de Ajustes
+- Reconfigurados widgets de inicio
+
+[B]Version 1.1.1[/B] - 19/3/22
+- Corregido tamaño de letra del tiempo del reproductor
+- Agregada categoría Canales deportivos en sección Deportes
+- Agregado Cristal Azul en Addons y dependencias del skin en ajustes de skin
+
+[B]Version 1.1.0[/B] - 12/3/22
+- Aumentado el tamaño de algunos textos
+- Cambiada acción al pulsar sobre el icono del buscador
+- Eliminado widget, películas nuevas próximamente
+- Cambiado widget películas mejor valoradas, por películas nuevas
+- Cambiado widget series mejor valoradas por series al azar
+- Eliminada categoría de series, próximas emisiones
+- Agregada categoría en series y películas, canales
+- Elimandos enlaces a cristal azul en deportes y tv
+- Cambiado widget TV Premium por Plataformas TDT
+- Añadida categoría en addons, Instalar desde Luar
+- Añadidos widgets en secciones Películas y Series de los addons Palantir y Cristal Azul
+
+[B]Version 1.0.9[/B] - 19/2/22
+- Corregido error en la vista Detallada
+- Cambiado fondo de la barra de progreso inferior
+
+[B]Version 1.0.8[/B] - 13/2/22
+- Agregada opción para bloquear el tipo de vista
+- Ocultado título de item en widgets personalizados al mostrar sinopsis en el Home
+- Corregidos errores visuales menores
+- Agregada opción de instalar los addons correspondientes al activar secciones Televisión, Deportes y Trailers
+
+[B]Version 1.0.7[/B] - 2/2/22
+- Ajustado tamaño y posición de la ventana del trailer
+- Editado widget de inicio, series en tendencia
+- Corregidos errores menores
+
+[B]Version 1.0.6[/B] - 31/1/22
+- Ajustado tamaño de la ventana del trailer
+- Agregada ayuda botón ok del mando
+- Desactivado por defecto el mensaje de no se puede reproducir el trailer
+
+[B]Version 1.0.5[/B] - 30/1/22
+- Cambiadas algunas categorías
+- Cambiado orden de algunos widgets
+- Cambios internos
+- Ahora en las vistas al desplazar a la izquierda aparece el menú contextual de vistas
+- Modificado Startup y Ajustes del Skin
+- Agregada opción en Ajustes de Skin para desactivar el mensaje 'No se ha podido reproducir el trailer'
+- Agregada opción en Ajustes de Skin para restablecer los widgets y categorías por defecto
+- Agregado al menú contextual, Buscar Trailer
+- Agregado estado de la serie en vista Slide para series de la Videoteca
+- Agregado número y título de capítulo en OSD
+- Agregado al startup y Ajustes de Skin, el script.stva.matrix para instalar los ajustes recomendados
+
+[B]Version 1.0.4[/B] - 10/1/22
+- Cambiado Overlay y tamaño de los Trailers
+- Corregidos errores relacionados con los trailers
+
+[B]Version 1.0.3[/B] - 10/1/22
+- Corregidos errores visuales menores
+
+[B]Version 1.0.2[/B] - 10/1/22
+- Agregado estilo de inicio con sinopsis
+- Agregado Auto reproducir Trailer
+- Agregado Calidad de Audio y Video en el OSD
+
+[B]Version 1.0.1[/B] - 9/1/22
+- Corregido error menor
+
+[B]Version 1.0.0[/B] - 9/1/22
+- Primera version del Skin
+

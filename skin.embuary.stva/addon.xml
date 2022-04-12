@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.embuary.stva" version="1.1.4" name="Embuary STVA" provider-name="stva">
+<addon id="skin.embuary.stva" version="1.1.5" name="Embuary STVA" provider-name="stva">
 	<requires>
 		<import addon="resource.language.es_es" />
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -34,22 +34,11 @@
 			<screenshot>resources/screenshot-09.jpg</screenshot>
 		</assets>
 		<news>
-[B]Version 1.1.4[/B] - 3/4/22
-- Añadido al Startup la desactivación de los scripts del pack ajustes
-- Añadida Sección, Instalador Pack Ajustes, en Ajustes de Skin
-- Ahora se puede instalar y desactivar los addons instaladores del pack ajustes desde ajustes de Skin
-- Añadida Sección, Canales de Ayuda, en Ajustes de Skin
-- En Ajustes de Skin, Addons y dependencias, ahora torrest primero pide descargar su repositorio
-- Cambiados widgets de inicio, Series en Tendencia, Películas en Tendencia, Series Populares y Películas Populares
-- Cambiados widget Descubrir Series y Descubrir Películas
-- Agregado consejo para usar micrófono en ventana de teclado
-- Cambios en el diseño de los widgets
-- Eliminada opción Esconder Etiquetas de Ajustes de Skin
-- Ahora al llegar al última widget pasa al primero y al pulsar atrás el foco pasa al menú superior
-- Cambiada opacidad del fondo
-- Añadida opción para Activar/Desactivar el Autoplay de Alfa en Ajustes de Skin > General > Setup
-- Reajustada ventana de Trailer Automático
-- Corregido otro bucle en el startup
-- Añadida Lista de Deseos de Alfa como Categoría de Películas</news>
+[B]Version 1.1.5[/B] - /4/22
+- Se ha cambiado en todas las ventanas las carátulas poster y anchas a redondeadas
+- Se ha cambiado la sección Limpieza por Útiles en Ajustes
+- Se ha cambiado el foco en el inicio
+- Se han hecho diversos retoques visuales
+- Ahora al pulsar sobre la lupa, pide descargar el addon Autocompletion</news>
 	</extension>
 </addon>
