@@ -1,4 +1,4 @@
-[B]Version 1.1.5[/B] - /4/22
+[B]Version 1.1.5[/B] - 12/4/22
 - Se ha cambiado en todas las ventanas las carátulas poster y anchas a redondeadas
 - Se ha cambiado la sección Limpieza por Útiles en Ajustes
 - Se ha cambiado el foco en el inicio
