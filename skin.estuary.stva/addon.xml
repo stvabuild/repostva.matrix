@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.stva" version="0.9.13" name="Estuary STVA Matrix" provider-name="STVA">
+<addon id="skin.estuary.stva" version="1.0" name="Estuary STVA" provider-name="STVA">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="resource.language.es_es" version="0.0.0"/>		
@@ -9,6 +9,7 @@
 		<import addon="resource.images.studios.coloured.stva" version="0.0.51"/>
 		<import addon="resource.images.moviegenreicons.estuarystva" version="0.0.1"/>
 		<import addon="repository.repostva.matrix" version="1.0"/>
+		<import addon="script.embuary.helper" version="1.0"/>
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
 		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
@@ -43,9 +44,14 @@
 				<screenshot>resources/screenshot-10.jpg</screenshot>
 				<screenshot>resources/screenshot-11.jpg</screenshot>
 			</assets>
-			<news>- Reparado tercer widget de Películas.
-			- Cambiado segundo widget de Películas.
-			- Tercer widget de Series cambiado.
-			- Cambiado primer por tercer widget en Series.</news>
+			<news>[B]Versión 1.0[/B] - 12/4/22
+- Agregado al inicio y a ajustes de Skin el instalador pack ajustes
+- Eliminada opción addon Balandro en Inicio, ahora solo funcionará con Alfa
+- Cambiados dos primeros widgets de Películas y Series
+- Reconfigurada categoría Canales Deportivos, ahora enlaza a sección Deportes de Cristal Azul
+- Eliminado repositorio TVAddons
+- Agregada dependencia embuary helper
+- Eliminado sufijo Matrix del Skin
+- Cambiado icono y fanart</news>
 	</extension>
 </addon>

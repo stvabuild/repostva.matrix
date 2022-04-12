@@ -1,0 +1,13 @@
+[B]Versión - 1.0[/B] - 12/4/22
+- Agregado al inicio y a ajustes de Skin el instalador pack ajustes
+- Eliminada opción addon Balandro en Inicio, ahora solo funcionará con Alfa
+- Cambiados dos primeros widgets de Películas y Series
+- Reconfigurada categoría Canales Deportivos, ahora enlaza a sección Deportes de Cristal Azul
+- Eliminado repositorio TVAddons
+- Agregada dependencia embuary helper
+- Eliminado sufijo Matrix del Skin
+- Cambiado icono y fanart
+
+
+
+
