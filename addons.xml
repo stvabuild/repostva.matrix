@@ -1372,7 +1372,7 @@ Version 1.0.37
     </extension>
 </addon>
 
-<addon id="script.stva" name="[COLOR white]Complemento [COLOR orange]STVA[/COLOR]" version="1.0" provider-name="stva">
+<addon id="script.stva" name="[COLOR white]Complemento [COLOR orange]STVA[/COLOR]" version="0.1" provider-name="stva">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" />
