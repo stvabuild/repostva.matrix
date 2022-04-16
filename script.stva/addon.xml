@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.stva" name="[COLOR white]Complemento [COLOR orange]STVA[/COLOR]" version="0.1" provider-name="stva">
+<addon id="script.stva" name="Complemento [COLOR orange]STVA[/COLOR]" version="1.0" provider-name="stva">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" />
@@ -20,7 +20,9 @@
     
     <extension point="xbmc.addon.metadata">
     <summary lang="en">Complemento para Skins STVA</summary>
-    <description lang="en">Complemento para los skins STVA</description>
+    <description lang="en">Complemento para los skins STVA.
+Funciones: Instalar el pack de ajustes stva, limpiar aplicación, copia de seguridad de la videoteca de alfa y de la aplicación, proteger datos, herramientas de addons y más.
+Addon basado en el addon wizard kodileia, agradecimientos al grupo</description>
         <platform>all</platform>
         <reuselanguageinvoker>false</reuselanguageinvoker>
         
