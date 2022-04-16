@@ -1372,6 +1372,39 @@ Version 1.0.37
     </extension>
 </addon>
 
+<addon id="script.stva" name="[COLOR white]Complemento [COLOR orange]STVA[/COLOR]" version="1.0" provider-name="stva">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.six" />
+    </requires>
+
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+    </extension>
+
+	<extension point="xbmc.addon.repository" name="repofamilyleia">
+        <info>https://raw.githubusercontent.com/stvabuild/repostva.matrix/master/Repositorio/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/stvabuild/repostva.matrix/master/Repositorio/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/stvabuild/repostva.matrix/master/Repositorio/</datadir>
+    </extension>
+
+    <extension point="xbmc.service" library="startup.py" start="startup" />
+
+    <extension point="xbmc.addon.metadata">
+    <summary lang="en">Complemento para Skins STVA</summary>
+    <description lang="en">Complemento para los skins STVA</description>
+        <platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+
+
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
 <addon id="script.stva.matrix" name="Instalador Pack Ajustes [COLOR orange]STVA[/COLOR] SIN Videoteca" version="1.0.4" provider-name="www.stva.ga">
     <requires>
     </requires>
