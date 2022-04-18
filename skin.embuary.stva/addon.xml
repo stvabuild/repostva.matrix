@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.embuary.stva" version="1.1.5" name="Embuary STVA" provider-name="stva">
+<addon id="skin.embuary.stva" version="1.1.6" name="Embuary STVA" provider-name="stva">
 	<requires>
 		<import addon="resource.language.es_es" />
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="script.embuary.helper" />
 		<import addon="script.skinshortcuts" />
+		<import addon="script.stva" />
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
@@ -34,11 +35,8 @@
 			<screenshot>resources/screenshot-09.jpg</screenshot>
 		</assets>
 		<news>
-[B]Version 1.1.5[/B] - 12/4/22
-- Se ha cambiado en todas las ventanas las carátulas poster y anchas a redondeadas
-- Se ha cambiado la sección Limpieza por Útiles en Ajustes
-- Se ha cambiado el foco en el inicio
-- Se han hecho diversos retoques visuales
-- Ahora al pulsar sobre la lupa, pide descargar el addon Autocompletion</news>
+[B]Version 1.1.6[/B] - 18/4/22
+- Corregidos algunos widgets
+- Sustituido antiguo instalador pack ajustes por complemento stva en todo el skin</news>
 	</extension>
 </addon>
