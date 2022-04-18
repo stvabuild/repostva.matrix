@@ -1,0 +1,38 @@
+{
+  "Estilo 1": {
+    "movie": "white",
+    "tvshow": "salmon",
+    "year": "cyan",
+    "rating_1": "red",
+    "rating_2": "orange",
+    "rating_3": "gold",
+    "quality": "deepskyblue",
+    "cast": "yellow",
+    "lat": "limegreen",
+    "vose": "firebrick",
+    "vos": "firebrick",
+    "vo": "firebrick",
+    "server": "orange",
+    "library": "yellow",
+    "update": "limegreen",
+    "no_update": "red"
+  },
+  "Estilo 2": {
+    "movie": "deepskyblue",
+    "tvshow": "goldenrod",
+    "year": "yellow",
+    "rating_1": "red",
+    "rating_2": "white",
+    "rating_3": "gold",
+    "quality": "salmon",
+    "cast": "orange",
+    "lat": "deepskyblue",
+    "vose": "yellow",
+    "vos": "red",
+    "vo": "firebrick",
+    "server": "white",
+    "library": "yellow",
+    "update": "gold",
+    "no_update": "red"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "active": true,
+  "find_videos": {
+    "ignore_urls": [],
+    "patterns": [
+      {
+        "pattern": "playtube.ws/(?:embed-|)(\\w+)",
+        "url": "https://playtube.ws/embed-\\1.html"
+      },
+      {
+        "pattern": "(https://vtube.to/embed-[A-z0-9]+.html)",
+        "url": "\\1"
+      }
+      ]
+  },
+  "free": true,
+  "id": "playtube",
+  "name": "playtube",
+  "settings": [
+    {
+      "default": false,
+      "enabled": true,
+      "id": "black_list",
+      "label": "@60654",
+      "type": "bool",
+      "visible": true
+    },
+    {
+      "default": 0,
+      "enabled": true,
+      "id": "favorites_servers_list",
+      "label": "@60655",
+      "lvalues": [
+        "No",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "type": "list",
+      "visible": false
+    }
+  ],
+  "thumbnail": "https://i.postimg.cc/8CVV6DnF/playtube.png"
+}
