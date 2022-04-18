@@ -3,9 +3,8 @@
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="resource.language.es_es" version="0.0.0"/>		
+		<import addon="repository.marcelveldt" />
 		<import addon="script.skinshortcuts" version="1.1.5"/>
-		<import addon="script.skin.helper.service" version="1.1.38"/>
-		<import addon="script.skin.helper.widgets" version="1.0.45"/>
 		<import addon="resource.images.studios.coloured.stva" version="0.0.51"/>
 		<import addon="resource.images.moviegenreicons.estuarystva" version="0.0.1"/>
 		<import addon="repository.repostva.matrix" version="1.0"/>
