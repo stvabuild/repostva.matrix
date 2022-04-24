@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addon id="skin.ctouch"  version="1.8.1" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="1.9" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>		
 	</requires>
@@ -17,8 +17,17 @@
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 1.8.1 - 11/4/22
-- Cambiado item 'En vivo' del addon winner por la Sección Deportes de Cristal Azul, tanto en el inicio Cristal como STVA
+		<news>Versión 1.9 - 24/4/22
+- Reparado error que hacía que no apareciera el botón táctil para cerrar ventanas emergentes
+- Cambiado aspecto de los iconos de los items personalizados
+- Modificados algunos items del inicio STVA
+- Cambiado en ajustes, item mantenimiento de limpia tu kodi a complemento stva
+- Si activas el addon iptv simple client o tvheadend htsp client, el item tv premium en el inicio STVa cambia a la lista IPTV
+- Añadido a items personalizados, item iptv y colección de la aplicación. Se pueden desactivar
+- Ventana de progreso movida al centro como la ventana de notificaciones
+- Eliminado fondo de la ventana de notificaciones.
+- Corregidos fallos visuales en vistas de colección
+- Editado startup
 		</news>
 		<assets>
 			<icon>icon.png</icon>
