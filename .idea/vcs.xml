@@ -4,6 +4,7 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/script.module.metadatautils" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/script.skin.helper.service" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/script.skin.helper.skinbackup" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/script.skin.helper.widgets" vcs="Git" />
   </component>
 </project>
