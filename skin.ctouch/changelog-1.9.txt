@@ -1,3 +1,17 @@
+2.0 - 20/5/22
+- Agregada función para cambiar el color principal del skin desde Ajustes, Ajustes de Skin, Apariencia
+- Agregada función para hacer los iconos superiores del menú más pequeños, en Ajustes de Skin, Apariencia
+- Actualizados enalces de Winner a Winner2
+- Reconfigurado tamaño de los items del inicio personal
+- Agregado item iptv y videoteca al pulsar sobre items inicio en Ajustes de Skin
+- Reparado item Youtube del inicio Cristal
+- Reconfigurado primer inicio
+- Agregados algunos addons a Ajustes de Skin, addons
+- Cambiado addon que fuerza el cierre, de Force Close a Complemento STVA
+- Cambiado Skin helper Backup por Complemento STVA en Ajustes de Skin, Copias de Seguridad
+- Añadido Canales de Addons (canales y grupos de telegram), a Ajustes de Skin
+- Cambios gráficos menores
+
 1.9 - 24/4/22
 - Reparado error que hacía que no apareciera el botón táctil para cerrar ventanas emergentes
 - Cambiado aspecto de los iconos de los items personalizados
