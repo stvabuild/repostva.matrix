@@ -11,22 +11,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15fde8f9-d8c9-4746-a759-6e7e77d26162" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/repo_maker_py3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skin.ctouch/changelog-2.0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skin.ctouch/skin.ctouch-2.0.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/repostva.matrix.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/skin.ctouch/changelog-2.0.1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skin.ctouch/skin.ctouch-2.0.1.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skin.ctouch/xml/Home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skin.ctouch/xml/MusicOSD.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skin.ctouch/xml/MusicVisualisation.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skin.ctouch/xml/MyMusicPlaylistEditor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skin.ctouch/xml/MyPVRRecordings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skin.ctouch/xml/MyPVRTimers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skin.ctouch/xml/MyPics.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skin.ctouch/xml/MyPlaylist.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skin.ctouch/xml/MyPrograms.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skin.ctouch/xml/MyVideoNav.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skin.ctouch/xml/MyWeather.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skin.ctouch/xml/Settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skin.ctouch/xml/SettingsCategory.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skin.ctouch/xml/SettingsProfile.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skin.ctouch/xml/SlideShow.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skin.ctouch/xml/VideoFullScreen.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skin.ctouch/xml/VideoOSDBookmarks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skin.ctouch/xml/View-General.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skin.ctouch/xml/View-Music.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/addons.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addons.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/addons.xml.md5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/skin.ctouch/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/skin.ctouch/addon.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skin.ctouch/changelog-1.9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skin.ctouch/skin.ctouch-1.9.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vfs.libarchive/addon.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vfs.libarchive/vfs.libarchive-0.9.2.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.ctouch/changelog-2.0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.ctouch/skin.ctouch-2.0.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,12 +58,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.repo_maker_py3">
     <configuration name="repo_maker_py3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="repostva.matrix" />

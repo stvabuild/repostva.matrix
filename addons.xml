@@ -45,7 +45,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.alfa" name="Alfa" version="3.6.9" provider-name="Alfa Addon">
+<addon id="plugin.video.alfa" name="Alfa" version="3.7.0" provider-name="Alfa Addon">
   <requires>
     <import addon="script.module.requests"/>
     <import addon="script.module.beautifulsoup4" version="4.5.3"/>
@@ -77,18 +77,13 @@
     <news>[B]Estos son los cambios para esta versión:[/B]
 
       [COLOR green][B]Arreglos[/B][/COLOR]
-      ¤ Serieslan                      ¤ Allcalidad                      ¤ Animespace
-      ¤ Cuevana3video           ¤ Divxtotal                       ¤ Dontorrent
-      ¤ Elitetorrent                  ¤ Ennovelas                     ¤ Fullseriehd
-      ¤ Grantorrent                 ¤ HDFull                           ¤ Magnetpelis
-      ¤ Mejortorrent               ¤ Newpct1                       ¤ Salynpm
-      ¤ Seriesantiguas            ¤ Pelisplanet                    ¤ Allcalidad
-      ¤ 18+
+      ¤ Allcalidad                         ¤ Cinecalidad                             ¤ Cuevana3video
+      ¤ Dontorrent                      ¤ Entrepeliculasyseries             ¤ Estrenospapaya
+      ¤ Grantorrent                     ¤ Newpct1                                  ¤ PoseidonHD
+      ¤ Seriesanimadas              ¤ Subtorrents                             ¤ 18+
 
       [COLOR green][B]Novedades[/B][/COLOR]
-      ¤ Dangotoons (desactivado)        ¤ Zooqle (desactivado)
-      ¤ Rexpelis  (reactivación)              ¤ Asialiveaction (reactivación)
-      ¤ 18+
+      ¤ Soporte inicial para Kodi 20
 
     </news>
     <assets>
@@ -899,7 +894,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
     </extension>
 </addon>
 
-<addon id="skin.ctouch"  version="2.0" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="2.0.1" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>
 	</requires>
@@ -917,7 +912,10 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 2.0 - 20/5/22
+		<news>Versión 2.0.1 - 26/5/22
+- Corregido error en el inicio custom, cono mando o teclado no se podía acceder al menú superior si no había ningún ítem personalizado
+
+Versión 2.0 - 20/5/22
 - Agregada función para cambiar el color principal del skin desde Ajustes, Ajustes de Skin, Apariencia
 - Agregada función para hacer los iconos superiores del menú más pequeños, en Ajustes de Skin, Apariencia
 - Actualizados enalces de Winner a Winner2
