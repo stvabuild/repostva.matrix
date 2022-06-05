@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.close.kodi" name="[COLOR red] Force Close Kodi[/COLOR] " version="3.1.3" provider-name="Based_Skid">
-  <extension point="xbmc.python.pluginsource" library="default.py">
+<addon id="plugin.program.autocompletion" name="AutoCompletion for virtual keyboard" version="2.0.5" provider-name="henryjfry">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.simplejson" version="3.3.0"/>
+        <import addon="script.module.autocompletion" version="1.0.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="plugin.py" />
+    <extension point="xbmc.python.script"       library="default.py">
         <provides>executable</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Force Close Kodi</summary>
-    <description lang="en"></description>
-    <platform>all</platform>
-  </extension>
+    </extension>
+
+    <extension point="xbmc.addon.metadata">
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <summary lang="en">AutoCompletion for the virtual keyboard (needs skin support)</summary>
+        <description lang="en">AutoCompletion for the virtual keyboard (needs skin support)</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE Version 2.1, February 1999</license>
+        <source>https://github.com/phil65/plugin.program.autocompletion</source>
+        <assets>
+            <icon>resources/icon.png</icon>
+            <fanart>resources/fanart.jpg</fanart>
+            <screenshot>resources/screenshot-01.jpg</screenshot>
+            <screenshot>resources/screenshot-02.jpg</screenshot>
+            <screenshot>resources/screenshot-03.jpg</screenshot>
+        </assets>
+    </extension>
 </addon>
 
 <addon id="plugin.program.kodileiawizard.matrix" name="[COLOR white]Kodileia Wizard [COLOR chartreuse]Matrix[/COLOR]" version="1.0" provider-name="Grupo Kodileia">
@@ -291,7 +308,7 @@ provider-name="jurialmunkey">
 </extension>
 </addon>
 
-<addon id="plugin.video.winner" name="[COLOR orange]WINNER 2[/COLOR]" version="2.1" provider-name="La Taberna and Camaradas">
+<addon id="plugin.video.winner" name="[COLOR orange]WINNER 2[/COLOR]" version="2.3" provider-name="La Taberna and Camaradas">
     <requires>
         <import addon="script.module.six" version="1.11.0" />
         <import addon="plugin.video.duffyou" />
@@ -334,20 +351,38 @@ provider-name="jurialmunkey">
     </extension>
 </addon>
 
-<addon id="repository.alfa-addon" name="[COLOR red]Alfa-Addon[/COLOR] Repo" version="1.0.6" provider-name="Alfa Addon">
+<addon id="repository.alfa-addon" name="[COLOR red]Alfa Add-on[/COLOR] Repo" version="1.0.7" provider-name="Alfa Development Group">
     <requires>
         <import addon="xbmc.addon" version="12.0.0"/>
     </requires>
-    <extension point="xbmc.addon.repository" name="Alfa-Addon Repo">
-        <info>https://github.com/alfa-addon/alfa-repo/raw/master/addons.xml</info>
-        <checksum>https://github.com/alfa-addon/alfa-repo/raw/master/addons.xml.md5</checksum>
-        <datadir zip="true">https://github.com/alfa-addon/alfa-repo/raw/master</datadir>
+    <extension point="xbmc.addon.repository" name="Alfa Add-on Repo">
+        <dir>
+            <info>https://github.com/alfa-addon/alfa-repo/raw/master/addons.xml</info>
+            <checksum>https://github.com/alfa-addon/alfa-repo/raw/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://github.com/alfa-addon/alfa-repo/raw/master</datadir>
+        </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary>Repositorio para Alfa-Addon</summary>
-        <description></description>
-        <disclaimer>The owners and submitters to this repository do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.</disclaimer>
+        <summary lang="ca">Repositori d'Alfa Add-on</summary>
+        <summary lang="en">Alfa Add-on Repository</summary>
+        <summary lang="es">Repositorio de Alfa Add-on</summary>
+        <summary lang="it">Repository di Alfa Add-on</summary>
+        <summary lang="pt">Repositório de Alfa Add-on</summary>
+        <description lang="ca">Repositori per instal·lar Alfa Addon, un dels principals add-ons de contingut de parla hispana al món, successor al conegut Pelisalacarta-ce. També es proveeix algunes utilitats addicionals.</description>
+        <description lang="en">Repository to install Alfa Addon, one of the main Spanish-speaking content add-ons in the world, successor to the well-known Pelisalacarta-ce. Some additional utilities are also provided.</description>
+        <description lang="es">Repositorio para instalar Alfa Addon, uno de los principales add-ons de contenido de habla hispana en el mundo, sucesor al conocido Pelisalacarta-ce. También se provee de algunas utilidades adicionales.</description>
+        <description lang="it">Repository per installare Alfa Addon, uno dei principali add-on di contenuti di lingua spagnola nel mondo, successore del noto Pelisalacarta-ce. Vengono fornite anche alcune utilità aggiuntive.</description>
+        <description lang="pt">Repositório para instalação do Alfa Addon, um dos principais add-ons de conteúdo em língua espanhola do mundo, sucessor do conhecido Pelisalacarta-ce. Alguns utilitários adicionais também são fornecidos.</description>
+        <disclaimer lang="ca">[COLOR red]Els propietaris i distribuïdors d'aquest complemento no proveeixen ni distribueixen cap contingut mostrat pel complemento ni tenen affiliación alguna amb els proveïdors de l'contingut.[/COLOR]</disclaimer>
+        <disclaimer lang="en">[COLOR red]The owners and submitters to this add-on do not host or distribute any of the content displayed by these add-ons nor do they have any affiliation with the content providers.[/COLOR]</disclaimer>
+        <disclaimer lang="es">[COLOR red]Los propietarios y distribuidores de este add-on no proveen ni distribuyen ningún contenido mostrado por el add-on ni tienen afiliación alguna con los proveedores del contenido.[/COLOR]</disclaimer>
+        <disclaimer lang="it">[COLOR red]I proprietari e i distributori di questo add-on aggiuntivo non forniscono o distribuiscono alcun contenuto visualizzato dal add-on aggiuntivo né hanno alcuna affiliazione con i fornitori di contenuti.[/COLOR]</disclaimer>
+        <disclaimer lang="pt">[COLOR red]Os proprietários e distribuidores deste add-on não fornecem ou distribuem qualquer conteúdo exibido pelo add-on nem têm qualquer afiliação com os provedores de conteúdo.[/COLOR]</disclaimer>
         <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
     </extension>
 </addon>
 
@@ -379,14 +414,16 @@ provider-name="jurialmunkey">
     </extension>
 </addon>
 
-<addon id="repository.github" name="GitHub Add-on repository"  version="0.0.6" provider-name="i96751414">
+<addon id="repository.github" name="GitHub Add-on repository" provider-name="i96751414" version="0.0.7">
     <requires>
         <!--<import addon="xbmc.python" version="3.0.0"/>-->
     </requires>
     <extension point="xbmc.addon.repository">
-        <info>http://127.0.0.1:61234/addons.xml</info>
-        <checksum>http://127.0.0.1:61234/addons.xml.md5</checksum>
-        <datadir>http://127.0.0.1:61234/</datadir>
+        <dir>
+            <info>http://127.0.0.1:61234/addons.xml</info>
+            <checksum>http://127.0.0.1:61234/addons.xml.md5</checksum>
+            <datadir>http://127.0.0.1:61234/</datadir>
+        </dir>
     </extension>
     <extension point="xbmc.python.script" library="default.py"/>
     <extension point="xbmc.service" library="service.py"/>
@@ -394,10 +431,15 @@ provider-name="jurialmunkey">
         <platform>all</platform>
         <license>See https://github.com/i96751414/repository.github/blob/master/LICENSE</license>
         <source>https://github.com/i96751414/repository.github</source>
-        <summary lang="en">GitHub virtual Add-on repository</summary>
-        <description lang="en">Customizable repository which acts as a proxy for defined GitHub users' add-ons updates.</description>
+        <summary lang="en">GitHub virtual Add-on repository for TORREST and others</summary>
+        <description lang="en">Customizable repository which acts as a proxy for defined GitHub users' add-ons updates, like TORREST.</description>
+        <summary lang="es">Repositorio GitHub virtual para el Add-on TORREST y otros</summary>
+        <description lang="es">Repositorio configurable que actúa como un proxy para add-ons disponibles en GitHub, como TORREST.</description>
         <news>
-            - Add support to Kodi 19
+            - Add platform check support
+            - Fix arch detection for aarch with 32 bits
+            - Add support to Kodi 20
+            - Small improvements (os_platform, logging)
         </news>
         <assets>
             <icon>icon.png</icon>
@@ -525,36 +567,6 @@ provider-name="jurialmunkey">
 	</extension>
 </addon>
 
-<addon id="script.limpiarkodi"
-       name="Limpia Tu Kodi"
-       version="2.1.0"
-       provider-name="Catoal - Teco">
-  <requires>
-    <import addon="script.module.six" version="1.11.0"/>
-  </requires>
-     <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>executable</provides>
-    </extension>
-  <extension point="xbmc.service" library="service.py" start="startup" />
-  <extension point="xbmc.addon.metadata">
-  <extension point="xbmc.addon.repository" name="Maniac">
-      <info compressed="false">http://raw.github.com/Maniac2017/repository.Maniac/master/addons.xml</info>
-      <checksum>http://raw.github.com/Maniac2017/repository.Maniac/master/addons.xml.md5</checksum>
-      <datadir zip="true">http://raw.github.com/Maniac2017/repository.Maniac/master/repor/</datadir>
-  </extension>
-    <platform>all</platform>
-    <summary>Limpiar</summary>
-    <description>La herramienta para limpiar de una pasada su dispositivo.</description>
-    <assets>
-      <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
-      <screenshot>resources/screenshot000.jpg</screenshot>
-      <screenshot>resources/screenshot001.jpg</screenshot>
-      <screenshot>resources/screenshot002.jpg</screenshot>
-    </assets>
-  </extension>
-</addon>
-
 <addon id="script.luar"
   version="0.8.1"
   name="Luar"
@@ -620,7 +632,7 @@ provider-name="jurialmunkey">
     </extension>
 </addon>
 
-<addon id="script.stva" name="Complemento [COLOR orange]STVA[/COLOR]" version="1.4" provider-name="stva">
+<addon id="script.stva" name="Complemento [COLOR orange]STVA[/COLOR]" version="1.5" provider-name="stva">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="resource.language.es_es" />
@@ -633,9 +645,9 @@ provider-name="jurialmunkey">
     </extension>
 
 	<extension point="xbmc.addon.repository" name="repostva.matrix">
-        <info>https://raw.githubusercontent.com/stvabuild/repostva.matrix/master/Repositorio/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/stvabuild/repostva.matrix/master/Repositorio/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.githubusercontent.com/stvabuild/repostva.matrix/master/Repositorio/</datadir>
+		<info compressed="false">https://raw.githubusercontent.com/stvabuild/repostva.matrix/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/stvabuild/repostva.matrix/master/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/stvabuild/repostva.matrix/master</datadir>
     </extension>
 
     <extension point="xbmc.service" library="startup.py" start="startup" />
