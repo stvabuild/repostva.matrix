@@ -11,35 +11,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15fde8f9-d8c9-4746-a759-6e7e77d26162" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/plugin.program.autocompletion/addon.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugin.program.autocompletion/changelog-2.0.5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugin.program.autocompletion/plugin.program.autocompletion-2.0.5.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugin.video.winner/plugin.video.winner-2.3.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository.alfa-addon/repository.alfa-addon-1.0.7.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository.github/repository.github-0.0.7.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script.stva/script.stva-1.5.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/addons.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addons.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/addons.xml.md5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin.close.kodi/addon.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin.close.kodi/fanart.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin.close.kodi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin.close.kodi/plugin.close.kodi-3.1.3.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin.video.winner/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.video.winner/addon.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin.video.winner/plugin.video.winner-2.1.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository.alfa-addon/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository.alfa-addon/addon.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository.alfa-addon/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/repository.alfa-addon/icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository.alfa-addon/repository.alfa-addon-1.0.6.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository.github/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository.github/addon.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository.github/repository.github-0.0.6.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.limpiarkodi/addon.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.limpiarkodi/changelog-2.1.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.limpiarkodi/fanart.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.limpiarkodi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.limpiarkodi/script.limpiarkodi-2.1.0.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.stva/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/script.stva/addon.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.stva/script.stva-1.4.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin.video.alfa/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.video.alfa/addon.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin.video.alfa/plugin.video.alfa-3.7.0.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.ctouch/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/skin.ctouch/addon.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.ctouch/changelog-2.0.1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.ctouch/skin.ctouch-2.0.1.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.embuary.stva/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/skin.embuary.stva/addon.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.embuary.stva/changelog-1.1.8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.embuary.stva/skin.embuary.stva-1.1.8.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.estuary.stva/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/skin.estuary.stva/addon.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.estuary.stva/changelog-1.1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.estuary.stva/skin.estuary.stva-1.1.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addon id="skin.ctouch"  version="2.0.1" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="2.1" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>		
 	</requires>
@@ -17,22 +17,10 @@
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 2.0.1 - 26/5/22
-- Corregido error en el inicio custom, cono mando o teclado no se podía acceder al menú superior si no había ningún ítem personalizado		
-
-Versión 2.0 - 20/5/22
-- Agregada función para cambiar el color principal del skin desde Ajustes, Ajustes de Skin, Apariencia
-- Agregada función para hacer los iconos superiores del menú más pequeños, en Ajustes de Skin, Apariencia
-- Actualizados enalces de Winner a Winner2
-- Reconfigurado tamaño de los items del inicio personal
-- Agregado item iptv y videoteca al pulsar sobre items inicio en Ajustes de Skin
-- Reparado item Youtube del inicio Cristal
-- Reconfigurado primer inicio
-- Agregados algunos addons a Ajustes de Skin, addons
-- Cambiado addon que fuerza el cierre, de Force Close a Complemento STVA
-- Cambiado Skin helper Backup por Complemento STVA en Ajustes de Skin, Copias de Seguridad
-- Añadido Canales de Addons (canales y grupos de telegram), a Ajustes de Skin
-- Cambios gráficos menores</news>
+		<news>Versión 2.1 - 6/6/22
+- Reparado ítem 'En Vivo' en el inicio Cristal Azul y STVA
+- Eliminado Horus de addons necesarios en el primer arranque, ahora es una dependencia de winner y se instala solo
+- Ajustadas columnas de items inicio con el inicio custom en Ajustes de Skin</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>

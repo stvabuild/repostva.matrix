@@ -1,5 +1,5 @@
 # Repo STVA Matrix
-#### Repositorio del Skin STVA para Kodi 19 Matrix.
+#### Repositorio de los Skins STVA para Kodi 19 Matrix.
 Más informacion en:
 www.stva.ga
 

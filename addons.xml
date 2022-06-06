@@ -62,7 +62,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.alfa" name="Alfa" version="3.7.0" provider-name="Alfa Addon">
+<addon id="plugin.video.alfa" name="Alfa" version="3.7.1" provider-name="Alfa Addon">
   <requires>
     <import addon="script.module.requests"/>
     <import addon="script.module.beautifulsoup4" version="4.5.3"/>
@@ -94,13 +94,11 @@
     <news>[B]Estos son los cambios para esta versión:[/B]
 
       [COLOR green][B]Arreglos[/B][/COLOR]
-      ¤ Allcalidad                         ¤ Cinecalidad                             ¤ Cuevana3video
-      ¤ Dontorrent                      ¤ Entrepeliculasyseries             ¤ Estrenospapaya
-      ¤ Grantorrent                     ¤ Newpct1                                  ¤ PoseidonHD
-      ¤ Seriesanimadas              ¤ Subtorrents                             ¤ 18+
+      ¤ Jkanime                          ¤ Pelisplus                        ¤ Dontorrent
+      ¤ Elitetorrent                    ¤ Grantorrent                   ¤ Newpct1
+      ¤ Playdede                        ¤ 18+
 
       [COLOR green][B]Novedades[/B][/COLOR]
-      ¤ Soporte inicial para Kodi 20
 
     </news>
     <assets>
@@ -906,7 +904,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
     </extension>
 </addon>
 
-<addon id="skin.ctouch"  version="2.0.1" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="2.1" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>
 	</requires>
@@ -924,22 +922,10 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 2.0.1 - 26/5/22
-- Corregido error en el inicio custom, cono mando o teclado no se podía acceder al menú superior si no había ningún ítem personalizado
-
-Versión 2.0 - 20/5/22
-- Agregada función para cambiar el color principal del skin desde Ajustes, Ajustes de Skin, Apariencia
-- Agregada función para hacer los iconos superiores del menú más pequeños, en Ajustes de Skin, Apariencia
-- Actualizados enalces de Winner a Winner2
-- Reconfigurado tamaño de los items del inicio personal
-- Agregado item iptv y videoteca al pulsar sobre items inicio en Ajustes de Skin
-- Reparado item Youtube del inicio Cristal
-- Reconfigurado primer inicio
-- Agregados algunos addons a Ajustes de Skin, addons
-- Cambiado addon que fuerza el cierre, de Force Close a Complemento STVA
-- Cambiado Skin helper Backup por Complemento STVA en Ajustes de Skin, Copias de Seguridad
-- Añadido Canales de Addons (canales y grupos de telegram), a Ajustes de Skin
-- Cambios gráficos menores</news>
+		<news>Versión 2.1 - 6/6/22
+- Reparado ítem 'En Vivo' en el inicio Cristal Azul y STVA
+- Eliminado Horus de addons necesarios en el primer arranque, ahora es una dependencia de winner y se instala solo
+- Ajustadas columnas de items inicio con el inicio custom en Ajustes de Skin</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
@@ -951,7 +937,7 @@ Versión 2.0 - 20/5/22
 	</extension>
 </addon>
 
-<addon id="skin.embuary.stva" version="1.1.8" name="Embuary STVA" provider-name="stva">
+<addon id="skin.embuary.stva" version="1.1.9" name="Embuary STVA" provider-name="stva">
 	<requires>
 		<import addon="resource.language.es_es" />
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -987,16 +973,17 @@ Versión 2.0 - 20/5/22
 			<screenshot>resources/screenshot-09.jpg</screenshot>
 		</assets>
 		<news>
-[B]Version 1.1.8[/B] - 20/5/22
-- Actualizados enlaces de Winner a Winner 2</news>
+[B]Version 1.1.9[/B] - 6/6/22
+- Reparado enlace del widget 'Deportes Hoy'
+- Cambiado tipo de widget para widgets Deportes Hoy, Categorías de Deportes, Canales de la TDT y Plataformas TDT
+- Cambios internos en el primer arranque</news>
 	</extension>
 </addon>
 
-<addon id="skin.estuary.stva" version="1.1" name="Estuary STVA" provider-name="STVA">
+<addon id="skin.estuary.stva" version="1.2" name="Estuary STVA" provider-name="STVA">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="resource.language.es_es" version="0.0.0"/>
-		<import addon="repository.marcelveldt" />
 		<import addon="script.skinshortcuts" version="1.1.5"/>
 		<import addon="repository.repostva.matrix" version="1.0"/>
 	</requires>
@@ -1033,15 +1020,9 @@ Versión 2.0 - 20/5/22
 				<screenshot>resources/screenshot-10.jpg</screenshot>
 				<screenshot>resources/screenshot-11.jpg</screenshot>
 			</assets>
-			<news>[B]Versión - 1.1[/B] - 20/5/22
-- Agregado Complemento STVA en el primer inicio y en Ajustes de Skin, dependencias
-- Actualizados enlaces de Winner a Winner2
-- Desactivadas productoras de películas hasta que vuelvan a funcionar
-- Cambiado Force Close por complemento STVA
-- Cambiado enlace item de Ajustes, Mantenimiento
-- Eliminadas dependencias de addons, image coloured stva, moviegenres estuarystva y embuary helper
-- Eliminado widget de repeticiones deportivas
-- Cambiado Skin helper Backup por Complemento STVA en Ajustes de Skin, Backup/Restaurar
+			<news>[B]Versión - 1.2[/B] - 6/6/22
+- Eliminada dependencia del Skin, repository.marcelveldt para evitar errores en la instalación
+- Reparado widget y categoría En Directo de Deportes
 </news>
 	</extension>
 </addon>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.embuary.stva" version="1.1.8" name="Embuary STVA" provider-name="stva">
+<addon id="skin.embuary.stva" version="1.1.9" name="Embuary STVA" provider-name="stva">
 	<requires>
 		<import addon="resource.language.es_es" />
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -35,7 +35,9 @@
 			<screenshot>resources/screenshot-09.jpg</screenshot>
 		</assets>
 		<news>
-[B]Version 1.1.8[/B] - 20/5/22
-- Actualizados enlaces de Winner a Winner 2</news>
+[B]Version 1.1.9[/B] - 6/6/22
+- Reparado enlace del widget 'Deportes Hoy'
+- Cambiado tipo de widget para widgets Deportes Hoy, Categorías de Deportes, Canales de la TDT y Plataformas TDT
+- Cambios internos en el primer arranque</news>
 	</extension>
 </addon>
