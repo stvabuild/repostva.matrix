@@ -988,7 +988,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
     </extension>
 </addon>
 
-<addon id="skin.ctouch"  version="2.1" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="2.2" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>
 	</requires>
@@ -998,18 +998,28 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 	<extension point="xbmc.addon.metadata">
 		<summary lang="es_ES">Skin para Cristal Azul</summary>
 		<summary lang="en_GB">Skin para Cristal Azul</summary>
-		<description lang="es_ES">CTouch es un mod de skin realizado por STVA para Cristal Azul.</description>
-		<description lang="en_GB">CTouch es un mod de skin realizado por STVA para Cristal Azul.</description>
-		<disclaimer lang="en_GB">Para dudas, preguntas o sugerencias [CR]Telegram: @kodi18</disclaimer>
-		<disclaimer lang="es_ES">Para dudas, preguntas o sugerencias [CR]Telegram: @kodi18</disclaimer>
+		<description lang="es_ES">Cristal Touch es un mod del skin AppTV realizado por STVA para Cristal Azul.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV o TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>
+		<description lang="en_GB">Cristal Touch es un mod del skin AppTV realizado por STVA para Cristal Azul.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV o TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>
+		<disclaimer lang="en_GB">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]Web y Foro: stva.ga[CR]Grupo Cristal Azul: t.me/addonfestaycristal</disclaimer>
+		<disclaimer lang="es_ES">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]Web y Foro: stva.ga[CR]Grupo Cristal Azul: t.me/addonfestaycristal</disclaimer>
 		<platform>all</platform>
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 2.1 - 6/6/22
-- Reparado ítem 'En Vivo' en el inicio Cristal Azul y STVA
-- Eliminado Horus de addons necesarios en el primer arranque, ahora es una dependencia de winner y se instala solo
-- Ajustadas columnas de items inicio con el inicio custom en Ajustes de Skin</news>
+		<news>Versión 2.2 - 26/6/22
+- Agregado botón 'Versiones' en información de addons
+- Eliminado fondo de la barra de progreso
+- El botón buscador del inicio, ahora abre una ventana para elegir entre el buscador de Alfa, Cristal Azul y Palantir
+- Eliminada ventana del startup para instalar Repositorios. Ahora al instalar un addon en la ventana del startup primero pedirá instalar su repositorio
+- Agregado botón en el startup para descargar Elementum o Torrest como clientes Torrent
+- Agregada ventana de consejos al final del startup
+- Ahora al aparecer el icono de carga, el fondo se oscurece
+- Arreglos visuales en Ajustes y menús contextuales
+- Oscurecido fondo de algunas vistas para mejorar la legibilidad
+- Nueva vista, Cuadrado
+- Eliminado fondo del texto en el inicio STVA
+- Añadido Palantir y su repositorio en Addons opcionales de Ajustes de Skin
+- Añadido Elementum para Android arm y Windows x64 en Addons opciones de Ajustes de Skin</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
@@ -1017,6 +1027,9 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 			<screenshot>resources/screenshot002.jpg</screenshot>
 			<screenshot>resources/screenshot003.jpg</screenshot>
 			<screenshot>resources/screenshot004.jpg</screenshot>
+			<screenshot>resources/screenshot005.jpg</screenshot>
+			<screenshot>resources/screenshot006.jpg</screenshot>
+			<screenshot>resources/screenshot007.jpg</screenshot>
 		</assets>
 	</extension>
 </addon>
