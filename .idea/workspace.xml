@@ -10,16 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15fde8f9-d8c9-4746-a759-6e7e77d26162" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/repository.magellan/addon.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository.magellan/fanart.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository.magellan/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository.magellan/repository.magellan-1.0.0.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/addons.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/addons.xml.md5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin.video.elementum/fanart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin.video.elementum/icon-menu.png" beforeDir="false" />
-    </list>
+    <list default="true" id="15fde8f9-d8c9-4746-a759-6e7e77d26162" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
