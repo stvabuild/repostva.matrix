@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.embuary.stva" version="1.1.9" name="Embuary STVA" provider-name="stva">
+<addon id="skin.embuary.stva" version="1.2" name="Embuary STVA" provider-name="stva">
 	<requires>
 		<import addon="resource.language.es_es" />
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -35,9 +35,14 @@
 			<screenshot>resources/screenshot-09.jpg</screenshot>
 		</assets>
 		<news>
-[B]Version 1.1.9[/B] - 6/6/22
-- Reparado enlace del widget 'Deportes Hoy'
-- Cambiado tipo de widget para widgets Deportes Hoy, Categorías de Deportes, Canales de la TDT y Plataformas TDT
-- Cambios internos en el primer arranque</news>
+[B]Version 1.2[/B] - 12/8/22
+- Agregada categoría Repeticiones Cristal en Deportes
+- Agregada categoría TV Premium en Televisión (Magellan)
+- Eliminados del inicio con sinopsis los widgets de series y películas de la videoteca
+- Ahora al pulsar en la lupa aparecerá un menú para elegir el buscador de Alfa, Cristal Azul o Palantir
+- Eliminada categoría Productoras de Películas
+- Agregado en Ajustes de Skin, addons, el addon Elementum
+- Cambiado addon Torrest en el primer inicio por Cliente torrent que da a elegir para instalar entre Torrest y Elementum
+- Pequeñas correcciones internas</news>
 	</extension>
 </addon>

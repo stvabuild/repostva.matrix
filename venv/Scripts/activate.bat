@@ -1,6 +1,6 @@
 @echo off
 
-set "VIRTUAL_ENV=D:\Documentos\STVA\repositorio\repostva.matrix\venv"
+set "VIRTUAL_ENV=D:\Documentos\STVA\repostva\repostva.matrix\venv"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
@@ -13,7 +13,11 @@ if defined _OLD_VIRTUAL_PROMPT (
     )
 )
 if not defined VIRTUAL_ENV_DISABLE_PROMPT (
-    set "PROMPT=(venv) %PROMPT%"
+    if "" NEQ "" (
+        set "PROMPT=() %PROMPT%"
+    ) else (
+        for %%d in ("%VIRTUAL_ENV%") do set "PROMPT=(%%~nxd) %PROMPT%"
+    )
 )
 
 REM Don't use () to avoid problems with them in %PATH%

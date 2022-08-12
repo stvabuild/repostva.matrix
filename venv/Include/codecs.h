@@ -81,6 +81,51 @@ PyAPI_FUNC(PyObject *) PyCodec_Decode(
        const char *errors
        );
 
+/* Text codec specific encoding and decoding API.
+
+   Checks the encoding against a list of codecs which do not
+   implement a unicode<->bytes encoding before attempting the
+   operation.
+
+   Please note that these APIs are internal and should not
+   be used in Python C extensions.
+
+   XXX (ncoghlan): should we make these, or something like them, public
+   in Python 3.5+?
+
+ */
+PyAPI_FUNC(PyObject *) _PyCodec_LookupTextEncoding(
+       const char *encoding,
+       const char *alternate_command
+       );
+
+PyAPI_FUNC(PyObject *) _PyCodec_EncodeText(
+       PyObject *object,
+       const char *encoding,
+       const char *errors
+       );
+
+PyAPI_FUNC(PyObject *) _PyCodec_DecodeText(
+       PyObject *object,
+       const char *encoding,
+       const char *errors
+       );
+
+/* These two aren't actually text encoding specific, but _io.TextIOWrapper
+ * is the only current API consumer.
+ */
+PyAPI_FUNC(PyObject *) _PyCodecInfo_GetIncrementalDecoder(
+       PyObject *codec_info,
+       const char *errors
+       );
+
+PyAPI_FUNC(PyObject *) _PyCodecInfo_GetIncrementalEncoder(
+       PyObject *codec_info,
+       const char *errors
+       );
+
+
+
 /* --- Codec Lookup APIs -------------------------------------------------- 
 
    All APIs return a codec object with incremented refcount and are
@@ -101,14 +146,14 @@ PyAPI_FUNC(PyObject *) PyCodec_Decoder(
        const char *encoding
        );
 
-/* Get a IncrementalEncoder object for the given encoding. */
+/* Get an IncrementalEncoder object for the given encoding. */
 
 PyAPI_FUNC(PyObject *) PyCodec_IncrementalEncoder(
        const char *encoding,
        const char *errors
        );
 
-/* Get a IncrementalDecoder object function for the given encoding. */
+/* Get an IncrementalDecoder object function for the given encoding. */
 
 PyAPI_FUNC(PyObject *) PyCodec_IncrementalDecoder(
        const char *encoding,
@@ -133,7 +178,7 @@ PyAPI_FUNC(PyObject *) PyCodec_StreamWriter(
 
 /* Unicode encoding error handling callback registry API */
 
-/* Register the error handling callback function error under the name
+/* Register the error handling callback function error under the given
    name. This function will be called by the codec when it encounters
    unencodable characters/undecodable bytes and doesn't know the
    callback name, when name is specified as the error parameter
@@ -141,8 +186,8 @@ PyAPI_FUNC(PyObject *) PyCodec_StreamWriter(
    Return 0 on success, -1 on error */
 PyAPI_FUNC(int) PyCodec_RegisterError(const char *name, PyObject *error);
 
-/* Lookup the error handling callback function registered under the
-   name error. As a special case NULL can be passed, in which case
+/* Lookup the error handling callback function registered under the given
+   name. As a special case NULL can be passed, in which case
    the error handling callback for "strict" will be returned. */
 PyAPI_FUNC(PyObject *) PyCodec_LookupError(const char *name);
 
@@ -152,7 +197,7 @@ PyAPI_FUNC(PyObject *) PyCodec_StrictErrors(PyObject *exc);
 /* ignore the unicode error, skipping the faulty input */
 PyAPI_FUNC(PyObject *) PyCodec_IgnoreErrors(PyObject *exc);
 
-/* replace the unicode error with ? or U+FFFD */
+/* replace the unicode encode error with ? or U+FFFD */
 PyAPI_FUNC(PyObject *) PyCodec_ReplaceErrors(PyObject *exc);
 
 /* replace the unicode encode error with XML character references */

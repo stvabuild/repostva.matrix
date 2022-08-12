@@ -62,7 +62,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.alfa" name="Alfa" version="3.7.2" provider-name="Alfa Addon">
+<addon id="plugin.video.alfa" name="Alfa" version="3.7.5" provider-name="Alfa Addon">
   <requires>
     <import addon="script.module.requests"/>
     <import addon="script.module.beautifulsoup4" version="4.5.3"/>
@@ -94,9 +94,10 @@
     <news>[B]Estos son los cambios para esta versión:[/B]
 
       [COLOR green][B]Arreglos[/B][/COLOR]
-      ¤ Cuevana3                        ¤ Cuevana3Video                     ¤ Dontorrent
-      ¤ Hdfull                              ¤ HDFulls                                   ¤ Newpct1
-      ¤ Pelispop                          ¤ 18+
+      ¤ PelisPlus                           ¤ Inkapelis                     ¤ Documentalesonline
+      ¤ Hdfull                                ¤ Newpct1                     ¤ Caricaturashd
+      ¤ Cuevana3video                ¤ Dontorrent                 ¤ Pelisencastellano
+      ¤ Zonaleros                          ¤ 18+
 
       [COLOR green][B]Novedades[/B][/COLOR]
 
@@ -113,7 +114,7 @@
   <extension point="xbmc.service" library="videolibrary_service.py" start="login|startup"></extension>
 </addon>
 
-<addon id="plugin.video.cristalazul" name="[B][/B][COLOR aqua]CRISTAL AZUL 3.0.3[/COLOR]" version="3.0.3" provider-name="PICAPAU, LOURDES, SUPERTOPO, LUISMA">
+<addon id="plugin.video.cristalazul" name="[B][/B][COLOR aqua]CRISTAL AZUL 3.0.4[/COLOR]" version="3.0.4" provider-name="PICAPAU, LOURDES, SUPERTOPO, LUISMA, GEORGE">
     <requires>
         <import addon="script.module.simplecache"/>
         <import addon="script.module.six"/>
@@ -1111,7 +1112,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
     </extension>
 </addon>
 
-<addon id="skin.ctouch"  version="2.2" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="2.3" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>
 	</requires>
@@ -1129,20 +1130,16 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 2.2 - 26/6/22
-- Agregado botón 'Versiones' en información de addons
-- Eliminado fondo de la barra de progreso
-- El botón buscador del inicio, ahora abre una ventana para elegir entre el buscador de Alfa, Cristal Azul y Palantir
-- Eliminada ventana del startup para instalar Repositorios. Ahora al instalar un addon en la ventana del startup primero pedirá instalar su repositorio
-- Agregado botón en el startup para descargar Elementum o Torrest como clientes Torrent
-- Agregada ventana de consejos al final del startup
-- Ahora al aparecer el icono de carga, el fondo se oscurece
-- Arreglos visuales en Ajustes y menús contextuales
-- Oscurecido fondo de algunas vistas para mejorar la legibilidad
-- Nueva vista, Cuadrado
-- Eliminado fondo del texto en el inicio STVA
-- Añadido Palantir y su repositorio en Addons opcionales de Ajustes de Skin
-- Añadido Elementum para Android arm y Windows x64 en Addons opciones de Ajustes de Skin</news>
+		<news>Versión 2.3 - 12/8/22
+- Ahora se pueden desactivar individualmente los items predefinidos
+- Arreglos visuales
+- Item TV Premium del inicio STVA cambiado a la sección España del addon Magellan
+- Item Repeticiones, ahora abre un menú para elegir
+- Cambiado item productoras de películas por Canales de Alfa
+- Cambiado enlaces de los items películas y series por años al canal IMDB de Alfa
+- Agregado Magellan en Ajustes de Skin/Addons para instalar a través de Luar
+- Corregido error en el startup para instalar Elementum
+- Corregidos otros errores menores</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
@@ -1157,7 +1154,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 	</extension>
 </addon>
 
-<addon id="skin.embuary.stva" version="1.1.9" name="Embuary STVA" provider-name="stva">
+<addon id="skin.embuary.stva" version="1.2" name="Embuary STVA" provider-name="stva">
 	<requires>
 		<import addon="resource.language.es_es" />
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -1193,10 +1190,15 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 			<screenshot>resources/screenshot-09.jpg</screenshot>
 		</assets>
 		<news>
-[B]Version 1.1.9[/B] - 6/6/22
-- Reparado enlace del widget 'Deportes Hoy'
-- Cambiado tipo de widget para widgets Deportes Hoy, Categorías de Deportes, Canales de la TDT y Plataformas TDT
-- Cambios internos en el primer arranque</news>
+[B]Version 1.2[/B] - 12/8/22
+- Agregada categoría Repeticiones Cristal en Deportes
+- Agregada categoría TV Premium en Televisión (Magellan)
+- Eliminados del inicio con sinopsis los widgets de series y películas de la videoteca
+- Ahora al pulsar en la lupa aparecerá un menú para elegir el buscador de Alfa, Cristal Azul o Palantir
+- Eliminada categoría Productoras de Películas
+- Agregado en Ajustes de Skin, addons, el addon Elementum
+- Cambiado addon Torrest en el primer inicio por Cliente torrent que da a elegir para instalar entre Torrest y Elementum
+- Pequeñas correcciones internas</news>
 	</extension>
 </addon>
 
