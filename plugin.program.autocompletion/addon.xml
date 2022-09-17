@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.program.autocompletion" name="AutoCompletion for virtual keyboard" version="2.0.5" provider-name="henryjfry">
+<addon id="plugin.program.autocompletion" name="AutoCompletion for virtual keyboard Android" version="2.0.5.a" provider-name="henryjfry">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.simplejson" version="3.3.0"/>
         <import addon="script.module.autocompletion" version="1.0.0"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="plugin.py" />
-    <extension point="xbmc.python.script"       library="default.py">
+    <extension point="xbmc.python.script" library="default.py">
         <provides>executable</provides>
     </extension>
 

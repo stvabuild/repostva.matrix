@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.program.autocompletion" name="AutoCompletion for virtual keyboard" version="2.0.5" provider-name="henryjfry">
+<addon id="plugin.program.autocompletion" name="AutoCompletion for virtual keyboard Android" version="2.0.5.a" provider-name="henryjfry">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.simplejson" version="3.3.0"/>
         <import addon="script.module.autocompletion" version="1.0.0"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="plugin.py" />
-    <extension point="xbmc.python.script"       library="default.py">
+    <extension point="xbmc.python.script" library="default.py">
         <provides>executable</provides>
     </extension>
 
@@ -62,7 +62,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.alfa" name="Alfa" version="3.7.5" provider-name="Alfa Addon">
+<addon id="plugin.video.alfa" name="Alfa" version="3.7.8" provider-name="Alfa Addon">
   <requires>
     <import addon="script.module.requests"/>
     <import addon="script.module.beautifulsoup4" version="4.5.3"/>
@@ -94,10 +94,11 @@
     <news>[B]Estos son los cambios para esta versión:[/B]
 
       [COLOR green][B]Arreglos[/B][/COLOR]
-      ¤ PelisPlus                           ¤ Inkapelis                     ¤ Documentalesonline
-      ¤ Hdfull                                ¤ Newpct1                     ¤ Caricaturashd
-      ¤ Cuevana3video                ¤ Dontorrent                 ¤ Pelisencastellano
-      ¤ Zonaleros                          ¤ 18+
+      ¤ Salynpm                             ¤ AnimeFLV                          ¤ Blogdepelis
+      ¤ Cuevana2                           ¤ Divxtotal                            ¤ Dontorrent
+      ¤ Estrenosdoramas              ¤ Filmoves                            ¤ Hdfull
+      ¤ Kindor                                ¤ Newpct1                             ¤ Pelispanda
+      ¤ Seriesflix                            ¤ Torrentpelis                       ¤ 18+
 
       [COLOR green][B]Novedades[/B][/COLOR]
 
@@ -418,7 +419,7 @@ provider-name="jurialmunkey">
 </extension>
 </addon>
 
-<addon id="plugin.video.winner" name="[COLOR orange]WINNER 2[/COLOR]" version="2.3" provider-name="La Taberna and Camaradas">
+<addon id="plugin.video.winner" name="[COLOR orange]WINNER 2[/COLOR]" version="2.4" provider-name="La Taberna and Camaradas">
     <requires>
         <import addon="script.module.six" version="1.11.0" />
         <import addon="plugin.video.duffyou" />
