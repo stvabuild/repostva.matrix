@@ -839,7 +839,7 @@ provider-name="jurialmunkey">
     </extension>
 </addon>
 
-<addon id="script.stva" name="Complemento [COLOR orange]STVA[/COLOR]" version="1.5" provider-name="stva">
+<addon id="script.stva" name="Complemento [COLOR orange]STVA[/COLOR]" version="1.6" provider-name="stva">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="resource.language.es_es" />
