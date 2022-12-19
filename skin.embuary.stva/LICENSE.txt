@@ -1,5 +1,0 @@
-Embuary STVA
-
-Fonts
-Material Design Icons - SIL OFL 1.1 - <http://scripts.sil.org/OFL>
-Noto - SIL OFL 1.1 - <http://scripts.sil.org/OFL>

@@ -62,7 +62,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.alfa" name="Alfa" version="3.7.10" provider-name="Alfa Addon">
+<addon id="plugin.video.alfa" name="Alfa" version="3.8.0" provider-name="Alfa Addon">
   <requires>
     <import addon="script.module.requests"/>
     <import addon="script.module.beautifulsoup4" version="4.5.3"/>
@@ -94,12 +94,7 @@
     <news>[B]Estos son los cambios para esta versión:[/B]
 
       [COLOR green][B]Arreglos[/B][/COLOR]
-      ¤ Allcalidad                         ¤ Pelisplus                            ¤ Cuevana2
-      ¤ Cuevana2                        ¤ Cuevana3                          ¤ Estrenosdoramas
-      ¤ Dontorrent                      ¤ Entrepeliculasyseries       ¤ Hdfull
-      ¤ Hdfulls                             ¤ Jkanime                             ¤ Mitorrent
-      ¤ Newpct1                          ¤ Pelisflix                              ¤ Playdede
-      ¤ Poseidonhd                     ¤ 18+
+      ¤ Revisión general de canales
 
       [COLOR green][B]Novedades[/B][/COLOR]
 
@@ -312,7 +307,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.palantir2" name="[COLOR gold]Palantir 2[/COLOR]" version="2.2.4" provider-name="TierraMedia">
+<addon id="plugin.video.palantir2" name="[COLOR gold]Palantir 2[/COLOR]" version="2.2.5" provider-name="TierraMedia">
   <requires>
     <import addon="script.module.six" version="1.11.0"/>
     <import addon="plugin.video.duffyou" version="0.1.3" optional="true"/>
@@ -676,15 +671,24 @@ provider-name="jurialmunkey">
 	</extension>
 </addon>
 
-<addon id="repository.zachmorris" name="Zach Morris Add-ons" version="1.0.0" provider-name="zachmorris">
-    <extension point="xbmc.addon.repository" name="Zach Morris Add-ons">
-        <info compressed="true">https://github.com/zach-morris/repository.zachmorris/raw/master/addons.xml</info>
-        <checksum>https://github.com/zach-morris/repository.zachmorris/raw/master/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.githubusercontent.com/zach-morris/repository.zachmorris/master/</datadir>
+<addon id="repository.zachmorris" name="Zach Morris Add-ons" version="1.0.3" provider-name="zachmorris">
+    <requires>
+        <import addon="xbmc.addon" version="12.0.0"/>
+    </requires>
+    <extension point="xbmc.addon.repository">
+        <dir>
+            <info minversion="18.0.0">https://github.com/zach-morris/repository.zachmorris/raw/master/addons.xml</info>
+            <checksum>https://github.com/zach-morris/repository.zachmorris/raw/master/addons.xml.md5</checksum>
+            <datadir>https://github.com/zach-morris/repository.zachmorris/raw/master/</datadir>
+        </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary>Zach Morris Add-ons</summary>
+        <summary lang="en_GB">Zach Morris Add-ons</summary>
         <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
     </extension>
 </addon>
 
@@ -1113,7 +1117,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
     </extension>
 </addon>
 
-<addon id="skin.ctouch"  version="2.3" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="2.4" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>
 	</requires>
@@ -1131,16 +1135,8 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 2.3 - 12/8/22
-- Ahora se pueden desactivar individualmente los items predefinidos
-- Arreglos visuales
-- Item TV Premium del inicio STVA cambiado a la sección España del addon Magellan
-- Item Repeticiones, ahora abre un menú para elegir
-- Cambiado item productoras de películas por Canales de Alfa
-- Cambiado enlaces de los items películas y series por años al canal IMDB de Alfa
-- Agregado Magellan en Ajustes de Skin/Addons para instalar a través de Luar
-- Corregido error en el startup para instalar Elementum
-- Corregidos otros errores menores</news>
+		<news>Versión 2.4 - 19/12/22
+- Reparados los ítems del inicio STVA que no funcionaban</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
@@ -1155,7 +1151,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 	</extension>
 </addon>
 
-<addon id="skin.embuary.stva" version="1.2" name="Embuary STVA" provider-name="stva">
+<addon id="skin.embuary.stva" version="1.3" name="Embuary STVA" provider-name="stva">
 	<requires>
 		<import addon="resource.language.es_es" />
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -1191,19 +1187,12 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 			<screenshot>resources/screenshot-09.jpg</screenshot>
 		</assets>
 		<news>
-[B]Version 1.2[/B] - 12/8/22
-- Agregada categoría Repeticiones Cristal en Deportes
-- Agregada categoría TV Premium en Televisión (Magellan)
-- Eliminados del inicio con sinopsis los widgets de series y películas de la videoteca
-- Ahora al pulsar en la lupa aparecerá un menú para elegir el buscador de Alfa, Cristal Azul o Palantir
-- Eliminada categoría Productoras de Películas
-- Agregado en Ajustes de Skin, addons, el addon Elementum
-- Cambiado addon Torrest en el primer inicio por Cliente torrent que da a elegir para instalar entre Torrest y Elementum
-- Pequeñas correcciones internas</news>
+[B]Version 1.3[/B] - 19/12/22
+- Sustituidos los widgets que no funcionaban</news>
 	</extension>
 </addon>
 
-<addon id="skin.estuary.stva" version="1.2" name="Estuary STVA" provider-name="STVA">
+<addon id="skin.estuary.stva" version="1.3" name="Estuary STVA" provider-name="STVA">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="resource.language.es_es" version="0.0.0"/>
@@ -1243,9 +1232,8 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 				<screenshot>resources/screenshot-10.jpg</screenshot>
 				<screenshot>resources/screenshot-11.jpg</screenshot>
 			</assets>
-			<news>[B]Versión - 1.2[/B] - 6/6/22
-- Eliminada dependencia del Skin, repository.marcelveldt para evitar errores en la instalación
-- Reparado widget y categoría En Directo de Deportes
+			<news>[B]Versión - 1.3[/B] - 19/12/22
+- Sustituidos todos los widgets que no funcionaban
 </news>
 	</extension>
 </addon>
