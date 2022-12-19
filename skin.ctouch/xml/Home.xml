@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol>8000</defaultcontrol>
+	<onload condition="!Skin.HasSetting(FirstRunSetup)">ActivateWindow(1130)</onload> 	
+	<onload condition="!Skin.HasSetting(SkinHelper.EnablePVRThumbs)">Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
+	<onload condition="!Skin.HasSetting(SkinHelper.EnableMusicArt)">Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
+	<onload condition="!Skin.HasSetting(SkinHelper.EnableExtraFanart)">Skin.SetBool(SkinHelper.EnableExtraFanart)</onload>	  
+	<onload condition="!Skin.HasSetting(SkinHelper.EnableExtendedArt)">Skin.SetBool(SkinHelper.EnableExtendedArt)</onload>	  
+	  <onload condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters)">Skin.SetBool(SkinHelper.EnableAnimatedPosters)</onload>
+	  <onload condition="!Skin.HasSetting(SkinHelper.EnableAnimatedPosters)">Skin.Reset(SkinHelper.EnableAnimatedPosters)</onload>	
+	<onup>Control.SetFocus(80008,$INFO[Container(9000).Position])</onup>
+	<include>zoom-openclose</include>
+	<controls>
+		<!-- Use Custom Home menu-->
+		<include condition="Skin.HasSetting(homemenu-custom)" file="Includes_CustomHome.xml">CustomHomeMenu</include>
+		<!-- Use Cristal Home menu-->
+		<include condition="Skin.HasSetting(homemenu-icon)" file="Includes_IconHome.xml">IconHomeMenu</include>	
+		<!-- Use STVA Home menu-->
+		<include condition="Skin.HasSetting(homemenu-stva)" file="Includes_stvaHome.xml">STVAHomeMenu</include>	
+
+		<control type="group">
+			<include>touch-controls</include>
+			<include>touch-controlsl</include>
+			<include>fake-overlay</include>		
+			<include>hora</include>	
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<defaultID>TDT</defaultID>
+		<label>Canales TDT</label>
+		<label2>Add-on de Vídeo</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb></thumb>
+		<action>ActivateWindow(Videos,"plugin://plugin.video.moestv/?eydhY3Rpb24nOiAnbWFpbm1lbnUnLCAnY2hhbm5lbCc6ICdkaXJlY3RvcycsICdmYW5hcnQnOiAnaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3BvcHVsYy9iaWdtYWMvbWFzdGVyL21lZGlhL2JnX2RpcmVjdG9zLmpwZycsICdpY29uJzogJ2h0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9wb3B1bGMvYmlnbWFjL21hc3Rlci9tZWRpYS9kaXJlY3Rvcy5wbmcnLCAnbGFiZWwnOiAnRW4gRGlyZWN0byd9",return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>Plataformas</defaultID>
+		<label>Plataformas TV</label>
+		<label2>Add-on de Vídeo</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb></thumb>
+		<action>ActivateWindow(Videos,"plugin://plugin.video.moestv",return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>TVPremium</defaultID>
+		<label>TV Premium</label>
+		<label2>Add-on de Vídeo</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb></thumb>
+		<action>ActivateWindow(Videos,"plugin://plugin.video.Magellan_Matrix/?fanart=https%3a%2f%2fcdn.wallpapersafari.com%2f36%2f28%2fTzvSKW.jpeg&amp;mode=1&amp;name=%5bCOLOR%20lime%5d%20%3e%20%5bCOLOR%20yellow%5dESPANHA%2fLATINOS%20%5b%2fCOLOR%5d&amp;url=https%3a%2f%2fpastebin.com%2fraw%2f5jZTyKZP&quot;,return)</action>
+	</shortcut>
+</shortcuts>

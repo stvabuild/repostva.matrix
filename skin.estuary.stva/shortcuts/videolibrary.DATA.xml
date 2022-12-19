@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<defaultID>10024</defaultID>
+		<label>Mis Series</label>
+		<label2>Common Shortcut</label2>
+		<icon>DefaultTVShowTitle.png</icon>
+		<thumb>icons/sidemenu/tv.png</thumb>
+		<action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action>
+		<visible>Skin.HasSetting(alfa-content) | [Library.HasContent(tvshows) | Library.HasContent(movies)] + Skin.HasSetting(balandro-content)</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID>10024</defaultID>
+		<label>Mis Series</label>
+		<label2>Common Shortcut</label2>
+		<icon>DefaultTVShowTitle.png</icon>
+		<thumb>icons/sidemenu/tv.png</thumb>
+		<action>ActivateWindow(Videos,"plugin://plugin.video.balandro/?ewogICAgImFjdGlvbiI6ICJtYWlubGlzdF9zZXJpZXMiLCAKICAgICJjYXRlZ29yeSI6ICJkZWZhdWx0IiwgCiAgICAiY2hhbm5lbCI6ICJ0cmFja2luZyIsIAogICAgImluZm9MYWJlbHMiOiB7fSwgCiAgICAidGh1bWJuYWlsIjogIkM6XFxVc2Vyc1xcd2ludHRcXEFwcERhdGFcXFJvYW1pbmdcXEtvZGlcXGFkZG9uc1xccGx1Z2luLnZpZGVvLmJhbGFuZHJvXFxyZXNvdXJjZXNcXG1lZGlhXFx0aGVtZXNcXGRlZmF1bHRcXHR2LnBuZyIsIAogICAgInRpdGxlIjogIlNlcmllcyAoMSkiCn0%3d",return)</action>
+		<visible>![Library.HasContent(tvshows) | Library.HasContent(movies)] + Skin.HasSetting(balandro-content)</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>Calendario Series</label>
+		<label2>Common Shortcut</label2>
+		<icon>DefaultYear.png</icon>
+		<thumb>special://skin/extras/icons/guide.png</thumb>
+		<action>RunAddon(script.tv.show.next.aired)</action>
+		<visible>System.HasAddon(script.tv.show.next.aired) + Library.HasContent(tvshows)</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID>10024</defaultID>
+		<label>Mis Películas</label>
+		<label2>Common Shortcut</label2>
+		<icon>DefaultMovieTitle.png</icon>
+		<thumb>icons/sidemenu/movies.png</thumb>
+		<action>ActivateWindow(Videos,videodb://movies/titles/,return)</action>
+		<visible>Skin.HasSetting(alfa-content) | [Library.HasContent(tvshows) | Library.HasContent(movies)] + Skin.HasSetting(balandro-content)</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID>10024</defaultID>
+		<label>Mis Películas</label>
+		<label2>Common Shortcut</label2>
+		<icon>DefaultMovieTitle.png</icon>
+		<thumb>icons/sidemenu/movies.png</thumb>
+		<action>ActivateWindow(Videos,"plugin://plugin.video.balandro/?ewogICAgImFjdGlvbiI6ICJtYWlubGlzdF9wZWxpcyIsIAogICAgImNhdGVnb3J5IjogImRlZmF1bHQiLCAKICAgICJjaGFubmVsIjogInRyYWNraW5nIiwgCiAgICAiaW5mb0xhYmVscyI6IHt9LCAKICAgICJ0aHVtYm5haWwiOiAiQzpcXFVzZXJzXFx3aW50dFxcQXBwRGF0YVxcUm9hbWluZ1xcS29kaVxcYWRkb25zXFxwbHVnaW4udmlkZW8uYmFsYW5kcm9cXHJlc291cmNlc1xcbWVkaWFcXHRoZW1lc1xcZGVmYXVsdFxcY2xhcGJvYXJkLnBuZyIsIAogICAgInRpdGxlIjogIlBlbMOtY3VsYXMgKDApIgp9",return)</action>
+		<visible>![Library.HasContent(tvshows) | Library.HasContent(movies)] + Skin.HasSetting(balandro-content)</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>Videoteca Alfa</label>
+		<label2>Complemento de Vídeo</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb>special://skin/extras/icons/bookmark.png</thumb>
+		<action>ActivateWindow(1108)</action>
+		<visible>Skin.HasSetting(alfa-content)</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>Videoteca Balandro</label>
+		<label2>Complemento de Vídeo</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb>special://skin/extras/icons/bookmark.png</thumb>
+		<action>ActivateWindow(1108)</action>
+		<visible>Skin.HasSetting(balandro-content)</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>Mis Torrents</label>
+		<label2>Complemento de Vídeo</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb>special://skin/extras/icons/download.png</thumb>
+		<action>ActivateWindow(Videos,"plugin://plugin.video.torrest/torrents",return)</action>
+		<visible>System.HasAddon(plugin.video.torrest)</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>Ayuda</label>
+		<label2>Complemento de Vídeo</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb>special://skin/extras/icons/info.png</thumb>
+		<action>ActivateWindow(Videos,"plugin://plugin.video.balandro/?ewogICAgImFjdGlvbiI6ICJtYWlubGlzdCIsIAogICAgImNhdGVnb3J5IjogIkJhbGFuZHJvIiwgCiAgICAiY2hhbm5lbCI6ICJoZWxwZXIiLCAKICAgICJpbmZvTGFiZWxzIjoge30sIAogICAgInRodW1ibmFpbCI6ICJDOlxcVXNlcnNcXEFkTVxcQXBwRGF0YVxcUm9hbWluZ1xcS29kaVxcYWRkb25zXFxwbHVnaW4udmlkZW8uYmFsYW5kcm9cXHJlc291cmNlc1xcbWVkaWFcXHRoZW1lc1xcZGVmYXVsdFxcaGVscC5wbmciLCAKICAgICJ0aXRsZSI6ICJBeXVkYSAoMi4wLjIpIgp9",return)</action>
+		<visible>Skin.HasSetting(balandro-content)</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID>20314</defaultID>
+		<label>20314</label>
+		<label2>Common Shortcut</label2>
+		<icon>LibrarySettings.png</icon>
+		<thumb />
+		<action>ActivateWindow(videos,library://video/tvshows/,return)</action>
+		<disabled>false</disabled>
+		<visible>Skin.HasSetting(alfa-content)</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID>var-videolibraryscanlabel</defaultID>
+		<label>$VAR[VideoLibraryScanLabel]</label>
+		<label2>Common Shortcut</label2>
+		<icon>$VAR[VideoLibraryScanIcon]</icon>
+		<thumb />
+		<action>RunPlugin(plugin://plugin.video.alfa/?ewogICAgImFjdGlvbiI6ICJ1cGRhdGVfdmlkZW9saWJyYXJ5IiwgCiAgICAiY2hhbm5lbCI6ICJ2aWRlb2xpYnJhcnkiLCAKICAgICJmb2xkZXIiOiBmYWxzZSwgCiAgICAiaW5mb0xhYmVscyI6IHt9LCAKICAgICJ0aHVtYm5haWwiOiAiQzpcXFVzZXJzXFxIUFxcQXBwRGF0YVxcUm9hbWluZ1xcS29kaVxcYWRkb25zXFxwbHVnaW4udmlkZW8uYWxmYVxccmVzb3VyY2VzXFxtZWRpYVxcdGhlbWVzXFxkZWZhdWx0XFx0aHVtYl92aWRlb2xpYnJhcnlfdHZzaG93LnBuZyIsIAogICAgInRpdGxlIjogIkJ1c2NhciBudWV2b3MgZXBpc29kaW9zIHkgYWN0dWFsaXphciB2aWRlb3RlY2EiCn0%3D)</action>
+		<visible>Skin.HasSetting(alfa-content)</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>$LOCALIZE[40009]</label>
+		<label2>Common Shortcut</label2>
+		<icon>$VAR[VideoLibraryScanIcon]</icon>
+		<thumb />
+		<action>UpdateLibrary(video)</action>
+	</shortcut>
+</shortcuts>

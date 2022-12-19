@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window id="1130">
+    <defaultcontrol>9000</defaultcontrol>
+    <controls>
+		<control type="image">
+			<centerleft>50%</centerleft>
+			<top>0</top>
+			<width>300</width>
+			<height>300</height>
+			<texture background="true">special://skin/resources/icon.png</texture>
+			<visible>!Window.isVisible(DialogExtendedProgressBar.xml)</visible>
+			<visible>!Window.isVisible(DialogNotification.xml)</visible>
+		</control>	
+		<control type="group">
+			<centerleft>50%</centerleft>
+			<top>285</top>
+			<height>900</height>
+			<width>1200</width>
+			<control type="textbox">
+				<width>1200</width>
+				<height>500</height>
+				<shadowcolor>black</shadowcolor>
+				<pagecontrol>3000</pagecontrol>
+				<font>font13</font>
+				<align>center</align>
+				<label>Instala los siguientes addons que nutrirán de contenido y otras funciones al Skin.
+Al instalar algunos addons primero pedirá instalar su repositorio y después el addon.[CR]
+Si tu dispositivo no es Android, después de instalar Winner, pulsa de nuevo para que descargue los módulos Acestream para poder ver los enlaces del addon winner.
+Si tu dispositivo es Android, instala la app Acestream desde el PlayStore.</label>
+			</control>
+			<control type="grouplist" id="9000">
+				<orientation>vertical</orientation>
+				<left>0</left>
+				<itemgap>7</itemgap>
+				<top>100</top>
+				<width>1200</width>
+				<align>center</align>
+				<font>font13</font>
+				<control type="radiobutton" id="321">
+					<font>font13</font>
+					<label>Cristal Azul $INFO[System.AddonVersion(plugin.video.cristalazul),(,)][COLOR grey] - Pelis, Series, TV, Deportes, Documentales, Varios[/COLOR]</label>
+					<height>60</height>
+					<radiowidth>100</radiowidth>
+					<radioheight>100</radioheight>
+					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+					<onclick condition="!System.HasAddon(plugin.video.cristalazul)">InstallAddon(plugin.video.cristalazul)</onclick>
+					<selected>System.HasAddon(plugin.video.cristalazul)</selected>
+					<include>DefaultSettingButton</include>
+				</control>
+				<control type="radiobutton" id="324">
+					<font>font13</font>
+					<label>Alfa $INFO[System.AddonVersion(plugin.video.alfa),(,)][COLOR grey] - Pelis, Series, Documentales[/COLOR]</label>
+					<height>60</height>
+					<radiowidth>100</radiowidth>
+					<radioheight>100</radioheight>
+					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+					<onclick condition="!System.HasAddon(repository.camaradas)">InstallAddon(repository.alfa-addon)</onclick>																		
+					<onclick condition="!System.HasAddon(plugin.video.alfa)">InstallAddon(plugin.video.alfa)</onclick>																		
+					<selected>System.HasAddon(plugin.video.alfa)</selected>
+					<include>DefaultSettingButton</include>
+				</control>
+				<control type="radiobutton" id="322">
+					<font>font13</font>
+					<height>60</height>
+					<label>Winner $INFO[System.AddonVersion(plugin.video.winner),(,)][COLOR grey] - Deportes[/COLOR]</label>
+					<radiowidth>100</radiowidth>
+					<radioheight>100</radioheight>
+					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+					<onclick condition="!System.HasAddon(repository.camaradas)">InstallAddon(repository.camaradas.repo)</onclick>																		
+					<onclick condition="!System.HasAddon(plugin.video.winner)">InstallAddon(plugin.video.winner)</onclick>																		
+					<onclick condition="System.HasAddon(script.module.horus)">ActivateWindow(10025,&quot;plugin://script.module.horus/&quot;,return)</onclick>
+					<selected>System.HasAddon(plugin.video.winner)</selected>
+					<include>DefaultSettingButton</include>
+				</control>
+				<control type="radiobutton" id="325">
+					<font>font13</font>
+					<height>60</height>
+					<label>Moe's TV $INFO[System.AddonVersion(plugin.video.moestv),(,)][COLOR grey] - Plataformas TV[/COLOR]</label>
+					<radiowidth>100</radiowidth>
+					<radioheight>100</radioheight>
+					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+					<onclick condition="!System.HasAddon(plugin.video.moestv)">InstallAddon(plugin.video.moestv)</onclick>																		
+					<selected>System.HasAddon(plugin.video.moestv)</selected>
+					<include>DefaultSettingButton</include>
+				</control>
+				<control type="radiobutton" id="327">
+					<font>font13</font>
+					<label>Skin Helper Service $INFO[System.AddonVersion(script.skin.helper.service),(,)][COLOR grey] - Dependencia del Skin (Arte para títulos)[/COLOR]</label>
+					<height>60</height>
+					<radiowidth>100</radiowidth>
+					<radioheight>100</radioheight>
+					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+					<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>																		
+					<onclick condition="!System.HasAddon(repoository.marcelveldt)">InstallAddon(repository.marcelveldt)</onclick>																		
+					<selected>System.HasAddon(script.skin.helper.service)</selected>
+					<include>DefaultSettingButton</include>
+				</control>
+				<control type="radiobutton" id="328">
+					<font>font13</font>
+					<label>Cliente Torrent[COLOR grey] - Elige entre Torrest o Elementum[/COLOR]</label>
+					<height>60</height>
+					<radiowidth>100</radiowidth>
+					<radioheight>100</radioheight>
+					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+					<onclick>ActivateWindow(1133)</onclick>																		
+					<selected>System.HasAddon(plugin.video.elementum) | System.HasAddon(plugin.video.torrest)</selected>
+					<include>DefaultSettingButton</include>
+				</control>
+				<control type="button" id="308">
+					<top>70</top>
+					<height>60</height>
+					<label>Continuar</label>
+					<font>font14</font>
+					<textoffsetx>30</textoffsetx>
+					<onclick>Close</onclick>
+					<onclick>ActivateWindow(5111)</onclick>
+					<align>center</align>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

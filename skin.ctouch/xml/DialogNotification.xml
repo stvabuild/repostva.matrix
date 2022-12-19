@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<coordinates>
+		<left>10</left>
+		<top>0</top>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<animation easing="inout" effect="slide" end="0,0" start="0,-225" time="200" tween="sine">WindowOpen</animation>
+			<animation easing="inout" effect="slide" end="0,-225" start="0,0" time="200" tween="sine">WindowClose</animation>
+			<control type="image" id="400">
+				<centerleft>32%</centerleft>
+				<top>5</top>
+				<width>80</width>
+				<height>80</height>
+				<texture>DefaultIconInfo.png</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="label" id="401">
+				<!-- Caption -->
+				<centerleft>50%</centerleft>
+				<top>5</top>
+				<width>600</width>
+				<height>30</height>
+				<font>ctouch18</font>
+				<align>center</align>
+				<include>scrolltext</include>
+			</control>
+			<control type="label" id="402">
+				<!-- Description -->
+				<centerleft>50%</centerleft>
+				<top>50</top>
+				<width>600</width>
+				<height>30</height>
+				<font>ctouch16</font>
+				<align>center</align>
+				<include>scrolltext</include>
+			</control>
+		</control>
+	</controls>
+</window>

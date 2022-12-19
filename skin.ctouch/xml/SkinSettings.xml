@@ -1,0 +1,2378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol always="true">999</defaultcontrol>
+	<controls>
+		<include>background</include>
+		<include>fake-overlay</include>
+		<control type="image">
+			<!-- Dialog background image -->
+			<left>1480</left>
+			<top>140</top>
+			<width>420</width>
+			<height>850</height>
+			<texture border="14" colordiffuse="midgrey">button-default.png</texture>
+		</control>
+		<control type="group" id="999">
+			<control type="button" id="983">
+				<!-- General -->
+				<right>30</right>
+				<top>165</top>
+				<width>400</width>
+				<height>75</height>
+				<font>ctouch22</font>
+				<label>General</label>
+				<onfocus>Skin.SetString(skinsettingmenu,background)</onfocus>
+				<onup>80008</onup>
+				<ondown>981</ondown>
+				<align>right</align>
+				<onleft>501</onleft>
+				<texturenofocus/>
+			</control>
+			<control type="button" id="981">
+				<!-- Inicio -->
+				<right>30</right>
+				<top>250</top>
+				<width>400</width>
+				<height>75</height>
+				<font>ctouch22</font>
+				<label>Tipo de Inicio</label>
+				<onfocus>Skin.SetString(skinsettingmenu,inicio)</onfocus>
+				<onup>983</onup>
+				<ondown>982</ondown>
+				<align>right</align>
+				<onleft>300</onleft>
+				<texturenofocus/>
+				<onfocus>SetProperty(Image_Preview,special://skin/resources/screenshot001.jpg)</onfocus>
+			</control>			
+			<control type="button" id="982">
+				<!-- Items Inicio -->
+				<right>30</right>
+				<top>335</top>
+				<width>400</width>
+				<height>75</height>
+				<font>ctouch22</font>
+				<label>Items Inicio</label>
+				<onfocus>Skin.SetString(skinsettingmenu,custom)</onfocus>
+				<onclick>ActivateWindow(1152,,return)</onclick>
+				<onup>981</onup>
+				<ondown>986</ondown>
+				<align>right</align>
+				<onleft>400</onleft>
+				<texturenofocus/>
+			</control>			
+			<control type="button" id="986">
+				<!-- addons -->
+				<right>30</right>
+				<top>420</top>
+				<width>400</width>
+				<height>75</height>
+				<font>ctouch22</font>
+				<label>Addons</label>
+				<onfocus>Skin.SetString(skinsettingmenu,addons)</onfocus>
+				<onup>982</onup>
+				<ondown>987</ondown>
+				<align>right</align>
+				<onleft>600</onleft>
+				<texturenofocus/>
+			</control>
+			<control type="button" id="987">
+				<!-- Help -->
+				<right>30</right>
+				<top>505</top>
+				<width>400</width>
+				<height>75</height>
+				<font>ctouch22</font>
+				<label>Ayuda</label>
+				<onfocus>Skin.SetString(skinsettingmenu,help)</onfocus>
+				<onup>986</onup>
+				<ondown>989</ondown>
+				<align>right</align>
+				<onleft>700</onleft>
+				<texturenofocus/>
+			</control>
+			<control type="button" id="989">
+				<!-- Canales -->
+				<right>30</right>
+				<top>590</top>
+				<width>400</width>
+				<height>75</height>
+				<font>ctouch22</font>
+				<label>Canales de Addons</label>
+				<onfocus>Skin.SetString(skinsettingmenu,canales)</onfocus>
+				<onup>987</onup>
+				<ondown>988</ondown>
+				<align>right</align>
+				<onleft>200</onleft>
+				<texturenofocus/>
+			</control>
+			<control type="button" id="988">
+				<right>30</right>
+				<top>900</top>
+				<width>400</width>
+				<height>75</height>
+				<font>ctouch22</font>
+				<label>Aplicar Cambios</label>
+				<onclick>ReloadSkin()</onclick>
+				<onup>989</onup>
+				<ondown>981</ondown>
+				<align>right</align>
+				<texturenofocus/>
+			</control>			
+		</control>
+		<control type="scrollbar" id="1223">
+			<left>20</left>
+			<top>140</top>
+			<width>18</width>
+			<height>850</height>
+			<onright>998</onright>
+			<animation condition="!Control.HasFocus(1223) + !Container.Scrolling + !String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31875])" effect="fade" start="100" end="0" time="200" reversible="true">Conditional</animation>
+			<visible>!Skin.String(skinsettingmenu,custom)</visible>
+		</control>
+		<control type="group" id="998">
+			<control type="group" id="400">
+				<!-- Home Menu Settings -->				
+				<visible>Skin.String(skinsettingmenu,custom)</visible>
+				<control type="image">
+					<!-- Background Settings Button Image -->
+					<right>30</right>
+					<top>335</top>
+					<width>400</width>
+					<height>75</height>
+					<texture border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texture>
+					<include>settingbutton-fade</include>
+					<visible>!ControlGroup(999).HasFocus()</visible>
+				</control>			
+				<control type="panel" id="9021">
+					<!-- Home menu icon panel -->
+					<animation condition="true" effect="zoom" start="100" end="80" center="auto">Conditional</animation>
+					<width>1890</width>
+					<height>1050</height>
+					<top>25</top>
+					<left>-125</left>
+					<onleft>982</onleft>
+					<onright>982</onright>
+					<onup>8000</onup>
+					<ondown>noop</ondown>
+					<visible>Skin.HasSetting(homemenu-icon)</visible>
+					<itemlayout height="220" width="330">
+						<control type="image">
+							<!-- Icon image -->
+							<width>300</width>
+							<height>180</height>
+							<aspectratio>stretch</aspectratio>
+							<texture fallback="special://skin/extras/homeicons/fallback.png">$INFO[ListItem.Art(thumb)]</texture>
+							<animation effect="fade" start="100" end="35" condition="!ListItem.Property(isActive) | Control.HasFocus(402) | Control.HasFocus(403)">Conditional</animation>
+							<bordersize>6</bordersize>
+						</control>
+					</itemlayout>
+					<focusedlayout height="220" width="330">
+						<control type="group">
+							<control type="image">
+								<!-- Focused non settings icon image -->
+								<top>0</top>
+								<width>300</width>
+								<height>180</height>
+								<aspectratio>stretch</aspectratio>
+								<bordertexture border="3" colordiffuse="$VAR[AccentColor]">homeiconlite.png</bordertexture>
+								<texture fallback="special://skin/extras/homeicons/fallback.png">$INFO[ListItem.Art(thumb)]</texture>
+								<bordersize>6</bordersize>
+							</control>
+							<control type="label">
+								<left>0</left>
+								<top>180</top>
+								<width>300</width>
+								<height>33</height>
+								<align>center</align>
+								<label fallback="Agregar Favorito">$INFO[ListItem.Label]</label>
+								<font>ctouch19</font>
+								<animation effect="fade" start="100" end="35" condition="!ListItem.Property(isActive) | Control.HasFocus(402)">Conditional</animation>
+							</control>
+						</control>
+					</focusedlayout>
+					<content>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/pcanales.png" />
+							<param name="itemlabel" value="Cine" />
+							<param name="itemcondition" value="!Skin.HasSetting(pcristal)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="pcristal" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/scanales.png" />
+							<param name="itemlabel" value="Series" />
+							<param name="itemcondition" value="!Skin.HasSetting(scristal)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="scristal" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/menutv.png" />
+							<param name="itemlabel" value="Televisión" />
+							<param name="itemcondition" value="!Skin.HasSetting(tvcristal)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="tvcristal" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/ideportes.png" />
+							<param name="itemlabel" value="Deportes" />
+							<param name="itemcondition" value="!Skin.HasSetting(dcristal)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="dcristal" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/idocumentales.png" />
+							<param name="itemlabel" value="Documentales" />
+							<param name="itemcondition" value="!Skin.HasSetting(doccristal)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="doccristal" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/pelishd.png" />
+							<param name="itemlabel" value="Películas HD" />
+							<param name="itemcondition" value="!Skin.HasSetting(4kcristal)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="4kcristal" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/serieshd.png" />
+							<param name="itemlabel" value="Series HD" />
+							<param name="itemcondition" value="!Skin.HasSetting(shd)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="shd" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/tdt.png" />
+							<param name="itemlabel" value="Canales TDT" />
+							<param name="itemcondition" value="!Skin.HasSetting(tdtcristal)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="tdtcristal" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/directos.png" />
+							<param name="itemlabel" value="En vivo" />
+							<param name="itemcondition" value="!Skin.HasSetting(envivocristal)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="envivocristal" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/videoteca.png" />
+							<param name="itemlabel" value="Favoritos Cristal" />
+							<param name="itemcondition" value="!Skin.HasSetting(favcristal)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="favcristal" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/estrenos.png" />
+							<param name="itemlabel" value="SuperCine Estrenos" />
+							<param name="itemcondition" value="!Skin.HasSetting(superestrenos)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="superestrenos" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/pidepalomitas.png" />
+							<param name="itemlabel" value="Series Torrent" />
+							<param name="itemcondition" value="!Skin.HasSetting(torrentcristal)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="torrentcristal" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/moes.png" />
+							<param name="itemlabel" value="Plataformas TV" />
+							<param name="itemcondition" value="!Skin.HasSetting(moescristal)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="moescristal" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/deportesca.png" />
+							<param name="itemlabel" value="Deportes Cristal" />
+							<param name="itemcondition" value="!Skin.HasSetting(deportescristal)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="deportescristal" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/youtube.png" />
+							<param name="itemlabel" value="Youtube" />
+							<param name="itemcondition" value="!Skin.HasSetting(youtubecristal)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="youtubecristal" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/sagas.png" />
+							<param name="itemlabel" value="Sagas" />
+							<param name="itemcondition" value="!Skin.HasSetting(sagascristal)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="sagascristal" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/youtube.png" />
+							<param name="itemlabel" value="Productoras" />
+							<param name="itemcondition" value="!Skin.HasSetting(productorascristal)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="productorascristal" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/disney.png" />
+							<param name="itemlabel" value="Disney + Star" />
+							<param name="itemcondition" value="!Skin.HasSetting(disneycristal)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="deportescristal" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/festakids.png" />
+							<param name="itemlabel" value="Festa Kids" />
+							<param name="itemcondition" value="!Skin.HasSetting(festacristal)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="festacristal" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/latino.png" />
+							<param name="itemlabel" value="Cristal Latino" />
+							<param name="itemcondition" value="!Skin.HasSetting(latinocristal)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="latinocristal" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/coleccion.png" />
+							<param name="itemlabel" value="Colección" />
+							<param name="itemcondition" value="!Skin.HasSetting(coleccion-v) + Library.HasContent(tvshows) + Skin.HasSetting(homemenu-icon)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="coleccion-v" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/liptv.png" />
+							<param name="itemlabel" value="IPTV" />
+							<param name="itemcondition" value="!Skin.HasSetting(iptv-v) + System.HasPVRAddon" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="iptv-v" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMovies.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMovies.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMovies.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMovies.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMovies.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMovies.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMovies.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMovies.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMovies.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMovies.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMovies.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMovies.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMovies.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMovies.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMovies.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMovies.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMovies.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMovies.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMovies.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMovies.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTVShow.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTVShow.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTVShow.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTVShow.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTVShow.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTVShow.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTVShow.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTVShow.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTVShow.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTVShow.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTVShow.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTVShow.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTVShow.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTVShow.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTVShow.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTVShow.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTVShow.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTVShow.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTVShow.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTVShow.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTV.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTV.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTV.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTV.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTV.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTV.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTV.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTV.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTV.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTV.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTV.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTV.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTV.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTV.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTV.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTV.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTV.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTV.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTV.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTV.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomRadio.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomRadio.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomRadio.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomRadio.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomRadio.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomRadio.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomRadio.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomRadio.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomRadio.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomRadio.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomRadio.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomRadio.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomRadio.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomRadio.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomRadio.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomRadio.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomRadio.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomRadio.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomRadio.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomRadio.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomFav.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomFav.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomFav.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomFav.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomFav.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomFav.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomFav.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomFav.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomFav.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomFav.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomFav.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomFav.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomFav.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomFav.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomFav.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomFav.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomFav.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomFav.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomFav.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomFav.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMusic.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMusic.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMusic.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMusic.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMusic.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMusic.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMusic.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMusic.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMusic.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMusic.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMusic.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMusic.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMusic.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMusic.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMusic.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMusic.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMusic.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMusic.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMusic.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMusic.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomAddon.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomAddon.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomAddon.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomAddon.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomAddon.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomAddon.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomAddon.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomAddon.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomAddon.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomAddon.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomAddon.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomAddon.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomAddon.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomAddon.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomAddon.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomAddon.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomAddon.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomAddon.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomAddon.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomAddon.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomGame.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomGame.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomGame.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomGame.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomGame.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomGame.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomGame.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomGame.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomGame.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomGame.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomGame.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomGame.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomGame.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomGame.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomGame.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomGame.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomGame.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomGame.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomGame.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomGame.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+					</content>
+				</control>
+				<control type="panel" id="9021">
+					<!-- Home menu icon panel -->
+					<animation condition="true" effect="zoom" start="100" end="80" center="auto">Conditional</animation>
+					<width>1890</width>
+					<height>1050</height>
+					<top>25</top>
+					<left>-125</left>
+					<onleft>982</onleft>
+					<onright>982</onright>
+					<onup>8000</onup>
+					<ondown>noop</ondown>
+					<visible>Skin.HasSetting(homemenu-stva)</visible>
+					<itemlayout height="220" width="330">
+						<control type="image">
+							<!-- Icon image -->
+							<width>300</width>
+							<height>180</height>
+							<aspectratio>keep</aspectratio>
+							<texture fallback="special://skin/extras/homeicons/fallback.png">$INFO[ListItem.Art(thumb)]</texture>
+							<animation effect="fade" start="100" end="35" condition="!ListItem.Property(isActive) | Control.HasFocus(402) | Control.HasFocus(403)">Conditional</animation>
+							<bordersize>6</bordersize>
+						</control>
+					</itemlayout>
+					<focusedlayout height="220" width="330">
+						<control type="group">
+							<control type="image">
+								<!-- Focused non settings icon image -->
+								<top>0</top>
+								<width>300</width>
+								<height>180</height>
+								<aspectratio>keep</aspectratio>
+								<bordertexture border="3" colordiffuse="$VAR[AccentColor]">homeiconlite.png</bordertexture>
+								<texture fallback="special://skin/extras/homeicons/fallback.png">$INFO[ListItem.Art(thumb)]</texture>
+								<bordersize>6</bordersize>
+							</control>
+							<control type="label">
+								<left>0</left>
+								<top>180</top>
+								<width>300</width>
+								<height>33</height>
+								<align>center</align>
+								<label fallback="Agregar Favorito">$INFO[ListItem.Label]</label>
+								<font>ctouch19</font>
+								<animation effect="fade" start="100" end="35" condition="!ListItem.Property(isActive) | Control.HasFocus(402)">Conditional</animation>
+							</control>
+						</control>
+					</focusedlayout>
+					<content>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/tags.png" />
+							<param name="itemlabel" value="Pelis en Tendencia" />
+							<param name="itemcondition" value="!Skin.HasSetting(ptendencia)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="ptendencia" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/cinema.png" />
+							<param name="itemlabel" value="Películas Populares" />
+							<param name="itemcondition" value="!Skin.HasSetting(ppopulares)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="ppopulares" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/genre.png" />
+							<param name="itemlabel" value="Géneros de Películas" />
+							<param name="itemcondition" value="!Skin.HasSetting(pgenre)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="pgenre" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/filemanager.png" />
+							<param name="itemlabel" value="Canales" />
+							<param name="itemcondition" value="!Skin.HasSetting(canales)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="canales" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/fecha.png" />
+							<param name="itemlabel" value="Películas por Año" />
+							<param name="itemcondition" value="!Skin.HasSetting(pfecha)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="pfecha" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/hot.png" />
+							<param name="itemlabel" value="Series en Tendencia" />
+							<param name="itemcondition" value="!Skin.HasSetting(stendencia)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="stendencia" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/emision.png" />
+							<param name="itemlabel" value="Series Populares" />
+							<param name="itemcondition" value="!Skin.HasSetting(spopulares)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="spopulares" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/genres.png" />
+							<param name="itemlabel" value="Géneros de Series" />
+							<param name="itemcondition" value="!Skin.HasSetting(sgeneros)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="sgeneros" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/productorasstva.png" />
+							<param name="itemlabel" value="Productoras de Series" />
+							<param name="itemcondition" value="!Skin.HasSetting(proseries)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="proseries" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/fechaseries.png" />
+							<param name="itemlabel" value="Series por Año" />
+							<param name="itemcondition" value="!Skin.HasSetting(sfecha)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="sfecha" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/cristalazul.png" />
+							<param name="itemlabel" value="Televisión Cristal" />
+							<param name="itemcondition" value="!Skin.HasSetting(tvcristal)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="tvcristal" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/tvpremium.png" />
+							<param name="itemlabel" value="TV Premium" />
+							<param name="itemcondition" value="!Skin.HasSetting(tvpremium)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="tvpremium" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/iptv.png" />
+							<param name="itemlabel" value="TDT" />
+							<param name="itemcondition" value="!Skin.HasSetting(tdt)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="tdt" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/tvalacarta.png" />
+							<param name="itemlabel" value="TV a la Carta" />
+							<param name="itemcondition" value="!Skin.HasSetting(alacarta)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="alacarta" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/mseries.png" />
+							<param name="itemlabel" value="Videoteca" />
+							<param name="itemcondition" value="!Skin.HasSetting(videoteca)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="videoteca" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/winner.png" />
+							<param name="itemlabel" value="Winner" />
+							<param name="itemcondition" value="!Skin.HasSetting(winner)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="winner" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/directosstva.png" />
+							<param name="itemlabel" value="En Vivo" />
+							<param name="itemcondition" value="!Skin.HasSetting(envivo)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="envivo" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/futbol.png" />
+							<param name="itemlabel" value="Deportes Cristal" />
+							<param name="itemcondition" value="!Skin.HasSetting(deportescristal)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="deportescristal" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/repeticiones.png" />
+							<param name="itemlabel" value="Repeticiones" />
+							<param name="itemcondition" value="!Skin.HasSetting(repes)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="repes" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/mpelis.png" />
+							<param name="itemlabel" value="Colección" />
+							<param name="itemcondition" value="!Skin.HasSetting(coleccion)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="coleccion" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/liptv.png" />
+							<param name="itemlabel" value="IPTV" />
+							<param name="itemcondition" value="!Skin.HasSetting(iptv-v) + System.HasPVRAddon" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="iptv-v" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMovies.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMovies.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMovies.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMovies.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMovies.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMovies.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMovies.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMovies.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMovies.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMovies.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMovies.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMovies.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMovies.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMovies.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMovies.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMovies.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMovies.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMovies.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMovies.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMovies.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTVShow.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTVShow.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTVShow.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTVShow.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTVShow.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTVShow.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTVShow.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTVShow.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTVShow.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTVShow.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTVShow.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTVShow.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTVShow.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTVShow.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTVShow.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTVShow.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTVShow.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTVShow.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTVShow.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTVShow.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTV.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTV.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTV.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTV.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTV.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTV.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTV.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTV.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTV.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTV.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTV.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTV.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTV.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTV.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTV.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTV.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTV.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTV.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTV.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTV.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomRadio.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomRadio.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomRadio.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomRadio.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomRadio.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomRadio.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomRadio.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomRadio.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomRadio.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomRadio.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomRadio.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomRadio.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomRadio.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomRadio.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomRadio.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomRadio.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomRadio.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomRadio.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomRadio.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomRadio.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomFav.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomFav.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomFav.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomFav.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomFav.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomFav.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomFav.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomFav.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomFav.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomFav.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomFav.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomFav.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomFav.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomFav.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomFav.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomFav.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomFav.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomFav.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomFav.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomFav.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMusic.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMusic.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMusic.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMusic.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMusic.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMusic.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMusic.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMusic.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMusic.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMusic.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMusic.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMusic.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMusic.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMusic.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMusic.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMusic.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMusic.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMusic.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMusic.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMusic.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomAddon.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomAddon.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomAddon.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomAddon.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomAddon.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomAddon.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomAddon.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomAddon.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomAddon.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomAddon.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomAddon.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomAddon.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomAddon.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomAddon.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomAddon.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomAddon.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomAddon.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomAddon.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomAddon.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomAddon.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomGame.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomGame.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomGame.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomGame.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomGame.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomGame.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomGame.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomGame.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomGame.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomGame.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomGame.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomGame.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomGame.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomGame.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomGame.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomGame.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomGame.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomGame.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomGame.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomGame.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+					</content>
+				</control>
+				<control type="panel" id="9021">
+					<!-- Home menu icon panel -->
+					<animation condition="true" effect="zoom" start="100" end="80" center="auto">Conditional</animation>
+					<width>1690</width>
+					<height>1050</height>
+					<top>25</top>
+					<left>-50</left>
+					<onleft>982</onleft>
+					<onright>982</onright>
+					<onup>8000</onup>
+					<ondown>noop</ondown>
+					<visible>Skin.HasSetting(homemenu-custom)</visible>
+					<itemlayout height="280" width="260">
+						<control type="image">
+							<!-- Icon image -->
+							<width>220</width>
+							<height>220</height>
+							<aspectratio>scale</aspectratio>
+							<texture fallback="special://skin/extras/homeicons/fallbackwide.png">$INFO[ListItem.Art(thumb)]</texture>
+							<animation effect="fade" start="100" end="35" condition="!ListItem.Property(isActive) | Control.HasFocus(402) | Control.HasFocus(403)">Conditional</animation>
+							<bordersize>6</bordersize>
+						</control>
+					</itemlayout>
+					<focusedlayout height="280" width="260">
+						<control type="group">
+							<control type="image">
+								<!-- Focused non settings icon image -->
+								<top>0</top>
+								<width>220</width>
+								<height>220</height>
+								<aspectratio>scale</aspectratio>
+								<bordertexture border="3" colordiffuse="$VAR[AccentColor]">homeiconlite.png</bordertexture>
+								<texture fallback="special://skin/extras/homeicons/fallbackwide.png">$INFO[ListItem.Art(thumb)]</texture>
+								<bordersize>6</bordersize>
+							</control>
+							<control type="label">
+								<left>0</left>
+								<top>230</top>
+								<align>center</align>
+								<width>220</width>
+								<height>33</height>
+								<label fallback="Agregar Favorito">$INFO[ListItem.Label]</label>
+								<font>ctouch18</font>
+								<include>scrolltext</include>
+								<animation effect="fade" start="100" end="35" condition="!ListItem.Property(isActive) | Control.HasFocus(402)">Conditional</animation>
+							</control>
+						</control>
+					</focusedlayout>
+					<content>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/coleccion.png" />
+							<param name="itemlabel" value="Colección" />
+							<param name="itemcondition" value="!Skin.HasSetting(coleccion-v) + Library.HasContent(tvshows)" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="coleccion-v" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemthumb" value="special://skin/extras/homeicons/liptv.png" />
+							<param name="itemlabel" value="IPTV" />
+							<param name="itemcondition" value="!Skin.HasSetting(iptv-v) + System.HasPVRAddon" />
+							<param name="itemmenuid" value="9021" />
+							<param name="itemtoggle" value="iptv-v" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMovies.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMovies.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMovies.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMovies.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMovies.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMovies.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMovies.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMovies.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMovies.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMovies.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMovies.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMovies.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMovies.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMovies.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMovies.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMovies.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMovies.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMovies.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMovies.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMovies.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTVShow.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTVShow.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTVShow.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTVShow.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTVShow.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTVShow.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTVShow.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTVShow.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTVShow.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTVShow.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTVShow.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTVShow.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTVShow.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTVShow.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTVShow.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTVShow.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTVShow.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTVShow.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTVShow.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTVShow.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTV.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTV.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTV.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTV.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTV.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTV.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTV.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTV.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTV.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTV.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTV.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTV.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTV.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTV.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTV.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTV.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTV.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTV.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTV.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTV.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomRadio.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomRadio.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomRadio.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomRadio.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomRadio.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomRadio.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomRadio.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomRadio.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomRadio.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomRadio.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomRadio.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomRadio.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomRadio.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomRadio.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomRadio.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomRadio.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomRadio.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomRadio.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomRadio.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomRadio.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomFav.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomFav.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomFav.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomFav.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomFav.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomFav.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomFav.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomFav.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomFav.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomFav.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomFav.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomFav.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomFav.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomFav.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomFav.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomFav.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomFav.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomFav.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomFav.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomFav.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMusic.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMusic.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMusic.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMusic.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMusic.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMusic.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMusic.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMusic.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMusic.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMusic.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMusic.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMusic.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMusic.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMusic.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMusic.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMusic.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMusic.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMusic.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMusic.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMusic.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomAddon.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomAddon.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomAddon.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomAddon.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomAddon.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomAddon.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomAddon.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomAddon.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomAddon.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomAddon.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomAddon.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomAddon.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomAddon.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomAddon.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomAddon.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomAddon.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomAddon.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomAddon.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomAddon.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomAddon.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomGame.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomGame.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomGame.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomGame.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomGame.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomGame.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomGame.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomGame.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomGame.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomGame.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomGame.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomGame.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomGame.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomGame.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomGame.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomGame.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomGame.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomGame.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomGame.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomGame.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+					</content>
+				</control>
+			</control>	
+			<control type="group" id="300">
+				<!-- Home Screen Settings -->
+				<visible>Skin.String(skinsettingmenu,inicio)</visible>
+				<control type="image">
+				<!-- Dialog background image -->
+					<left>60</left>
+					<top>140</top>
+					<width>1300</width>
+					<height>850</height>
+					<texture border="14" colordiffuse="midgrey">button-default.png</texture>
+				</control>
+				<control type="image">
+				<!-- Dialog background image -->
+					<left>260</left>
+					<width>910</width>
+					<top>450</top>
+					<height>525</height>
+					<texture border="14">button-default.png</texture>
+				</control>
+				<control type="image">
+					<!-- Background Settings Button Image -->
+					<right>30</right>
+					<top>250</top>
+					<width>400</width>
+					<height>75</height>
+					<texture border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texture>
+					<include>settingbutton-fade</include>
+					<visible>!ControlGroup(999).HasFocus()</visible>
+				</control>
+				<control type="grouplist" id="301">
+					<left>80</left>
+					<top>165</top>
+					<width>1250</width>
+					<height>750</height>
+					<itemgap>5</itemgap>
+					<onleft>1223</onleft>
+					<onup>8000</onup>
+					<onright>999</onright>
+					<pagecontrol>1223</pagecontrol>
+					<control type="radiobutton" id="308">
+						<width>1250</width>
+						<texturenofocus/>
+						<include>settings-submenu-common</include>
+						<label>Inicio Cristal Azul</label>
+						<textwidth>1125</textwidth>
+						<onclick>Skin.SetBool(homemenu-icon)</onclick>
+						<onclick>ReloadSkin()</onclick>
+						<onclick>Skin.Reset(homemenu-custom)</onclick>
+						<onclick>Skin.Reset(homemenu-stva)</onclick>
+						<selected>Skin.HasSetting(homemenu-icon)</selected>
+						<font>font14</font>
+						<radioposx>1200</radioposx>
+						<radiowidth>40</radiowidth>
+						<radioheight>40</radioheight>
+						<onfocus>SetProperty(Image_Preview,special://skin/resources/screenshot001.jpg)</onfocus>
+					</control>
+					<control type="radiobutton" id="309">
+						<width>1250</width>
+						<texturenofocus/>
+						<include>settings-submenu-common</include>
+						<label>Inicio STVA</label>
+						<textwidth>1125</textwidth>
+						<font>font14</font>
+						<onclick>Skin.SetBool(homemenu-stva)</onclick>
+						<onclick>ReloadSkin()</onclick>
+						<onclick>Skin.Reset(homemenu-icon)</onclick>
+						<onclick>Skin.Reset(homemenu-custom)</onclick>
+						<selected>Skin.HasSetting(homemenu-stva)</selected>
+						<radioposx>1200</radioposx>
+						<radiowidth>40</radiowidth>
+						<radioheight>40</radioheight>
+						<onfocus>SetProperty(Image_Preview,special://skin/resources/screenshot002.jpg)</onfocus>
+					</control>
+					<control type="radiobutton" id="307">
+						<width>1250</width>
+						<texturenofocus/>
+						<include>settings-submenu-common</include>
+						<label>Inicio Personal</label>
+						<textwidth>1125</textwidth>
+						<onclick>Skin.SetBool(homemenu-custom)</onclick>
+						<font>font14</font>
+						<onclick>ReloadSkin()</onclick>
+						<onclick>Skin.Reset(homemenu-icon)</onclick>
+						<onclick>Skin.Reset(homemenu-stva)</onclick>
+						<selected>Skin.HasSetting(homemenu-custom)</selected>
+						<radioposx>1200</radioposx>
+						<radiowidth>40</radiowidth>
+						<radioheight>40</radioheight>
+						<onfocus>SetProperty(Image_Preview,special://skin/resources/custom.jpg)</onfocus>
+					</control>
+				</control>
+			</control>
+			<control type="group" id="500">
+				<visible>Skin.String(skinsettingmenu,background)</visible>
+				<control type="image">
+				<!-- Dialog background image -->
+					<left>60</left>
+					<top>140</top>
+					<width>1300</width>
+					<height>850</height>
+					<texture border="14" colordiffuse="midgrey">button-default.png</texture>
+				</control>
+				<control type="image">
+					<right>30</right>
+					<top>165</top>
+					<width>400</width>
+					<height>75</height>
+					<texture border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texture>
+					<include>settingbutton-fade</include>
+					<visible>!ControlGroup(999).HasFocus()</visible>
+				</control>								
+				<!-- Markers for control area items -->
+				<include content="page-offscreen-vertical">
+					<param name="indicator1left" value="726"/>
+					<param name="indicator1top" value="144"/>
+					<param name="indicator2left" value="726"/>
+					<param name="indicator2top" value="978"/>
+					<param name="indicatorsize" value="24"/>
+					<param name="indicatorcontainer" value="501"/>
+				</include>
+				<control type="grouplist" id="501">
+					<left>80</left>
+					<top>165</top>
+					<width>1250</width>
+					<height>800</height>
+					<itemgap>5</itemgap>
+					<onleft>1223</onleft>
+					<onright>999</onright>
+					<ondown>801</ondown>
+					<onup>8000</onup>
+					<pagecontrol>1223</pagecontrol>
+					<control type="label" id="506">
+						<left>70</left>
+						<height>70</height>
+						<width>500</width>
+						<label>Apariencia</label>
+						<textcolor>$VAR[AccentColor]</textcolor>
+						<font>ctouch22</font>
+					</control>
+					<control type="button" id="502">
+						<!-- Custom Background Button -->
+						<font>font14</font>
+						<width>1250</width>
+						<texturenofocus/>
+						<include>settings-submenu-common</include>
+						<label>Cambiar Fondo</label>
+						<textwidth>1178</textwidth>
+						<onclick>Skin.SetImage(background-custom)</onclick>
+						<visible>!Skin.String(background-custom)</visible>
+					</control>
+					<control type="button" id="503">
+						<font>font14</font>
+						<!-- Reset Custom Background Button -->
+						<width>1250</width>
+						<texturenofocus/>
+						<include>settings-submenu-common</include>
+						<label>Restaurar Fondo</label>
+						<textwidth>1278</textwidth>
+						<onclick>Skin.Reset(background-custom)</onclick>
+						<visible>Skin.String(background-custom)</visible>
+						<onfocus>$INFO[Skin.String(background-custom)]</onfocus>
+					</control>
+					<control type="radiobutton" id="504">
+						<font>font14</font>
+						<width>1250</width>
+						<texturenofocus/>
+						<include>settings-submenu-common</include>
+						<textwidth>1125</textwidth>
+						<radioposx>1200</radioposx>
+						<radiowidth>40</radiowidth>
+						<radioheight>40</radioheight>
+						<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,skinstring=color_accent,palette=rainbow)</onclick>
+						<label>$LOCALIZE[31984]</label>
+						<label2>$VAR[AccentColorLabel]</label2>
+					</control>
+					<control type="radiobutton" id="505">
+						<font>font14</font>
+						<width>1250</width>
+						<texturenofocus/>
+						<include>settings-submenu-common</include>
+						<label>Menu pequeño</label>
+						<textwidth>1125</textwidth>
+						<onclick>Skin.ToggleSetting(menulittle)</onclick>
+						<selected>Skin.HasSetting(menulittle)</selected>
+						<radioposx>1200</radioposx>
+						<radiowidth>40</radiowidth>
+						<radioheight>40</radioheight>
+					</control>
+					<control type="label" id="807">
+						<left>70</left>
+						<height>80</height>
+						<width>500</width>
+						<label>Copias de Seguridad</label>
+						<textcolor>$VAR[AccentColor]</textcolor>
+						<font>ctouch22</font>
+					</control>
+					<control type="button" id="808">
+						<!-- Backup skin settings -->
+						<width>1250</width>
+						<font>font14</font>
+						<include>settings-submenu-common</include>
+						<label>Copia de Seguridad del Skin</label>
+						<textwidth>1125</textwidth>
+						<onclick condition="!System.HasAddon(script.stva)">InstallAddon(script.stva)</onclick>
+						<onclick condition="System.HasAddon(script.stva)">PlayMedia(&quot;plugin://script.stva/?mode=backup&amp;action=skin&quot;)</onclick>
+						<texturenofocus/>
+					</control>
+					<control type="button" id="809">
+						<font>font14</font>
+						<width>1250</width>
+						<include>settings-submenu-common</include>
+						<label>Copia de Seguridad de la Videoteca</label>
+						<textwidth>1125</textwidth>
+						<onclick condition="!System.HasAddon(script.stva)">InstallAddon(script.stva)</onclick>
+						<onclick condition="System.HasAddon(script.stva)">PlayMedia(&quot;plugin://script.stva/?mode=backup&amp;action=gui&quot;)</onclick>
+						<texturenofocus/>
+					</control>
+					<control type="button" id="810">
+						<font>font14</font>
+						<width>1250</width>
+						<include>settings-submenu-common</include>
+						<label>Restaurar Copias de Seguridad</label>
+						<textwidth>1125</textwidth>
+						<onclick condition="!System.HasAddon(script.stva)">InstallAddon(script.stva)</onclick>
+						<onclick condition="System.HasAddon(script.stva)">ActivateWindow(10001,&quot;plugin://script.stva/?mode=maint&amp;name=copias&quot;,return)</onclick>
+						<texturenofocus/>
+					</control>
+					<control type="button" id="811">
+						<font>font14</font>
+						<width>1250</width>
+						<include>settings-submenu-common</include>
+						<label>Packs Ajustes</label>
+						<textwidth>1178</textwidth>
+						<onclick>ActivateWindow(10001,&quot;plugin://script.stva/?mode=builds&amp;name=Pack%20Ajustes%20CON%20Videoteca&quot;,return)</onclick>
+						<visible>Skin.HasSetting(homemenu-stva)</visible>
+						<texturenofocus/>
+					</control>
+				</control>
+			</control>	
+			<control type="group" id="800">
+				<!-- Support Settings -->
+				<visible>Skin.String(skinsettingmenu,support)</visible>
+				<control type="image">
+				<!-- Dialog background image -->
+					<left>60</left>
+					<top>140</top>
+					<width>1300</width>
+					<height>350</height>
+					<texture border="14" colordiffuse="midgrey">button-default.png</texture>
+				</control>
+				<control type="image">
+					<!-- Background Settings Button Image -->
+					<right>30</right>
+					<top>420</top>
+					<width>400</width>
+					<height>75</height>
+					<texture border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texture>
+					<include>settingbutton-fade</include>
+					<visible>!ControlGroup(999).HasFocus()</visible>
+				</control>				
+				<!-- Markers for control area items -->
+				<include content="page-offscreen-vertical">
+					<param name="indicator1left" value="726"/>
+					<param name="indicator1top" value="144"/>
+					<param name="indicator2left" value="726"/>
+					<param name="indicator2top" value="978"/>
+					<param name="indicatorsize" value="24"/>
+					<param name="indicatorcontainer" value="801"/>
+				</include>
+				<control type="grouplist" id="801">
+					<left>80</left>
+					<top>165</top>
+					<width>1250</width>
+					<height>810</height>
+					<itemgap>10</itemgap>
+					<onleft>1223</onleft>
+					<onright>999</onright>
+					<onup>8000</onup>
+					<pagecontrol>1223</pagecontrol>
+					<control type="button" id="808">
+						<!-- Backup skin settings -->
+						<width>1250</width>
+						<include>settings-submenu-common</include>
+						<label>Copia de Seguridad del Skin</label>
+						<textwidth>1125</textwidth>
+						<onclick condition="!System.HasAddon(script.stva)">InstallAddon(script.stva)</onclick>
+						<onclick condition="System.HasAddon(script.stva)">PlayMedia(&quot;plugin://script.stva/?mode=backup&amp;action=skin&quot;)</onclick>
+						<texturenofocus/>
+					</control>
+					<control type="button" id="809">
+						<width>1250</width>
+						<include>settings-submenu-common</include>
+						<label>Copia de Seguridad de la Videoteca</label>
+						<textwidth>1125</textwidth>
+						<onclick condition="!System.HasAddon(script.stva)">InstallAddon(script.stva)</onclick>
+						<onclick condition="System.HasAddon(script.stva)">PlayMedia(&quot;plugin://script.stva/?mode=backup&amp;action=gui&quot;)</onclick>
+						<texturenofocus/>
+					</control>
+					<control type="button" id="810">
+						<width>1250</width>
+						<include>settings-submenu-common</include>
+						<label>Restaurar Copias de Seguridad</label>
+						<textwidth>1125</textwidth>
+						<onclick condition="!System.HasAddon(script.stva)">InstallAddon(script.stva)</onclick>
+						<onclick condition="System.HasAddon(script.stva)">ActivateWindow(10001,&quot;plugin://script.stva/?mode=maint&amp;name=copias&quot;,return)</onclick>
+						<texturenofocus/>
+					</control>
+					<control type="button" id="811">
+						<width>1250</width>
+						<include>settings-submenu-common</include>
+						<label>Packs Ajustes</label>
+						<textwidth>1178</textwidth>
+						<onclick>ActivateWindow(10001,&quot;plugin://script.stva/?mode=builds&amp;name=Pack%20Ajustes%20CON%20Videoteca&quot;,return)</onclick>
+						<visible>Skin.HasSetting(homemenu-stva)</visible>
+						<texturenofocus/>
+					</control>
+				</control>
+			</control>
+			<control type="group" id="600">
+				<!-- Support Settings -->
+				<visible>Skin.String(skinsettingmenu,addons)</visible>
+				<control type="image">
+				<!-- Dialog background image -->
+					<left>60</left>
+					<top>140</top>
+					<width>1300</width>
+					<height>850</height>
+					<texture border="14" colordiffuse="midgrey">button-default.png</texture>
+				</control>
+				<control type="image">
+					<!-- Background Settings Button Image -->
+					<right>30</right>
+					<top>420</top>
+					<width>400</width>
+					<height>75</height>
+					<texture border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texture>
+					<include>settingbutton-fade</include>
+					<visible>!ControlGroup(999).HasFocus()</visible>
+				</control>				
+				<!-- Markers for control area items -->
+				<include content="page-offscreen-vertical">
+					<param name="indicator1left" value="726"/>
+					<param name="indicator1top" value="144"/>
+					<param name="indicator2left" value="726"/>
+					<param name="indicator2top" value="960"/>
+					<param name="indicatorsize" value="24"/>
+					<param name="indicatorcontainer" value="601"/>
+				</include>
+				<control type="grouplist" id="601">
+					<left>80</left>
+					<top>140</top>
+					<width>1250</width>
+					<height>790</height>
+					<itemgap>5</itemgap>
+					<onleft>1223</onleft>
+					<onright>999</onright>
+					<pagecontrol>1223</pagecontrol>
+					<control type="label">
+						<height>70</height>
+						<font>ctouch22</font>
+						<label>Repositorios</label>
+						<textcolor>$VAR[AccentColor]</textcolor>
+					</control>	
+					<control type="radiobutton" id="321">
+						<font>font14</font>
+						<radioposx>1160</radioposx>
+						<label>Repositorio STVA Matrix $INFO[System.AddonVersion(repository.repostva.matrix),(,)]</label>
+						<height>60</height>
+						<radiowidth>100</radiowidth>
+						<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+						<onclick condition="!System.HasAddon(repository.repostva.matrix)">InstallAddon(repository.repostva.matrix)</onclick>																		
+						<onup>8000</onup>
+						<onclick condition="System.HasAddon(repository.repostva.matrix)">ActivateWindow(10040,&quot;addons://repository.repostva.matrix/&quot;,return)</onclick>
+						<selected>System.HasAddon(repository.repostva.matrix)</selected>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+					<control type="radiobutton" id="322">
+						<radioposx>1160</radioposx>
+						<font>font14</font>
+						<label>Repositorio Festa $INFO[System.AddonVersion(repository.festa),(,)]</label>
+						<height>60</height>
+						<radiowidth>100</radiowidth>
+						<radioheight>100</radioheight>
+						<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+						<onclick condition="!System.HasAddon(repoository.festa)">InstallAddon(repository.festa)</onclick>																		
+						<onclick condition="System.HasAddon(repository.festa)">ActivateWindow(10040,&quot;addons://repository.festa/&quot;,return)</onclick>
+						<selected>System.HasAddon(repository.festa)</selected>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+					<control type="radiobutton" id="323">
+						<radioposx>1160</radioposx>
+						<font>font14</font>
+						<label>Repositorio Camaradas $INFO[System.AddonVersion(repository.camaradas.repo),(,)]</label>
+						<height>60</height>
+						<radiowidth>100</radiowidth>
+						<radioheight>100</radioheight>
+						<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+						<onclick condition="!System.HasAddon(repoository.camaradas.repo)">InstallAddon(repository.camaradas.repo)</onclick>																		
+						<onclick condition="System.HasAddon(repository.camaradas.repo)">ActivateWindow(10040,&quot;addons://repository.camaradas.repo/&quot;,return)</onclick>
+						<selected>System.HasAddon(repository.camaradas.repo)</selected>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+					<control type="radiobutton" id="324">
+						<radioposx>1160</radioposx>
+						<font>font14</font>
+						<label>Repositorio Marcelveldt $INFO[System.AddonVersion(repository.marcelveldt),(,)]</label>
+						<height>60</height>
+						<radiowidth>100</radiowidth>
+						<radioheight>100</radioheight>
+						<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+						<onclick condition="!System.HasAddon(repoository.marcelveldt)">InstallAddon(repository.marcelveldt)</onclick>																		
+						<onclick condition="System.HasAddon(repository.marcelveldt)">ActivateWindow(10040,&quot;addons://repository.marcelveldt/&quot;,return)</onclick>
+						<selected>System.HasAddon(repository.marcelveldt)</selected>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+					<control type="radiobutton" id="325">
+						<radioposx>1160</radioposx>
+						<height>60</height>
+						<font>font14</font>
+						<label>Repositorio Alfa $INFO[System.AddonVersion(repository.alfa-addon),(,)]</label>
+						<radiowidth>100</radiowidth>
+						<radioheight>100</radioheight>
+						<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+						<onclick condition="!System.HasAddon(repoository.alfa-addon)">InstallAddon(repository.alfa-addon)</onclick>																		
+						<onclick condition="System.HasAddon(repository.alfa-addon)">ActivateWindow(10040,&quot;addons://repository.alfa-addon/&quot;,return)</onclick>
+						<selected>System.HasAddon(repository.alfa-addon)</selected>
+						<include>DefaultSettingButton</include>
+						<visible>Skin.HasSetting(homemenu-stva)</visible>
+						<texturenofocus/>
+					</control>
+					<control type="label" id="326">
+						<height>70</height>
+						<font>ctouch22</font>
+						<label>Addons de Contenido</label>
+						<textcolor>$VAR[AccentColor]</textcolor>
+					</control>	
+					<control type="radiobutton" id="327">
+						<radioposx>1160</radioposx>
+						<font>font14</font>
+						<label>Cristal Azul $INFO[System.AddonVersion(plugin.video.cristalazul),(,)] [COLOR grey]- Pelis, Series, TV, Deportes, Documentales, Varios[/COLOR]</label>
+						<height>60</height>
+						<radiowidth>100</radiowidth>
+						<radioheight>100</radioheight>
+						<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+						<onclick condition="!System.HasAddon(plugin.video.cristalazul)">InstallAddon(plugin.video.cristalazul)</onclick>
+						<selected>System.HasAddon(plugin.video.cristalazul)</selected>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+					<control type="radiobutton" id="328">
+						<radioposx>1160</radioposx>
+						<height>60</height>
+						<font>font14</font>
+						<label>Alfa $INFO[System.AddonVersion(plugin.video.alfa),(,)][COLOR grey] - Pelis, Series, Documentales[/COLOR]</label>
+						<radiowidth>100</radiowidth>
+						<radioheight>100</radioheight>
+						<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+						<onclick condition="!System.HasAddon(plugin.video.alfa)">InstallAddon(plugin.video.alfa)</onclick>																		
+						<onclick condition="System.HasAddon(plugin.video.alfa)">ActivateWindow(10040,&quot;addons://plugin.video.alfa/&quot;,return)</onclick>
+						<selected>System.HasAddon(plugin.video.alfa)</selected>
+						<include>DefaultSettingButton</include>
+						<visible>Skin.HasSetting(homemenu-stva)</visible>
+						<texturenofocus/>
+					</control>
+					<control type="radiobutton" id="329">
+						<radioposx>1160</radioposx>
+						<font>font14</font>
+						<height>60</height>
+						<label>Winner $INFO[System.AddonVersion(plugin.video.winner),(,)] [COLOR grey]- Deportes[/COLOR]</label>
+						<radiowidth>100</radiowidth>
+						<radioheight>100</radioheight>
+						<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+						<onclick condition="!System.HasAddon(repository.camaradas)">InstallAddon(repository.camaradas.repo)</onclick>																		
+						<onclick condition="!System.HasAddon(plugin.video.winner)">InstallAddon(plugin.video.winner)</onclick>																		
+						<selected>System.HasAddon(plugin.video.winner)</selected>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+					<control type="radiobutton" id="330">
+						<radioposx>1160</radioposx>
+						<font>font14</font>
+						<height>60</height>
+						<label>Moe's TV $INFO[System.AddonVersion(plugin.video.moestv),(,)] [COLOR grey]- Plataformas TV[/COLOR]</label>
+						<radiowidth>100</radiowidth>
+						<radioheight>100</radioheight>
+						<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+						<onclick condition="!System.HasAddon(plugin.video.moestv)">InstallAddon(plugin.video.moestv)</onclick>																		
+						<selected>System.HasAddon(plugin.video.moestv)</selected>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+					<control type="button" id="331">
+						<radioposx>1160</radioposx>
+						<font>font14</font>
+						<height>60</height>
+						<label>Magellan $INFO[System.AddonVersion(plugin.video.Magellan_Matrix),(,)] [COLOR grey]- TV Gratis[/COLOR]</label>
+						<radiowidth>100</radiowidth>
+						<radioheight>100</radioheight>
+						<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+						<onclick condition="!System.HasAddon(repository.magellan)">InstallAddon(repository.magellan)</onclick>
+						<onclick condition="!System.HasAddon(plugin.video.Magellan_Matrix)">InstallAddon(plugin.video.Magellan_Matrix)</onclick>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+					<control type="radiobutton" id="332">
+						<radioposx>1160</radioposx>
+						<font>font14</font>
+						<label>Palantir2 $INFO[System.AddonVersion(plugin.video.palantir2),(,)] [COLOR grey]- Películas, Series Documentales[/COLOR]</label>
+						<height>60</height>
+						<radiowidth>100</radiowidth>
+						<radioheight>100</radioheight>
+						<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+						<onclick condition="!System.HasAddon(repository.Palantir)">InstallAddon(repository.Palantir)</onclick>																		
+						<onclick condition="!System.HasAddon(plugin.video.palantir2)">InstallAddon(plugin.video.palantir2)</onclick>																		
+						<selected>System.HasAddon(plugin.video.palantir2)</selected>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+					<control type="label" id="333">
+						<height>70</height>
+						<font>ctouch22</font>
+						<label>Addons requeridos</label>
+						<textcolor>$VAR[AccentColor]</textcolor>
+					</control>	
+					<control type="radiobutton" id="334">
+						<radioposx>1160</radioposx>
+						<font>font14</font>
+						<height>60</height>
+						<label>Horus $INFO[System.AddonVersion(script.module.horus),(,)] [COLOR grey]- Requerido para ver Deportes[/COLOR]</label>
+						<radiowidth>100</radiowidth>
+						<radioheight>100</radioheight>
+						<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+						<onclick condition="!System.HasAddon(script.module.horus)">InstallAddon(script.module.horus)</onclick>
+						<onclick condition="System.HasAddon(script.module.horus)">RunAddon(script.module.horus)</onclick>
+						<selected>System.HasAddon(script.module.horus)</selected>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+					<control type="radiobutton" id="335">
+						<radioposx>1160</radioposx>
+						<label>Complemento STVA $INFO[System.AddonVersion(script.stva),(,)] [COLOR grey]- Addon de Mantenimiento[/COLOR]</label>
+						<font>font14</font>
+						<height>60</height>
+						<radiowidth>100</radiowidth>
+						<radioheight>100</radioheight>
+						<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+						<onclick condition="!System.HasAddon(script.stva)">InstallAddon(script.stva)</onclick>																		
+						<selected>System.HasAddon(script.stva)</selected>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+					<control type="radiobutton" id="336">
+						<radioposx>1160</radioposx>
+						<font>font14</font>
+						<label>Skin Helper Service $INFO[System.AddonVersion(script.skin.helper.service),(,)] [COLOR grey]- Dependencia de arte para el skin[/COLOR]</label>
+						<height>60</height>
+						<radiowidth>100</radiowidth>
+						<radioheight>100</radioheight>
+						<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+						<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>																		
+						<selected>System.HasAddon(script.skin.helper.service)</selected>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+					<control type="radiobutton" id="337">
+						<radioposx>1160</radioposx>
+						<font>font14</font>
+						<height>60</height>
+						<radiowidth>100</radiowidth>
+						<radioheight>100</radioheight>
+						<label>ResolveURL $INFO[System.AddonVersion(script.module.resolveurl),(,)] [COLOR grey]- Necesario para Cristal Azul[/COLOR]</label>
+						<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+						<onclick condition="!System.HasAddon(script.module.resolveurl)">InstallAddon(script.module.resolveurl)</onclick>
+						<selected>System.HasAddon(script.module.resolveurl)</selected>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+					<control type="label" id="338">
+						<height>70</height>
+						<font>ctouch22</font>
+						<label>Addons opcionales</label>
+						<textcolor>$VAR[AccentColor]</textcolor>
+					</control>	
+					<control type="radiobutton" id="339">
+						<radioposx>1160</radioposx>
+						<font>font14</font>
+						<label>Repositorio Github (Torrest) $INFO[System.AddonVersion(repository.github),(,)] [COLOR grey]- Repositorio para Torrest[/COLOR]</label>
+						<height>60</height>
+						<radiowidth>100</radiowidth>
+						<radioheight>100</radioheight>
+						<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+						<onclick condition="!System.HasAddon(repoository.github)">InstallAddon(repository.github)</onclick>																		
+						<onclick condition="System.HasAddon(repository.github)">ActivateWindow(10040,&quot;addons://repository.github/&quot;,return)</onclick>
+						<selected>System.HasAddon(repository.github)</selected>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+					<control type="radiobutton" id="340">
+						<radioposx>1160</radioposx>
+						<font>font14</font>
+						<height>60</height>
+						<radiowidth>100</radiowidth>
+						<radioheight>100</radioheight>
+						<label>Torrest $INFO[System.AddonVersion(plugin.video.torrest),(,)] [COLOR grey]- Cliente Torrent[/COLOR]</label>
+						<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+						<onclick condition="!System.HasAddon(plugin.video.torrest)">InstallAddon(plugin.video.torrest)</onclick>
+						<selected>System.HasAddon(plugin.video.torrest)</selected>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+					<control type="radiobutton" id="341">
+						<radioposx>1160</radioposx>
+						<font>font14</font>
+						<height>60</height>
+						<radiowidth>100</radiowidth>
+						<radioheight>100</radioheight>
+						<label>Elementum $INFO[System.AddonVersion(plugin.video.elementum),(,)] [COLOR grey]- Cliente Torrent (Para Android ARM y Windows x64)[/COLOR]</label>
+						<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+						<onclick condition="!System.HasAddon(plugin.video.elementum)">InstallAddon(plugin.video.elementum)</onclick>
+						<selected>System.HasAddon(plugin.video.elementum)</selected>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+					<control type="radiobutton" id="342">
+						<radioposx>1160</radioposx>
+						<font>font14</font>
+						<label>Luar $INFO[System.AddonVersion(script.luar),(,)] [COLOR grey]- Instalador de Addons[/COLOR]</label>
+						<height>60</height>
+						<radiowidth>100</radiowidth>
+						<radioheight>100</radioheight>
+						<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+						<onclick condition="!System.HasAddon(script.luar)">InstallAddon(script.luar)</onclick>																		
+						<selected>System.HasAddon(script.luar)</selected>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+					<control type="radiobutton" id="343">
+						<radioposx>1160</radioposx>
+						<font>font14</font>
+						<label>PVR IPTV Simple Client $INFO[System.AddonVersion(pvr.iptvsimple),(,)] [COLOR grey]- Cliente IPTV[/COLOR]</label>
+						<height>60</height>
+						<radiowidth>100</radiowidth>
+						<radioheight>100</radioheight>
+						<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+						<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+						<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+						<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+						<onclick condition="!System.HasAddon(pvr.iptvsimple)">InstallAddon(pvr.iptvsimple)</onclick>																		
+						<selected>System.HasAddon(pvr.iptvsimple)</selected>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+				</control>	
+			</control>
+			<control type="group" id="200">
+				<!-- Canales -->
+				<visible>Skin.String(skinsettingmenu,canales)</visible>
+				<control type="image">
+				<!-- Dialog background image -->
+					<left>60</left>
+					<top>140</top>
+					<width>1300</width>
+					<height>850</height>
+					<texture border="14" colordiffuse="midgrey">button-default.png</texture>
+				</control>
+				<control type="image">
+					<!-- Background Settings Button Image -->
+					<right>30</right>
+					<top>590</top>
+					<width>400</width>
+					<height>75</height>
+					<texture border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texture>
+					<include>settingbutton-fade</include>
+					<visible>!ControlGroup(999).HasFocus()</visible>
+				</control>				
+				<control type="grouplist" id="201">
+					<left>80</left>
+					<top>150</top>
+					<width>1270</width>
+					<height>750</height>
+					<itemgap>10</itemgap>
+					<onleft>1223</onleft>
+					<onright>999</onright>
+					<pagecontrol>1223</pagecontrol>
+					<control type="label">
+						<height>70</height>
+						<font>ctouch22</font>
+						<label>Canales y Grupos de Telegram</label>
+						<textcolor>$VAR[AccentColor]</textcolor>
+					</control>	
+					<control type="button" id="221">
+						<font>font14</font>
+						<radioposx>1230</radioposx>
+						<label>Canal STVA - [COLOR midgrey]t.me/stvabuild[/COLOR]</label>
+						<height>60</height>
+						<onup>8000</onup>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+					<control type="button" id="222">
+						<radioposx>1230</radioposx>
+						<font>font14</font>
+						<label>Grupo Cristal Azul - [COLOR midgrey]t.me/addonfestaycristal[/COLOR]</label>
+						<height>60</height>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+					<control type="button" id="223">
+						<radioposx>1230</radioposx>
+						<font>font14</font>
+						<label>Grupo Winner (camaradas) - [COLOR midgrey]t.me/kodicamaradas[/COLOR]</label>
+						<height>60</height>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+					<control type="button" id="224">
+						<radioposx>1230</radioposx>
+						<font>font14</font>
+						<label>Grupo Moe`s TV - [COLOR midgrey]t.me/hirayasoftware[/COLOR]</label>
+						<height>60</height>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+					<control type="button" id="225">
+						<radioposx>1230</radioposx>
+						<font>font14</font>
+						<label>Canal Alfa Addon - [COLOR midgrey]t.me/alfa_addon[/COLOR]</label>
+						<height>60</height>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+					<control type="button" id="227">
+						<radioposx>1230</radioposx>
+						<font>font14</font>
+						<label>Grupo Luar - [COLOR grey]t.me/KodiManiac[/COLOR]</label>
+						<height>60</height>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+					<control type="label" id="226">
+						<height>70</height>
+						<font>ctouch22</font>
+						<label>Webs</label>
+						<textcolor>$VAR[AccentColor]</textcolor>
+						<texturenofocus/>
+					</control>	
+					<control type="button" id="228">
+						<radioposx>1230</radioposx>
+						<font>font14</font>
+						<label>Web STVA - [COLOR grey]stva.ga[/COLOR]</label>
+						<height>60</height>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+					<control type="button" id="229">
+						<radioposx>1230</radioposx>
+						<font>font14</font>
+						<label>Web Alfa Addon - [COLOR midgrey]alfa-addon.com[/COLOR]</label>
+						<height>60</height>
+						<include>DefaultSettingButton</include>
+						<texturenofocus/>
+					</control>
+				</control>	
+			</control>
+			<control type="group" id="700">
+				<!-- Support Settings -->
+				<visible>Skin.String(skinsettingmenu,help)</visible>
+				<control type="image">
+				<!-- Dialog background image -->
+					<left>60</left>
+					<top>140</top>
+					<width>1300</width>
+					<height>850</height>
+					<texture border="14" colordiffuse="midgrey">button-default.png</texture>
+				</control>
+				<control type="image">
+					<!-- Background Settings Button Image -->
+					<right>30</right>
+					<top>505</top>
+					<width>400</width>
+					<height>75</height>
+					<texture border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texture>
+					<include>settingbutton-fade</include>
+					<visible>!ControlGroup(999).HasFocus()</visible>
+				</control>				
+				<!-- Markers for control area items -->
+				<include content="page-offscreen-vertical">
+					<param name="indicator1left" value="726"/>
+					<param name="indicator1top" value="144"/>
+					<param name="indicator2left" value="726"/>
+					<param name="indicator2top" value="978"/>
+					<param name="indicatorsize" value="24"/>
+					<param name="indicatorcontainer" value="801"/>
+				</include>
+				<control type="label" id="701">
+					<left>80</left>
+					<top>155</top>
+					<width>1260</width>
+					<height>800</height>
+					<onleft>1223</onleft>
+					<onright>999</onright>
+					<align>left</align>
+					<pagecontrol>1223</pagecontrol>
+					<font>ctouch20</font>
+					<wrapmultiline>true</wrapmultiline>
+					<label>[B][COLOR $VAR[AccentColor]]CAMBIAR VISTA[/B][/COLOR]
+Cuando visualizamos contenido, por ejemplo entrando en algún item de Inicio, podemos cambiar el tipo de vista, lista, póster, muero, etc.
+Para poder cambiarla, nos desplazamos a la izquierda o pulsamos el icono azul del ojo y aparecerá una ventana donde podremos cambiar la vista y bloquearla.[CR]
+[B][COLOR $VAR[AccentColor]]MENÚ CONTEXTUAL[/B][/COLOR]
+Si dejas pulsado el OK o en modo táctil sobre el item que quieras, película, serie, addon, etc, aparecerá un menú con las opciones extra sobre ese elemento.[CR]
+[COLOR $VAR[AccentColor]][B]AÑADIR ITEMS AL INICIO[/B][/COLOR]
+Hay dos formas de añadir items al Inicio, mediante los favoritos o por menú contextual.
+Mediante los favoritos, debes agregar el item que quieras a favoritos, haciendo pulsación larga y añadiendo a Favoritos.
+Desde el menú contextual (pulsación larga), sobre el ítem que quieras, aparecerá la opción, Añadir al Inicio y podrás editar el icono y el nombre.[CR][CR]
+Para más ayuda con el Skin: www.stva.ga/foro - t.me/stvabuild
+Para más ayuda con Cristal Azul: t.me/addonfestaycristal
+					</label>
+				</control>
+			</control>			
+		</control>
+		<control type="textbox">
+			<!-- Settings description area -->
+			<left>70</left>
+			<top>999</top>
+			<width>1700</width>
+			<height>75</height>
+			<font>ctouch20</font>
+			<align>left</align>
+			<label>$VAR[SkinSettingHelp]</label>
+		</control>
+        <control type="group">
+            <left>350</left>
+            <width>800</width>
+            <top>640</top>
+            <height>340</height>
+			<visible>Control.HasFocus(702) | Control.HasFocus(703) | Control.HasFocus(704) | Control.HasFocus(705)</visible>
+            <control type="image">
+                <aspectratio scalediffuse="false">keep</aspectratio>
+                <texture background="true" fallback="special://skin/fanart.jpg" diffuse="diffuse/1117.png">$INFO[Window.Property(Image_Preview)]</texture>
+			</control>
+            <control type="image">
+                <aspectratio scalediffuse="false">center</aspectratio>
+                 <visible>[Control.HasFocus(701) + !String.Contains(Control.GetLabel(701),*)] | [Control.HasFocus(702) + !String.Contains(Control.GetLabel(702),*)] | [Control.HasFocus(703) + !String.Contains(Control.GetLabel(703),*)] | [Control.HasFocus(704) + !String.Contains(Control.GetLabel(704),*)] | [Control.HasFocus(705) + !String.Contains(Control.GetLabel(705),*)]</visible>
+            </control>
+        </control>		
+        <control type="group">
+            <left>115</left>
+            <width>1200</width>
+            <top>465</top>
+            <height>495</height>
+			<visible>Control.HasFocus(307) | Control.HasFocus(308) | Control.HasFocus(309) | Control.HasFocus(981)</visible>
+            <control type="image">
+                <aspectratio scalediffuse="false">keep</aspectratio>
+                <texture background="true" fallback="special://skin/fanart.jpg" diffuse="diffuse/1117.png">$INFO[Window.Property(Image_Preview)]</texture>
+			</control>
+            <control type="image">
+                <aspectratio scalediffuse="false">center</aspectratio>
+                 <visible>[Control.HasFocus(701) + !String.Contains(Control.GetLabel(701),*)] | [Control.HasFocus(702) + !String.Contains(Control.GetLabel(702),*)] | [Control.HasFocus(703) + !String.Contains(Control.GetLabel(703),*)] | [Control.HasFocus(704) + !String.Contains(Control.GetLabel(704),*)] | [Control.HasFocus(705) + !String.Contains(Control.GetLabel(705),*)]</visible>
+            </control>
+        </control>		
+		<include>touch-controls</include>
+		<include>touch-controlsl</include>
+		<include>hora</include>
+	</controls>
+</window>

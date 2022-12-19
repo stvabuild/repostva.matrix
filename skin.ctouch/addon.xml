@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addon id="skin.ctouch"  version="2.3" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="2.4" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>		
 	</requires>
@@ -17,16 +17,8 @@
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 2.3 - 12/8/22
-- Ahora se pueden desactivar individualmente los items predefinidos		
-- Arreglos visuales
-- Item TV Premium del inicio STVA cambiado a la sección España del addon Magellan
-- Item Repeticiones, ahora abre un menú para elegir
-- Cambiado item productoras de películas por Canales de Alfa
-- Cambiado enlaces de los items películas y series por años al canal IMDB de Alfa
-- Agregado Magellan en Ajustes de Skin/Addons para instalar a través de Luar
-- Corregido error en el startup para instalar Elementum
-- Corregidos otros errores menores</news>
+		<news>Versión 2.4 - 19/12/22
+- Reparados los ítems del inicio STVA que no funcionaban</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>

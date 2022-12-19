@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1108">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<include>Animation_DialogPopupOpenClose</include>
+	<controls>
+		<control type="group">
+			<centerleft>50%</centerleft>
+			<width>700</width>
+			<centertop>60%</centertop>
+			<height>700</height>
+			<include content="DialogBackgroundCommons">
+				<param name="width" value="700" />
+				<param name="height" value="80" />
+				<param name="header_label" value="Videoteca" />
+				<param name="header_id" value="" />
+			</include>
+			<control type="panel" id="9000">
+				<include>ButtonMenuList</include>
+				<content>
+					<item>
+						<label>$LOCALIZE[31210]</label>
+						<onclick>Dialog.Close(all)</onclick>
+						<onclick>ActivateWindow(Videos,"plugin://plugin.video.alfa/?ewogICAgImFjdGlvbiI6ICJsaXN0X3R2c2hvd3MiLCAKICAgICJjYXRlZ29yeSI6ICJWaWRlb3RlY2EgZGUgc2VyaWVzIiwgCiAgICAiY2hhbm5lbCI6ICJ2aWRlb2xpYnJhcnkiLCAKICAgICJpbmZvTGFiZWxzIjoge30sIAogICAgInRodW1ibmFpbCI6ICJDOlxcVXNlcnNcXEhQXFxBcHBEYXRhXFxSb2FtaW5nXFxLb2RpXFxhZGRvbnNcXHBsdWdpbi52aWRlby5hbGZhXFxyZXNvdXJjZXNcXG1lZGlhXFx0aGVtZXNcXGRlZmF1bHRcXHRodW1iX3ZpZGVvbGlicmFyeV90dnNob3cucG5nIiwgCiAgICAidGl0bGUiOiAiU2VyaWVzIgp9",return)</onclick>
+						<visible>Skin.HasSetting(alfa-content)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[31224]</label>
+						<onclick>Dialog.Close(all)</onclick>
+						<onclick>ActivateWindow(Videos,"plugin://plugin.video.alfa/?ewogICAgImFjdGlvbiI6ICJsaXN0X21vdmllcyIsCiAgICAiY2F0ZWdvcnkiOiAiVmlkZW90ZWNhIGRlIHBlbFx1MDBlZGN1bGFzIiwKICAgICJjaGFubmVsIjogInZpZGVvbGlicmFyeSIsCiAgICAiaW5mb0xhYmVscyI6IHt9LAogICAgInRodW1ibmFpbCI6ICJDOlxcVXNlcnNcXEFkTVxcQXBwRGF0YVxcUm9hbWluZ1xcS29kaVxcYWRkb25zXFxwbHVnaW4udmlkZW8uYWxmYVxccmVzb3VyY2VzXFxtZWRpYVxcdGhlbWVzXFxkZWZhdWx0XFx0aHVtYl92aWRlb2xpYnJhcnlfbW92aWUucG5nIiwKICAgICJ0aXRsZSI6ICJQZWxcdTAwZWRjdWxhcyIKfQ%3d%3d&quot;,return)</onclick>
+						<visible>Skin.HasSetting(alfa-content)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[31212]</label>
+						<onclick>Dialog.Close(all)</onclick>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.alfa/?ewogICAgImFjdGlvbiI6ICJjaGFubmVsX2NvbmZpZyIsCiAgICAiY2hhbm5lbCI6ICJ2aWRlb2xpYnJhcnkiLAogICAgImZvbGRlciI6IHRydWUsCiAgICAiaW5mb0xhYmVscyI6IHt9LAogICAgInRodW1ibmFpbCI6ICJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vYWxmYS1hZGRvbi9tZWRpYS9tYXN0ZXIvdGhlbWVzL2RhcmtcXHRodW1iX3ZpZGVvbGlicmFyeS5wbmciLAogICAgInRpdGxlIjogIkFqdXN0ZXMgZGUgbGEgdmlkZW90ZWNhIgp9,return)</onclick>
+						<visible>System.HasAddon(plugin.video.alfa)</visible>
+						<visible>Skin.HasSetting(alfa-content)</visible>
+					</item>
+					<item>
+						<label>Videoteca Balandro</label>
+						<onclick>Dialog.Close(all)</onclick>
+						<onclick>ActivateWindow(10025,plugin://plugin.video.balandro/?ewogICAgImFjdGlvbiI6ICJtYWlubGlzdCIsIAogICAgImNhdGVnb3J5IjogIkJhbGFuZHJvIiwgCiAgICAiY2hhbm5lbCI6ICJ0cmFja2luZyIsIAogICAgImluZm9MYWJlbHMiOiB7fSwgCiAgICAidGh1bWJuYWlsIjogIkM6XFxVc2Vyc1xcd2ludHRcXEFwcERhdGFcXFJvYW1pbmdcXEtvZGlcXGFkZG9uc1xccGx1Z2luLnZpZGVvLmJhbGFuZHJvXFxyZXNvdXJjZXNcXG1lZGlhXFx0aGVtZXNcXGRlZmF1bHRcXHN0YXIucG5nIiwgCiAgICAidGl0bGUiOiAiUHJlZmVyaWRvcyIKfQ%3d%3d,return)</onclick>
+						<visible>Skin.HasSetting(balandro-content)</visible>
+					</item>
+					<item>
+						<label>Buscar nuevos episodios</label>
+						<onclick>Dialog.Close(all)</onclick>
+						<onclick>RunPlugin(plugin://plugin.video.balandro/?channel=actions&action=comprobar_nuevos_episodios)</onclick>
+						<visible>Skin.HasSetting(balandro-content)</visible>
+					</item>
+				</content>
+			</control>
+		</control>
+	</controls>
+</window>

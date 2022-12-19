@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1112" type="dialog">
+	<visible>
+		!String.IsEmpty(Window(home).Property(DefaultsReset))
+		| !String.IsEmpty(Window(home).Property(HomeWidgetReset))
+		| !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))
+		| !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))
+		| !String.IsEmpty(Window(home).Property(sportshubWidgetReset))
+		| !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))
+		| !String.IsEmpty(Window(home).Property(TagMovieHubWidgetsReset))
+		| !String.IsEmpty(Window(home).Property(TagTVShowHubWidgetsReset))
+		| !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))
+		| !String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))
+	</visible>
+
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset))">Notification(Embuary STVA,$LOCALIZE[31217])</onload>
+
+	<!-- home widget reset -->
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.SetString(home_widget_pos_1,W_InProgressMedia)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.SetString(home_widget_pos_2,W_NextUpHome)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.SetString(home_widget_pos_3,W_NewEpisodes)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.SetString(home_widget_pos_4,W_NewMovies)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.SetString(home_widget_pos_5,W_SeriesTendencias)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.SetString(home_widget_pos_6,W_MoviesTendencias)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.SetString(home_widget_pos_7,W_SeriesPopulares)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.SetString(home_widget_pos_8,W_MoviesPopulares)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.SetString(home_widget_pos_9,W_SeriesEnEmision)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.SetString(home_widget_pos_10,W_MoviesValoradas)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.SetString(home_widget_pos_11,W_SeriesValoradas)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_12)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_13)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_14)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_15)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_16)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_17)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_18)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_19)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_20)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_21)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_22)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_23)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_24)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_25)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_26)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_27)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_28)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_29)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_30)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.SetString(home_widget_pos_1.label,$LOCALIZE[31080])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.SetString(home_widget_pos_2.label,$LOCALIZE[31012])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.SetString(home_widget_pos_3.label,$LOCALIZE[31442])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.SetString(home_widget_pos_4.label,$LOCALIZE[31301])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.SetString(home_widget_pos_5.label,$LOCALIZE[31418])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.SetString(home_widget_pos_6.label,$LOCALIZE[31419])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.SetString(home_widget_pos_7.label,$LOCALIZE[31421])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.SetString(home_widget_pos_8.label,$LOCALIZE[31423])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.SetString(home_widget_pos_9.label,$LOCALIZE[31420])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.SetString(home_widget_pos_10.label,$LOCALIZE[31424])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.SetString(home_widget_pos_11.label,$LOCALIZE[31422])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_12.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_13.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_14.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_15.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_16.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_17.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_18.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_19.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_20.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_21.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_22.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_23.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_24.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_25.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_26.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_27.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_28.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_29.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))">Skin.Reset(home_widget_pos_30.label)</onload>
+
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.SetString(home_widget_pos_1,W_SeriesTendencias)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.SetString(home_widget_pos_2,W_MoviesTendencias)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.SetString(home_widget_pos_3,W_SeriesPopulares)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.SetString(home_widget_pos_4,W_MoviesPopulares)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.SetString(home_widget_pos_5,W_SeriesEnEmision)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.SetString(home_widget_pos_6,W_MoviesValoradas)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.SetString(home_widget_pos_7,W_SeriesValoradas)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.SetString(home_widget_pos_8,W_InProgressMedia)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.SetString(home_widget_pos_9,W_NextUpHome)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.SetString(home_widget_pos_10,W_NewEpisodes)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.SetString(home_widget_pos_11,W_NewMovies)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_12)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_13)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_14)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_15)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_16)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_17)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_18)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_19)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_20)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_21)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_22)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_23)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_24)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_25)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_26)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_27)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_28)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_29)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_30)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.SetString(home_widget_pos_1.label,$LOCALIZE[31418])</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.SetString(home_widget_pos_2.label,$LOCALIZE[31419])</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.SetString(home_widget_pos_3.label,$LOCALIZE[31421])</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.SetString(home_widget_pos_4.label,$LOCALIZE[31423])</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.SetString(home_widget_pos_5.label,$LOCALIZE[31420])</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.SetString(home_widget_pos_6.label,$LOCALIZE[31424])</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.SetString(home_widget_pos_7.label,$LOCALIZE[31422])</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.SetString(home_widget_pos_8.label,$LOCALIZE[31080])</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.SetString(home_widget_pos_9.label,$LOCALIZE[31012])</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.SetString(home_widget_pos_10.label,$LOCALIZE[31442])</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.SetString(home_widget_pos_11.label,$LOCALIZE[31301])</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_12.label)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_13.label)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_14.label)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_15.label)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_16.label)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_17.label)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_18.label)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_19.label)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_20.label)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_21.label)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_22.label)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_23.label)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_24.label)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_25.label)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_26.label)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_27.label)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_28.label)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_29.label)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(HomeWidgetReset))] + Skin.HasSetting(HomePlotLayout)">Skin.Reset(home_widget_pos_30.label)</onload>
+
+	<onload condition="!String.IsEmpty(Window(home).Property(HomeWidgetReset))">Notification($LOCALIZE[513],$LOCALIZE[31127])</onload>
+
+	<!-- movie widget reset -->
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.SetString(moviehub_widget_pos_1,W_InProgressMovies)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.SetString(moviehub_widget_pos_2,W_NewMovies)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))] + System.HasAddon(plugin.video.palantir2)">Skin.SetString(moviehub_widget_pos_4,W_PalantirMovies)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))] + System.HasAddon(plugin.video.palantir2)">Skin.SetString(moviehub_widget_pos_5,W_CristalMovies)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_6)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_7)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_8)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_9)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_10)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_11)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_12)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_13)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_14)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_15)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_16)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_17)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_18)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_19)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_20)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_21)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_22)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_23)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_24)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_25)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_26)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_27)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_28)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_29)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_30)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.SetString(moviehub_widget_pos_1.label,$LOCALIZE[31080])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.SetString(moviehub_widget_pos_2.label,$LOCALIZE[31301])</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))] + System.HasAddon(plugin.video.palantir2)">Skin.SetString(moviehub_widget_pos_4.label,$LOCALIZE[31457])</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))] + System.HasAddon(plugin.video.palantir2)">Skin.SetString(moviehub_widget_pos_5.label,$LOCALIZE[31459])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_6.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_7.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_8.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_9.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_10.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_11.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_12.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_13.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_14.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_15.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_16.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_17.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_18.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_19.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_20.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_21.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_22.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_23.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_24.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_25.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_26.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_27.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_28.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_29.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Skin.Reset(moviehub_widget_pos_30.label)</onload>
+
+	<onload condition="!String.IsEmpty(Window(home).Property(MovieHubWidgetReset))">Notification($LOCALIZE[31173],$LOCALIZE[31127])</onload>
+
+	<!-- tvshow widget reset -->
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.SetString(tvshowhub_widget_pos_1,W_InProgressShows)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.SetString(tvshowhub_widget_pos_2,W_NextUp)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.SetString(tvshowhub_widget_pos_3,W_NewEpisodes)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.SetString(tvshowhub_widget_pos_4,W_Seriesproximas)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))] + System.HasAddon(plugin.video.palantir2)">Skin.SetString(tvshowhub_widget_pos_6,W_PalantirSeries)</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))] + System.HasAddon(plugin.video.palantir2)">Skin.SetString(tvshowhub_widget_pos_7,W_CristalSeries)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_8)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_9)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_10)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_11)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_12)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_13)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_14)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_15)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_16)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_17)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_18)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_19)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_20)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_21)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_22)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_23)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_24)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_25)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_26)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_27)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_28)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_29)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_30)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.SetString(tvshowhub_widget_pos_1.label,$LOCALIZE[31080])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.SetString(tvshowhub_widget_pos_2.label,$LOCALIZE[31012])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.SetString(tvshowhub_widget_pos_3.label,$LOCALIZE[31442])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.SetString(tvshowhub_widget_pos_4.label,$LOCALIZE[31154])</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))] + System.HasAddon(plugin.video.palantir2)">Skin.SetString(tvshowhub_widget_pos_5.label,$LOCALIZE[31456])</onload>
+	<onload condition="[!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))] + System.HasAddon(plugin.video.palantir2)">Skin.SetString(tvshowhub_widget_pos_6.label,$LOCALIZE[31458])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_7.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_8.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_9.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_10.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_11.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_12.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_13.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_14.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_15.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_16.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_17.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_18.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_19.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_20.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_21.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_22.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_23.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_24.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_25.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_26.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_27.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_28.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_29.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Skin.Reset(tvshowhub_widget_pos_30.label)</onload>
+
+	<onload condition="!String.IsEmpty(Window(home).Property(TVShowHubWidgetReset))">Notification($LOCALIZE[31172],$LOCALIZE[31127])</onload>
+
+	<!-- customhub widget reset -->
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_1)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_2)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_3)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_4)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_5)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_6)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_7)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_8)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_9)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_10)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_11)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_12)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_13)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_14)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_15)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_16)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_17)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_18)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_19)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_20)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_21)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_22)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_23)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_24)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_25)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_26)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_27)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_28)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_29)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_30)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_1.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_2.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_3.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_4.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_5.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_6.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_7.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_8.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_9.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_10.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_11.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_12.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_13.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_14.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_15.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_16.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_17.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_18.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_19.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_20.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_21.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_22.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_23.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_24.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_25.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_26.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_27.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_28.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_29.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Skin.Reset(customhub_widget_pos_30.label)</onload>
+
+	<onload condition="!String.IsEmpty(Window(home).Property(CustomHubWidgetsReset))">Notification($LOCALIZE[31232],$LOCALIZE[31127])</onload>
+
+	<!-- sports widget reset -->
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.SetString(sportshub_widget_pos_1,W_EnVivo)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.SetString(sportshub_widget_pos_2,W_WDeportes)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_3)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_4)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_5)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_6)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_7)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_8)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_9)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_10)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_11)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_12)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_13)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_14)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_15)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.SetString(sportshub_widget_pos_1.label,$LOCALIZE[31429])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_2.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_3.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_4.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_5.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_6.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_7.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_8.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_9.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_10.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_11.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_12.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_13.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_14.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Skin.Reset(sportshub_widget_pos_15.label)</onload>
+
+	<onload condition="!String.IsEmpty(Window(home).Property(sportshubWidgetReset))">Notification($LOCALIZE[31174],$LOCALIZE[31127])</onload>
+
+	<!-- tv widget reset -->
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.SetString(tvlivehub_widget_pos_1,W_PVR_Directo)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.SetString(tvlivehub_widget_pos_2,W_TDT)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.SetString(tvlivehub_widget_pos_3,W_Premium)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.Reset(tvlivehub_widget_pos_4)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.Reset(tvlivehub_widget_pos_5)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.Reset(tvlivehub_widget_pos_6)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.Reset(tvlivehub_widget_pos_7)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.Reset(tvlivehub_widget_pos_8)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.Reset(tvlivehub_widget_pos_9)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.Reset(tvlivehub_widget_pos_10)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.Reset(tvlivehub_widget_pos_11)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.Reset(tvlivehub_widget_pos_12)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.Reset(tvlivehub_widget_pos_13)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.Reset(tvlivehub_widget_pos_14)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.Reset(tvlivehub_widget_pos_15)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.SetString(tvlivehub_widget_pos_1.label,$LOCALIZE[31448])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.SetString(tvlivehub_widget_pos_2.label,$LOCALIZE[31432])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.SetString(tvlivehub_widget_pos_3.label,$LOCALIZE[31433])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.Reset(tvlivehub_widget_pos_4.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.Reset(tvlivehub_widget_pos_5.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.Reset(tvlivehub_widget_pos_6.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.Reset(tvlivehub_widget_pos_7.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.Reset(tvlivehub_widget_pos_8.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.Reset(tvlivehub_widget_pos_9.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.Reset(tvlivehub_widget_pos_10.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.Reset(tvlivehub_widget_pos_11.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.Reset(tvlivehub_widget_pos_12.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.Reset(tvlivehub_widget_pos_13.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.Reset(tvlivehub_widget_pos_14.label)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Skin.Reset(tvlivehub_widget_pos_15.label)</onload>
+
+	<onload condition="!String.IsEmpty(Window(home).Property(tvlivehubWidgetReset))">Notification($LOCALIZE[31174],$LOCALIZE[31127])</onload>
+
+	<!-- Tag mixed widget reset -->
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_1,W_TagHub_InProgress)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_2,W_TagHub_NextUp)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_3,W_TagHub_NewMovies)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_4,W_TagHub_NewEpisodes)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_5,W_TagHub_MovieGenres)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_6,W_TagHub_TVShowGenres)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_7,W_TagHub_MixedByGenre)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_8,W_TagHub_RecommendedMovies)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_9,W_TagHub_RecommendedShows)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_10,W_TagHub_SimilarMovies)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_11,W_TagHub_SimilarShows)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_12,W_TagHub_RandomMovies)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_13,W_TagHub_RandomShows)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_1.label,$LOCALIZE[31080])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_2.label,$LOCALIZE[31012])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_3.label,$LOCALIZE[31301])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_4.label,$LOCALIZE[31302])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_5.label,$LOCALIZE[31387])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_6.label,$LOCALIZE[31388])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_7.label,$LOCALIZE[31278])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_8.label,$LOCALIZE[31183])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_9.label,$LOCALIZE[31182])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_10.label,$LOCALIZE[31018] ($LOCALIZE[342]))</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_11.label,$LOCALIZE[31018] ($LOCALIZE[20343]))</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_12.label,$LOCALIZE[31184])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Skin.SetString(tagmixedhub_widget_pos_13.label,$LOCALIZE[31185])</onload>
+
+	<onload condition="!String.IsEmpty(Window(home).Property(TagMixedHubWidgetsReset))">Notification($LOCALIZE[31279],$LOCALIZE[31127])</onload>
+
+	<!-- Tag movie widget reset -->
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMovieHubWidgetsReset))">Skin.SetString(tagmoviehub_widget_pos_1,W_TagHub_InProgressMovies)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMovieHubWidgetsReset))">Skin.SetString(tagmoviehub_widget_pos_2,W_TagHub_NewMovies)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMovieHubWidgetsReset))">Skin.SetString(tagmoviehub_widget_pos_3,W_TagHub_MovieGenres)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMovieHubWidgetsReset))">Skin.SetString(tagmoviehub_widget_pos_4,W_TagHub_RecommendedMovies)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMovieHubWidgetsReset))">Skin.SetString(tagmoviehub_widget_pos_5,W_TagHub_SimilarMovies)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMovieHubWidgetsReset))">Skin.SetString(tagmoviehub_widget_pos_6,W_TagHub_MoviesByGenre)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMovieHubWidgetsReset))">Skin.SetString(tagmoviehub_widget_pos_7,W_TagHub_RandomMovies)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMovieHubWidgetsReset))">Skin.SetString(tagmoviehub_widget_pos_1.label,$LOCALIZE[31080])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMovieHubWidgetsReset))">Skin.SetString(tagmoviehub_widget_pos_2.label,$LOCALIZE[31301])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMovieHubWidgetsReset))">Skin.SetString(tagmoviehub_widget_pos_3.label,$LOCALIZE[135])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMovieHubWidgetsReset))">Skin.SetString(tagmoviehub_widget_pos_4.label,$LOCALIZE[31183])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMovieHubWidgetsReset))">Skin.SetString(tagmoviehub_widget_pos_5.label,$LOCALIZE[31018])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMovieHubWidgetsReset))">Skin.SetString(tagmoviehub_widget_pos_6.label,$LOCALIZE[31278])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagMovieHubWidgetsReset))">Skin.SetString(tagmoviehub_widget_pos_7.label,$LOCALIZE[31184])</onload>
+
+	<onload condition="!String.IsEmpty(Window(home).Property(TagMovieHubWidgetsReset))">Notification($LOCALIZE[31279],$LOCALIZE[31127])</onload>
+
+	<!-- Tag tvshow widget reset -->
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagTVShowHubWidgetsReset))">Skin.SetString(tagtvshowhub_widget_pos_1,W_TagHub_InprogressEpisodes)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagTVShowHubWidgetsReset))">Skin.SetString(tagtvshowhub_widget_pos_2,W_TagHub_NextUp)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagTVShowHubWidgetsReset))">Skin.SetString(tagtvshowhub_widget_pos_3,W_TagHub_NewEpisodes)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagTVShowHubWidgetsReset))">Skin.SetString(tagtvshowhub_widget_pos_4,W_TagHub_TVShowGenres)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagTVShowHubWidgetsReset))">Skin.SetString(tagtvshowhub_widget_pos_5,W_TagHub_RecommendedShows)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagTVShowHubWidgetsReset))">Skin.SetString(tagtvshowhub_widget_pos_6,W_TagHub_SimilarShows)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagTVShowHubWidgetsReset))">Skin.SetString(tagtvshowhub_widget_pos_7,W_TagHub_TVShowsByGenre)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagTVShowHubWidgetsReset))">Skin.SetString(tagtvshowhub_widget_pos_8,W_TagHub_RandomShows)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagTVShowHubWidgetsReset))">Skin.SetString(tagtvshowhub_widget_pos_1.label,$LOCALIZE[31080])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagTVShowHubWidgetsReset))">Skin.SetString(tagtvshowhub_widget_pos_2.label,$LOCALIZE[31012])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagTVShowHubWidgetsReset))">Skin.SetString(tagtvshowhub_widget_pos_3.label,$LOCALIZE[31302])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagTVShowHubWidgetsReset))">Skin.SetString(tagtvshowhub_widget_pos_4.label,$LOCALIZE[135])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagTVShowHubWidgetsReset))">Skin.SetString(tagtvshowhub_widget_pos_5.label,$LOCALIZE[31182])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagTVShowHubWidgetsReset))">Skin.SetString(tagtvshowhub_widget_pos_6.label,$LOCALIZE[31018])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagTVShowHubWidgetsReset))">Skin.SetString(tagtvshowhub_widget_pos_7.label,$LOCALIZE[31278])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(TagTVShowHubWidgetsReset))">Skin.SetString(tagtvshowhub_widget_pos_8.label,$LOCALIZE[31185])</onload>
+
+	<onload condition="!String.IsEmpty(Window(home).Property(TagTVShowHubWidgetsReset))">Notification($LOCALIZE[31279],$LOCALIZE[31127])</onload>
+
+	<!-- EmbyCon movie widget reset -->
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConMovieHubWidgetsReset))">Skin.SetString(embyconmoviehub_widget_pos_1,W_EmbyConHub_InProgressMovies)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConMovieHubWidgetsReset))">Skin.SetString(embyconmoviehub_widget_pos_2,W_EmbyConHub_NewMovies)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConMovieHubWidgetsReset))">Skin.SetString(embyconmoviehub_widget_pos_3,W_EmbyConHub_RecommendedMovies)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConMovieHubWidgetsReset))">Skin.SetString(embyconmoviehub_widget_pos_4,W_EmbyConHub_RandomMovies)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConMovieHubWidgetsReset))">Skin.SetString(embyconmoviehub_widget_pos_5,W_EmbyConHub_MovieGenres)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConMovieHubWidgetsReset))">Skin.SetString(embyconmoviehub_widget_pos_1.label,$LOCALIZE[31080])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConMovieHubWidgetsReset))">Skin.SetString(embyconmoviehub_widget_pos_2.label,$LOCALIZE[31301])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConMovieHubWidgetsReset))">Skin.SetString(embyconmoviehub_widget_pos_3.label,$LOCALIZE[31183])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConMovieHubWidgetsReset))">Skin.SetString(embyconmoviehub_widget_pos_4.label,$LOCALIZE[31184])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConMovieHubWidgetsReset))">Skin.SetString(embyconmoviehub_widget_pos_5.label,$LOCALIZE[135])</onload>
+
+	<onload condition="!String.IsEmpty(Window(home).Property(EmbyConMovieHubWidgetsReset))">Notification($LOCALIZE[31282],$LOCALIZE[31127])</onload>
+
+	<!-- EmbyCon tvshow widget reset -->
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConTVShowHubWidgetsReset))">Skin.SetString(embycontvshowhub_widget_pos_1,W_EmbyConHub_InProgressShows)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConTVShowHubWidgetsReset))">Skin.SetString(embycontvshowhub_widget_pos_2,W_EmbyConHub_NextUp)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConTVShowHubWidgetsReset))">Skin.SetString(embycontvshowhub_widget_pos_3,W_EmbyConHub_NewEpisodes)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConTVShowHubWidgetsReset))">Skin.SetString(embycontvshowhub_widget_pos_4,W_EmbyConHub_RecommendedShows)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConTVShowHubWidgetsReset))">Skin.SetString(embycontvshowhub_widget_pos_5,W_EmbyConHub_RandomShows)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConTVShowHubWidgetsReset))">Skin.SetString(embycontvshowhub_widget_pos_6,W_EmbyConHub_TVShowGenres)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConTVShowHubWidgetsReset))">Skin.SetString(embycontvshowhub_widget_pos_1.label,$LOCALIZE[31080])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConTVShowHubWidgetsReset))">Skin.SetString(embycontvshowhub_widget_pos_2.label,$LOCALIZE[31012])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConTVShowHubWidgetsReset))">Skin.SetString(embycontvshowhub_widget_pos_3.label,$LOCALIZE[31302])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConTVShowHubWidgetsReset))">Skin.SetString(embycontvshowhub_widget_pos_4.label,$LOCALIZE[31182])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConTVShowHubWidgetsReset))">Skin.SetString(embycontvshowhub_widget_pos_5.label,$LOCALIZE[31185])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConTVShowHubWidgetsReset))">Skin.SetString(embycontvshowhub_widget_pos_6.label,$LOCALIZE[135])</onload>
+
+	<onload condition="!String.IsEmpty(Window(home).Property(EmbyConTVShowHubWidgetsReset))">Notification($LOCALIZE[31282],$LOCALIZE[31127])</onload>
+
+	<!-- EmbyCon music widget reset -->
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConsportshubWidgetsReset))">Skin.SetString(embyconsportshub_widget_pos_1,W_EmbyConHub_NewAlbums)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConsportshubWidgetsReset))">Skin.SetString(embyconsportshub_widget_pos_2,W_EmbyConHub_PlayedSongs)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConsportshubWidgetsReset))">Skin.SetString(embyconsportshub_widget_pos_3,W_EmbyConHub_OftenPlayed)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConsportshubWidgetsReset))">Skin.SetString(embyconsportshub_widget_pos_4,W_EmbyConHub_FavArtists)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConsportshubWidgetsReset))">Skin.SetString(embyconsportshub_widget_pos_5,W_EmbyConHub_FavAlbums)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConsportshubWidgetsReset))">Skin.SetString(embyconsportshub_widget_pos_6,W_EmbyConHub_FavSongs)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConsportshubWidgetsReset))">Skin.SetString(embyconsportshub_widget_pos_1.label,$LOCALIZE[31303])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConsportshubWidgetsReset))">Skin.SetString(embyconsportshub_widget_pos_2.label,$LOCALIZE[31211])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConsportshubWidgetsReset))">Skin.SetString(embyconsportshub_widget_pos_3.label,$LOCALIZE[31215])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConsportshubWidgetsReset))">Skin.SetString(embyconsportshub_widget_pos_4.label,$LOCALIZE[31212])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConsportshubWidgetsReset))">Skin.SetString(embyconsportshub_widget_pos_5.label,$LOCALIZE[31213])</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(DefaultsReset)) | !String.IsEmpty(Window(home).Property(EmbyConsportshubWidgetsReset))">Skin.SetString(embyconsportshub_widget_pos_6.label,$LOCALIZE[31214])</onload>
+
+	<onload condition="!String.IsEmpty(Window(home).Property(EmbyConsportshubWidgetsReset))">Notification($LOCALIZE[31282],$LOCALIZE[31127])</onload>
+
+	<!-- Done -->
+	<onload>ClearProperty(HomeWidgetReset,home)</onload>
+	<onload>ClearProperty(MovieHubWidgetReset,home)</onload>
+	<onload>ClearProperty(TVShowHubWidgetReset,home)</onload>
+	<onload>ClearProperty(sportshubWidgetReset,home)</onload>
+	<onload>ClearProperty(tvlivehubWidgetReset,home)</onload>
+	<onload>ClearProperty(TagMovieHubWidgetsReset,home)</onload>
+	<onload>ClearProperty(TagTVShowHubWidgetsReset,home)</onload>
+	<onload>ClearProperty(TagMixedHubWidgetsReset,home)</onload>
+	<onload>ClearProperty(CustomHubWidgetsReset,home)</onload>
+	<onload>ClearProperty(DefaultsReset,home)</onload>
+	<onunload condition="Window.IsVisible(home)">AlarmClock(ReloadSkin,ReloadSkin(),00:02,silent)</onunload>
+
+	<controls/>
+</window>

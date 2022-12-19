@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol>3</defaultcontrol>
+	<controls>
+		<include>background</include>
+		<control type="image">
+			<!-- Dialog background image -->
+			<left>1400</left>
+			<top>120</top>
+			<width>500</width>
+			<height>870</height>
+			<texture border="14" colordiffuse="midgrey">button-default.png</texture>
+		</control>
+		<control type="label" id="2">
+			<!-- Settings screen heading -->
+			<right>40</right>
+			<align>right</align>
+			<top>135</top>
+			<width>565</width>
+			<height>48</height>
+			<textcolor>$VAR[AccentColor]</textcolor>
+			<font>ctouch29w</font>
+		</control>
+		<control type="grouplist" id="3">
+			<!-- Subheadings area -->
+			<left>1410</left>
+			<top>215</top>
+			<width>480</width>
+			<height>675</height>
+			<itemgap>10</itemgap>
+			<onleft>5</onleft>
+			<onup>80001</onup>
+			<ondown>20</ondown>
+		</control>
+		<control type="button" id="20">
+			<!-- Setting level button -->
+			<left>1410</left>
+			<top>895</top>
+			<width>480</width>
+			<height>75</height>
+			<font>ctouch22</font>
+			<label>$LOCALIZE[10037]</label>
+			<align>right</align>
+			<onleft>5</onleft>
+			<onright>5</onright>
+			<onup>3</onup>
+			<onclick>SettingsLevelChange</onclick>
+			<texturenofocus></texturenofocus>
+		</control>
+		<control type="label">
+			<!-- Settings level heading -->
+			<left>1437</left>
+			<top>895</top>
+			<width>480</width>
+			<height>75</height>
+			<label>$LOCALIZE[10004]:</label>
+			<font>ctouch22</font>
+		</control>
+		<!-- Markers for control area items -->
+		<include content="page-offscreen-vertical">
+			<param name="indicator1left" value="726"/>
+			<param name="indicator1top" value="115"/>
+			<param name="indicator2left" value="726"/>
+			<param name="indicator2top" value="975"/>
+			<param name="indicatorsize" value="24"/>
+			<param name="indicatorcontainer" value="5"/>
+		</include>
+		<control type="image">
+			<!-- Dialog background image -->
+			<left>60</left>
+			<top>120</top>
+			<width>1280</width>
+			<height>870</height>
+			<texture border="14" colordiffuse="midgrey">button-default.png</texture>
+		</control>
+		<control type="grouplist" id="5">
+			<!-- Controls area -->
+			<left>80</left>
+			<top>130</top>
+			<width>1228</width>
+			<height>850</height>
+			<itemgap>10</itemgap>
+			<onleft condition="String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31877])">noop</onleft>
+			<onleft condition="!String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31877])">23</onleft>
+			<onright>3</onright>
+			<pagecontrol>23</pagecontrol>
+		</control>
+		<control type="scrollbar" id="23">
+			<left>20</left>
+			<top>159</top>
+			<width>18</width>
+			<height>750</height>
+			<onleft>9000</onleft>
+			<onright>5</onright>
+			<animation condition="!Control.HasFocus(23) + !Container.Scrolling + !String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31875])" effect="fade" start="100" end="0" time="200" reversible="true">Conditional</animation>
+			<visible>$EXP[isEnabledScrollbar]</visible>
+		</control>
+		<control type="textbox" id="6">
+			<!-- Settings description area -->
+			<left>90</left>
+			<top>1005</top>
+			<width>1810</width>
+			<height>105</height>
+			<font>ctouch18</font>
+			<align>left</align>
+		</control>
+		<control type="button" id="7">
+			<!-- Default button -->
+			<height>75</height>
+			<font>ctouch20</font>
+			<invalidcolor>invalid-text</invalidcolor>
+			<texturenofocus></texturenofocus>
+		</control>
+		<control type="radiobutton" id="8">
+			<!-- Default radiobutton -->
+			<height>75</height>
+			<font>ctouch20</font>
+			<radioposx>1160</radioposx>
+			<radiowidth>40</radiowidth>
+			<textwidth>1100</textwidth>
+			<texturenofocus></texturenofocus>
+		</control>
+		<control type="spincontrolex" id="9">
+			<!-- Default spincontrolex -->
+			<height>75</height>
+			<font>ctouch20</font>
+			<reverse>yes</reverse>
+			<texturenofocus></texturenofocus>
+		</control>
+		<control type="button" id="10">
+			<!-- Default category button -->
+			<width>480</width>
+			<height>75</height>
+			<font>ctouch22</font>
+			<texturenofocus></texturenofocus>
+		</control>
+		<control type="sliderex" id="13">
+			<!-- Default slider button -->
+			<height>75</height>
+			<font>ctouch20</font>
+			<texturenofocus></texturenofocus>
+		</control>
+		<control type="label" id="14">
+			<!-- Default label -->
+			<height>75</height>
+			<textcolor>$VAR[AccentColor]</textcolor>
+			<font>ctouch22</font>
+		</control>
+		<include>touch-controlsl</include>
+		<include>touch-controls</include>	
+		<include>hora</include>
+	</controls>
+</window>
