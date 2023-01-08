@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.stva" name="Repositorio [COLOR orange]STVA[/COLOR]" version="1.0" provider-name="stva.ga">
+    <requires>
+        <import addon="xbmc.addon" version="12.0.0"/>
+    </requires>
+    <extension point="xbmc.addon.repository" name="Repositorio STVA">
+        <dir>
+			<info>https://raw.githubusercontent.com/stvabuild/repostva.matrix/master/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/stvabuild/repostva.matrix/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/stvabuild/repostva.matrix/master</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+		<summary>Repositorio STVA</summary>
+   		<description lang="es">Repositorio de addons de los Skins STVA para Kodi Matrix y Nexus</description>
+		<disclaimer>Repositorio de addons de los Skins STVA para Kodi Matrix y Nexus</disclaimer>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>

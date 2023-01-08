@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addon id="skin.ctouch"  version="2.4" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="3.0" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>		
 	</requires>
@@ -7,18 +7,39 @@
 		<res aspect="16:9" default="true" folder="xml" height="1080" width="1920" />
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="es_ES">Skin para Cristal Azul</summary>
-		<summary lang="en_GB">Skin para Cristal Azul</summary>				
-		<description lang="es_ES">Cristal Touch es un mod del skin AppTV realizado por STVA para Cristal Azul.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV o TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>
-		<description lang="en_GB">Cristal Touch es un mod del skin AppTV realizado por STVA para Cristal Azul.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV o TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>		
-		<disclaimer lang="en_GB">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]Web y Foro: stva.ga[CR]Grupo Cristal Azul: t.me/addonfestaycristal</disclaimer>
-		<disclaimer lang="es_ES">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]Web y Foro: stva.ga[CR]Grupo Cristal Azul: t.me/addonfestaycristal</disclaimer>		
+		<summary lang="es_ES">Skin para Kodi y Forks. Compatible con Kodi Matrix y Nexus</summary>
+		<summary lang="en_GB">Skin para Kodi y Forks. Compatible con Kodi Matrix y Nexus</summary>				
+		<description lang="es_ES">Cristal Touch es un mod del skin AppTV realizado por STVA.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV o TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>
+		<description lang="en_GB">Cristal Touch es un mod del skin AppTV realizado por STVA.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV o TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>		
+		<disclaimer lang="en_GB">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]Web y Foro: stva.ga</disclaimer>
+		<disclaimer lang="es_ES">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]Web y Foro: stva.ga</disclaimer>		
 		<platform>all</platform>
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 2.4 - 19/12/22
-- Reparados los ítems del inicio STVA que no funcionaban</news>
+		<news>Versión 3.0 - /1/23
+- Cambiados los inicios, ahora solo hay dos, Inicio Iconos e Inicio Widgets
+- Los items por defecto se agrupan en  grupos, Cristal, Alfa y Palantir
+- Se pueden ocultar todos los items  y widgets del skin individualmente o por grupos
+- Se ha modificado el Inicio Iconos
+- Se ha rediseñado el menú
+- Cambiado Primer Inicio (primera instalación)
+- En la vista Lista, independientemente del contenido, al hacer foco ahora el texto se desplaza
+- Modificados visualmente todos los tipos de vistas
+- Añadida opción en Ajustes de Skin para cambiar la visibilidad del fondo
+- Cambiado icono de carga
+- Cambiado el modo en que se muestran las ventanas popup y de progreso
+- Cambiado menú de apagado
+- Cambiado color de foco de la barra de scroll
+- Modificada ventana de Favoritos
+- Modificada ventana de addons
+- Modificada ventana de info de Addons
+- Modificado teclado
+- Agregada funcion autocompletar al teclado
+- Integración con el script embuary info
+- Modificado todo el addon en general para corregir fallos y mejorar visualmente
+- Integración de TMDB Helper para el arte de los títulos
+- Integración de Image Studio Coloured para los iconos de estudios</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
@@ -27,8 +48,6 @@
 			<screenshot>resources/screenshot003.jpg</screenshot>
 			<screenshot>resources/screenshot004.jpg</screenshot>
 			<screenshot>resources/screenshot005.jpg</screenshot>
-			<screenshot>resources/screenshot006.jpg</screenshot>
-			<screenshot>resources/screenshot007.jpg</screenshot>
 		</assets>
 	</extension>
 </addon>

@@ -62,53 +62,55 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.alfa" name="Alfa" version="3.8.0" provider-name="Alfa Addon">
-  <requires>
-    <import addon="script.module.requests"/>
-    <import addon="script.module.beautifulsoup4" version="4.5.3"/>
-    <import addon="script.module.html5lib" version="0.999.0"/>
-    <import addon="script.alfa-update-helper" optional="true"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="ca">Navega amb Kodi per pàgines web.</summary>
-    <summary lang="en">Browse web pages using Kodi</summary>
-    <summary lang="es">Navega con Kodi por páginas web.</summary>
-    <summary lang="it">Sfoglia le pagine web con Kodi.</summary>
-    <summary lang="pt">Navegue por páginas da web com Kodi.</summary>
-    <description lang="ca">Navega amb Kodi per pàgines web per veure els vídeos de manera fàcil.</description>
-	  <description lang="en">Browse web pages using Kodi to easily watch their video content.</description>
-    <description lang="es">Navega con Kodi por páginas web para ver sus videos de manera fácil.</description>
-    <description lang="it">Sfoglia le pagine web con Kodi per guardare facilmente i tuoi video.</description>
-    <description lang="pt">Navegue pelas páginas da web com Kodi para assistir seus vídeos facilmente.</description>
-    <disclaimer lang="ca">[COLOR red]Els propietaris i distribuïdors d'aquest complemento no proveeixen ni distribueixen cap contingut mostrat pel complemento ni tenen affiliación alguna amb els proveïdors de l'contingut.[/COLOR]</disclaimer>
-	  <disclaimer lang="en">[COLOR red]The owners and submitters to this addon do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.[/COLOR]</disclaimer>
-    <disclaimer lang="es">[COLOR red]Los propietarios y distribuidores de este addon no proveen ni distribuyen ningún contenido mostrado por el addon ni tienen affiliación alguna con los proveedores del contenido.[/COLOR]</disclaimer>
-    <disclaimer lang="it">[COLOR red]I proprietari e i distributori di questo addon aggiuntivo non forniscono o distribuiscono alcun contenuto visualizzato dal addon aggiuntivo né hanno alcuna affiliazione con i fornitori di contenuti.[/COLOR]</disclaimer>
-    <disclaimer lang="pt">[COLOR red]Os proprietários e distribuidores deste addon não fornecem ou distribuem qualquer conteúdo exibido pelo addon nem têm qualquer afiliação com os provedores de conteúdo.[/COLOR]</disclaimer>
-    <platform>all</platform>
-    <license>GNU GPL v3</license>
-    <source>https://github.com/alfa-addon/addon</source>
-    <news>[B]Estos son los cambios para esta versión:[/B]
+<addon id="plugin.video.alfa" name="Alfa" version="3.8.2" provider-name="Alfa Addon">
+	<requires>
+		<import addon="script.module.requests"></import>
+		<import addon="script.module.beautifulsoup4" version="4.5.3"></import>
+		<import addon="script.module.html5lib" version="0.999.0"></import>
+		<import addon="script.alfa-update-helper" optional="true"></import>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="ca">Navega amb Kodi per pàgines web.</summary>
+		<summary lang="en">Browse web pages using Kodi</summary>
+		<summary lang="es">Navega con Kodi por páginas web.</summary>
+		<summary lang="it">Sfoglia le pagine web con Kodi.</summary>
+		<summary lang="pt">Navegue por páginas da web com Kodi.</summary>
+		<description lang="ca">Navega amb Kodi per pàgines web per veure els vídeos de manera fàcil.</description>
+		<description lang="en">Browse web pages using Kodi to easily watch their video content.</description>
+		<description lang="es">Navega con Kodi por páginas web para ver sus videos de manera fácil.</description>
+		<description lang="it">Sfoglia le pagine web con Kodi per guardare facilmente i tuoi video.</description>
+		<description lang="pt">Navegue pelas páginas da web com Kodi para assistir seus vídeos facilmente.</description>
+		<disclaimer lang="ca">[COLOR red]Els propietaris i distribuïdors d'aquest complemento no proveeixen ni distribueixen cap contingut mostrat pel complemento ni tenen affiliación alguna amb els proveïdors de l'contingut.[/COLOR]</disclaimer>
+		<disclaimer lang="en">[COLOR red]The owners and submitters to this addon do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.[/COLOR]</disclaimer>
+		<disclaimer lang="es">[COLOR red]Los propietarios y distribuidores de este addon no proveen ni distribuyen ningún contenido mostrado por el addon ni tienen affiliación alguna con los proveedores del contenido.[/COLOR]</disclaimer>
+		<disclaimer lang="it">[COLOR red]I proprietari e i distributori di questo addon aggiuntivo non forniscono o distribuiscono alcun contenuto visualizzato dal addon aggiuntivo né hanno alcuna affiliazione con i fornitori di contenuti.[/COLOR]</disclaimer>
+		<disclaimer lang="pt">[COLOR red]Os proprietários e distribuidores deste addon não fornecem ou distribuem qualquer conteúdo exibido pelo addon nem têm qualquer afiliação com os provedores de conteúdo.[/COLOR]</disclaimer>
+		<platform>all</platform>
+		<license>GNU GPL v3</license>
+		<source>https://github.com/alfa-addon/addon</source>
+		<news>[B]Estos son los cambios para esta versión:[/B]
 
       [COLOR green][B]Arreglos[/B][/COLOR]
-      ¤ Revisión general de canales
+      ¤ Cuevana2                        ¤ Cuevana3                       ¤ Dilo
+      ¤ Dontorrent                      ¤ Doramasyt                     ¤ Hdfulls
+      ¤ Newpct1                         ¤ Seriesanimadas              ¤ Subtorrents
+      ¤ Torrentpelis                    ¤ Tvmoviedb                     ¤ Veranime
+      ¤ +18
 
-      [COLOR green][B]Novedades[/B][/COLOR]
-
-    </news>
-    <assets>
-      <icon>resources/icon.png</icon>
-      <fanart>resources/fanart.jpg</fanart>
-      <screenshot>resources/media/screenshots/1.jpg</screenshot>
-      <screenshot>resources/media/screenshots/2.jpg</screenshot>
-      <screenshot>resources/media/screenshots/3.jpg</screenshot>
-      <screenshot>resources/media/screenshots/4.jpg</screenshot>
-    </assets>
-  </extension>
-  <extension point="xbmc.service" library="videolibrary_service.py" start="login|startup"></extension>
+      [COLOR green][B]Novedades[/B][/COLOR]</news>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart_navidad.png</fanart>
+			<screenshot>resources/media/screenshots/1.jpg</screenshot>
+			<screenshot>resources/media/screenshots/2.jpg</screenshot>
+			<screenshot>resources/media/screenshots/3.jpg</screenshot>
+			<screenshot>resources/media/screenshots/4.jpg</screenshot>
+		</assets>
+	</extension>
+	<extension point="xbmc.service" library="videolibrary_service.py" start="login|startup"></extension>
 </addon>
 
 <addon id="plugin.video.cristalazul" name="[B][/B][COLOR aqua]CRISTAL AZUL 3.0.5[/COLOR]" version="3.0.5" provider-name="PICAPAU, LOURDES, SUPERTOPO, LUISMA, GEORGE">
@@ -342,65 +344,27 @@
 </addon>
 
 <addon id="plugin.video.themoviedb.helper"
-version="4.4.61"
+version="5.0.45"
 name="TheMovieDb Helper"
 provider-name="jurialmunkey">
 <requires>
   <import addon="xbmc.python" version="3.0.0"/>
   <import addon="script.module.requests" version="2.9.1"/>
   <import addon="script.module.pil" version="1.1.7"/>
+  <import addon="script.module.addon.signals" version="0.0.6" />
+  <import addon="script.module.tmdbhelper" version="0.0.7" />
+  <import addon="script.module.beautifulsoup4" version="4.9.3" />
 </requires>
 <extension point="xbmc.python.pluginsource" library="plugin.py">
   <provides>video</provides>
 </extension>
 <extension point="xbmc.python.script" library="script.py" />
 <extension point="xbmc.service" library="service.py" />
-<extension point="kodi.context.item">
-  <menu id="kodi.core.main">
-    <item library="context-playusing.py">
-      <label>$ADDON[plugin.video.themoviedb.helper 32322]</label>
-      <visible>!String.IsEmpty(ListItem.Property(tmdbhelper.context.playusing))</visible>
-    </item>
-    <item library="context-related.py">
-      <label>$ADDON[plugin.video.themoviedb.helper 32235]</label>
-      <visible>!String.IsEmpty(ListItem.Property(tmdbhelper.context.related))</visible>
-    </item>
-    <item library="context-addlibrary.py">
-      <label>$LOCALIZE[20444]</label>
-      <visible>!String.IsEmpty(ListItem.Property(tmdbhelper.context.addlibrary))</visible>
-    </item>
-    <item library="context-trakt.py">
-      <label>$ADDON[plugin.video.themoviedb.helper 32295]</label>
-      <visible>!String.IsEmpty(ListItem.Property(tmdbhelper.context.trakt))</visible>
-    </item>
-    <item library="context-refresh.py">
-      <label>$ADDON[plugin.video.themoviedb.helper 32233]</label>
-      <visible>!String.IsEmpty(ListItem.Property(tmdbhelper.context.refresh))</visible>
-    </item>
-    <item library="context-artwork.py">
-      <label>$ADDON[plugin.video.themoviedb.helper 32222]</label>
-      <visible>!String.IsEmpty(ListItem.Property(tmdbhelper.context.artwork))</visible>
-    </item>
-    <item library="context-sorting.py">
-      <label>$ADDON[plugin.video.themoviedb.helper 32309]</label>
-      <visible>!String.IsEmpty(ListItem.Property(tmdbhelper.context.sorting))</visible>
-    </item>
-    <item library="context-recacheblur.py">
-      <label>$ADDON[plugin.video.themoviedb.helper 32395]</label>
-      <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.BlurImage))</visible>
-    </item>
-  </menu>
-</extension>
 <extension point="xbmc.addon.metadata">
-  <summary lang="en_GB">TheMovieDb Helper - Now With Trakt Support!</summary>
-  <summary lang="es_ES">TheMovieDb Helper - ¡Ahora con soporte para Trakt!</summary>
-  <summary lang="fr_FR">TheMovieDb Helper - Maintenant avec support Trakt!</summary>
-  <description lang="en_GB">TheMovieDb Helper provides details about movies, tvshows and actors from TMDb. Users can access a variety of lists from TMDb and Trakt.</description>
-  <description lang="es_ES">TheMovieDb Helper proporciona detalles sobre películas, programas de televisión y actores de TMDb. Los usuarios pueden acceder a una variedad de listas desde TMDb y Trakt.</description>
-  <description lang="fr_FR">TheMovieDb Helper fournit des détails sur les films, les émissions de télévision et acteurs de TMDb. Les utilisateurs peuvent accéder à une variété de listes TMDb et Trakt.</description>
-  <disclaimer lang="en_GB">Provided by TheMovieDb and Trakt.</disclaimer>
-  <disclaimer lang="es_ES">Proporcionado por TheMovieDb y Trakt</disclaimer>
-  <disclaimer lang="fr_FR">Fourni par TheMovieDb et Trakt.</disclaimer>
+  <reuselanguageinvoker>false</reuselanguageinvoker>
+  <summary lang="en_GB">TheMovieDb Helper</summary>
+  <description lang="en_GB">TheMovieDb Helper provides details about movies, tvshows and actors from TMDb. Users can access a variety of lists from TMDb TVDb MDbList and Trakt.</description>
+  <disclaimer lang="en_GB">Data provided by TheMovieDb TVDb MDbList OMDb FanartTV and Trakt. Some of the information is provided by TheTVDB.com. Please consider supporting them. https://thetvdb.com/subscribe</disclaimer>
   <license>GPL-3.0-or-later</license>
   <website>https://github.com/jurialmunkey/plugin.video.themoviedb.helper</website>
   <forum>https://forum.kodi.tv/showthread.php?tid=345847</forum>
@@ -410,7 +374,6 @@ provider-name="jurialmunkey">
     <screenshot>resources/screenshot-01.jpg</screenshot>
     <screenshot>resources/screenshot-02.jpg</screenshot>
   </assets>
-  <news>Add some additional dbid checking based on title/year combo</news>
 </extension>
 </addon>
 
@@ -553,6 +516,35 @@ provider-name="jurialmunkey">
     </extension>
 </addon>
 
+<addon id="repository.jurialmunkey" name="jurialmunkey Alpha Repository" version="2.2" provider-name="jurialmunkey">
+    <extension point="xbmc.addon.repository" name="jurialmunkey Alpha Repository">
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/repo/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/repo/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/repo/zips/</datadir>
+        </dir>
+		<dir minversion="18.0" maxversion="18.9.0">
+            <info compressed="false">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/leia/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/leia/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/leia/zips/</datadir>
+        </dir>
+        <dir minversion="18.9.0">
+            <info compressed="false">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/matrix/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/matrix/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/matrix/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>jurialmunkey Alpha Repository</summary>
+        <description>A repository for alpha releases of jurialmunkey's skins.</description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon>
+
   <addon id="repository.magellan" name="[COLOR red]Mage[/COLOR] [COLOR black]llan[/COLOR] [COLORcyan]Repository[/COLOR]"version="1.0.0" provider-name="Magellan">
   <requires>
     <import addon="xbmc.addon" version="12.0.0"/>
@@ -669,6 +661,29 @@ provider-name="jurialmunkey">
 		<disclaimer></disclaimer>
 		<platform>all</platform>
 	</extension>
+</addon>
+
+<addon id="repository.stva" name="Repositorio [COLOR orange]STVA[/COLOR]" version="1.0" provider-name="stva.ga">
+    <requires>
+        <import addon="xbmc.addon" version="12.0.0"/>
+    </requires>
+    <extension point="xbmc.addon.repository" name="Repositorio STVA">
+        <dir>
+			<info>https://raw.githubusercontent.com/stvabuild/repostva.matrix/master/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/stvabuild/repostva.matrix/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/stvabuild/repostva.matrix/master</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+		<summary>Repositorio STVA</summary>
+   		<description lang="es">Repositorio de addons de los Skins STVA para Kodi Matrix y Nexus</description>
+		<disclaimer>Repositorio de addons de los Skins STVA para Kodi Matrix y Nexus</disclaimer>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
 </addon>
 
 <addon id="repository.zachmorris" name="Zach Morris Add-ons" version="1.0.3" provider-name="zachmorris">
@@ -1117,7 +1132,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
     </extension>
 </addon>
 
-<addon id="skin.ctouch"  version="2.4" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="3.0" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>
 	</requires>
@@ -1125,18 +1140,39 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 		<res aspect="16:9" default="true" folder="xml" height="1080" width="1920" />
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="es_ES">Skin para Cristal Azul</summary>
-		<summary lang="en_GB">Skin para Cristal Azul</summary>
-		<description lang="es_ES">Cristal Touch es un mod del skin AppTV realizado por STVA para Cristal Azul.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV o TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>
-		<description lang="en_GB">Cristal Touch es un mod del skin AppTV realizado por STVA para Cristal Azul.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV o TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>
-		<disclaimer lang="en_GB">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]Web y Foro: stva.ga[CR]Grupo Cristal Azul: t.me/addonfestaycristal</disclaimer>
-		<disclaimer lang="es_ES">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]Web y Foro: stva.ga[CR]Grupo Cristal Azul: t.me/addonfestaycristal</disclaimer>
+		<summary lang="es_ES">Skin para Kodi y Forks. Compatible con Kodi Matrix y Nexus</summary>
+		<summary lang="en_GB">Skin para Kodi y Forks. Compatible con Kodi Matrix y Nexus</summary>
+		<description lang="es_ES">Cristal Touch es un mod del skin AppTV realizado por STVA.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV o TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>
+		<description lang="en_GB">Cristal Touch es un mod del skin AppTV realizado por STVA.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV o TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>
+		<disclaimer lang="en_GB">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]Web y Foro: stva.ga</disclaimer>
+		<disclaimer lang="es_ES">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]Web y Foro: stva.ga</disclaimer>
 		<platform>all</platform>
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 2.4 - 19/12/22
-- Reparados los ítems del inicio STVA que no funcionaban</news>
+		<news>Versión 3.0 - /1/23
+- Cambiados los inicios, ahora solo hay dos, Inicio Iconos e Inicio Widgets
+- Los items por defecto se agrupan en  grupos, Cristal, Alfa y Palantir
+- Se pueden ocultar todos los items  y widgets del skin individualmente o por grupos
+- Se ha modificado el Inicio Iconos
+- Se ha rediseñado el menú
+- Cambiado Primer Inicio (primera instalación)
+- En la vista Lista, independientemente del contenido, al hacer foco ahora el texto se desplaza
+- Modificados visualmente todos los tipos de vistas
+- Añadida opción en Ajustes de Skin para cambiar la visibilidad del fondo
+- Cambiado icono de carga
+- Cambiado el modo en que se muestran las ventanas popup y de progreso
+- Cambiado menú de apagado
+- Cambiado color de foco de la barra de scroll
+- Modificada ventana de Favoritos
+- Modificada ventana de addons
+- Modificada ventana de info de Addons
+- Modificado teclado
+- Agregada funcion autocompletar al teclado
+- Integración con el script embuary info
+- Modificado todo el addon en general para corregir fallos y mejorar visualmente
+- Integración de TMDB Helper para el arte de los títulos
+- Integración de Image Studio Coloured para los iconos de estudios</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
@@ -1145,8 +1181,6 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 			<screenshot>resources/screenshot003.jpg</screenshot>
 			<screenshot>resources/screenshot004.jpg</screenshot>
 			<screenshot>resources/screenshot005.jpg</screenshot>
-			<screenshot>resources/screenshot006.jpg</screenshot>
-			<screenshot>resources/screenshot007.jpg</screenshot>
 		</assets>
 	</extension>
 </addon>
@@ -1235,42 +1269,6 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 			<news>[B]Versión - 1.3[/B] - 19/12/22
 - Sustituidos todos los widgets que no funcionaban
 </news>
-	</extension>
-</addon>
-
-<addon id="skin.stva"  version="1.2" name="STVA" provider-name="STVA">
-	<requires>
-		<import addon="resource.language.es_es" />
-	</requires>
-	<extension debugging="false" effectslowdown="1" point="xbmc.gui.skin">
-		<res aspect="16:9" default="true" folder="xml" height="1080" width="1920" />
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="es_ES">Skin para Kodi con menús y widgets ya creados, se instalará todo lo necesario para funcionar.</summary>
-		<summary lang="en_GB">Skin para Kodi con menús y widgets ya creados, se instalará todo lo necesario para funcionar.</summary>
-		<description lang="en_GB">STVA es una mod del skin AppTV de Wyrm e inspirado en el skin Aura de jurialmunkey.[CR]Todos los agradecimientos a ellos.[CR]Completamente optimizado para ser utilizado en Móvil y Tablet, TV y TV Box con mando, PC con ratón y/o teclado, consola con mando o gamepad.</description>
-		<description lang="es_ES">STVA es una mod del skin AppTV de Wyrm e inspirado en el skin Aura de jurialmunkey.[CR]Todos los agradecimientos a ellos.[CR]Completamente optimizado para ser utilizado en Móvil y Tablet, TV y TV Box con mando, PC con ratón y/o teclado, consola con mando o gamepad.</description>
-		<disclaimer lang="en_GB">Para más información, dudas o consultas [CR][B]web:[/B] http://stva.ga[CR]</disclaimer>
-		<disclaimer lang="es_ES">Para más información, dudas o consultas [CR][B]web:[/B] http://stva.ga[CR]</disclaimer>
-		<platform>all</platform>
-		<license></license>
-		<website>stva.ga</website>
-		<email />
-<news>
-Versión Final, 1.2.
-- Se añade función para desactivar los items predefinidos.
-- Se añade un inicio personalizado eligiendo inicio Táctil y addon de contenido, ninguno.
-- Pequeños arreglos.
-- No se actualizará más.
-</news>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-			<screenshot>resources/screenshot001.jpg</screenshot>
-			<screenshot>resources/screenshot000.jpg</screenshot>
-			<screenshot>resources/screenshot002.jpg</screenshot>
-			<screenshot>resources/screenshot003.jpg</screenshot>
-		</assets>
 	</extension>
 </addon>
 </addons>
