@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addon id="skin.ctouch"  version="3.0.1" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="3.1" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>		
 	</requires>
@@ -17,33 +17,25 @@
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 3.0.1 - 8/1/23
-- Corregido error que no mostraba la barra de progreso
-- Corregido error que no permitía cerrar la ventana del menú ajustes
-
-Versión 3.0 - 8/1/23
-- Cambiados los inicios, ahora solo hay dos, Inicio Iconos e Inicio Widgets
-- Los items por defecto se agrupan en  grupos, Cristal, Alfa y Palantir
-- Se pueden ocultar todos los items  y widgets del skin individualmente o por grupos
-- Se ha modificado el Inicio Iconos
-- Se ha rediseñado el menú
-- Cambiado Primer Inicio (primera instalación)
-- En la vista Lista, independientemente del contenido, al hacer foco ahora el texto se desplaza
-- Modificados visualmente todos los tipos de vistas
-- Añadida opción en Ajustes de Skin para cambiar la visibilidad del fondo
-- Cambiado icono de carga
-- Cambiado el modo en que se muestran las ventanas popup y de progreso
-- Cambiado menú de apagado
-- Cambiado color de foco de la barra de scroll
-- Modificada ventana de Favoritos
-- Modificada ventana de addons
-- Modificada ventana de info de Addons
-- Modificado teclado
-- Agregada funcion autocompletar al teclado
-- Integración con el script embuary info
-- Modificado todo el addon en general para corregir fallos y mejorar visualmente
-- Integración de TMDB Helper para el arte de los títulos
-- Integración de Image Studio Coloured para los iconos de estudios</news>
+		<news>Versión 3.1 - 15/1/23
+- Cambiado color del icono de carga en los addons
+- Corregido Buscador Cristal Azul de la ventana de Buscadores
+- Corregido error en ventana favoritos que no mostraba algunas imágenes
+- Añadido Widget Series en Seguimiento de Palantir
+- Reposicionada imagen de items de inicio desactivados en Ajustes de Skin
+- Corregido error que al tener una reproducción de fondo mostraba el fondo difuminado del reproductor
+- Cambiado icono de pantalla completa
+- Añadido al reproductor icono de cantidad de canales de audio (2.0, 5.1, etc)
+- Añadido al reproductor la información de proceso de video
+- Añadido icono del Skin o el addon en el que estemos delante de la hora
+- Cambiado en ajustes de skin las opciones de Tipo de Inicio e Items de inicio
+- Actualizado icono del Item de Winner
+- Añadido Apagar el Sistema al menú de apagado
+- Modificado Primer Inicio tras las instalación del Skin
+- Añadido mensaje de aviso de cuenta hdfull necesaria en el item Repeticiones deportivas
+- Añadida ventana de ayuda del menú contextual para el primer inicio del Skin
+- Añadida opción de Mostrar/Ocultas Botones Táctiles, incluye el menú Grande
+- Añadido icono en el reproductor para ocultar los controles de manera táctil</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>

@@ -793,6 +793,36 @@ provider-name="jurialmunkey">
     </extension>
 </addon>
 
+<addon id="script.limpiarkodi"
+       name="Limpia Tu Kodi"
+       version="3.0.1"
+       provider-name="Catoal">
+  <requires>
+    <import addon="script.module.six" version="1.11.0"/>
+  </requires>
+     <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+    </extension>
+  <extension point="xbmc.service" library="service.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+  <extension point="xbmc.addon.repository" name="Maniac">
+      <info compressed="false">http://raw.github.com/Maniac2017/repository.Maniac/master/addons.xml</info>
+      <checksum>http://raw.github.com/Maniac2017/repository.Maniac/master/addons.xml.md5</checksum>
+      <datadir zip="true">http://raw.github.com/Maniac2017/repository.Maniac/master/repor/</datadir>
+  </extension>
+    <platform>all</platform>
+    <summary>Limpiar</summary>
+    <description>La herramienta para limpiar de una pasada su dispositivo.</description>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+      <screenshot>resources/screenshot000.jpg</screenshot>
+      <screenshot>resources/screenshot001.jpg</screenshot>
+      <screenshot>resources/screenshot002.jpg</screenshot>
+    </assets>
+  </extension>
+</addon>
+
 <addon id="script.luar"
   version="0.8.1"
   name="Luar"
@@ -1132,7 +1162,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
     </extension>
 </addon>
 
-<addon id="skin.ctouch"  version="3.0.1" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="3.1" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>
 	</requires>
@@ -1150,33 +1180,25 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 3.0.1 - 8/1/23
-- Corregido error que no mostraba la barra de progreso
-- Corregido error que no permitía cerrar la ventana del menú ajustes
-
-Versión 3.0 - 8/1/23
-- Cambiados los inicios, ahora solo hay dos, Inicio Iconos e Inicio Widgets
-- Los items por defecto se agrupan en  grupos, Cristal, Alfa y Palantir
-- Se pueden ocultar todos los items  y widgets del skin individualmente o por grupos
-- Se ha modificado el Inicio Iconos
-- Se ha rediseñado el menú
-- Cambiado Primer Inicio (primera instalación)
-- En la vista Lista, independientemente del contenido, al hacer foco ahora el texto se desplaza
-- Modificados visualmente todos los tipos de vistas
-- Añadida opción en Ajustes de Skin para cambiar la visibilidad del fondo
-- Cambiado icono de carga
-- Cambiado el modo en que se muestran las ventanas popup y de progreso
-- Cambiado menú de apagado
-- Cambiado color de foco de la barra de scroll
-- Modificada ventana de Favoritos
-- Modificada ventana de addons
-- Modificada ventana de info de Addons
-- Modificado teclado
-- Agregada funcion autocompletar al teclado
-- Integración con el script embuary info
-- Modificado todo el addon en general para corregir fallos y mejorar visualmente
-- Integración de TMDB Helper para el arte de los títulos
-- Integración de Image Studio Coloured para los iconos de estudios</news>
+		<news>Versión 3.1 - 15/1/23
+- Cambiado color del icono de carga en los addons
+- Corregido Buscador Cristal Azul de la ventana de Buscadores
+- Corregido error en ventana favoritos que no mostraba algunas imágenes
+- Añadido Widget Series en Seguimiento de Palantir
+- Reposicionada imagen de items de inicio desactivados en Ajustes de Skin
+- Corregido error que al tener una reproducción de fondo mostraba el fondo difuminado del reproductor
+- Cambiado icono de pantalla completa
+- Añadido al reproductor icono de cantidad de canales de audio (2.0, 5.1, etc)
+- Añadido al reproductor la información de proceso de video
+- Añadido icono del Skin o el addon en el que estemos delante de la hora
+- Cambiado en ajustes de skin las opciones de Tipo de Inicio e Items de inicio
+- Actualizado icono del Item de Winner
+- Añadido Apagar el Sistema al menú de apagado
+- Modificado Primer Inicio tras las instalación del Skin
+- Añadido mensaje de aviso de cuenta hdfull necesaria en el item Repeticiones deportivas
+- Añadida ventana de ayuda del menú contextual para el primer inicio del Skin
+- Añadida opción de Mostrar/Ocultas Botones Táctiles, incluye el menú Grande
+- Añadido icono en el reproductor para ocultar los controles de manera táctil</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
@@ -1189,7 +1211,7 @@ Versión 3.0 - 8/1/23
 	</extension>
 </addon>
 
-<addon id="skin.embuary.stva" version="1.3" name="Embuary STVA" provider-name="stva">
+<addon id="skin.embuary.stva" version="1.4" name="Embuary STVA" provider-name="stva">
 	<requires>
 		<import addon="resource.language.es_es" />
 		<import addon="xbmc.gui" version="5.15.0"/>
@@ -1225,17 +1247,16 @@ Versión 3.0 - 8/1/23
 			<screenshot>resources/screenshot-09.jpg</screenshot>
 		</assets>
 		<news>
-[B]Version 1.3[/B] - 19/12/22
-- Sustituidos los widgets que no funcionaban</news>
+[B]Versión - 1.4[/B] - 15/1/23
+- Recuperados los enlaces de los widgets de la versión 1.2</news>
 	</extension>
 </addon>
 
-<addon id="skin.estuary.stva" version="1.3" name="Estuary STVA" provider-name="STVA">
+<addon id="skin.estuary.stva" version="1.4" name="Estuary STVA" provider-name="STVA">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="resource.language.es_es" version="0.0.0"/>
 		<import addon="script.skinshortcuts" version="1.1.5"/>
-		<import addon="repository.repostva.matrix" version="1.0"/>
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
 		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
@@ -1270,8 +1291,8 @@ Versión 3.0 - 8/1/23
 				<screenshot>resources/screenshot-10.jpg</screenshot>
 				<screenshot>resources/screenshot-11.jpg</screenshot>
 			</assets>
-			<news>[B]Versión - 1.3[/B] - 19/12/22
-- Sustituidos todos los widgets que no funcionaban
+			<news>[B]Versión - 1.4[/B] - 15/1/23
+- Recuperados los enlaces de los widgets de la versión 1.2
 </news>
 	</extension>
 </addon>

@@ -14,8 +14,15 @@
       <change beforePath="$PROJECT_DIR$/addons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/addons.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addons.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/addons.xml.md5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/skin.ctouch/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/skin.ctouch/addon.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skin.ctouch/changelog-3.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skin.ctouch/skin.ctouch-3.0.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.ctouch/changelog-3.0.1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.ctouch/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/skin.ctouch/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.ctouch/skin.ctouch-3.0.1.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.embuary.stva/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/skin.embuary.stva/addon.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.embuary.stva/changelog-1.3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.embuary.stva/skin.embuary.stva-1.3.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.estuary.stva/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/skin.estuary.stva/addon.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.estuary.stva/changelog-1.3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.estuary.stva/skin.estuary.stva-1.3.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
