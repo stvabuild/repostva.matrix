@@ -62,7 +62,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.alfa" name="Alfa" version="3.8.2" provider-name="Alfa Addon">
+<addon id="plugin.video.alfa" name="Alfa" version="3.8.4" provider-name="Alfa Addon">
 	<requires>
 		<import addon="script.module.requests"></import>
 		<import addon="script.module.beautifulsoup4" version="4.5.3"></import>
@@ -94,16 +94,16 @@
 		<news>[B]Estos son los cambios para esta versión:[/B]
 
       [COLOR green][B]Arreglos[/B][/COLOR]
-      ¤ Cuevana2                        ¤ Cuevana3                       ¤ Dilo
-      ¤ Dontorrent                      ¤ Doramasyt                     ¤ Hdfulls
-      ¤ Newpct1                         ¤ Seriesanimadas              ¤ Subtorrents
-      ¤ Torrentpelis                    ¤ Tvmoviedb                     ¤ Veranime
-      ¤ +18
+      ¤ Animefenix                            ¤ Bloghorror                        ¤ Cuevana2
+      ¤ Cuevana2Español                 ¤ Cuevana3                          ¤ Dilo
+      ¤ Dontorrent                            ¤ Hdfull                                ¤ Hdfulls
+      ¤ Newpct1                                ¤ Pelisflix                              ¤ Playdede
+      ¤ Seriesantiguas                      ¤ +18
 
       [COLOR green][B]Novedades[/B][/COLOR]</news>
 		<assets>
 			<icon>resources/icon.png</icon>
-			<fanart>resources/fanart_navidad.png</fanart>
+			<fanart>resources/fanart.jpg</fanart>
 			<screenshot>resources/media/screenshots/1.jpg</screenshot>
 			<screenshot>resources/media/screenshots/2.jpg</screenshot>
 			<screenshot>resources/media/screenshots/3.jpg</screenshot>
@@ -113,13 +113,12 @@
 	<extension point="xbmc.service" library="videolibrary_service.py" start="login|startup"></extension>
 </addon>
 
-<addon id="plugin.video.cristalazul" name="[B][/B][COLOR aqua]CRISTAL AZUL 3.0.5[/COLOR]" version="3.0.5" provider-name="PICAPAU, LOURDES, SUPERTOPO, LUISMA, GEORGE">
+<addon id="plugin.video.cristalazul" name="[B][/B][COLOR aqua]CRISTAL AZUL 3.0.6[/COLOR]" version="3.0.6" provider-name="PICAPAU, LOURDES, SUPERTOPO, LUISMA, GEORGE">
     <requires>
         <import addon="script.module.simplecache"/>
         <import addon="script.module.six"/>
         <import addon="script.module.kodi-six"/>
         <import addon="script.module.requests"/>
-        <import addon="script.module.websocket" optional="true" />
         <import addon="script.module.youtube.dl" optional="true" />
         <import addon="plugin.video.youtube" />
 		<import addon="plugin.video.duffyou" optional="true" />
@@ -168,7 +167,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.duffyou" name="Duff You" version="0.1.3" provider-name="La Taberna">
+<addon id="plugin.video.duffyou" name="Duff You" version="0.2.1" provider-name="La Taberna">
     <requires>
         <import addon="script.module.six" version="1.11.0" />
         <import addon="script.module.simplecache" />
@@ -269,7 +268,7 @@
 	</extension>
 </addon>
 
-<addon id="plugin.video.moestv" name="Moe's TV" version="0.1.3" provider-name="La Taberna">
+<addon id="plugin.video.moestv" name="Moe's TV" version="0.2.1" provider-name="La Taberna">
   <requires>
     <import addon="script.module.six" version="1.11.0"/>
     <import addon="script.module.simplecache"/>
@@ -281,7 +280,7 @@
   </extension>
 
   <extension point="xbmc.addon.metadata">
-    <summary>Televisión a la carta</summary>
+    <summary>Televisión a la carta y en directo.[CR]Algunos de los enlaces de la sección 'En Directo' provienen de las listas publicadas en https://www.tdtchannels.com/ </summary>
     <disclaimer>Este es un software [COLOR red][B]gratuito[/B][/COLOR][CR][COLOR red][B]Pero no se permite[/B][/COLOR] su distribuición preinstalada en ningún tipo de dispositivo ni tampoco su inclusión total o parcial en cualquier paquete de software y/o hardware por el que el usuario final deba [COLOR red][B]pagar o hacer una donación[/B][/COLOR], por su adquisición, por su uso o por recibir asistencia.[CR]Si cree que alguna de estas normas no se está cumpliendo póngase en contacto con nosotros.</disclaimer>
     <platform>all</platform>
     <assets>
@@ -344,7 +343,7 @@
 </addon>
 
 <addon id="plugin.video.themoviedb.helper"
-version="5.0.45"
+version="5.0.47"
 name="TheMovieDb Helper"
 provider-name="jurialmunkey">
 <requires>
@@ -377,7 +376,7 @@ provider-name="jurialmunkey">
 </extension>
 </addon>
 
-<addon id="plugin.video.winner" name="[COLOR orange]WINNER 2[/COLOR]" version="2.5" provider-name="La Taberna and Camaradas">
+<addon id="plugin.video.winner" name="[COLOR orange]WINNER 2[/COLOR]" version="2.8.1" provider-name="La Taberna and Camaradas">
     <requires>
         <import addon="script.module.six" version="1.11.0" />
         <import addon="plugin.video.duffyou" />
@@ -516,7 +515,7 @@ provider-name="jurialmunkey">
     </extension>
 </addon>
 
-<addon id="repository.jurialmunkey" name="jurialmunkey Alpha Repository" version="2.2" provider-name="jurialmunkey">
+<addon id="repository.jurialmunkey" name="jurialmunkey Alpha Repository" version="3.3" provider-name="jurialmunkey">
     <extension point="xbmc.addon.repository" name="jurialmunkey Alpha Repository">
         <dir>
             <info compressed="false">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/repo/zips/addons.xml</info>
@@ -528,10 +527,15 @@ provider-name="jurialmunkey">
             <checksum>https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/leia/zips/addons.xml.md5</checksum>
             <datadir zip="true">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/leia/zips/</datadir>
         </dir>
-        <dir minversion="18.9.0">
+        <dir minversion="18.9.0" maxversion="19.9.0">
             <info compressed="false">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/matrix/zips/addons.xml</info>
             <checksum>https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/matrix/zips/addons.xml.md5</checksum>
             <datadir zip="true">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/matrix/zips/</datadir>
+        </dir>
+        <dir minversion="19.9.1">
+            <info compressed="false">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/nexusrepo/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/nexusrepo/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/nexusrepo/zips/</datadir>
         </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
@@ -824,7 +828,7 @@ provider-name="jurialmunkey">
 </addon>
 
 <addon id="script.luar"
-  version="0.8.1"
+  version="0.9.5"
   name="Luar"
   provider-name="The Dreamers">
   <requires>
@@ -836,16 +840,11 @@ provider-name="jurialmunkey">
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>executable</provides>
   </extension>
-  <extension point="xbmc.addon.repository" name="Luar Repo">
-    <info>https://raw.githubusercontent.com/Masterwine/Luar/master/repor/addons.xml</info>
-    <checksum>https://raw.githubusercontent.com/Masterwine/Luar/master/repor/addons.xml.md5</checksum>
-    <datadir zip="true">https://raw.githubusercontent.com/Masterwine/Luar/master/repor/</datadir>
-  </extension>
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
     <summary lang="es">Script instalador de complementos para Kodi.</summary>
     <description lang="es">Selecciona, instala y disfruta.</description>
-    <disclaimer lang="es"></disclaimer>
+    <disclaimer>Este es un software [COLOR red][B]gratuito[/B][/COLOR][CR]No obstante, [COLOR red][B]no se permite[/B][/COLOR] su distribuición preinstalada en ningún tipo de dispositivo ni tampoco su inclusión total o parcial en cualquier paquete de software y/o hardware por el que el usuario final deba [COLOR red][B]pagar o hacer una donación[/B][/COLOR], por su adquisición, uso o asistencia.[CR]Si cree que alguna de estas normas no se está cumpliendo póngase en contacto con nosotros.</disclaimer>
     <assets>
       <icon>icon.gif</icon>
       <fanart>fanart.jpg</fanart>
@@ -1162,7 +1161,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
     </extension>
 </addon>
 
-<addon id="skin.ctouch"  version="3.1" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="3.2" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>
 	</requires>
@@ -1180,25 +1179,19 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 3.1 - 15/1/23
-- Cambiado color del icono de carga en los addons
-- Corregido Buscador Cristal Azul de la ventana de Buscadores
-- Corregido error en ventana favoritos que no mostraba algunas imágenes
-- Añadido Widget Series en Seguimiento de Palantir
-- Reposicionada imagen de items de inicio desactivados en Ajustes de Skin
-- Corregido error que al tener una reproducción de fondo mostraba el fondo difuminado del reproductor
-- Cambiado icono de pantalla completa
-- Añadido al reproductor icono de cantidad de canales de audio (2.0, 5.1, etc)
-- Añadido al reproductor la información de proceso de video
-- Añadido icono del Skin o el addon en el que estemos delante de la hora
-- Cambiado en ajustes de skin las opciones de Tipo de Inicio e Items de inicio
-- Actualizado icono del Item de Winner
-- Añadido Apagar el Sistema al menú de apagado
-- Modificado Primer Inicio tras las instalación del Skin
-- Añadido mensaje de aviso de cuenta hdfull necesaria en el item Repeticiones deportivas
-- Añadida ventana de ayuda del menú contextual para el primer inicio del Skin
-- Añadida opción de Mostrar/Ocultas Botones Táctiles, incluye el menú Grande
-- Añadido icono en el reproductor para ocultar los controles de manera táctil</news>
+		<news>Versión 3.2 - 29/1/23
+- Añadida opción de Instalar Alfa en el item Repeticiones Deportivas
+- Corregido error que no ocultaba el item de documentales palantir
+- Cambiada ruta del item de la videoteca
+- Cambiado color de la barra de caché
+- Etiquetas ocultables en items del inicio iconos
+- Ahora puedes agregar Buscadores Personales
+- Se pueden desactivar los Buscadores del Skin
+- Ahora se muestran los títulos de los widgets
+- Corregida la visibilidad del fondo
+- La Vista Paisaje ahora solo muestra el título del item al hacer foco
+- Aumentado el tamaño de la sinopsis en los addons que no sean Alfa
+- Levemente mejorada la ventana de información de vídeo</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
