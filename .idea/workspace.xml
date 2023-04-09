@@ -11,12 +11,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15fde8f9-d8c9-4746-a759-6e7e77d26162" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/plugin.video.alfa/plugin.video.alfa-3.8.9.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script.module.horus/script.module.horus-1.1.8.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script.module.jurialmunkey/script.module.jurialmunkey-0.1.0.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/addons.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addons.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/addons.xml.md5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugin.video.alfa/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.video.alfa/addon.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin.video.alfa/plugin.video.alfa-3.8.4.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin.video.palantir2/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.video.palantir2/addon.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin.video.palantir2/plugin.video.palantir2-2.2.5.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin.video.alfa/plugin.video.alfa-3.8.5.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin.video.elementum/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.video.elementum/addon.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin.video.elementum/plugin.video.elementum-0.1.86.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin.video.themoviedb.helper/addon.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin.video.themoviedb.helper/fanart.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin.video.themoviedb.helper/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin.video.themoviedb.helper/plugin.video.themoviedb.helper-5.0.47.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.module.horus/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/script.module.horus/addon.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.module.horus/script.module.horus-1.1.7.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
