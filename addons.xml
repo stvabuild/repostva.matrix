@@ -854,7 +854,7 @@ provider-name="jurialmunkey">
   </extension>
 </addon>
 
-<addon id="script.module.horus" name="Horus" version="1.1.8" provider-name="Caperucitaferoz">
+<addon id="script.module.horus" name="Horus" version="1.1.9" provider-name="Caperucitaferoz">
     <requires>
         <import addon="script.module.six" />
     </requires>
@@ -1175,7 +1175,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
     </extension>
 </addon>
 
-<addon id="skin.ctouch"  version="3.2.1" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="3.3" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>
 	</requires>
@@ -1187,28 +1187,32 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 		<summary lang="en_GB">Skin para Kodi y Forks. Compatible con Kodi Matrix y Nexus</summary>
 		<description lang="es_ES">Cristal Touch es un mod del skin AppTV realizado por STVA.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV o TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>
 		<description lang="en_GB">Cristal Touch es un mod del skin AppTV realizado por STVA.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV o TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>
-		<disclaimer lang="en_GB">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]Web y Foro: stva.ga</disclaimer>
-		<disclaimer lang="es_ES">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]Web y Foro: stva.ga</disclaimer>
+		<disclaimer lang="en_GB">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]Web y Foro: stva.es</disclaimer>
+		<disclaimer lang="es_ES">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]Web y Foro: stva.es</disclaimer>
 		<platform>all</platform>
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 3.2.1 - 30/1/23
-- Corregido error del menú contextual que hacía aparecer una segunda opción de Buscar Trailer
-
-Versión 3.2 - 29/1/23
-- Añadida opción de Instalar Alfa en el item Repeticiones Deportivas
-- Corregido error que no ocultaba el item de documentales palantir
-- Cambiada ruta del item de la videoteca
-- Cambiado color de la barra de caché
-- Etiquetas ocultables en items del inicio iconos
-- Ahora puedes agregar Buscadores Personales
-- Se pueden desactivar los Buscadores del Skin
-- Ahora se muestran los títulos de los widgets
-- Corregida la visibilidad del fondo
-- La Vista Paisaje ahora solo muestra el título del item al hacer foco
-- Aumentado el tamaño de la sinopsis en los addons que no sean Alfa
-- Levemente mejorada la ventana de información de vídeo</news>
+		<news>Versión 3.3 - 02/05/23
+- Nueva Vista, Slider Paisaje
+- Nuevo item, Actualizar Listados de Series y Películas de Palantir
+- Agregada opción en Ajustes de Skin para Actualizar los Listados de Palantir
+- Eliminados items, productoras cristal y disney + star por no funcionar
+- Cambiado startup de configuración del skin
+- Los items en el inicio widget se ocultan automáticamente
+- Reconfigurado título y sinopsis del inicio widgets
+- Los widgets vacíos aparecerá el icono si no es el foco
+- Los widgets personales aparecen después de los del skin
+- Cambiada visibilidad del fondo por defecto
+- Cambiados iconos de stop y reproductor al reproducir un video y minimizarlo
+- Ajustes del addon alfa en ajustes de skin ahora lleva a configuracion dentro del addon
+- Reparados buscadores personalizados, ahora sí funcionan
+- Cambiado estilo de cuadros de selección
+- Opción 'Imagen de Fondo estática" en ajustes de skin hace que no cambie el background
+- Modificada ruta de secciones de Motogp y F1 en item Repeticiones de Alfa a Cristal Azul
+- Al avanzar por pasos con el mando en un vídeo ahora se verá la cantidad de avance en la barra
+- Al avanzar pulsando hacia arriba en el mando ahora aparece la barra y el indicador de 10 minutos
+- Cambiada posición y aspecto de las ventanas de ajustes de audio, video y subtítulos</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
