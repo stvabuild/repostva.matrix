@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addon id="skin.ctouch"  version="3.3" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="3.4" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>		
 	</requires>
@@ -17,26 +17,22 @@
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 3.3 - 02/05/23
-- Nueva Vista, Slider Paisaje
-- Nuevo item, Actualizar Listados de Series y Películas de Palantir
-- Agregada opción en Ajustes de Skin para Actualizar los Listados de Palantir
-- Eliminados items, productoras cristal y disney + star por no funcionar
-- Cambiado startup de configuración del skin
-- Los items en el inicio widget se ocultan automáticamente
-- Reconfigurado título y sinopsis del inicio widgets
-- Los widgets vacíos aparecerá el icono si no es el foco
-- Los widgets personales aparecen después de los del skin
-- Cambiada visibilidad del fondo por defecto
-- Cambiados iconos de stop y reproductor al reproducir un video y minimizarlo
-- Ajustes del addon alfa en ajustes de skin ahora lleva a configuracion dentro del addon
-- Reparados buscadores personalizados, ahora sí funcionan
-- Cambiado estilo de cuadros de selección
-- Opción 'Imagen de Fondo estática" en ajustes de skin hace que no cambie el background
-- Modificada ruta de secciones de Motogp y F1 en item Repeticiones de Alfa a Cristal Azul
-- Al avanzar por pasos con el mando en un vídeo ahora se verá la cantidad de avance en la barra
-- Al avanzar pulsando hacia arriba en el mando ahora aparece la barra y el indicador de 10 minutos
-- Cambiada posición y aspecto de las ventanas de ajustes de audio, video y subtítulos</news>
+		<news>Versión 3.4 - 15/5/23
+- Ahora con ratón y dispositivos táctiles se pueden desplazar por los widgets con la barra scroll a la izquierda
+- Cambiada dirección de la web en el startup
+- Corregida dirección de descarga de resolveurl y subido en el repositorio
+- Reparados errores en el menú oculto
+- En Inicio Widgets al subir desde los widgets ahora se posiciona en los items
+- Al seleccionar Botones Táctiles se oculta la opción Ocultar menú
+- Añadida casilla de activación en la opción Auto Actualizar de Información de Addons
+- Corregidos errores en las ventanas de ajustes durante la reproducción
+- Añadido icono del addon en el título de los widgets por defecto
+- Agregado a Ajustes de Skin > Ajustes de Addons, el addon IPTV Simple Client
+- Mejorada la ventana Guia IPTV
+- Mejorada la ventana Canales IPTV
+- Mejorada la ventana de info de Canales IPTV
+- Mejorado el OSD de IPTV
+- Corregido error que no permitia ver todos los addons de Addons del Skin</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
