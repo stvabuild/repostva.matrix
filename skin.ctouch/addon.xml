@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addon id="skin.ctouch"  version="3.4" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="3.4.1" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>		
 	</requires>
@@ -17,7 +17,11 @@
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 3.4 - 15/5/23
+		<news>Versión 3.4.1 - 15/5/23
+- Modificado desplazamiento de Ajustes de Addons en Ajustes de Skin
+- Cambiado foco en el reproductor, se había cambiao al stop y se ha vuelto a poner en el pause
+
+Versión 3.4 - 15/5/23
 - Ahora con ratón y dispositivos táctiles se pueden desplazar por los widgets con la barra scroll a la izquierda
 - Cambiada dirección de la web en el startup
 - Corregida dirección de descarga de resolveurl y subido en el repositorio
