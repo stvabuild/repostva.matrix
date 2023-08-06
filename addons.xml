@@ -62,7 +62,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.alfa" name="Alfa" version="3.8.9" provider-name="Alfa Addon">
+<addon id="plugin.video.alfa" name="Alfa" version="3.9.4" provider-name="Alfa Addon">
 	<requires>
 		<import addon="script.module.requests"></import>
 		<import addon="script.module.beautifulsoup4" version="4.5.3"></import>
@@ -94,13 +94,12 @@
 		<news>[B]Estos son los cambios para esta versión:[/B]
 
       [COLOR green][B]Arreglos[/B][/COLOR]
-      ¤ Cuevana3video                   ¤ Dontorrent                      ¤ Doramedplay
-      ¤ NewPct1                              ¤ +18
+      ¤ Dontorrent                          ¤ Ennovelas                         ¤ Ennovelas
+      ¤ Pelisflix                                 ¤ +18
 
       [COLOR green][B]Novedades y Remasterizaciones[/B][/COLOR]
-      ¤ Cinecalidad                         ¤ Dilo                                  ¤ Elitetorrent
-      ¤ Ennovelas                           ¤ MiTorrent                        ¤ MoviesDVDR
-      ¤ Playview                             ¤ SubTorrent
+      ¤ Serieslan                             ¤ Doramasqueen                ¤ Filmoves
+      ¤ +18
 
         </news>
 		<assets>
@@ -340,7 +339,7 @@
 </addon>
 
 <addon id="plugin.video.themoviedb.helper"
-version="5.1.10_nexus"
+version="5.1.28~nexus"
 name="TheMovieDb Helper"
 provider-name="jurialmunkey">
 <requires>
@@ -348,9 +347,9 @@ provider-name="jurialmunkey">
   <import addon="script.module.requests" version="2.9.1"/>
   <import addon="script.module.pil" version="1.1.7"/>
   <import addon="script.module.addon.signals" version="0.0.6" />
-  <import addon="script.module.jurialmunkey" version="0.1.0" />
   <import addon="script.module.infotagger" version="0.0.5" />
   <import addon="script.module.beautifulsoup4" version="4.9.3" />
+  <import addon="script.module.jurialmunkey" version="0.1.7" />
 </requires>
 <extension point="xbmc.python.pluginsource" library="resources/plugin.py">
   <provides>video</provides>
@@ -373,32 +372,6 @@ provider-name="jurialmunkey">
     <screenshot>resources/screenshot-02.jpg</screenshot>
   </assets>
 </extension>
-</addon>
-
-<addon id="plugin.video.winner" name="[COLOR orange]WINNER 2[/COLOR]" version="2.8.1" provider-name="La Taberna and Camaradas">
-    <requires>
-        <import addon="script.module.six" version="1.11.0" />
-        <import addon="plugin.video.duffyou" />
-        <import addon="script.module.simplecache"/>
-        <import addon="script.module.horus" />
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-    </extension>
-
-    <extension point="xbmc.addon.metadata">
-        <summary lang="es">[COLOR orange]WINNER 2[/COLOR]</summary>
-        <description lang="es">Addon con eventos deportivos en directo.</description>
-        <disclaimer lang="es">Este es un software [COLOR red][B]gratuito[/B][/COLOR][CR][COLOR red][B]Pero no se permite[/B][/COLOR] su distribuición preinstalada en ningún tipo de dispositivo ni tampoco su inclusión total o parcial en cualquier paquete de software y/o hardware por el que el usuario final deba [COLOR red][B]pagar o hacer una donación[/B][/COLOR], por su adquisición, por su uso o por recibir asistencia.[CR]Si cree que alguna de estas normas no se está cumpliendo póngase en contacto con nosotros.</disclaimer>
-        <license lang="es">[B]Este es un software gratuito[/B]</license>
-        <platform>all</platform>
-        <assets>
-            <icon>resources/media/icon.jpg</icon>
-            <fanart>resources/media/fanart.jpg</fanart>
-        </assets>
-
-        <news></news>
-    </extension>
 </addon>
 
 <addon id="repository.a4ksubtitles"
@@ -876,6 +849,26 @@ provider-name="jurialmunkey">
   </extension>
 </addon>
 
+<addon id="script.module.addon.signals"
+    name="Addon Signals"
+    version="0.0.6+matrix.1"
+    provider-name="Rick Phillips (ruuk)">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">Inter-addon signalling</summary>
+        <description lang="en_GB">Provides signal/slot mechanism for inter-addon communication</description>
+        <platform>all</platform>
+        <license>LGPL-2.1-only</license>
+        <source>https://github.com/ruuk/script.module.addon.signals</source>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon>
+
 <addon id="script.module.horus" name="Horus" version="1.1.9" provider-name="Caperucitaferoz">
     <requires>
         <import addon="script.module.six" />
@@ -908,17 +901,18 @@ provider-name="jurialmunkey">
     </extension>
 </addon>
 
-<addon id="script.module.jurialmunkey" name="jurialmunkey common" provider-name="jurialmunkey" version="0.1.0">
+<addon id="script.module.jurialmunkey" name="jurialmunkey common" provider-name="jurialmunkey" version="0.1.6">
+  <requires>
+    <import addon="xbmc.python" version="3.0.1"/>
+    <import addon="script.module.requests" version="2.9.1"/>
+  </requires>
   <extension point="xbmc.python.module" library="resources/modules" />
   <extension point="xbmc.addon.metadata">
-    <description lang="en">Common code required by TMDbHelper and other related jurialmunkey add-ons</description>
-    <reuselanguageinvoker>false</reuselanguageinvoker>
-    <license></license>
-    <language></language>
-    <website></website>
+    <description lang="en_GB">Common code required by TMDbHelper and other related jurialmunkey add-ons</description>
+    <license>GPL-3.0-or-later</license>
+    <website>https://github.com/jurialmunkey/script.module.jurialmunkey</website>
     <assets>
       <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
     </assets>
   </extension>
 </addon>
@@ -952,7 +946,7 @@ provider-name="jurialmunkey">
     </extension>
 </addon>
 
-<addon id="script.stva" name="Complemento [COLOR orange]STVA[/COLOR]" version="1.6" provider-name="stva">
+<addon id="script.stva" name="Complemento [COLOR orange]STVA[/COLOR]" version="1.7" provider-name="stva">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="resource.language.es_es" />
@@ -1226,7 +1220,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
     </extension>
 </addon>
 
-<addon id="skin.ctouch"  version="3.4.1" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="3.5" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>
 	</requires>
@@ -1244,26 +1238,23 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 3.4.1 - 15/5/23
-- Modificado desplazamiento de Ajustes de Addons en Ajustes de Skin
-- Cambiado foco en el reproductor, se había cambiao al stop y se ha vuelto a poner en el pause
-
-Versión 3.4 - 15/5/23
-- Ahora con ratón y dispositivos táctiles se pueden desplazar por los widgets con la barra scroll a la izquierda
-- Cambiada dirección de la web en el startup
-- Corregida dirección de descarga de resolveurl y subido en el repositorio
-- Reparados errores en el menú oculto
-- En Inicio Widgets al subir desde los widgets ahora se posiciona en los items
-- Al seleccionar Botones Táctiles se oculta la opción Ocultar menú
-- Añadida casilla de activación en la opción Auto Actualizar de Información de Addons
-- Corregidos errores en las ventanas de ajustes durante la reproducción
-- Añadido icono del addon en el título de los widgets por defecto
-- Agregado a Ajustes de Skin > Ajustes de Addons, el addon IPTV Simple Client
-- Mejorada la ventana Guia IPTV
-- Mejorada la ventana Canales IPTV
-- Mejorada la ventana de info de Canales IPTV
-- Mejorado el OSD de IPTV
-- Corregido error que no permitia ver todos los addons de Addons del Skin</news>
+		<news>Versión 3.5 - 6/8/23
+- Cambiada Fuente de texto del skin
+- Varios cambios estéticos en todo el skin
+- Eliminado addon Winner del Skin, ya no funciona
+- Modificado estética del primer inicio
+- Eliminado complemento stva del primer inicio
+- Añadidos addons Horus y DuffYou al primer inicio
+- Solucionado error que mostraba la última búsqueda al usar el mismo buscador con Palantir
+- Cambiado item Winner por 'lista Tebas' de Deportes Cristal
+- Reparado item 'Repeticiones deportivas'
+- Añadido enlace 'Canales' al item Repeticiones deportivas
+- Ahora el botón pausa es el foco por defecto
+- El OSD ahora se auto oculta tras 5 segundos de inactividad
+- Añadido a Ajustes de Kodi botón de Libreelec
+- Cambiada opción Log de Ajustes por el visor de log del Complemento STVA
+- Ahora al pulsar hacia la izquierda en el Inicio Widgets se hace focus en los items
+- Otras correcciones menores</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>

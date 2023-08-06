@@ -1,6 +1,6 @@
 @echo off
 
-set "VIRTUAL_ENV=D:\Documentos\STVA\repostva\repostva.matrix\venv"
+set "VIRTUAL_ENV=C:\Users\wintt\Documents\STVA\GitHub\repostva.matrix\venv"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
