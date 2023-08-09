@@ -15,11 +15,36 @@
   <component name="ChangeListManager">
     <list default="true" id="15fde8f9-d8c9-4746-a759-6e7e77d26162" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin.program.kodileiawizard.matrix/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.program.kodileiawizard.matrix/addon.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin.program.kodileiawizard.matrix/plugin.program.kodileiawizard.matrix-1.0.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.module.resolveurl/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/script.module.resolveurl/addon.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.module.resolveurl/changelog-5.1.97.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.module.resolveurl/script.module.resolveurl-5.1.97.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/addons.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/addons.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository.camaradas.repo/addon.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository.camaradas.repo/fanart.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository.camaradas.repo/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository.camaradas.repo/repository.camaradas.repo-2.0.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository.repostva.matrix/addon.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository.repostva.matrix/fanart.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository.repostva.matrix/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository.repostva.matrix/repository.repostva.matrix-1.0.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource.images.moviegenreicons.estuarystva/addon.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource.images.moviegenreicons.estuarystva/changelog-0.0.1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource.images.moviegenreicons.estuarystva/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource.images.moviegenreicons.estuarystva/resource.images.moviegenreicons.estuarystva-0.0.1.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource.images.studios.coloured.stva/addon.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource.images.studios.coloured.stva/changelog-0.0.51.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource.images.studios.coloured.stva/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource.images.studios.coloured.stva/resource.images.studios.coloured.stva-0.0.51.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.bingie.helper/addon.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.bingie.helper/script.bingie.helper-1.1.0.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.embuary.stva/addon.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.embuary.stva/changelog-1.4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.embuary.stva/fanart.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.embuary.stva/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.embuary.stva/skin.embuary.stva-1.4.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.estuary.stva/addon.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.estuary.stva/changelog-1.4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.estuary.stva/fanart.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.estuary.stva/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.estuary.stva/skin.estuary.stva-1.4.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

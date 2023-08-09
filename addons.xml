@@ -426,20 +426,6 @@ provider-name="jurialmunkey">
     </extension>
 </addon>
 
-<addon id="repository.camaradas.repo" name="[COLOR orangered]camaradas.repo[/COLOR]" version="2.0" provider-name="Team Camaradas">
-    <extension point="xbmc.addon.repository" name="camaradas.repo">
-        <info>https://raw.githubusercontent.com/camaradas/camaradas.repo/master/Repositorio/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/camaradas/camaradas.repo/master/Repositorio/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.githubusercontent.com/camaradas/camaradas.repo/master/Repositorio/</datadir>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>Repositorio camaradas.repo</summary>
-        <description></description>
-        <disclaimer></disclaimer>
-        <platform>all</platform>
-    </extension>
-</addon>
-
 <addon id="repository.festa" name="[COLOR blue]REPOSITORIO[/COLOR][COLOR lime] FESTA[/COLOR]" version="1.0.1" provider-name="Yo Mismo">
     <extension point="xbmc.addon.repository" name="Festa">
         <info>https://raw.githubusercontent.com/picapaujulen/repositorio/master/Repositorio/addons.xml</info>
@@ -625,20 +611,6 @@ provider-name="jurialmunkey">
     </extension>
 </addon>
 
-<addon id="repository.repostva.matrix" name="STVA [COLOR yellow]Repo[/COLOR] Matrix" version="1.0" provider-name="www.stva.ga">
-	<extension point="xbmc.addon.repository" name="STVA Repo Matrix">
-		<info compressed="false">https://raw.githubusercontent.com/stvabuild/repostva.matrix/master/addons.xml</info>
-		<checksum>https://raw.githubusercontent.com/stvabuild/repostva.matrix/master/addons.xml.md5</checksum>
-                <datadir zip="true">https://raw.githubusercontent.com/stvabuild/repostva.matrix/master</datadir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary>STVA repo Matrix</summary>
-   		<description lang="es">Repositorio de addons STVA para Kodi 19 Matrix</description>
-		<disclaimer></disclaimer>
-		<platform>all</platform>
-	</extension>
-</addon>
-
 <addon id="repository.resolveurl" name="ResolveURL Repository" provider-name="gujal" version="1.0.0">
   <extension point="xbmc.addon.repository" name="ResolveURL Repository">
     <dir>
@@ -703,54 +675,6 @@ provider-name="jurialmunkey">
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
-</addon>
-
-<addon id="resource.images.moviegenreicons.estuarystva" name="Movie Genre Icons - Estuary STVA" version="0.0.1" provider-name="STVA">
-	<extension point="kodi.resource.images" compile="true" type="moviegenreicons" />
-	<requires>
-		<import addon="kodi.resource" version="1.0.0"/>
-	</requires>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Transparent Movie Genre Icons - Mod of Team Kodi addon</summary>
-		<summary lang="es">Transparent Movie Genre Icons - Mod del addon del Team Kodi</summary>
-		<description lang="en">Movie Genre Icons with a transparent background for Estuary STVA Skin</description>
-		<description lang="es">Iconos de Géneros de Películas con fondo transparente para el skin Estuary STVA</description>
-		<platform>all</platform>
-	</extension>
-</addon>
-
-<addon id="resource.images.studios.coloured.stva" name="Studio Icons - Coloured STVA" version="0.0.51" provider-name="Team Kodi, STVA">
-	<extension point="kodi.resource.images" compile="true" type="studios" />
-	<requires>
-		<import addon="kodi.resource" version="1.0.0"/>
-	</requires>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Coloured Studio Icons STVA</summary>
-		<description lang="en">Coloured Studio Icons STVA</description>
-		<platform>all</platform>
-	</extension>
-</addon>
-
-<addon id="script.bingie.helper" name="Bingie Helper" version="1.1.0" provider-name="cartman.dos, Matke">
-	<requires>
-		<import addon="xbmc.python" version="3.0.0"/>
-		<import addon="script.module.simplejson" version="3.17.0"/>
-	</requires>
-	<extension point="xbmc.python.script" library="default.py" />
-	<extension point="xbmc.addon.metadata">
-		<language/>
-		<summary lang="en">BINGIE Helper Script</summary>
-		<description lang="en">Helper for some of BINGIE features</description>
-		<platform>all</platform>
-		<license>GPL v3.0</license>
-		<forum>https://forum.kodi.tv/showthread.php?tid=334820</forum>
-		<website></website>
-		<source>https://github.com/matke-84/script.bingie.helper/</source>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-		</assets>
-	</extension>
 </addon>
 
 <addon id="script.elementum.burst" name="Elementum [COLOR FFFF6B00]Burst[/COLOR]" version="0.0.71" provider-name="elgatito">
@@ -917,7 +841,7 @@ provider-name="jurialmunkey">
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.97" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.105" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six" />
@@ -1264,92 +1188,6 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 			<screenshot>resources/screenshot004.jpg</screenshot>
 			<screenshot>resources/screenshot005.jpg</screenshot>
 		</assets>
-	</extension>
-</addon>
-
-<addon id="skin.embuary.stva" version="1.4" name="Embuary STVA" provider-name="stva">
-	<requires>
-		<import addon="resource.language.es_es" />
-		<import addon="xbmc.gui" version="5.15.0"/>
-		<import addon="script.embuary.helper" />
-		<import addon="script.skinshortcuts" />
-		<import addon="script.stva" />
-	</requires>
-	<extension point="xbmc.gui.skin" debugging="false">
-		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">Embuary STVA It is a Skin Wizard created from Sualfred's Skin Embuary Matrix</summary>
-		<summary lang="es_ES">Embuary STVA es un Skin Wizard creado a partir del Skin Embuary Matrix de Sualfred. </summary>
-		<description lang="en_GB">Embuary STVA It is a Skin Wizard created from Sualfred's Skin Embuary Matrix.[CR]Embuary STVA is modified to be able to obtain audiovisual content easily.</description>
-		<description lang="es_ES">Embuary STVA es un Skin Wizard creado a partir del Skin Embuary Matrix de Sualfred.[CR]Skin modificado para poder obtener contenido audiovisual fácilmente, ofrece la instalación de varios addons y el skin ya está configurado para acceder a ellos.[CR]No es compatible con mouse. Optimizado para TV con mando.[CR][CR]web: [B]stva.ga[/B][CR]Foro: [B]stva.ga/foro[/B][CR]Telegram: [B]t.me/stvabuild[/B]</description>
-		<disclaimer lang="en_GB">The Skin presents accesses to other addons that have nothing to do with STVA.[CR]STVA is not responsible for the content offered by said addons.</disclaimer>
-		<disclaimer lang="es_ES">El skin presenta accesos a otros addons que no tienen nada que ver con STVA.[CR]STVA no se hace responsable del contenido que ofrezcan dichos addons.</disclaimer>
-		<platform>all</platform>
-		<license>CC-BY-NC-ND-4.0</license>
-		<forum>https://stva.ga/foro/embuarystva/</forum>
-		<source>https://github.com/stvabuild/repostva.matrix/skin.embuary.stva</source>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-			<screenshot>resources/screenshot-01.jpg</screenshot>
-			<screenshot>resources/screenshot-02.jpg</screenshot>
-			<screenshot>resources/screenshot-03.jpg</screenshot>
-			<screenshot>resources/screenshot-04.jpg</screenshot>
-			<screenshot>resources/screenshot-05.jpg</screenshot>
-			<screenshot>resources/screenshot-06.jpg</screenshot>
-			<screenshot>resources/screenshot-07.jpg</screenshot>
-			<screenshot>resources/screenshot-08.jpg</screenshot>
-			<screenshot>resources/screenshot-09.jpg</screenshot>
-		</assets>
-		<news>
-[B]Versión - 1.4[/B] - 15/1/23
-- Recuperados los enlaces de los widgets de la versión 1.2</news>
-	</extension>
-</addon>
-
-<addon id="skin.estuary.stva" version="1.4" name="Estuary STVA" provider-name="STVA">
-	<requires>
-		<import addon="xbmc.gui" version="5.15.0"/>
-		<import addon="resource.language.es_es" version="0.0.0"/>
-		<import addon="script.skinshortcuts" version="1.1.5"/>
-	</requires>
-	<extension point="xbmc.gui.skin" debugging="false">
-		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
-		<res width="1920" height="1280" aspect="3:2" default="false" folder="xml" />
-		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />
-		<res width="2040" height="1080" aspect="17:9" default="false" folder="xml" />
-		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
-		<res width="2338" height="1080" aspect="19.5:9" default="false" folder="xml" />
- 		<res width="2160" height="1080" aspect="18:9" default="false" folder="xml" />
-		<res width="2560" height="1080" aspect="21:9" default="false" folder="xml" />
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">Estuary STVA skin by STVA</summary>
-		<summary lang="es_ES">Estuar STVA skin de STVA</summary>
-		<description lang="en_GB">Estuary STVA is a mod from Estuary by Guilouz for Kodi 19. It attempts to be easy for first time Kodi users to understand and use.</description>
-		<description lang="es_ES">Estuary STVA es un mod de Estuary MOD hecho por STVA para Kodi 19. Intenta ser fácil de entender y utilizar para nuevos usuarios en Kodi.</description>
-		<disclaimer lang="en_GB">For better experience, be sure to install all addons required by the skin.</disclaimer>
-		<disclaimer lang="es_ES">Para una mejor experiencia, asegúrate de instalar todos los complementos requeridos por el skin.</disclaimer>
-		<platform>all</platform>
-		<license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
-		<source>https://github.com/stvabuild/skin.estuary.modstva</source>
-			<assets>
-				<icon>icon.png</icon>
-				<fanart>fanart.jpg</fanart>
-				<screenshot>resources/screenshot-01.jpg</screenshot>
-				<screenshot>resources/screenshot-02.jpg</screenshot>
-				<screenshot>resources/screenshot-05.jpg</screenshot>
-				<screenshot>resources/screenshot-06.jpg</screenshot>
-				<screenshot>resources/screenshot-07.jpg</screenshot>
-				<screenshot>resources/screenshot-08.jpg</screenshot>
-				<screenshot>resources/screenshot-09.jpg</screenshot>
-				<screenshot>resources/screenshot-10.jpg</screenshot>
-				<screenshot>resources/screenshot-11.jpg</screenshot>
-			</assets>
-			<news>[B]Versión - 1.4[/B] - 15/1/23
-- Recuperados los enlaces de los widgets de la versión 1.2
-</news>
 	</extension>
 </addon>
 </addons>
