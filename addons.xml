@@ -1144,7 +1144,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
     </extension>
 </addon>
 
-<addon id="skin.ctouch"  version="3.5" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="3.5.1" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>
 	</requires>
@@ -1162,7 +1162,14 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 3.5 - 6/8/23
+		<news>Versión 3.5.1 - 10/8/23
+- Reparado Botón 'Buscador Palantir' que provocaba errores
+- Añadidos mensajes de aviso al buscador Palantir y al item deportes
+- Corregidos algunos detalles visuales
+- Añadida al menú Apagado la opción Reiniciar App para dispositivos Linux
+- Reparado Botón libreelec de Ajustes para que aparezca también en corelec y openelec
+
+Versión 3.5 - 6/8/23
 - Cambiada Fuente de texto del skin
 - Varios cambios estéticos en todo el skin
 - Eliminado addon Winner del Skin, ya no funciona

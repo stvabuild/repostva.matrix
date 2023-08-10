@@ -1,0 +1,250 @@
+Versión 3.5.1 - 10/8/23
+- Reparado Botón 'Buscador Palantir' que provocaba errores
+- Añadidos mensajes de aviso al buscador Palantir y al item deportes
+- Corregidos algunos detalles visuales
+- Añadida al menú Apagado la opción Reiniciar App para dispositivos Linux
+- Reparado Botón libreelec de Ajustes para que aparezca también en corelec y openelec
+
+Versión 3.5 - 6/8/23
+- Cambiada Fuente de texto del skin
+- Varios cambios estéticos en todo el skin
+- Eliminado addon Winner del Skin, ya no funciona
+- Modificado estética del primer inicio
+- Eliminado complemento stva del primer inicio
+- Añadidos addons Horus y DuffYou al primer inicio
+- Solucionado error que mostraba la última búsqueda al usar el mismo buscador con Palantir
+- Cambiado item Winner por 'lista Tebas' de Deportes Cristal
+- Reparado item 'Repeticiones deportivas'
+- Añadido enlace 'Canales' al item Repeticiones deportivas
+- Ahora el botón pausa es el foco por defecto
+- El OSD ahora se auto oculta tras 5 segundos de inactividad
+- Añadido a Ajustes de Kodi botón de Libreelec
+- Cambiada opción Log de Ajustes por el visor de log del Complemento STVA
+- Ahora al pulsar hacia la izquierda en el Inicio Widgets se hace focus en los items
+- Otras correcciones menores
+
+Versión 3.4.1 - 15/5/23
+- Modificado desplazamiento de Ajustes de Addons en Ajustes de Skin
+- Cambiado foco en el reproductor, se había cambiao al stop y se ha vuelto a poner en el pause
+
+Versión 3.4 - 15/5/23
+- Ahora con ratón y dispositivos táctiles se pueden desplazar por los widgets con la barra scroll a la izquierda
+- Cambiada dirección de la web en el startup
+- Corregida dirección de descarga de resolveurl y subido en el repositorio
+- Reparados errores en el menú oculto
+- En Inicio Widgets al subir desde los widgets ahora se posiciona en los items
+- Al seleccionar Botones Táctiles se oculta la opción Ocultar menú
+- Añadida casilla de activación en la opción Auto Actualizar de Información de Addons
+- Corregidos errores en las ventanas de ajustes durante la reproducción
+- Añadido icono del addon en el título de los widgets por defecto
+- Agregado a Ajustes de Skin > Ajustes de Addons, el addon IPTV Simple Client
+- Mejorada la ventana Guia IPTV
+- Mejorada la ventana Canales IPTV
+- Mejorada la ventana de info de Canales IPTV
+- Mejorado el OSD de IPTV
+- Corregido error que no permitia ver todos los addons de Addons del Skin
+
+Versión 3.3 - 2/5/23 
+- Nueva Vista, Slider Paisaje
+- Nuevo item, Actualizar Listados de Series y Películas de Palantir
+- Agregada opción en Ajustes de Skin para Actualizar los Listados de Palantir
+- Eliminados items, productoras cristal y disney + star por no funcionar
+- Cambiado startup de configuración del skin
+- Los items en el inicio widget se ocultan automáticamente
+- Reconfigurado título y sinopsis del inicio widgets
+- Los widgets vacíos aparecerá el icono si no es el foco
+- Los widgets personales aparecen después de los del skin
+- Cambiada visibilidad del fondo por defecto
+- Cambiados iconos de stop y reproductor al reproducir un video y minimizarlo
+- Ajustes del addon alfa en ajustes de skin ahora lleva a configuracion dentro del addon
+- Reparados buscadores personalizados, ahora sí funcionan
+- Cambiado estilo de cuadros de selección
+- Opción 'Imagen de Fondo estática" en ajustes de skin hace que no cambie el background
+- Modificada ruta de secciones de Motogp y F1 en item Repeticiones de Alfa a Cristal Azul
+- Al avanzar por pasos con el mando en un vídeo ahora se verá la cantidad de avance en la barra
+- Al avanzar pulsando hacia arriba en el mando ahora aparece la barra y el indicador de 10 minutos
+- Cambiada posición y aspecto de las ventanas de ajustes de audio, video y subtítulos
+
+
+Versión 3.2.1 - 30/1/23
+- Corregido error del menú contextual que hacía aparecer una segunda opción de Buscar Trailer
+
+Versión 3.2 - 29/1/23
+- Añadida opción de Instalar Alfa en el item Repeticiones Deportivas
+- Corregido error que no ocultaba el item de documentales palantir
+- Cambiada ruta del item de la videoteca
+- Cambiado color de la barra de caché
+- Etiquetas ocultables en items del inicio iconos
+- Ahora puedes agregar Buscadores Personales
+- Se pueden desactivar los Buscadores del Skin
+- Ahora se muestran los títulos de los widgets
+- Corregida la visibilidad del fondo
+- La Vista Paisaje ahora solo muestra el título del item al hacer foco
+- Aumentado el tamaño de la sinopsis en los addons que no sean Alfa
+- Levemente mejorada la ventana de información de vídeo
+
+Versión 3.1 - 15/1/23
+- Cambiado color del icono de carga en los addons
+- Corregido Buscador Cristal Azul de la ventana de Buscadores
+- Corregido error en ventana favoritos que no mostraba algunas imágenes
+- Añadido Widget Series en Seguimiento de Palantir
+- Reposicionada imagen de items de inicio desactivados en Ajustes de Skin
+- Corregido error que al tener una reproducción de fondo mostraba el fondo difuminado del reproductor
+- Cambiado icono de pantalla completa
+- Añadido al reproductor icono de cantidad de canales de audio (2.0, 5.1, etc)
+- Añadido al reproductor la información de proceso de video
+- Añadido icono del Skin o el addon en el que estemos delante de la hora
+- Cambiado en ajustes de skin las opciones de Tipo de Inicio e Items de inicio
+- Actualizado icono del Item de Winner
+- Añadido Apagar el Sistema al menú de apagado
+- Modificado Primer Inicio tras las instalación del Skin
+- Añadido mensaje de aviso de cuenta hdfull necesaria en el item Repeticiones deportivas
+- Añadida ventana de ayuda del menú contextual para el primer inicio del Skin
+- Añadida opción de Mostrar/Ocultas Botones Táctiles, incluye el menú Grande
+- Añadido icono en el reproductor para ocultar los controles de manera táctil 
+
+Versión 3.0.1 - 8/1/23
+- Corregido error que no mostraba la barra de progreso
+- Corregido error que no permitía cerrar la ventana del menú ajustes
+
+Versión 3.0 - 8/1/23
+- Cambiados los inicios, ahora solo hay dos, Inicio Iconos e Inicio Widgets
+- Los items por defecto se agrupan en  grupos, Cristal, Alfa y Palantir
+- Se pueden ocultar todos los items  y widgets del skin individualmente o por grupos
+- Se ha modificado el Inicio Iconos
+- Se ha rediseñado el menú
+- Cambiado Primer Inicio (primera instalación)
+- En la vista Lista, independientemente del contenido, al hacer foco ahora el texto se desplaza
+- Modificados visualmente todos los tipos de vistas
+- Añadida opción en Ajustes de Skin para cambiar la visibilidad del fondo
+- Cambiado icono de carga
+- Cambiado el modo en que se muestran las ventanas popup y de progreso
+- Cambiado menú de apagado
+- Cambiado color de foco de la barra de scroll
+- Modificada ventana de Favoritos
+- Modificada ventana de addons
+- Modificada ventana de info de Addons
+- Modificado teclado
+- Agregada funcion autocompletar al teclado
+- Integración con el script embuary info
+- Modificado todo el addon en general para corregir fallos y mejorar visualmente
+- Integración de TMDB Helper para el arte de los títulos
+- Integración de Image Studio Coloured para los iconos de estudios
+
+2.3 - 12/8/22
+- Ahora se pueden desactivar individualmente los items predefinidos
+- Arreglos visuales
+- Item TV Premium del inicio STVA cambiado a la sección España del addon Magellan
+- Item Repeticiones, ahora abre un menú para elegir
+- Cambiado item productoras de películas por Canales de Alfa
+- Cambiado enlaces de los items películas y series por años al canal IMDB de Alfa
+- Agregado Magellan en Ajustes de Skin/Addons
+- Corregido error en el startup para instalar Elementum
+- Corregidos otros errores menores
+
+2.2 - 26/6/22
+- Agregado botón 'Versiones' en información de addons
+- Eliminado fondo de la barra de progreso
+- El botón buscador del inicio, ahora abre una ventana para elegir entre el buscador de Alfa, Cristal Azul y Palantir
+- Eliminada ventana del startup para instalar Repositorios. Ahora al instalar un addon en la ventana del startup primero pedirá instalar su repositorio
+- Agregado botón en el startup para descargar Elementum o Torrest como clientes Torrent
+- Agregada ventana de consejos al final del startup
+- Ahora al aparecer el icono de carga, el fondo se oscurece
+- Arreglos visuales en Ajustes y menús contextuales
+- Oscurecido fondo de algunas vistas para mejorar la legibilidad
+- Nueva vista, Cuadrado
+- Eliminado fondo del texto en el inicio STVA
+- Añadido Palantir y su repositorio en Addons opcionales de Ajustes de Skin
+- Añadido Elementum para Android arm y Windows x64 en Addons opciones de Ajustes de Skin
+
+2.1 - 6/6/22
+- Reparado ítem 'En Vivo' en el inicio Cristal Azul y STVA
+- Eliminado Horus de addons necesarios en el primer arranque, ahora es una dependencia de winner y se instala solo
+- Ajustadas columnas de items inicio con el inicio custom en Ajustes de Skin
+
+2.0.1 - 26/5/22
+- Corregido error en el inicio custom, cono mando o teclado no se podía acceder al menú superior si no había ningún ítem personalizado	
+
+2.0 - 20/5/22
+- Agregada función para cambiar el color principal del skin desde Ajustes, Ajustes de Skin, Apariencia
+- Agregada función para hacer los iconos superiores del menú más pequeños, en Ajustes de Skin, Apariencia
+- Actualizados enalces de Winner a Winner2
+- Reconfigurado tamaño de los items del inicio personal
+- Agregado item iptv y videoteca al pulsar sobre items inicio en Ajustes de Skin
+- Reparado item Youtube del inicio Cristal
+- Reconfigurado primer inicio
+- Agregados algunos addons a Ajustes de Skin, addons
+- Cambiado addon que fuerza el cierre, de Force Close a Complemento STVA
+- Cambiado Skin helper Backup por Complemento STVA en Ajustes de Skin, Copias de Seguridad
+- Añadido Canales de Addons (canales y grupos de telegram), a Ajustes de Skin
+- Cambios gráficos menores
+
+1.9 - 24/4/22
+- Reparado error que hacía que no apareciera el botón táctil para cerrar ventanas emergentes
+- Cambiado aspecto de los iconos de los items personalizados
+- Modificados algunos items del inicio STVA
+- Cambiado en ajustes, item mantenimiento de limpia tu kodi a complemento stva
+- Si activas el addon iptv simple client o tvheadend htsp client, el item tv premium en el inicio STVa cambia a la lista IPTV
+- Añadido a items personalizados, item iptv y colección de la aplicación. Se pueden desactivar
+- Ventana de progreso movida al centro como la ventana de notificaciones
+- Eliminado fondo de la ventana de notificaciones
+- Corregidos fallos visuales en vistas de colección
+- Editado startup
+
+1.8.1 - 11/4/22
+- Cambiado item 'En vivo' del addon winner por la Sección Deportes de Cristal Azul, tanto en el inicio Cristal como STVA
+
+1.8 - 30/1/22
+- Cambiado Buscador del Inicio Cristal
+- En el inicio STVA, cambiados enlaces a Balandro por Alfa
+- Agregado enlace a colección de Kodi en el inicio STVA
+- Cambios internos menores
+
+1.7 - 11/10/21
+- Reparados errores menores
+- Reparado error que pedía emulador en la versión Matrix
+
+1.6 - 10/10/21
+- Reparados errores menores
+
+1.5 - 29/9/21
+- Adaptado para Kodi 19 Matrix.
+- Agregados 3 inicios distintos, cristal azul, stva y personal.
+- Corregidos Algunos errores.
+- Reparados y cambiados algunos items del Inicio Cristal Azul.
+- Ahora se pueden agregar items al Inicio desde el menú contextual.
+- Agregada mini guía de ayuda en Ajustes de Skin.
+
+1.4 - 3/11/20
+- Reparado menú Cine
+- Reparado menú Series
+- Actualizado icono Buscador
+- Reconfigurado Ajustes
+- Agregado Luar a Ajustes
+- Agregado Ajustes de Skin
+- Agregada función añadir favoritos al inicio
+- Ahora al pulsar en IPTV descarga el addon para tu plataforma
+
+1.3 - 21/10/20
+- Reparado menú TV Chikiry_Cristal
+
+1.2 - 19/10/20
+- Cambiados algunas imágenes del menú principal.
+- Reajustadas todas las vistas.
+- Nueva vista Paisaje.
+- Nueva vista de Ajustes.
+- Cambiados botones táctiles.
+- Ahora se puede acceder con mando y teclado a las áres táctiles.
+- Recongifurada vista guia pvr.
+- Reconfigurado OSD.
+- Ya no se accede a favoritos, buscador etc, desplazándote en los bordes de inicio.	
+- Reparados todos los menús que habían dejado de funcionar.
+- Cambiados menús Herramientas y KodiLeia Wizard por Pelis HD y Series HD.
+- Agreagada nueva fila de menús del addon Balandro.
+- Agregado opensubtitles.
+
+1.1 - 10/9/20
+- Cambiado menú Manta y Sofa por Superestrenos.
+
+1.0 - 25/5/20
+- Version Inicial
