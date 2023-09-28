@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addon id="skin.ctouch"  version="3.5.2" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="3.5.3" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>		
 	</requires>
@@ -17,37 +17,17 @@
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 3.5.2 - 15/8/23
-- Cambiado tamaño del menú iconos
-- Corregidos algunos detalles visuales
-- Modificado el teclado numérico
-- Agregada opción para cambiar la cantidad de carátulas por widget
-- Agregada opción para cambiar el tipo de widget
-
-Versión 3.5.1 - 10/8/23
-- Reparado Botón 'Buscador Palantir' que provocaba errores
-- Añadidos mensajes de aviso al buscador Palantir y al item deportes
-- Corregidos algunos detalles visuales
-- Añadida al menú Apagado la opción Reiniciar App para dispositivos Linux
-- Reparado Botón libreelec de Ajustes para que aparezca también en corelec y openelec
-
-Versión 3.5 - 6/8/23
-- Cambiada Fuente de texto del skin
-- Varios cambios estéticos en todo el skin
-- Eliminado addon Winner del Skin, ya no funciona
-- Modificado estética del primer inicio
-- Eliminado complemento stva del primer inicio
-- Añadidos addons Horus y DuffYou al primer inicio
-- Solucionado error que mostraba la última búsqueda al usar el mismo buscador con Palantir
-- Cambiado item Winner por 'lista Tebas' de Deportes Cristal
-- Reparado item 'Repeticiones deportivas'
-- Añadido enlace 'Canales' al item Repeticiones deportivas
-- Ahora el botón pausa es el foco por defecto
-- El OSD ahora se auto oculta tras 5 segundos de inactividad
-- Añadido a Ajustes de Kodi botón de Libreelec
-- Cambiada opción Log de Ajustes por el visor de log del Complemento STVA
-- Ahora al pulsar hacia la izquierda en el Inicio Widgets se hace focus en los items
-- Otras correcciones menores</news>
+		<news>Versión 3.5.3 - 28/9/23
+- Ocultada toda referencia y función al addon Palantir2 por su cierre
+- Añadida opción en Ajustes de skin/General para desactivar todos los items y widgets de Palantir
+- Añadido DuffYou a addons requeridos en ajustes de skin
+- Cambiada cantidad de widgets por defecto de 45 a 30
+- Mejoras visuales para vistas de la videoteca de Kodi
+- Añadidos widgets de la videoteca de Kodi
+- Cambiado icono y posición del item videoteca de Kodi
+- Correcciones menores en código y visuales 
+- Añadido a menú contextual, títulos siempre visibles y ocultar menú
+- Corregido error que no permitía establecer el contenido</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
