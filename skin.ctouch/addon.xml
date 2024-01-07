@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addon id="skin.ctouch"  version="3.5.3" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="3.6" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>		
 	</requires>
@@ -17,17 +17,14 @@
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 3.5.3 - 28/9/23
-- Ocultada toda referencia y función al addon Palantir2 por su cierre
-- Añadida opción en Ajustes de skin/General para desactivar todos los items y widgets de Palantir
-- Añadido DuffYou a addons requeridos en ajustes de skin
-- Cambiada cantidad de widgets por defecto de 45 a 30
-- Mejoras visuales para vistas de la videoteca de Kodi
-- Añadidos widgets de la videoteca de Kodi
-- Cambiado icono y posición del item videoteca de Kodi
-- Correcciones menores en código y visuales 
-- Añadido a menú contextual, títulos siempre visibles y ocultar menú
-- Corregido error que no permitía establecer el contenido</news>
+		<news>Versión 3.6 - 7/1/24
+- Integrados al skin, widgets, items, buscador y ajustes de Palantir3
+- Eliminada opción 'desactivar items y widgets palantir2'
+- Añadida opción para 'repetir la configuración inicial' a ajustes de skin/General
+- Cambiado widget 'Series Cristal Torrent' de paisaje a poster para que se vean correctamente
+- Sustituido widget 'Series Cristal 4k' por 'Super Peticiones'
+- Eliminada opción 'Canales' del item 'Repeticiones Deportivas'
+- Añadidas opciones; Agenda, Canales y Listas al item 'Deportes'</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
