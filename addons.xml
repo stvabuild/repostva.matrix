@@ -326,7 +326,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.palantir3" name="[COLOR gold]Palantir 3[/COLOR]" version="3.0.10" provider-name="TierraMedia">
+<addon id="plugin.video.palantir3" name="[COLOR gold]Palantir 3[/COLOR]" version="3.0.14" provider-name="TierraMedia">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.inputstreamhelper" version="0.5.0"/>
@@ -349,6 +349,12 @@
           <visible>String.IsEqual(Container.PluginName,"plugin.video.palantir3")</visible>
         </item>
       </menu>
+  </extension>
+
+  <extension point="xbmc.addon.repository" name="Palantir Repo">
+    <info>https://raw.githubusercontent.com/Palantiraddon/Repo/master/Palantir/addons.xml</info>
+    <checksum>https://raw.githubusercontent.com/Palantiraddon/Repo/master/Palantir/addons.xml.md5</checksum>
+    <datadir zip="true">https://raw.githubusercontent.com/Palantiraddon/Repo/master/Palantir/plugin.video.palantir3/</datadir>
   </extension>
 
   <extension point="xbmc.addon.metadata">
@@ -420,15 +426,15 @@ provider-name="jurialmunkey">
     </extension>
 </addon>
 
-<addon id="repository.alfa-addon" name="[COLOR red]Alfa Add-on[/COLOR] Repo" version="1.0.7" provider-name="Alfa Development Group">
+<addon id="repository.alfa-addon" name="[COLOR red]Alfa Add-on[/COLOR] Repo" version="1.0.8" provider-name="Alfa Development Group">
     <requires>
         <import addon="xbmc.addon" version="12.0.0"/>
     </requires>
     <extension point="xbmc.addon.repository" name="Alfa Add-on Repo">
         <dir>
-            <info>https://github.com/alfa-addon/alfa-repo/raw/master/addons.xml</info>
-            <checksum>https://github.com/alfa-addon/alfa-repo/raw/master/addons.xml.md5</checksum>
-            <datadir zip="true">https://github.com/alfa-addon/alfa-repo/raw/master</datadir>
+            <info compressed="false">https://raw.githubusercontent.com/alfa-addon/alfa-repo/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/alfa-addon/alfa-repo/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/alfa-addon/alfa-repo/master/</datadir>
         </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
@@ -452,6 +458,7 @@ provider-name="jurialmunkey">
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
         </assets>
+        <source>https://github.com/alfa-addon/alfa-repo</source>
     </extension>
 </addon>
 
@@ -861,6 +868,29 @@ provider-name="jurialmunkey">
     </extension>
 </addon>
 
+<addon id="script.module.js2py" name="js2py" version="0.75" provider-name="Piotr Dabkowski">
+	<requires>
+		<import addon="script.module.tzlocal" version="1.2"/>
+		<import addon="script.module.six" version="1.10"/>
+		<import addon="script.module.pyjsparser" version="2.5.1"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">JavaScript to Python Translator &amp; JavaScript interpreter written in 100% pure Python.</summary>
+		<description lang="en_GB">Packed for KODI from https://pypi.org/project/js2py/</description>
+		<platform>all</platform>
+		<language/>
+		<license>MIT</license>
+		<forum/>
+		<website/>
+		<source>https://github.com/PiotrDabkowski/Js2Py</source>
+		<email/>
+		<assets>
+			<icon>resources/icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
 <addon id="script.module.jurialmunkey" name="jurialmunkey common" provider-name="jurialmunkey" version="0.1.17">
   <requires>
     <import addon="xbmc.python" version="3.0.1"/>
@@ -904,6 +934,26 @@ provider-name="jurialmunkey">
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
+</addon>
+
+	<addon id="script.skin.helper.colorpicker" name="Skin Helper Service ColorPicker" version="2.0.1.1" provider-name="sualfred,marcelveldt">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.pil" version="1.1.7"/>
+	</requires>
+	<extension point="xbmc.python.library" library="default.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Colorpicker for Kodi Skins. Part of Skin Helper Suite</summary>
+		<description lang="en_GB">Colorpicker for Kodi Skins. Part of Skin Helper Suite</description>
+		<platform>all</platform>
+		<license>GPL-2.0</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=235676</forum>
+		<source>https://github.com/kodi-community-addons/script.skin.helper.colorpicker</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+		</assets>
+	</extension>
 </addon>
 
 <addon id="script.stva" name="Complemento [COLOR orange]STVA[/COLOR]" version="1.7" provider-name="stva">
@@ -1180,7 +1230,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
     </extension>
 </addon>
 
-<addon id="skin.ctouch"  version="3.6.1" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="3.6.2" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>
 	</requires>
@@ -1198,13 +1248,19 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 3.6.1 - 14/1/24
-- Reparados todos los enlaces en items y widgets de Palantir3</news>
+		<news>Versión 3.6.2 - 20/1/24
+- Agregado Inicio Deportes
+- Corregido item y widget 'Series en seguimiento' de Palantir
+- Cambiada descripción de Limpia tu Kodi en ajustes de Skin>Addons del skin
+- Habilitada función del reproductor para avanzar de manera táctil en la barra de progreso
+- Ahora en el reproductor al avanzar o retroceder se ven los botones
+- Otras correcciones menores</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
 			<screenshot>resources/screenshot001.jpg</screenshot>
 			<screenshot>resources/screenshot002.jpg</screenshot>
+			<screenshot>resources/screenshot006.jpg</screenshot>
 			<screenshot>resources/screenshot003.jpg</screenshot>
 			<screenshot>resources/screenshot004.jpg</screenshot>
 			<screenshot>resources/screenshot005.jpg</screenshot>

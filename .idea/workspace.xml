@@ -14,22 +14,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15fde8f9-d8c9-4746-a759-6e7e77d26162" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/plugin.video.alfa/plugin.video.alfa-3.9.19.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository.Palantir3/repository.Palantir3-3.9.19.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skin.ctouch/changelog-3.6.1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skin.ctouch/skin.ctouch-3.6.1.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/addons.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/addons.xml.md5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin.video.alfa/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.video.alfa/addon.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin.video.alfa/plugin.video.alfa-3.9.9.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository.Palantir3/repository.Palantir3-3.4.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository.stva/repository.stva-1.0.zip" beforeDir="false" afterPath="$PROJECT_DIR$/repository.stva/repository.stva-1.0.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.luar/script.luar-0.9.10.zip" beforeDir="false" afterPath="$PROJECT_DIR$/script.luar/script.luar-0.9.10.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.module.jurialmunkey/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/script.module.jurialmunkey/addon.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.module.jurialmunkey/script.module.jurialmunkey-0.1.6.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin.video.palantir3/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.video.palantir3/addon.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin.video.palantir3/plugin.video.palantir3-3.0.10.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository.Palantir3/repository.Palantir3-3.9.19.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository.alfa-addon/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository.alfa-addon/addon.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository.alfa-addon/repository.alfa-addon-1.0.7.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/skin.ctouch/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/skin.ctouch/addon.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skin.ctouch/changelog-3.6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skin.ctouch/skin.ctouch-3.6.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.ctouch/changelog-3.6.1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin.ctouch/skin.ctouch-3.6.1.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
