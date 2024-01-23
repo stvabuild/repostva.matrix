@@ -1230,7 +1230,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
     </extension>
 </addon>
 
-<addon id="skin.ctouch"  version="3.6.2" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="3.6.3" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>
 	</requires>
@@ -1248,13 +1248,9 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 3.6.2 - 20/1/24
-- Agregado Inicio Deportes
-- Corregido item y widget 'Series en seguimiento' de Palantir
-- Cambiada descripción de Limpia tu Kodi en ajustes de Skin>Addons del skin
-- Habilitada función del reproductor para avanzar de manera táctil en la barra de progreso
-- Ahora en el reproductor al avanzar o retroceder se ven los botones
-- Otras correcciones menores</news>
+		<news>Versión 3.6.3 - 23/1/24
+- Corregidos errores en Inicio Deportes
+- Cambiado el scroll de los widgets en modo táctil en Inicio Widgets</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
