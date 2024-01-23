@@ -1250,7 +1250,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 		<email />
 		<news>Versión 3.6.3 - 23/1/24
 - Corregidos errores en Inicio Deportes
-- Cambiado el scroll de los widgets en modo táctil en Inicio Widgets</news>
+- Cambiado scroll en modo táctil en Inicio Widgets</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>

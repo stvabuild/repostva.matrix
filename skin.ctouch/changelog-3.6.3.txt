@@ -1,6 +1,6 @@
 Versión 3.6.3 - 23/1/24
 - Corregidos errores en Inicio Deportes
-- Cambiado el scroll de los widgets en modo táctil en Inicio Widgets
+- Cambiado scroll en modo táctil en Inicio Widgets
 
 Versión 3.6.2 - 20/1/24
 - Agregado Inicio Deportes
