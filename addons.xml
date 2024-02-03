@@ -62,7 +62,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.alfa" name="Alfa" version="3.9.19" provider-name="Alfa Addon">
+<addon id="plugin.video.alfa" name="Alfa" version="3.9.20" provider-name="Alfa Addon">
     <requires>
         <import addon="script.module.requests" />
         <import addon="script.module.beautifulsoup4" version="4.5.3" />
@@ -108,17 +108,14 @@
         <platform>all</platform>
         <license>GNU GPL v3</license>
         <source>https://github.com/alfa-addon/addon</source>
-        <news>¡Feliz año nuevo 2024!
-
+        <news>
             [B]Estos son los cambios para esta versión:[/B]
 
             [B]Arreglos[/B]
-            ⦿ Don Torrent                            ⦿ Pelis Plus
-            ⦿ PlayDede                               ⦿ Pelisflix: desactivado
-            ⦿ +18
-
-            Esta actualización de emergencia debería solucionar errores en Kodi 18
-        </news>
+            • DivxTotal                                     • Don Torrent
+            • Entrepeliculasyseries                  • Pelisplus
+            • Pelispedia: Nuevo canal
+            • +18</news>
         <assets>
             <icon>resources/icon.png</icon>
             <fanart>resources/fanart.jpg</fanart>
@@ -131,7 +128,7 @@
     <extension point="xbmc.service" library="videolibrary_service.py" start="login|startup"></extension>
 </addon>
 
-<addon id="plugin.video.cristalazul" name="[B][/B][COLOR aqua]CRISTAL AZUL 3.0.6[/COLOR]" version="3.0.6" provider-name="PICAPAU, LOURDES, SUPERTOPO, LUISMA, GEORGE">
+<addon id="plugin.video.cristalazul" name="[B][/B][COLOR aqua]CRISTAL AZUL 3.0.8[/COLOR]" version="3.0.8" provider-name="PICAPAU, LOURDES, SUPERTOPO, LUISMA, GEORGE">
     <requires>
         <import addon="script.module.simplecache"/>
         <import addon="script.module.six"/>
@@ -149,26 +146,15 @@
     <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>video</provides>
     </extension>
-    <extension point="xbmc.service" library="autoexec.py" start="autoexec" />
-    <extension point="xbmc.addon.repository" name="Mi repositorio">
 
-        <dir>
-            <info>https://raw.githubusercontent.com/picapaujulen/repositorio/master/Repositorio/addons.xml</info>
+    <extension point="xbmc.service" library="autoexec.py" start="autoexec" />
+
+    <extension point="xbmc.addon.repository" name="Mi repositorio">
+       <dir minversion="18.9.0">
+            <info compressed="false">https://raw.githubusercontent.com/picapaujulen/repositorio/master/Repositorio/addons.xml</info>
             <checksum>https://raw.githubusercontent.com/picapaujulen/repositorio/master/Repositorio/addons.xml.md5</checksum>
             <datadir zip="true">https://raw.githubusercontent.com/picapaujulen/repositorio/master/Repositorio/</datadir>
-        </dir>
-
-        <dir>
-            <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
-        </dir>
-
-        <dir>
-            <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
-        </dir>
+       </dir>
     </extension>
 
 
@@ -907,7 +893,7 @@ provider-name="jurialmunkey">
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.105" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.125" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six" />
@@ -1230,7 +1216,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
     </extension>
 </addon>
 
-<addon id="skin.ctouch"  version="3.6.3" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="3.6.4" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>
 	</requires>
@@ -1248,9 +1234,18 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 3.6.3 - 23/1/24
-- Corregidos errores en Inicio Deportes
-- Cambiado scroll en modo táctil en Inicio Widgets</news>
+		<news>Versión 3.6.4 - 3/2/24
+- Reparados items y widgets de cristal azul
+- Eliminados items y widgets de cristal azul que no funcionan o ya no existen
+- Reparado buscador Cristal Azul
+- Reparados items y widgets de Alfa
+- Eliminado widget de películas 1 de Alfa
+- Eliminado item repeticiones deportivas
+- Cambiado widget Palantir de más vistas a últimas añadidas
+- En la vista 'Lista' al hacer foco, el texto se desplaza
+- Corregidos errores visuales en ventana de información de películas
+- Retoques visuales en Ajustes de Skin
+- Ahora en la ventana de Ajustes de addons al desplazarse a la izquierda el foco abajo al OK</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>

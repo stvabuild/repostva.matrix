@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addon id="skin.ctouch"  version="3.6.3" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="3.6.4" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>		
 	</requires>
@@ -17,9 +17,18 @@
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 3.6.3 - 23/1/24
-- Corregidos errores en Inicio Deportes
-- Cambiado scroll en modo táctil en Inicio Widgets</news>
+		<news>Versión 3.6.4 - 3/2/24
+- Reparados items y widgets de cristal azul
+- Eliminados items y widgets de cristal azul que no funcionan o ya no existen
+- Reparado buscador Cristal Azul
+- Reparados items y widgets de Alfa
+- Eliminado widget de películas 1 de Alfa
+- Eliminado item repeticiones deportivas
+- Cambiado widget Palantir de más vistas a últimas añadidas
+- En la vista 'Lista' al hacer foco, el texto se desplaza
+- Corregidos errores visuales en ventana de información de películas
+- Retoques visuales en Ajustes de Skin
+- Ahora en la ventana de Ajustes de addons al desplazarse a la izquierda el foco abajo al OK</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
