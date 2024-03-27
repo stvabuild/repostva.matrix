@@ -14,8 +14,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15fde8f9-d8c9-4746-a759-6e7e77d26162" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/skin.ctouch/changelog-3.6.4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skin.ctouch/skin.ctouch-3.6.4.zip" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugin.video.alfa/plugin.video.alfa-3.9.22.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugin.video.themoviedb.helper/plugin.video.themoviedb.helper-5.2.21~nexus.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository.Palantir3/repository.Palantir3-2.0.3.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script.module.jurialmunkey/script.module.jurialmunkey-0.1.18.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script.module.pyjsparser/addon.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script.module.pyjsparser/script.module.pyjsparser-2.7.1.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script.module.resolveurl/changelog-5.1.129.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script.module.resolveurl/script.module.resolveurl-5.1.129.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/addons.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/addons.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin.video.alfa/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.video.alfa/addon.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin.video.alfa/plugin.video.alfa-3.9.20.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin.video.themoviedb.helper/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.video.themoviedb.helper/addon.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin.video.themoviedb.helper/plugin.video.themoviedb.helper-5.1.37~nexus.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository.Palantir3/repository.Palantir3-1.0.8.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.module.jurialmunkey/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/script.module.jurialmunkey/addon.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.module.jurialmunkey/script.module.jurialmunkey-0.1.17.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.module.resolveurl/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/script.module.resolveurl/addon.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.module.resolveurl/changelog-5.1.125.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.module.resolveurl/script.module.resolveurl-5.1.125.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
