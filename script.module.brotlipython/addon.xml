@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addon id="script.module.brotlipython" name="brotlipython" version="0.0.1" provider-name="pothos">
+	<requires/>
+	<extension point="xbmc.python.module" library="lib"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Pure Python brotli decoder</summary>
+		<description lang="en_GB">Packed for KODI from https://github.com/pothos/brotlipython/</description>
+		<platform>all</platform>
+		<language/>
+		<license>GPLv3</license>
+		<forum/>
+		<website/>
+		<source>https://github.com/pothos/brotlipython</source>
+		<email/>
+		<assets>
+			<icon>resources/icon.png</icon>
+		</assets>
+	</extension>
+</addon>
