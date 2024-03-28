@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addon id="script.module.requests-toolbelt" name="requests-toolbelt" version="1.0.0" provider-name="Ian Cordasco, Cory Benfield">
+	<requires>
+		<import addon="script.module.requests" version="2.0.1"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">A utility belt for advanced users of python-requests</summary>
+		<description lang="en_GB">Packed for KODI from https://pypi.org/project/requests-toolbelt/</description>
+		<platform>all</platform>
+		<language/>
+		<license>Apache Software License (Apache 2.0)</license>
+		<forum/>
+		<website/>
+		<source>https://toolbelt.readthedocs.io/</source>
+		<email/>
+		<assets>
+			<icon>resources/icon.png</icon>
+		</assets>
+	</extension>
+</addon>
