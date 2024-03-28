@@ -14,7 +14,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15fde8f9-d8c9-4746-a759-6e7e77d26162" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/plugin.video.themoviedb.helper/plugin.video.themoviedb.helper-5.2.21~nexus.zip" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.video.themoviedb.helper/plugin.video.themoviedb.helper-5.2.21~nexus.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/addons.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/addons.xml.md5" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
