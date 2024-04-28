@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addon id="skin.ctouch"  version="3.6.6" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="3.6.7" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>		
 	</requires>
@@ -19,7 +19,17 @@
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 3.6.6 - 28/4/24
+		<news>Versión 3.6.7 - 29/4/24
+- Item Favoritos Palantir, ahora se puede ocultar
+- Eliminado buscador Cristal Azul
+- Eliminada ventana tip buscador Palantir
+- Reparados items y widgets Palantir
+- Añadida opción en menú vista lista detalles para cambiar fanart por póster
+- Corregido error que hacia aparecer el contador de items en vistas
+- Añadido título capítulos en vistas slider
+- Otras correciones menores
+
+Versión 3.6.6 - 28/4/24
 - Añadida opción para desactivar clearlogos
 - Reparados widgets e items de cristal azul y palantir
 - Eliminados algunos items y widgets de Cristal azul

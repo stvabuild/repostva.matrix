@@ -742,6 +742,45 @@ provider-name="jurialmunkey">
   </extension>
 </addon>
 
+<addon id="script.module.addon.signals"
+    name="Addon Signals"
+    version="0.0.6+matrix.1"
+    provider-name="Rick Phillips (ruuk)">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">Inter-addon signalling</summary>
+        <description lang="en_GB">Provides signal/slot mechanism for inter-addon communication</description>
+        <platform>all</platform>
+        <license>LGPL-2.1-only</license>
+        <source>https://github.com/ruuk/script.module.addon.signals</source>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="script.module.brotlipython" name="brotlipython" version="0.0.1" provider-name="pothos">
+	<requires/>
+	<extension point="xbmc.python.module" library="lib"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Pure Python brotli decoder</summary>
+		<description lang="en_GB">Packed for KODI from https://github.com/pothos/brotlipython/</description>
+		<platform>all</platform>
+		<language/>
+		<license>GPLv3</license>
+		<forum/>
+		<website/>
+		<source>https://github.com/pothos/brotlipython</source>
+		<email/>
+		<assets>
+			<icon>resources/icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
 <addon id="script.module.horus" name="Horus" version="1.1.9" provider-name="Caperucitaferoz">
     <requires>
         <import addon="script.module.six" />
@@ -774,6 +813,29 @@ provider-name="jurialmunkey">
     </extension>
 </addon>
 
+<addon id="script.module.js2py" name="js2py" version="0.75" provider-name="Piotr Dabkowski">
+	<requires>
+		<import addon="script.module.tzlocal" version="1.2"/>
+		<import addon="script.module.six" version="1.10"/>
+		<import addon="script.module.pyjsparser" version="2.5.1"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">JavaScript to Python Translator &amp; JavaScript interpreter written in 100% pure Python.</summary>
+		<description lang="en_GB">Packed for KODI from https://pypi.org/project/js2py/</description>
+		<platform>all</platform>
+		<language/>
+		<license>MIT</license>
+		<forum/>
+		<website/>
+		<source>https://github.com/PiotrDabkowski/Js2Py</source>
+		<email/>
+		<assets>
+			<icon>resources/icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
 <addon id="script.module.jurialmunkey" name="jurialmunkey common" provider-name="jurialmunkey" version="0.1.18">
   <requires>
     <import addon="xbmc.python" version="3.0.1"/>
@@ -788,6 +850,46 @@ provider-name="jurialmunkey">
       <icon>icon.png</icon>
     </assets>
   </extension>
+</addon>
+
+<addon id="script.module.pyjsparser" name="pyjsparser" version="2.7.1" provider-name="Piotr Dabkowski">
+	<requires/>
+	<extension point="xbmc.python.module" library="lib"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Fast javascript parser (based on esprima.js)</summary>
+		<description lang="en_GB">Packed for KODI from https://pypi.org/project/pyjsparser/</description>
+		<platform>all</platform>
+		<language/>
+		<license>MIT</license>
+		<forum/>
+		<website/>
+		<source>https://github.com/PiotrDabkowski/pyjsparser</source>
+		<email/>
+		<assets>
+			<icon>resources/icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="script.module.requests-toolbelt" name="requests-toolbelt" version="1.0.0" provider-name="Ian Cordasco, Cory Benfield">
+	<requires>
+		<import addon="script.module.requests" version="2.0.1"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">A utility belt for advanced users of python-requests</summary>
+		<description lang="en_GB">Packed for KODI from https://pypi.org/project/requests-toolbelt/</description>
+		<platform>all</platform>
+		<language/>
+		<license>Apache Software License (Apache 2.0)</license>
+		<forum/>
+		<website/>
+		<source>https://toolbelt.readthedocs.io/</source>
+		<email/>
+		<assets>
+			<icon>resources/icon.png</icon>
+		</assets>
+	</extension>
 </addon>
 
 <addon id="script.module.resolveurl" name="ResolveURL" version="5.1.129" provider-name="gujal">
@@ -817,6 +919,25 @@ provider-name="jurialmunkey">
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
+</addon>
+
+<addon id="script.module.rijndael" name="rijndael" version="0.1.1" provider-name="Moeen Zamani">
+	<requires/>
+	<extension point="xbmc.python.module" library="lib"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Rijndael AES encryption algorithm in pure python.</summary>
+		<description lang="en_GB">Packed for KODI from https://pypi.org/project/rijndael/</description>
+		<platform>all</platform>
+		<language/>
+		<license>MIT</license>
+		<forum/>
+		<website/>
+		<source>https://github.com/moeenz/rijndael</source>
+		<email/>
+		<assets>
+			<icon>resources/icon.png</icon>
+		</assets>
+	</extension>
 </addon>
 
 	<addon id="script.skin.helper.colorpicker" name="Skin Helper Service ColorPicker" version="2.0.1.1" provider-name="sualfred,marcelveldt">
@@ -875,7 +996,7 @@ Addon basado en el addon wizard kodileia, agradecimientos al grupo</description>
     </extension>
 </addon>
 
-<addon id="skin.ctouch"  version="3.6.6" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="3.6.7" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>
 	</requires>
@@ -895,7 +1016,17 @@ Addon basado en el addon wizard kodileia, agradecimientos al grupo</description>
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 3.6.6 - 28/4/24
+		<news>Versión 3.6.7 - 29/4/24
+- Item Favoritos Palantir, ahora se puede ocultar
+- Eliminado buscador Cristal Azul
+- Eliminada ventana tip buscador Palantir
+- Reparados items y widgets Palantir
+- Añadida opción en menú vista lista detalles para cambiar fanart por póster
+- Corregido error que hacia aparecer el contador de items en vistas
+- Añadido título capítulos en vistas slider
+- Otras correciones menores
+
+Versión 3.6.6 - 28/4/24
 - Añadida opción para desactivar clearlogos
 - Reparados widgets e items de cristal azul y palantir
 - Eliminados algunos items y widgets de Cristal azul

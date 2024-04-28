@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addon id="script.module.pyjsparser" name="pyjsparser" version="2.7.1" provider-name="Piotr Dabkowski">
+	<requires/>
+	<extension point="xbmc.python.module" library="lib"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Fast javascript parser (based on esprima.js)</summary>
+		<description lang="en_GB">Packed for KODI from https://pypi.org/project/pyjsparser/</description>
+		<platform>all</platform>
+		<language/>
+		<license>MIT</license>
+		<forum/>
+		<website/>
+		<source>https://github.com/PiotrDabkowski/pyjsparser</source>
+		<email/>
+		<assets>
+			<icon>resources/icon.png</icon>
+		</assets>
+	</extension>
+</addon>
