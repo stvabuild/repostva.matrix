@@ -1,33 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.program.autocompletion" name="AutoCompletion for virtual keyboard Android" version="2.0.5.a" provider-name="henryjfry">
-    <requires>
-        <import addon="xbmc.python" version="3.0.0" />
-        <import addon="script.module.simplejson" version="3.3.0"/>
-        <import addon="script.module.autocompletion" version="1.0.0"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="plugin.py" />
-    <extension point="xbmc.python.script" library="default.py">
-        <provides>executable</provides>
-    </extension>
-
-    <extension point="xbmc.addon.metadata">
-        <reuselanguageinvoker>true</reuselanguageinvoker>
-        <summary lang="en">AutoCompletion for the virtual keyboard (needs skin support)</summary>
-        <description lang="en">AutoCompletion for the virtual keyboard (needs skin support)</description>
-        <platform>all</platform>
-        <license>GNU GENERAL PUBLIC LICENSE Version 2.1, February 1999</license>
-        <source>https://github.com/phil65/plugin.program.autocompletion</source>
-        <assets>
-            <icon>resources/icon.png</icon>
-            <fanart>resources/fanart.jpg</fanart>
-            <screenshot>resources/screenshot-01.jpg</screenshot>
-            <screenshot>resources/screenshot-02.jpg</screenshot>
-            <screenshot>resources/screenshot-03.jpg</screenshot>
-        </assets>
-    </extension>
-</addon>
-
 <addon id="plugin.program.kodileiawizard.matrix" name="[COLOR white]Kodileia Wizard [COLOR chartreuse]Matrix[/COLOR]" version="1.0" provider-name="Grupo Kodileia">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
@@ -62,7 +34,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.alfa" name="Alfa" version="3.9.22" provider-name="Alfa Addon">
+<addon id="plugin.video.alfa" name="Alfa" version="3.9.24" provider-name="Alfa Addon">
     <requires>
         <import addon="script.module.requests" />
         <import addon="script.module.beautifulsoup4" version="4.5.3" />
@@ -112,9 +84,9 @@
             [B]Estos son los cambios para esta versión:[/B]
 
             [B]Arreglos[/B]
-            • Divxtotal                                            • Don Torrent
-            • Entrepeliculasyseries                         • JKAnime
-            • +18</news>
+            • +18                                                          • Dontorrent
+            • Doramasflix                                            • Ennovelas
+            • HDFull                                                      • Pelitorrent</news>
         <assets>
             <icon>resources/icon.png</icon>
             <fanart>resources/fanart.jpg</fanart>
@@ -311,35 +283,36 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.palantir3" name="[COLOR gold]Palantir 3[/COLOR]" version="3.0.14" provider-name="TierraMedia">
+<addon id="plugin.video.palantir3" name="[COLOR gold]Palantir 3[/COLOR]" version="3.1.2" provider-name="TierraMedia">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.inputstreamhelper" version="0.5.0"/>
     <import addon="script.module.pycryptodome" version="3.4.3"/>
     <import addon="script.module.requests"/>
     <import addon="script.embuary.info"/>
-    <import addon="script.module.simplecache"/>
-    <import addon="plugin.video.duffyou" version="0.1.3" optional="true"/>
     <import addon="script.module.resolveurl" version="5.0.00" optional="true"/>
   </requires>
 
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>video</provides>
   </extension>
+  <extension point="xbmc.python.library" library="default.py"/>
 
   <extension point="kodi.context.item">
       <menu id="kodi.core.main">
         <item library="context.py">
-          <label>[COLOR gold]Palantir 3...[/COLOR]</label>
+          <label>[COLOR gold]Menú Palantir 3...[/COLOR]</label>
           <visible>String.IsEqual(Container.PluginName,"plugin.video.palantir3")</visible>
         </item>
       </menu>
   </extension>
 
-  <extension point="xbmc.addon.repository" name="Palantir Repo">
-    <info>https://raw.githubusercontent.com/Palantiraddon/Repo/master/Palantir/addons.xml</info>
-    <checksum>https://raw.githubusercontent.com/Palantiraddon/Repo/master/Palantir/addons.xml.md5</checksum>
-    <datadir zip="true">https://raw.githubusercontent.com/Palantiraddon/Repo/master/Palantir/plugin.video.palantir3/</datadir>
+  <extension point="xbmc.addon.repository" name="Palantir 3 official Repo">
+    <dir minversion="18.9.0">
+        <info compressed="false">https://raw.githubusercontent.com/Palantiraddon/Repo/master/Palantir/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/Palantiraddon/Repo/master/Palantir/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/Palantiraddon/Repo/master/Palantir/</datadir>
+    </dir>
   </extension>
 
   <extension point="xbmc.addon.metadata">
@@ -359,7 +332,7 @@
 </addon>
 
 <addon id="plugin.video.themoviedb.helper"
-version="5.2.21~nexus"
+version="5.2.22~nexus"
 name="TheMovieDb Helper"
 provider-name="jurialmunkey">
 <requires>
@@ -394,135 +367,47 @@ provider-name="jurialmunkey">
 </extension>
 </addon>
 
-<addon id="plugin.video.youtube" name="YouTube" version="7.0.5+beta.2" provider-name="anxdpanic, bromix, MoojMidge">
-    <requires>
-        <import addon="xbmc.python" version="3.0.0"/>
-        <import addon="script.module.requests" version="2.27.1"/>
-        <import addon="inputstream.adaptive" version="19.0.0"/>
-        <import addon="script.module.inputstreamhelper" version="0.2.2" optional="true"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="resources/lib/plugin.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.service" library="resources/lib/service.py"/>
-    <extension point="xbmc.python.module" library="resources/lib/"/>
-    <extension point="xbmc.python.script" library="resources/lib/script.py">
-        <provides>executable</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <assets>
-            <icon>resources/media/icon.png</icon>
-            <fanart>resources/media/fanart.jpg</fanart>
-        </assets>
-        <platform>all</platform>
-        <license>GPL-2.0-only</license>
-        <forum>https://ytaddon.panicked.xyz/forum</forum>
-        <website>https://www.youtube.com</website>
-        <source>https://github.com/anxdpanic/plugin.video.youtube</source>
-        <reuselanguageinvoker>true</reuselanguageinvoker>
-        <summary lang="bg_BG">Добавка за YouTube</summary>
-        <summary lang="cs_CZ">Plugin pro YouTube</summary>
-        <summary lang="da_DK">Plugin til YouTube</summary>
-        <summary lang="de_DE">Plugin für YouTube</summary>
-        <summary lang="el_GR">Πρόσθετο YouTube</summary>
-        <summary lang="en_GB">Plugin for YouTube</summary>
-        <summary lang="es_ES">Plugin para YouTube</summary>
-        <summary lang="es_MX">Complemento para YouTube</summary>
-        <summary lang="fi_FI">YouTube-lisäosa</summary>
-        <summary lang="fr_FR">Plugin pour YouTube</summary>
-        <summary lang="he_IL">תוסף עבור YouTube</summary>
-        <summary lang="hr_HR">Dodatak za YouTube</summary>
-        <summary lang="hu_HU">YouTube kiegészítő</summary>
-        <summary lang="id_ID">Pengaya untuk YouTube</summary>
-        <summary lang="it_IT">Plugin per YouTube</summary>
-        <summary lang="ko_KR">유튜브 플러그인</summary>
-        <summary lang="nb_NO">Tillegg for YouTube</summary>
-        <summary lang="nl_NL">Plugin voor YouTube</summary>
-        <summary lang="pl_PL">Wtyczka YouTube</summary>
-        <summary lang="ru_RU">Видеодополнение YouTube</summary>
-        <summary lang="sk_SK">Doplnok pre YouTube</summary>
-        <summary lang="sv_SE">Plugin för YouTube</summary>
-        <summary lang="tr_TR">YouTube için eklenti</summary>
-        <summary lang="vi_VN">Plugin dành cho YouTube</summary>
-        <summary lang="zh_CN">油管插件</summary>
-        <summary lang="zh_TW">YouTube附加元件</summary>
-        <description lang="bg_BG">YouTube е един от най-големите уеб сайтове за споделяне на видео в целия свят.</description>
-        <description lang="cs_CZ">YouTube je jedna z největších webových stránek světa sdílející video.</description>
-        <description lang="da_DK">YouTube er et af verdens største videodelingswebsteder.</description>
-        <description lang="de_DE">YouTube ist eines der größten Video-Sharing-Websites der Welt.</description>
-        <description lang="el_GR">Το YouTube είναι μία από τις μεγαλύτερες ιστοσελίδες διαμοιρασμού βίντεο στον κόσμο.</description>
-        <description lang="en_GB">YouTube is one of the biggest video-sharing websites of the world.</description>
-        <description lang="es_ES">YouTube es uno de los sitios web más grande del mundo para compartir vídeos.</description>
-        <description lang="es_MX">YouTube es uno de los más grandes sitios web de intercambio de videos del mundo.</description>
-        <description lang="fi_FI">YouTube on yksi maailman suurimmista videoiden jakosivustoista.</description>
-        <description lang="fr_FR">YouTube est l'un des plus grands sites de partage vidéos du monde.</description>
-        <description lang="he_IL">YouTube הוא אחד מאתרי שיתוף הווידאו הגדולים בעולם.</description>
-        <description lang="hr_HR">YouTube je jedna od najvećih stranica za dijeljenje video sadržaja na svijetu.</description>
-        <description lang="hu_HU">A YouTube világ egyik legnagyobb videómegosztó weboldala.</description>
-        <description lang="id_ID">YouTube adalah salah satu situs web berbagi video terbesar di dunia.</description>
-        <description lang="it_IT">YouTube è uno dei più grandi siti di condivisione video del mondo.</description>
-        <description lang="ko_KR">유튜브는 세상에서 가장 큰 동영상 공유 사이트 중의 하나입니다.</description>
-        <description lang="nb_NO">YouTube er en av verdens største nettsider for videodeling.</description>
-        <description lang="nl_NL">YouTube is een van de grootste videodelenwebsite in de hele wereld.</description>
-        <description lang="pl_PL">YouTube jest jednym z największych na świecie serwisów udostępniania wideo.</description>
-        <description lang="ru_RU">YouTube - популярнейший видеохостинговый сайт, предоставляющий пользователям услуги хранения, доставки и показа видео.</description>
-        <description lang="sk_SK">YouTube je jednou z najväčších stránok na zdieľanie videa na svete.</description>
-        <description lang="sv_SE">YouTube är en av de största videodelningssajterna i världen.</description>
-        <description lang="tr_TR">YouTube, dünya üzerindeki en büyük video paylaşma platformlarından birisidir.</description>
-        <description lang="vi_VN">YouTube là một trong những trang web chia sẻ video lớn nhất trên thế giới.</description>
-        <description lang="zh_CN">油管是世界上最大的视频分享网站之一。</description>
-        <description lang="zh_TW">Youtube 是全世界最大的影片分享網站。</description>
-        <disclaimer lang="cs_CZ">Tento plugin není schválen společností Google</disclaimer>
-        <disclaimer lang="da_DK">Dette plugin er ikke godkendt af Google</disclaimer>
-        <disclaimer lang="de_DE">Dieses Plugin ist nicht von Google befürwortet</disclaimer>
-        <disclaimer lang="el_GR">Η παρούσα μικροεφαρμογή δεν έχει υϊοθετηθεί από την Google</disclaimer>
-        <disclaimer lang="en_GB">This plugin is not endorsed by Google</disclaimer>
-        <disclaimer lang="es_ES">Este add-on no está respaldado por Google</disclaimer>
-        <disclaimer lang="es_MX">Este complemento no está respaldado por Google</disclaimer>
-        <disclaimer lang="fi_FI">Google ei tue tätä lisäosaa</disclaimer>
-        <disclaimer lang="fr_FR">Ce module n'est pas validé par Google</disclaimer>
-        <disclaimer lang="hr_HR">Ovaj dodatak nije podržan od strane Googlea</disclaimer>
-        <disclaimer lang="id_ID">Plugin ini tidak didukung oleh Google</disclaimer>
-        <disclaimer lang="it_IT">Questo plugin non è approvato da Google</disclaimer>
-        <disclaimer lang="ko_KR">이 플러그인은 Google의 허가를 받지 않았습니다</disclaimer>
-        <disclaimer lang="nl_NL">Deze plug-in wordt niet door Google ondersteund</disclaimer>
-        <disclaimer lang="pl_PL">Ta wtyczka nie jest zatwierdzona przez Google</disclaimer>
-        <disclaimer lang="ru_RU">Плагин не поддерживается Google</disclaimer>
-        <disclaimer lang="sk_SK">Tento doplnok nie je schválený spoločnosťou Google</disclaimer>
-        <disclaimer lang="sv_SE">Detta plugin är inte godkänt av Google</disclaimer>
-        <disclaimer lang="tr_TR">Bu eklenti Google tarafından üretilmemiştir</disclaimer>
-        <disclaimer lang="vi_VN">Plugin này không được xác nhận bởi Google</disclaimer>
-        <disclaimer lang="zh_CN">此插件未被谷歌认可</disclaimer>
-        <disclaimer lang="zh_TW">此附加元件未由Google支持</disclaimer>
-    <news>## v7.0.5+beta.2
-### Fixed
-- Fix typos
-- Fix typo that prevented videos from being listed in Kodi versions prior to v20
-
-### Changed
-- Update language used for maintenance action prompts that clear data
-
-### New
-- Add new client that may provide 1080p non-adaptive formats
-  - Can be accessed as Alternate
-- Allow channel name to be displayed/sorted in listing depending on sort order</news></extension>
-</addon>
-
-<addon id="repository.a4ksubtitles"
-       name="a4kSubtitles Repository"
-       version="1.1.0"
-       provider-name="Unknown">
-    <extension point="xbmc.addon.repository">
-        <info>https://raw.githubusercontent.com/newt-sc/a4kSubtitles/master/packages/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/newt-sc/a4kSubtitles/master/packages/addons.xml.crc</checksum>
-        <datadir>https://github.com/newt-sc/a4kSubtitles/archive</datadir>
-        <artdir>https://github.com/a4k-openproject/a4kSubtitles/releases/download/v0.0.13</artdir>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>a4kSubtitles</summary>
-        <description>a4kSubtitles Repository</description>
-        <platform>all</platform>
-    </extension>
+<addon id="repository.addons4kodi" name="Addons4Kodi Repository" version="2.1" provider-name="A4K">
+	<extension point="xbmc.addon.repository" name="Addons4Kodi Repository">
+        <dir minversion="18.0">
+            <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.addons4kodi/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.addons4kodi/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.addons4kodi/master/zips/</datadir>
+        </dir>
+        <dir minversion="18.0" maxversion="18.9.9">
+            <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/</datadir>
+        </dir>
+        <dir minversion="18.0" maxversion="18.9.9">
+            <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openwizard/master/leia/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openwizard/master/leia/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openwizard/master/leia/zips/</datadir>
+        </dir>
+        <dir minversion="19.0">
+            <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openwizard/master/matrix/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openwizard/master/matrix/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openwizard/master/matrix/zips/</datadir>
+        </dir>
+        <dir minversion="18.0">
+            <info>https://raw.githubusercontent.com/newt-sc/a4kStreaming/master/packages/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/newt-sc/a4kStreaming/master/packages/addons.xml.crc</checksum>
+            <datadir>https://github.com/newt-sc/a4kStreaming/archive</datadir>
+            <artdir>https://github.com/newt-sc/a4kStreaming/releases/download/v0.1.0</artdir>
+        </dir>
+        <dir minversion="18.0">
+            <info>https://raw.githubusercontent.com/newt-sc/a4kSubtitles/master/packages/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/newt-sc/a4kSubtitles/master/packages/addons.xml.crc</checksum>
+            <datadir>https://github.com/newt-sc/a4kSubtitles/archive</datadir>
+            <artdir>https://github.com/a4k-openproject/a4kSubtitles/releases/download/v0.0.13</artdir>
+        </dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Addons4Kodi Repository</summary>
+		<description>The official repo of /r/Addons4Kodi!.</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
 </addon>
 
 <addon id="repository.alfa-addon" name="[COLOR red]Alfa Add-on[/COLOR] Repo" version="1.0.8" provider-name="Alfa Development Group">
@@ -558,20 +443,6 @@ provider-name="jurialmunkey">
             <fanart>fanart.jpg</fanart>
         </assets>
         <source>https://github.com/alfa-addon/alfa-repo</source>
-    </extension>
-</addon>
-
-<addon id="repository.festa" name="[COLOR blue]REPOSITORIO[/COLOR][COLOR lime] FESTA[/COLOR]" version="1.0.1" provider-name="Yo Mismo">
-    <extension point="xbmc.addon.repository" name="Festa">
-        <info>https://raw.githubusercontent.com/picapaujulen/repositorio/master/Repositorio/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/picapaujulen/repositorio/master/Repositorio/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.githubusercontent.com/picapaujulen/repositorio/master/Repositorio/</datadir>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>Repositorio Festa</summary>
-        <description></description>
-        <disclaimer></disclaimer>
-        <platform>all</platform>
     </extension>
 </addon>
 
@@ -739,20 +610,6 @@ provider-name="jurialmunkey">
 	</extension>
 </addon>
 
-<addon id="repository.repofamilyleia" name="[COLOR aqua]WIZARD LEIA[/COLOR] [COLOR royalblue]REPO[/COLOR]" version="2.0" provider-name="LouFesta y Supertopo">
-    <extension point="xbmc.addon.repository" name="repofamilyleia">
-        <info>https://raw.githubusercontent.com/Leia18/repofamilyleia/master/Repositorio/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/Leia18/repofamilyleia/master/Repositorio/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.githubusercontent.com/Leia18/repofamilyleia/master/Repositorio/</datadir>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>Repositorio wizards kodileia</summary>
-        <description></description>
-        <disclaimer></disclaimer>
-        <platform>all</platform>
-    </extension>
-</addon>
-
 <addon id="repository.resolveurl" name="ResolveURL Repository" provider-name="gujal" version="1.0.0">
   <extension point="xbmc.addon.repository" name="ResolveURL Repository">
     <dir>
@@ -857,36 +714,6 @@ provider-name="jurialmunkey">
     </extension>
 </addon>
 
-<addon id="script.limpiarkodi"
-       name="Limpia Tu Kodi"
-       version="3.0.1"
-       provider-name="Catoal">
-  <requires>
-    <import addon="script.module.six" version="1.11.0"/>
-  </requires>
-     <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>executable</provides>
-    </extension>
-  <extension point="xbmc.service" library="service.py" start="startup" />
-  <extension point="xbmc.addon.metadata">
-  <extension point="xbmc.addon.repository" name="Maniac">
-      <info compressed="false">http://raw.github.com/Maniac2017/repository.Maniac/master/addons.xml</info>
-      <checksum>http://raw.github.com/Maniac2017/repository.Maniac/master/addons.xml.md5</checksum>
-      <datadir zip="true">http://raw.github.com/Maniac2017/repository.Maniac/master/repor/</datadir>
-  </extension>
-    <platform>all</platform>
-    <summary>Limpiar</summary>
-    <description>La herramienta para limpiar de una pasada su dispositivo.</description>
-    <assets>
-      <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
-      <screenshot>resources/screenshot000.jpg</screenshot>
-      <screenshot>resources/screenshot001.jpg</screenshot>
-      <screenshot>resources/screenshot002.jpg</screenshot>
-    </assets>
-  </extension>
-</addon>
-
 <addon id="script.luar"
   version="0.9.10"
   name="Luar"
@@ -913,45 +740,6 @@ provider-name="jurialmunkey">
       <screenshot>resources/screenshot002.jpg</screenshot>
     </assets>
   </extension>
-</addon>
-
-<addon id="script.module.addon.signals"
-    name="Addon Signals"
-    version="0.0.6+matrix.1"
-    provider-name="Rick Phillips (ruuk)">
-    <requires>
-        <import addon="xbmc.python" version="3.0.0"/>
-    </requires>
-    <extension point="xbmc.python.module" library="lib" />
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">Inter-addon signalling</summary>
-        <description lang="en_GB">Provides signal/slot mechanism for inter-addon communication</description>
-        <platform>all</platform>
-        <license>LGPL-2.1-only</license>
-        <source>https://github.com/ruuk/script.module.addon.signals</source>
-        <assets>
-            <icon>icon.png</icon>
-        </assets>
-    </extension>
-</addon>
-
-<addon id="script.module.brotlipython" name="brotlipython" version="0.0.1" provider-name="pothos">
-	<requires/>
-	<extension point="xbmc.python.module" library="lib"/>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">Pure Python brotli decoder</summary>
-		<description lang="en_GB">Packed for KODI from https://github.com/pothos/brotlipython/</description>
-		<platform>all</platform>
-		<language/>
-		<license>GPLv3</license>
-		<forum/>
-		<website/>
-		<source>https://github.com/pothos/brotlipython</source>
-		<email/>
-		<assets>
-			<icon>resources/icon.png</icon>
-		</assets>
-	</extension>
 </addon>
 
 <addon id="script.module.horus" name="Horus" version="1.1.9" provider-name="Caperucitaferoz">
@@ -986,29 +774,6 @@ provider-name="jurialmunkey">
     </extension>
 </addon>
 
-<addon id="script.module.js2py" name="js2py" version="0.75" provider-name="Piotr Dabkowski">
-	<requires>
-		<import addon="script.module.tzlocal" version="1.2"/>
-		<import addon="script.module.six" version="1.10"/>
-		<import addon="script.module.pyjsparser" version="2.5.1"/>
-	</requires>
-	<extension point="xbmc.python.module" library="lib"/>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">JavaScript to Python Translator &amp; JavaScript interpreter written in 100% pure Python.</summary>
-		<description lang="en_GB">Packed for KODI from https://pypi.org/project/js2py/</description>
-		<platform>all</platform>
-		<language/>
-		<license>MIT</license>
-		<forum/>
-		<website/>
-		<source>https://github.com/PiotrDabkowski/Js2Py</source>
-		<email/>
-		<assets>
-			<icon>resources/icon.png</icon>
-		</assets>
-	</extension>
-</addon>
-
 <addon id="script.module.jurialmunkey" name="jurialmunkey common" provider-name="jurialmunkey" version="0.1.18">
   <requires>
     <import addon="xbmc.python" version="3.0.1"/>
@@ -1023,46 +788,6 @@ provider-name="jurialmunkey">
       <icon>icon.png</icon>
     </assets>
   </extension>
-</addon>
-
-<addon id="script.module.pyjsparser" name="pyjsparser" version="2.7.1" provider-name="Piotr Dabkowski">
-	<requires/>
-	<extension point="xbmc.python.module" library="lib"/>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">Fast javascript parser (based on esprima.js)</summary>
-		<description lang="en_GB">Packed for KODI from https://pypi.org/project/pyjsparser/</description>
-		<platform>all</platform>
-		<language/>
-		<license>MIT</license>
-		<forum/>
-		<website/>
-		<source>https://github.com/PiotrDabkowski/pyjsparser</source>
-		<email/>
-		<assets>
-			<icon>resources/icon.png</icon>
-		</assets>
-	</extension>
-</addon>
-
-<addon id="script.module.requests-toolbelt" name="requests-toolbelt" version="1.0.0" provider-name="Ian Cordasco, Cory Benfield">
-	<requires>
-		<import addon="script.module.requests" version="2.0.1"/>
-	</requires>
-	<extension point="xbmc.python.module" library="lib"/>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">A utility belt for advanced users of python-requests</summary>
-		<description lang="en_GB">Packed for KODI from https://pypi.org/project/requests-toolbelt/</description>
-		<platform>all</platform>
-		<language/>
-		<license>Apache Software License (Apache 2.0)</license>
-		<forum/>
-		<website/>
-		<source>https://toolbelt.readthedocs.io/</source>
-		<email/>
-		<assets>
-			<icon>resources/icon.png</icon>
-		</assets>
-	</extension>
 </addon>
 
 <addon id="script.module.resolveurl" name="ResolveURL" version="5.1.129" provider-name="gujal">
@@ -1092,25 +817,6 @@ provider-name="jurialmunkey">
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
-</addon>
-
-<addon id="script.module.rijndael" name="rijndael" version="0.1.1" provider-name="Moeen Zamani">
-	<requires/>
-	<extension point="xbmc.python.module" library="lib"/>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">Rijndael AES encryption algorithm in pure python.</summary>
-		<description lang="en_GB">Packed for KODI from https://pypi.org/project/rijndael/</description>
-		<platform>all</platform>
-		<language/>
-		<license>MIT</license>
-		<forum/>
-		<website/>
-		<source>https://github.com/moeenz/rijndael</source>
-		<email/>
-		<assets>
-			<icon>resources/icon.png</icon>
-		</assets>
-	</extension>
 </addon>
 
 	<addon id="script.skin.helper.colorpicker" name="Skin Helper Service ColorPicker" version="2.0.1.1" provider-name="sualfred,marcelveldt">
@@ -1169,264 +875,18 @@ Addon basado en el addon wizard kodileia, agradecimientos al grupo</description>
     </extension>
 </addon>
 
-<addon id="service.subtitles.a4ksubtitles"
-       name="a4kSubtitles"
-       version="2.8.0"
-       provider-name="Unknown">
-    <requires>
-      <import addon="script.module.requests"/>
-      <import addon="vfs.libarchive" optional="true"/>
-    </requires>
-    <extension point="xbmc.subtitle.module" library="main.py"/>
-    <extension point="xbmc.service" library="main_service.py" />
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en">a4kSubtitles - Multi-Source Subtitles Addon</summary>
-        <description>
-Multi-source subtitles addon optimized for Seren and a4kScrapers.
-Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
-        </description>
-        <platform>all</platform>
-        <reuselanguageinvoker>true</reuselanguageinvoker>
-        <license>MIT License</license>
-        <website>https://github.com/newt-sc/a4kSubtitles</website>
-        <source>https://github.com/newt-sc/a4kSubtitles</source>
-        <assets>
-            <icon>icon.png</icon>
-            <screenshot>screenshot-01.png</screenshot>
-            <screenshot>screenshot-02.png</screenshot>
-            <screenshot>screenshot-03.png</screenshot>
-        </assets>
-        <news>
-[v2.8.0]:
-  * Support tvshows with more than 250 episodes for episode id lookup when tvshow imdb id is provided.
-
-[v2.7.0]:
-  * Support tvshow imdb id, along with season and episode passed from video file url.
-
-[v2.6.0]:
-  * Support imdb id (movie or episode) passed from video file url.
-
-[v2.5.0]:
-  * Add TLS adapter fallback
-
-[v2.4.0]:
-  * Fix some ssl issues
-
-[v2.3.0]:
-  * Add concurrency error handling
-
-[v2.2.0]:
-  * Fix KODI 19 Matrix support
-
-[v2.1.0]:
-  * Fix Persian search in Subscene
-
-[v2.0.0]:
-  * Use IMDb as main source for all meta.
-  * Retry on 503 (Service Unavailable). OpenSubtitles and Subscene seems to return it occasionally.
-
-[v1.8.0]:
-  * Remove SubDb (Site is down)
-  * Make lib vfs optional since there are fallbacks and it is used as last case scenario. Thus making the addon installable on platforms which are not supported by lib vfs.
-
-[v1.7.2]:
-  * Improve results sort based on title match
-
-[v1.7.1]:
-  * Drop python meta as it prevents installations on pre Kodi 19 versions
-
-[v1.7.0]:
-  * Update python meta to enable Kodi 19 installations
-
-[v1.6.0]:
-  * Add option to auto download first subtitle result silently
-
-[v1.5.0]:
-  * Auto open search dialog only on movie and tvshow videos
-
-[v1.4.0]:
-  * Add option to auto open the search dialog when the video does not have subtitles
-
-[v1.3.0]:
-  * Improve tvshow year scraping
-
-[v1.2.0]:
-  * Use internal ZipFile for extraction with a fallback to vfs.libarchive
-
-[v1.1.0]:
-  * Improve imdb id scraping
-
-[v1.0.1]:
-  * Add screenshots
-
-[v1.0.0]:
-  * Invalidate BSPlayer results cache when download links expire
-  * Extraction fallback: zip -> gzip -> raw
-
-[v0.0.30]:
-  * Add service names in ad detection
-  * Removed the option to disable cleaning of ads
-  * Add remote fetching of addic7ed data
-
-[v0.0.29]:
-  * Fix Podnadpisi download of results missing filename meta
-  * Fix last results cache not invalidated on language preferences change
-
-[v0.0.28]:
-  * Attempt scrape of imdb id when missing
-  * Improve filename parsing
-  * Fix SubDB lang code
-  * Fix Podnadpisi not returning release name
-
-[v0.0.27]:
-  * Attempt to auto-fix a garbled cyrillic encoded subtitles
-  * Fix more encoding issues
-  * Ensure progress dialog close even if the addon crashes
-  * Apply color to service name in results and bold tags
-  * Show notification if imdb id is missing
-
-[v0.0.26]:
-  * Support for Addic7ed
-  * Improve cache of the last results
-  * Don't show progress when showing results from cache
-
-[v0.0.25]:
-  * Fix cancellation thread exit
-
-[v0.0.24]:
-  * Show progress dialog only for search
-
-[v0.0.23]:
-  * Add progress dialog
-  * Support cancellation
-
-[v0.0.22]:
-  * Fix meta string conversion issue
-
-[v0.0.21]:
-  * TVShow year scrape from imdb when necessary
-
-[v0.0.20]:
-  * Improve Subscene tvshow matching
-  * Extract first sub file from zips when none is matched
-  * Fix Podnadpisi not working properly for tvshows
-  * Fix non-ascii video file title issues
-  * Add tvshow tests
-
-[v0.0.19]:
-  * Update settings
-  * Fix language code suffix format in the subtitle file name
-  * Support for Subscene
-
-[v0.0.18]:
-  * Support for Podnadpisi.NET
-  * Support for SubDB
-
-[v0.0.17]:
-  * Reuse KODI's Python language invoker
-    * Improves performance on low-end devices when switching subtitles for best match
-  * Url decode subtitle names
-
-[v0.0.16]:
-  * Cache last result
-  * OpenSubtitles always queries:
-    * by imdb id and title
-    * by video file hash
-  * Improve results ordering:
-    * preferred lang
-    * lang
-    * synced
-    * name match
-    * rating
-    * hearing impaired
-    * subtitle service
-  * Fix url with numbers matching in ads detection
-
-[v0.0.15]:
-  * Remove ads by default
-  * Support for BSPlayer
-  * Additional option for OpenSubtitles to use file hash (Limits results to exact matches)
-
-[v0.0.14]:
-  * Fix API and normal usage at the same time
-
-[v0.0.13]:
-  * Exclude development files from release
-
-[v0.0.12]:
-  * Removal of ads (Experimental)
-  * Fix extract issue when file contains unicode symbols
-
-[v0.0.11]:
-  * Changelog in KODI
-
-[v0.0.10]:
-  * Inserted language code in sub filename
-
-[v0.0.9]:
-  * Implemented (orginal, default, none, forced_only) as KODI language setting
-  * Fixed minor bugs in API implementation
-  * Added .idea folder to .gitignore
-
-[v0.0.8]:
-  * opensubtitles should make max 2 requests for separate languages
-  * lint updates
-  * add tests for download
-
-[v0.0.7]:
-  * API class rename
-
-[v0.0.6]:
-  * fix core requiring handle even with API usage
-
-[v0.0.5]:
-  * expose API for usage without KODI
-  * add tests for search
-
-[v0.0.4]:
-  * distribution process:
-    * KODI repository with updates based on github releases
-    * addons.xml and addons.xml.crc auto generation via git hooks
-    * release automation on merge to master via Github Actions
-
-[v0.0.3]:
-  * general settings for configuring requests timeout and results limit
-  * additional ordering of the results depending on the similarity ratio of the video file name and the subtitle file name
-
-[v0.0.2]:
-  * improve archive extraction support
-  * limit the results and add requests timeout
-  * fix OpenSubtitles authentication
-  * handle debug logging detection issues
-
-[v0.0.1]:
-  * initial working version (search and download subtitles)
-  * OpenSubtitles support with optional authentication
-  * results ordering with preferred language ordered first
-        </news>
-    </extension>
-</addon>
-
-<addon id="skin.ctouch"  version="3.6.5+fix" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="3.6.6" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>
 	</requires>
 	<extension debugging="false" effectslowdown="1" point="xbmc.gui.skin">
 		<res aspect="16:9" default="true" folder="xml" width="1920" height="1080" />
-        <res aspect="3:2" default="false" folder="xml" width="1620" height="1080" />
         <res aspect="4:3" default="false" folder="xml" width="1440" height="1080" />
-        <res aspect="16:10" default="false" folder="xml" width="1728" height="1080" />
-        <res aspect="17:9" default="false" folder="xml" width="2040" height="1080" />
-        <res aspect="21:9" default="false" folder="xml" width="2520" height="1080" />
-        <res aspect="19.5:9" default="false" folder="xml" width="2340" height="1080" />
-        <res aspect="18:9" default="false" folder="xml" width="2160" height="1080" />
-		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
-		<res width="1920" height="1280" aspect="3:2" default="false" folder="xml" />
-		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />
+        <res aspect="16:9" default="false" folder="xml" width="3840" height="2160" />
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="es_ES">Skin para Kodi y Forks. Compatible con Kodi Matrix y Nexus</summary>
-		<summary lang="en_GB">Skin para Kodi y Forks. Compatible con Kodi Matrix y Nexus</summary>
+		<summary lang="es_ES">Skin para Kodi y Forks. Compatible con Kodi Omega</summary>
+		<summary lang="en_GB">Skin para Kodi y Forks. Compatible con Kodi Omega</summary>
 		<description lang="es_ES">Cristal Touch es un mod del skin AppTV realizado por STVA.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV o TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>
 		<description lang="en_GB">Cristal Touch es un mod del skin AppTV realizado por STVA.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV o TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>
 		<disclaimer lang="en_GB">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]Web y Foro: stva.es</disclaimer>
@@ -1435,26 +895,16 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 3.6.5+fix 1/4/24
-- Corregido error en la resolución en algunos dispositivos
-- Correcciones visuales menores
-
-Versión 3.6.5 - 30/3/24
-- Añadidos títulos a canales en inicio Deportes
-- Corregido buscador palantir para que no entre en bucle
-- Modificada ventana para elegir enlaces, ahora desplaza el título
-- Establecido tipo de widget y cantidad por defecto para que no queden ocultos los widgets personales al no elegir el tipo
-- Modificados títulos del inicio widget para que no aparezcan los detalles
-- Añadido trailers automáticos
-- Añadido Clearlogo
-- Añadida + info a películas y series en inicio y vistas
-- Editado startup
-- Ocultar icono del addon ahora también oculta la hora
-- Cambiado widget1 series Alfa, Series en emisión
-- Activado widget2 pelis Alfa
-- Cambiada vista Slider
-- Otras correcciones menores
-- Agradecimientos a Ravnos23 por la ayuda en esta versión</news>
+		<news>Versión 3.6.6 - 28/4/24
+- Añadida opción para desactivar clearlogos
+- Reparados widgets e items de cristal azul y palantir
+- Eliminados algunos items y widgets de Cristal azul
+- Reparado enlace a listas deportivas
+- Añadido item Favoritos Palantir
+- Añadido Foco en la barra de progreso del reproductor para avanzar
+- Reparados botones, herramientas Cristal y Buffer de la ventana Ajustes de Kodi
+- Añadido a4ksubtitles a addons de skin/opcionales
+- Adaptada ventana Favoritos a Kodi 21</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>

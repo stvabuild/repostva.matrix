@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<addon id="plugin.video.alfa" name="Alfa" version="3.9.22" provider-name="Alfa Addon">
+<addon id="plugin.video.alfa" name="Alfa" version="3.9.24" provider-name="Alfa Addon">
     <requires>
         <import addon="script.module.requests" />
         <import addon="script.module.beautifulsoup4" version="4.5.3" />
@@ -49,9 +49,9 @@
             [B]Estos son los cambios para esta versión:[/B]
 
             [B]Arreglos[/B]
-            • Divxtotal                                            • Don Torrent
-            • Entrepeliculasyseries                         • JKAnime
-            • +18</news>
+            • +18                                                          • Dontorrent
+            • Doramasflix                                            • Ennovelas
+            • HDFull                                                      • Pelitorrent</news>
         <assets>
             <icon>resources/icon.png</icon>
             <fanart>resources/fanart.jpg</fanart>

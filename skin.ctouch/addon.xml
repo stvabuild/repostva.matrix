@@ -1,24 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addon id="skin.ctouch"  version="3.6.5+fix" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="3.6.6" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>		
 	</requires>
 	<extension debugging="false" effectslowdown="1" point="xbmc.gui.skin">
 		<res aspect="16:9" default="true" folder="xml" width="1920" height="1080" />
-        <res aspect="3:2" default="false" folder="xml" width="1620" height="1080" />
         <res aspect="4:3" default="false" folder="xml" width="1440" height="1080" />
-        <res aspect="16:10" default="false" folder="xml" width="1728" height="1080" />
-        <res aspect="17:9" default="false" folder="xml" width="2040" height="1080" />
-        <res aspect="21:9" default="false" folder="xml" width="2520" height="1080" />
-        <res aspect="19.5:9" default="false" folder="xml" width="2340" height="1080" />
-        <res aspect="18:9" default="false" folder="xml" width="2160" height="1080" />	
-		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
-		<res width="1920" height="1280" aspect="3:2" default="false" folder="xml" />
-		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />
+        <res aspect="16:9" default="false" folder="xml" width="3840" height="2160" />
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="es_ES">Skin para Kodi y Forks. Compatible con Kodi Matrix y Nexus</summary>
-		<summary lang="en_GB">Skin para Kodi y Forks. Compatible con Kodi Matrix y Nexus</summary>				
+		<summary lang="es_ES">Skin para Kodi y Forks. Compatible con Kodi Omega</summary>
+		<summary lang="en_GB">Skin para Kodi y Forks. Compatible con Kodi Omega</summary>				
 		<description lang="es_ES">Cristal Touch es un mod del skin AppTV realizado por STVA.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV o TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>
 		<description lang="en_GB">Cristal Touch es un mod del skin AppTV realizado por STVA.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV o TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>		
 		<disclaimer lang="en_GB">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]Web y Foro: stva.es</disclaimer>
@@ -27,26 +19,16 @@
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 3.6.5+fix 1/4/24
-- Corregido error en la resolución en algunos dispositivos
-- Correcciones visuales menores		
-		
-Versión 3.6.5 - 30/3/24
-- Añadidos títulos a canales en inicio Deportes
-- Corregido buscador palantir para que no entre en bucle
-- Modificada ventana para elegir enlaces, ahora desplaza el título
-- Establecido tipo de widget y cantidad por defecto para que no queden ocultos los widgets personales al no elegir el tipo
-- Modificados títulos del inicio widget para que no aparezcan los detalles
-- Añadido trailers automáticos
-- Añadido Clearlogo
-- Añadida + info a películas y series en inicio y vistas
-- Editado startup
-- Ocultar icono del addon ahora también oculta la hora
-- Cambiado widget1 series Alfa, Series en emisión
-- Activado widget2 pelis Alfa
-- Cambiada vista Slider
-- Otras correcciones menores
-- Agradecimientos a Ravnos23 por la ayuda en esta versión</news>
+		<news>Versión 3.6.6 - 28/4/24
+- Añadida opción para desactivar clearlogos
+- Reparados widgets e items de cristal azul y palantir
+- Eliminados algunos items y widgets de Cristal azul
+- Reparado enlace a listas deportivas
+- Añadido item Favoritos Palantir
+- Añadido Foco en la barra de progreso del reproductor para avanzar
+- Reparados botones, herramientas Cristal y Buffer de la ventana Ajustes de Kodi
+- Añadido a4ksubtitles a addons de skin/opcionales
+- Adaptada ventana Favoritos a Kodi 21</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
