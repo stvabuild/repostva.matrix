@@ -34,7 +34,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.alfa" name="Alfa" version="3.9.24" provider-name="Alfa Addon">
+<addon id="plugin.video.alfa" name="Alfa" version="3.9.25" provider-name="Alfa Addon">
     <requires>
         <import addon="script.module.requests" />
         <import addon="script.module.beautifulsoup4" version="4.5.3" />
@@ -84,9 +84,8 @@
             [B]Estos son los cambios para esta versión:[/B]
 
             [B]Arreglos[/B]
-            • +18                                                          • Dontorrent
-            • Doramasflix                                            • Ennovelas
-            • HDFull                                                      • Pelitorrent</news>
+            • +18                                                          • Don Torrent
+            • HDFull                                                      • VerOnline</news>
         <assets>
             <icon>resources/icon.png</icon>
             <fanart>resources/fanart.jpg</fanart>
@@ -283,7 +282,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.palantir3" name="[COLOR gold]Palantir 3[/COLOR]" version="3.1.2" provider-name="TierraMedia">
+<addon id="plugin.video.palantir3" name="[COLOR gold]Palantir 3[/COLOR]" version="3.1.3" provider-name="TierraMedia">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.inputstreamhelper" version="0.5.0"/>
@@ -332,7 +331,7 @@
 </addon>
 
 <addon id="plugin.video.themoviedb.helper"
-version="5.2.22~nexus"
+version="5.2.25~nexus"
 name="TheMovieDb Helper"
 provider-name="jurialmunkey">
 <requires>
@@ -645,8 +644,8 @@ provider-name="jurialmunkey">
     </extension>
     <extension point="xbmc.addon.metadata">
 		<summary>Repositorio STVA</summary>
-   		<description lang="es">Repositorio de addons de los Skins STVA para Kodi Matrix y Nexus</description>
-		<disclaimer>Repositorio de addons de los Skins STVA para Kodi Matrix y Nexus</disclaimer>
+   		<description lang="es">Repositorio de addons de los Skins STVA para Kodi 21 Omega</description>
+		<disclaimer>Repositorio de addons de los Skins STVA para Kodi 21 Omega</disclaimer>
         <platform>all</platform>
         <assets>
             <icon>icon.png</icon>
@@ -996,46 +995,29 @@ Addon basado en el addon wizard kodileia, agradecimientos al grupo</description>
     </extension>
 </addon>
 
-<addon id="skin.ctouch"  version="3.6.7" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="3.7" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>
 	</requires>
 	<extension debugging="false" effectslowdown="1" point="xbmc.gui.skin">
 		<res aspect="16:9" default="true" folder="xml" width="1920" height="1080" />
-        <res aspect="4:3" default="false" folder="xml" width="1440" height="1080" />
-        <res aspect="16:9" default="false" folder="xml" width="3840" height="2160" />
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="es_ES">Skin para Kodi y Forks. Compatible con Kodi Omega</summary>
-		<summary lang="en_GB">Skin para Kodi y Forks. Compatible con Kodi Omega</summary>
-		<description lang="es_ES">Cristal Touch es un mod del skin AppTV realizado por STVA.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV o TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>
-		<description lang="en_GB">Cristal Touch es un mod del skin AppTV realizado por STVA.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV o TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>
+		<summary lang="es_ES">Skin Wizard para Kodi 21 Omega</summary>
+		<summary lang="en_GB">Skin Wizard para Kodi 21 Omega</summary>
+		<description lang="es_ES">Cristal Touch es un mod del skin AppTV realizado por STVA.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV, TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>
+		<description lang="en_GB">Cristal Touch es un mod del skin AppTV realizado por STVA.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV, TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>
 		<disclaimer lang="en_GB">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]Web y Foro: stva.es</disclaimer>
 		<disclaimer lang="es_ES">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]Web y Foro: stva.es</disclaimer>
 		<platform>all</platform>
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 3.6.7 - 29/4/24
-- Item Favoritos Palantir, ahora se puede ocultar
-- Eliminado buscador Cristal Azul
-- Eliminada ventana tip buscador Palantir
-- Reparados items y widgets Palantir
-- Añadida opción en menú vista lista detalles para cambiar fanart por póster
-- Corregido error que hacia aparecer el contador de items en vistas
-- Añadido título capítulos en vistas slider
-- Otras correciones menores
-
-Versión 3.6.6 - 28/4/24
-- Añadida opción para desactivar clearlogos
-- Reparados widgets e items de cristal azul y palantir
-- Eliminados algunos items y widgets de Cristal azul
-- Reparado enlace a listas deportivas
-- Añadido item Favoritos Palantir
-- Añadido Foco en la barra de progreso del reproductor para avanzar
-- Reparados botones, herramientas Cristal y Buffer de la ventana Ajustes de Kodi
-- Añadido a4ksubtitles a addons de skin/opcionales
-- Adaptada ventana Favoritos a Kodi 21</news>
+		<news>Versión 3.7 - 5/6/24
+- Revertidos cambios en la resolución de pantalla
+- Corregidos enlaces Canales y Agenda Deportiva en todos los inicios
+- Reparado widget Cine Super Estrenos Cristal azul
+</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>

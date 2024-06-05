@@ -12,8 +12,8 @@
     </extension>
     <extension point="xbmc.addon.metadata">
 		<summary>Repositorio STVA</summary>
-   		<description lang="es">Repositorio de addons de los Skins STVA para Kodi Matrix y Nexus</description>
-		<disclaimer>Repositorio de addons de los Skins STVA para Kodi Matrix y Nexus</disclaimer>
+   		<description lang="es">Repositorio de addons de los Skins STVA para Kodi 21 Omega</description>
+		<disclaimer>Repositorio de addons de los Skins STVA para Kodi 21 Omega</disclaimer>
         <platform>all</platform>
         <assets>
             <icon>icon.png</icon>
