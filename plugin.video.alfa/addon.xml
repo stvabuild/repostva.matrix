@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<addon id="plugin.video.alfa" name="Alfa" version="3.9.25" provider-name="Alfa Addon">
+<addon id="plugin.video.alfa" name="Alfa" version="3.9.28" provider-name="Alfa Addon">
     <requires>
         <import addon="script.module.requests" />
         <import addon="script.module.beautifulsoup4" version="4.5.3" />
@@ -46,11 +46,15 @@
         <license>GNU GPL v3</license>
         <source>https://github.com/alfa-addon/addon</source>
         <news>
-            [B]Estos son los cambios para esta versión:[/B]
+    [B]Estos son los cambios para esta versión:[/B]
 
-            [B]Arreglos[/B]
-            • +18                                                          • Don Torrent
-            • HDFull                                                      • VerOnline</news>
+    [B]Arreglos[/B]
+    • +18                           • Don Torrent             • DoramasYT
+    • Gran Torrent           • HDFull                       • HenaoJara
+    • Playdede
+
+    [B]Novedades[/B]
+    • Ver Anime Assistant</news>
         <assets>
             <icon>resources/icon.png</icon>
             <fanart>resources/fanart.jpg</fanart>

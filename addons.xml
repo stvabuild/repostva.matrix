@@ -34,7 +34,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.alfa" name="Alfa" version="3.9.25" provider-name="Alfa Addon">
+<addon id="plugin.video.alfa" name="Alfa" version="3.9.28" provider-name="Alfa Addon">
     <requires>
         <import addon="script.module.requests" />
         <import addon="script.module.beautifulsoup4" version="4.5.3" />
@@ -81,11 +81,15 @@
         <license>GNU GPL v3</license>
         <source>https://github.com/alfa-addon/addon</source>
         <news>
-            [B]Estos son los cambios para esta versión:[/B]
+    [B]Estos son los cambios para esta versión:[/B]
 
-            [B]Arreglos[/B]
-            • +18                                                          • Don Torrent
-            • HDFull                                                      • VerOnline</news>
+    [B]Arreglos[/B]
+    • +18                           • Don Torrent             • DoramasYT
+    • Gran Torrent           • HDFull                       • HenaoJara
+    • Playdede
+
+    [B]Novedades[/B]
+    • Ver Anime Assistant</news>
         <assets>
             <icon>resources/icon.png</icon>
             <fanart>resources/fanart.jpg</fanart>
@@ -98,7 +102,7 @@
     <extension point="xbmc.service" library="videolibrary_service.py" start="login|startup"></extension>
 </addon>
 
-<addon id="plugin.video.cristalazul" name="[B][/B][COLOR aqua]CRISTAL AZUL 3.0.9[/COLOR]" version="3.0.9" provider-name="PICAPAU, LOURDES, SUPERTOPO, LUISMA, GEORGE">
+<addon id="plugin.video.cristalazul" name="[B][/B][COLOR aqua]CRISTAL AZUL 3.0.10[/COLOR]" version="3.0.10" provider-name="PICAPAU, LOURDES, SUPERTOPO, LUISMA, GEORGE">
     <requires>
         <import addon="script.module.simplecache"/>
         <import addon="script.module.six"/>
@@ -209,37 +213,6 @@
             <screenshot>resources/screenshots/webui.png</screenshot>
         </assets>
     </extension>
-</addon>
-
-<addon id="plugin.video.Magellan_Matrix" name="[COLOR lime]Magellan[/COLOR]" version="3.0.0" provider-name="[COLOR lime][B]Magellan[/B][/COLOR]">
-	<requires>
-		<import addon="script.module.six" />
-		<import addon="script.module.kodi-six" />
-		<import addon="script.module.requests" optional="true"/>
-		<import addon="script.module.websocket" version="0.50.0"  optional="true"/>
-		<import addon="script.module.youtube.dl" optional="true"/>
-		<import addon="plugin.video.youtube" optional="true" />
-		<import addon="script.module.dateutil" optional="true" />
-		<import addon="script.module.resolveurl" optional="true"/>
-		<import addon="script.module.urlresolver" optional="true"/>
-		<import addon="script.module.cloudscraper" optional="true"/>
-		<import addon="script.module.inputstreamhelper" optional="true"/>
-		<import addon="script.module.slproxy" optional="true"/>
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="default.py">
-		<provides>video</provides>
-	</extension>
-
-	<extension point="xbmc.addon.metadata">
-		<summary>Magellan Tv e Filmes</summary>
-		<description>Magellan_Matrix é um plugin de vídeo gratuito para o KODI que agrega links de reprodução de vídeos de vários tipos,encontrados
-		livremente na internet,levando o lazer e o prazer a todos vocês, para assistirem e curtirem cada momento, com a família e amigos.</description>
-		<platform>all</platform>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-		</assets>
-	</extension>
 </addon>
 
 <addon id="plugin.video.moestv" name="Moe's TV" version="0.2.1" provider-name="La Taberna">
@@ -445,7 +418,7 @@ provider-name="jurialmunkey">
     </extension>
 </addon>
 
-<addon id="repository.github" name="GitHub Add-on repository" provider-name="i96751414" version="0.0.8">
+<addon id="repository.github" name="GitHub Add-on repository" provider-name="i96751414" version="0.0.9">
     <requires>
         <!--<import addon="xbmc.python" version="3.0.0"/>-->
     </requires>
@@ -462,12 +435,15 @@ provider-name="jurialmunkey">
         <platform>all</platform>
         <license>See https://github.com/i96751414/repository.github/blob/master/LICENSE</license>
         <source>https://github.com/i96751414/repository.github</source>
-        <summary lang="en">GitHub virtual Add-on repository</summary>
-        <description lang="en">Customizable repository which acts as a proxy for defined GitHub users' add-ons updates.</description>
+        <summary lang="en">GitHub virtual Add-on repository for TORREST and others</summary>
+        <description lang="en">Customizable repository which acts as a proxy for defined GitHub users' add-ons updates, like TORREST.</description>
+        <summary lang="es">Repositorio GitHub virtual para el Add-on TORREST y otros</summary>
+        <description lang="es">Repositorio configurable que actúa como un proxy para add-ons disponibles en GitHub, como TORREST.</description>
         <news>
-- Improve HTTP server
-- Add spanish translation
-- Allow extracting information about running platform
+- Add Kodi platform detection as default (fallback to OS platforms)
+- Add support for relative assets
+- Make sure repository addons order is always maintained
+- Minor improvements
         </news>
         <assets>
             <icon>icon.png</icon>
@@ -512,50 +488,6 @@ provider-name="jurialmunkey">
             <icon>icon.png</icon>
         </assets>
     </extension>
-</addon>
-
-  <addon id="repository.magellan" name="[COLOR red]Mage[/COLOR] [COLOR black]llan[/COLOR] [COLORcyan]Repository[/COLOR]"version="1.0.0" provider-name="Magellan">
-  <requires>
-    <import addon="xbmc.addon" version="12.0.0"/>
-
-  </requires>
-
-
-  <extension point="xbmc.addon.repository" name="[COLOR red]Magellan [COLOR red]Repositorio[/COLOR]">
-
-      <dir>
-      <info compressed="false">https://github.com/euro2000/magellan.github.io/raw/main/addons.xml</info>
-      <checksum>https://github.com/euro2000/magellan.github.io/raw/main/addons.xml.md5</checksum>
-      <datadir zip="true">https://github.com/euro2000/magellan.github.io/raw/main</datadir>
-      <hashes>false</hashes>
-    </dir>
-
-  <dir minversion="16.0.0" maxversion="18.9.0">
-      <info compressed="false">https://github.com/euro2000/magellan.github.io/raw/main/leia/addons.xml</info>
-      <checksum>https://github.com/euro2000/magellan.github.io/raw/main/leia/addons.xml.md5</checksum>
-      <datadir zip="true">https://github.com/euro2000/magellan.github.io/raw/main/leia</datadir>
-      <hashes>false</hashes>
-    </dir>
-
-   <dir minversion="18.9.1">
-      <info compressed="false">https://github.com/euro2000/magellan.github.io/raw/main/matrix/addons.xml</info>
-      <checksum>https://github.com/euro2000/magellan.github.io/raw/main/matrix/addons.xml.md5</checksum>
-      <datadir zip="true">https://github.com/euro2000/magellan.github.io/raw/main/matrix</datadir>
-      <hashes>false</hashes>
-    </dir>
-
-  </extension>
-
-  <extension point="xbmc.addon.metadata">
-    <summary>repositorio magellan</summary>
-    <description>repositorio oficial magellan - Proibido reproducao sem previa autorizacao</description>
-    <disclaimer></disclaimer>
-    <platform>all</platform>
-    <assets>
-      <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
 </addon>
 
 <addon id="repository.marcelveldt" version="1.0.3" name="Marcelveldt's BETA repository" provider-name="marcelveldt, finkleandeinhorn">
@@ -995,7 +927,7 @@ Addon basado en el addon wizard kodileia, agradecimientos al grupo</description>
     </extension>
 </addon>
 
-<addon id="skin.ctouch"  version="3.7" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="3.8" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>
 	</requires>
@@ -1013,10 +945,10 @@ Addon basado en el addon wizard kodileia, agradecimientos al grupo</description>
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 3.7 - 5/6/24
-- Revertidos cambios en la resolución de pantalla
-- Corregidos enlaces Canales y Agenda Deportiva en todos los inicios
-- Reparado widget Cine Super Estrenos Cristal azul
+		<news>Versión 3.8 - 7/9/24
+- Reparados todos los enlaces de Cristal Azul
+- Eliminado addon Magellan (item TV Premium) del skin
+- Cambiados widgets de series del addon Alfa
 </news>
 		<assets>
 			<icon>icon.png</icon>
