@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1132">
+	<defaultcontrol>1999</defaultcontrol>
+	<coordinates>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<include>fullscreenimage</include>
+			<texture>background-mask-black.png</texture>
+			<aspectratio>scale</aspectratio>
+		</control>
+		<control type="button">
+			<!-- Touch mouse close button -->
+			<right>15</right>
+			<bottom>15</bottom>
+			<width>180</width>
+			<height>75</height>
+			<texturefocus colordiffuse="$VAR[AccentColor]">backtransparent.png</texturefocus>
+			<texturenofocus colordiffuse="midgrey">backtransparent.png</texturenofocus>
+			<onclick>Dialog.Close(1132)</onclick>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>Cerrar</label>
+			<font>ctouch19</font>
+			<visible>Skin.HasSetting(menulittle)</visible>
+		</control>
+		<control type="panel" id="1999">
+			<centerleft>50%</centerleft>
+			<centertop>51%</centertop>
+			<width>520</width>
+			<height>500</height>
+			<onleft>Close</onleft>
+			<onright>Close</onright>
+			<aligny>top</aligny>
+			<itemlayout width="520" height="75">
+				<control type="image">
+					<centerleft>5%</centerleft>
+					<top>20</top>
+					<width>40</width>
+					<height>40</height>
+					<texture diffuse="diffuse/square.png">$INFO[ListItem.Art(thumb)]</texture>
+					<aspectratio>scale</aspectratio>
+				</control>	
+				<control type="label">
+					<centerleft>50%</centerleft>
+					<align>center</align>
+					<top>20</top>
+					<width>460</width>
+					<height>36</height>
+					<font>ctouch22</font>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout width="520" height="75">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>520</width>
+					<height>75</height>
+					<texture border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texture>
+				</control>
+				<control type="image">
+					<centerleft>5%</centerleft>
+					<top>20</top>
+					<width>40</width>
+					<height>40</height>
+					<texture diffuse="diffuse/square.png">$INFO[ListItem.Art(thumb)]</texture>
+					<aspectratio>scale</aspectratio>
+				</control>	
+				<control type="label">
+					<centerleft>50%</centerleft>
+					<align>center</align>
+					<top>20</top>
+					<width>460</width>
+					<height>36</height>
+					<font>ctouch22</font>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+			<content>
+				<item>
+					<thumb>icons/palantir.png</thumb>
+					<label>Buscador Palantir</label>
+					<onclick>Dialog.Close(all)</onclick>
+					<onclick condition="System.HasAddon(plugin.video.palantir3) + Skin.HasSetting(bpalantir)">ActivateWindow(10025,&quot;plugin://plugin.video.palantir3/?bvRGZhxFXpR2bLxFXn5WatF2bSxFXhRXYEBHcBxFX0RnbpdHXcNnclNXVcxlODdCI6ICdyFmbhZmIgwyJzVGbpZ2JgojI05WZ052bjJCIscyMyF2YzVnYnAiOi42bpR3YhJye03JzVCIyF2YzVnYlJHInAiOiwWczJCIscSXS9ETPN0Lb9Gb1RXrDTHIy9GcgIXYjNXdC1FMwcDZmZmZmBiUPx0TDt1JgojI09GbwJCIsADI6ISZnFGciACLn0lUPx0TD9yWvxWd016w0BicvBHIyF2YzVnQdBDM3QmZmZmZgI1TM90QbdCI6ICblJWYsJCIscyZuBnLyF2YzVnYlJHXcFWakVWbcx1clNmc192clJHXcNjcpRnbhxWYw5yblRWa25ibpdWdsBHXcNnbvRGZhxFXpR2bLxFXn5WatF2bSxFXhRXYEBHcBxFX0RnbpdHXcNnclNXVcxlODdCI6IibvNWaiACLnYWan5CdyFmbhZGXcNjcpRnbhxWYw5yblRWa25ibpdWdsBHXcNn&quot;)</onclick>
+					<onclick condition="!System.HasAddon(plugin.video.palantir3) + Skin.HasSetting(bpalantir)">InstallAddon(plugin.video.palantir3)</onclick>
+					<visible>!Skin.HasSetting(buscador-palantir)</visible>
+				</item>
+				<item>
+					<thumb>icons/alfa.png</thumb>
+					<label>Buscador Alfa</label>
+					<onclick>Dialog.Close(all)</onclick>
+					<onclick condition="System.HasAddon(plugin.video.alfa)">ActivateWindow(10025,&quot;plugin://plugin.video.alfa/?ewogICAgImFjdGlvbiI6ICJtYWlubGlzdCIsCiAgICAiY2F0ZWdvcnkiOiAiU2VsZWNjaW9uYSB1bmEgY2F0ZWdvclx1MDBlZGEiLAogICAgImNoYW5uZWwiOiAic2VhcmNoIiwKICAgICJjb250ZXh0IjogWwogICAgICAgIHsKICAgICAgICAgICAgImFjdGlvbiI6ICJvcGNpb25lcyIsCiAgICAgICAgICAgICJjaGFubmVsIjogInNlYXJjaCIsCiAgICAgICAgICAgICJnb3RvIjogdHJ1ZSwKICAgICAgICAgICAgInRpdGxlIjogIkNvbmZpZ3VyYXIgQnVzY2Fkb3IiCiAgICAgICAgfQogICAgXSwKICAgICJpbmZvTGFiZWxzIjoge30sCiAgICAidGh1bWJuYWlsIjogImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9hbGZhLWFkZG9uL21lZGlhL21hc3Rlci90aGVtZXMvZGFya1xcdGh1bWJfc2VhcmNoLnBuZyIsCiAgICAidGl0bGUiOiAiQnVzY2FyIiwKICAgICJ2aWV3bW9kZSI6ICJsaXN0Igp9&quot;,return)</onclick>
+					<onclick condition="!System.HasAddon(plugin.video.alfa)">InstallAddon(plugin.video.alfa)</onclick>
+					<visible>!Skin.HasSetting(buscador-alfa)</visible>
+				</item>
+				<item>
+					<thumb>$INFO[Skin.String(CustomSearch.1.Icon)]</thumb>
+					<label>$INFO[Skin.String(CustomSearch.1.Label)]</label>
+					<onclick>Dialog.Close(all)</onclick>
+					<onclick>$INFO[Skin.String(customsearch.1.path)]</onclick>
+					<visible>!String.IsEmpty(Skin.String(CustomSearch.1.Path))</visible>
+				</item>
+				<item>
+					<thumb>$INFO[Skin.String(CustomSearch.2.Icon)]</thumb>
+					<label>$INFO[Skin.String(CustomSearch.2.Label)]</label>
+					<onclick>Dialog.Close(all)</onclick>
+					<onclick>$INFO[Skin.String(customsearch.2.path)]</onclick>
+					<visible>!String.IsEmpty(Skin.String(CustomSearch.2.Path))</visible>
+				</item>
+				<item>
+					<thumb>$INFO[Skin.String(CustomSearch.3.Icon)]</thumb>
+					<label>$INFO[Skin.String(CustomSearch.3.Label)]</label>
+					<onclick>Dialog.Close(all)</onclick>
+					<onclick>$INFO[Skin.String(CustomSearch.3.Path)]</onclick>
+					<visible>!String.IsEmpty(Skin.String(CustomSearch.3.Path))</visible>
+				</item>
+			</content>
+		</control>
+	</controls>
+</window>

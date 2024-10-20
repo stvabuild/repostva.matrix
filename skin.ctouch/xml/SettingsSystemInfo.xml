@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<controls>
+		<include>background</include>
+		<control type="label">
+			<!-- Screen heading -->
+			<left>60</left>
+			<top>85</top>
+			<width>465</width>
+			<height>48</height>
+			<label>$LOCALIZE[31559]</label>
+			<textcolor>$VAR[AccentColor]</textcolor>
+			<font>ctouch30w</font>
+		</control>
+		<control type="image">
+			<top>155</top>
+			<left>1400</left>
+			<width>478</width>
+			<height>710</height>
+			<texture border="14" colordiffuse="midgrey">button-default.png</texture>
+		</control>
+		<control type="grouplist" id="9000">
+			<!-- Main menu -->
+			<left>1410</left>
+			<top>165</top>
+			<width>458</width>
+			<height>700</height>
+			<itemgap>10</itemgap>
+			<onup>8000</onup>
+			<control type="button" id="95">
+				<!-- Summary -->
+				<width>458</width>
+				<height>75</height>
+				<label>$LOCALIZE[128]</label>
+				<font>ctouch22</font>
+				<texturenofocus/>
+			</control>
+			<control type="button" id="94">
+				<!-- Storage info -->
+				<width>458</width>
+				<height>75</height>
+				<label>$LOCALIZE[13277]</label>
+				<font>ctouch22</font>
+				<texturenofocus/>
+			</control>
+			<control type="button" id="96">
+				<!-- Network info -->
+				<width>458</width>
+				<height>75</height>
+				<label>$LOCALIZE[13279]</label>
+				<font>ctouch22</font>
+				<texturenofocus/>
+			</control>
+			<control type="button" id="97">
+				<!-- Video info -->
+				<width>458</width>
+				<height>75</height>
+				<label>$LOCALIZE[13280]</label>
+				<font>ctouch22</font>
+				<texturenofocus/>
+			</control>
+			<control type="button" id="98">
+				<!-- Hardware info -->
+				<width>458</width>
+				<height>75</height>
+				<label>$LOCALIZE[13281]</label>
+				<font>ctouch22</font>
+				<texturenofocus/>
+			</control>
+			<control type="button" id="99">
+				<!-- PVR info -->
+				<width>458</width>
+				<height>75</height>
+				<label>$LOCALIZE[19191]</label>
+				<font>ctouch22</font>
+				<visible>System.HasPVR</visible>
+				<texturenofocus/>
+			</control>
+			<control type="button" id="100">
+				<!-- Privacy policy info -->
+				<width>458</width>
+				<height>75</height>
+				<label>$LOCALIZE[12389]</label>
+				<font>ctouch22</font>
+				<onleft>60</onleft>
+				<texturenofocus/>
+			</control>
+			<control type="button" id="101">
+				<!-- Skin info -->
+				<width>458</width>
+				<height>75</height>
+				<label>$LOCALIZE[166]</label>
+				<font>ctouch22</font>
+				<texturenofocus/>
+			</control>
+		</control>
+		<control type="textbox" id="30">
+			<left>51</left>
+			<top>168</top>
+			<width>1335</width>
+			<height>750</height>
+			<pagecontrol>60</pagecontrol>
+			<font>ctouch20</font>
+			<visible>!Control.HasFocus(101)</visible>
+		</control>
+		<control type="scrollbar" id="60">
+			<left>16</left>
+			<top>165</top>
+			<width>18</width>
+			<height>825</height>
+			<onright>9000</onright>
+			<orientation>vertical</orientation>
+			<visible>Control.IsVisible(30)</visible>
+		</control>
+		<control type="grouplist">
+			<left>51</left>
+			<top>168</top>
+			<width>1335</width>
+			<height>825</height>
+			<visible>!Control.HasFocus(100) + !Control.HasFocus(101)</visible>
+			<control type="label" id="2">
+				<width>1335</width>
+				<height>75</height>
+				<font>ctouch22</font>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+			<control type="label" id="3">
+				<width>1335</width>
+				<height>75</height>
+				<font>ctouch22</font>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+			<control type="label" id="4">
+				<width>1335</width>
+				<height>75</height>
+				<font>ctouch22</font>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+			<control type="label" id="5">
+				<width>1335</width>
+				<height>75</height>
+				<font>ctouch22</font>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+			<control type="label" id="6">
+				<width>1335</width>
+				<height>75</height>
+				<font>ctouch22</font>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+			<control type="label" id="7">
+				<width>1335</width>
+				<height>75</height>
+				<font>ctouch22</font>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+			<control type="label" id="8">
+				<width>1335</width>
+				<height>75</height>
+				<font>ctouch22</font>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+			<control type="label" id="9">
+				<width>1335</width>
+				<height>75</height>
+				<font>ctouch22</font>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+			<control type="label" id="10">
+				<width>1335</width>
+				<height>75</height>
+				<font>ctouch22</font>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+			<control type="label" id="11">
+				<width>1335</width>
+				<height>75</height>
+				<font>ctouch22</font>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+		</control>
+		<control type="grouplist">
+			<left>51</left>
+			<top>168</top>
+			<width>1335</width>
+			<height>450</height>
+			<visible>!Control.HasFocus(100) + Control.HasFocus(101)</visible>
+			<control type="label">
+				<!-- Skin version -->
+				<width>1335</width>
+				<height>75</height>
+				<label>$LOCALIZE[31563] $INFO[System.AddonTitle(skin.ctouch)] $INFO[System.AddonVersion(skin.ctouch)]</label>
+				<font>ctouch22</font>
+			</control>
+			<control type="label">
+				<!-- Current theme -->
+				<width>1335</width>
+				<height>75</height>
+				<label>$LOCALIZE[31564] $INFO[Skin.CurrentTheme]</label>
+				<font>ctouch22</font>
+			</control>
+			<control type="label">
+				<!-- Current font -->
+				<width>1335</width>
+				<height>75</height>
+				<label>$LOCALIZE[22030]: $INFO[Skin.Font]</label>
+				<font>ctouch22</font>
+			</control>
+			<control type="label">
+				<!-- Screen mode -->
+				<width>1335</width>
+				<height>75</height>
+				<label>$LOCALIZE[31565] $INFO[System.ScreenMode]</label>
+				<font>ctouch22</font>
+			</control>
+			<control type="label">
+				<!-- Platform system is running on -->
+				<width>1335</width>
+				<height>75</height>
+				<label>$VAR[SystemPlatform]</label>
+				<font>ctouch22</font>
+			</control>
+		</control>
+		<control type="label">
+			<!-- Kodi build version and date -->
+			<left>51</left>
+			<top>1020</top>
+			<width>1818</width>
+			<height>33</height>
+			<label>$INFO[System.BuildVersion,$LOCALIZE[144] ,] $INFO[System.BuildDate,(,)]</label>
+			<font>ctouch22</font>
+		</control>
+		<include>touch-controls</include>
+	</controls>
+</window>

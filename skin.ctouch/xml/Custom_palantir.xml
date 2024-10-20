@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1146">
+	<coordinates>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	<onunload>Skin.SetBool(hpalantir)</onunload>
+	<controls>
+		<control type="image">
+			<include>fullscreenimage</include>
+			<texture>background-mask-black.png</texture>
+			<aspectratio>scale</aspectratio>
+		</control>
+		<control type="button">
+			<!-- Touch mouse close button -->
+			<right>15</right>
+			<bottom>15</bottom>
+			<width>180</width>
+			<height>75</height>
+			<texturefocus colordiffuse="$VAR[AccentColor]">backtransparent.png</texturefocus>
+			<texturenofocus colordiffuse="midgrey">backtransparent.png</texturenofocus>
+			<onclick>Dialog.Close(1141)</onclick>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>Cerrar</label>
+			<font>ctouch19</font>
+		</control>
+		<control type="group">
+			<centerleft>50%</centerleft>
+			<width>750</width>
+			<top>100</top>
+			<height>1080</height>
+			<control type="group">
+				<onright>Dialog.close</onright>
+				<onleft>Dialog.close</onleft>
+				<onup>Dialog.close</onup>
+				<ondown>Dialog.close</ondown>
+				<control type="textbox">
+					<top>260</top>
+					<width>750</width>
+					<height max="500">auto</height>
+					<autoscroll>false</autoscroll>
+					<align>justify</align>
+					<top>100</top>
+					<font>font14</font>
+					<label>El Addon Palantir3 solo funciona con una cuenta Premium [COLOR midgrey](de pago)[/COLOR] de AllDebrid o RealDebrid.[CR]
+Una vez instalado, ves a Ajustes, Ajustes de Skin, Ajustes de Addons, Palantir3, Cuentas y Activa tu tipo de cuenta. Ahora al reproducir, sigue los pasos para vincular tu cuenta.[CR]
+La cuenta Tracktv sirve para guardar tus series y acceder a ella desde otro u otros dispositivo con Palantir3.</label>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

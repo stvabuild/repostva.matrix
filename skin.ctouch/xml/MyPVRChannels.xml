@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol>50</defaultcontrol>
+	<menucontrol>9000</menucontrol>
+	<views>50</views>
+	<onload condition="!Skin.HasSetting(SkinHelper.EnablePVRThumbs)">Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
+	<onload>ClearProperty(ShowScreenSettings,home)</onload>
+	<onunload>ClearProperty(ShowScreenSettings,home)</onunload>
+	<controls>
+		<include>background</include>
+		<control type="grouplist">
+			<left>60</left>
+			<top>100</top>
+			<width>auto</width>
+			<height>93</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<orientation>horizontal</orientation>
+			<itemgap>5</itemgap>
+			<control type="label">
+				<!-- Video screen heading -->
+				<width max="600">auto</width>
+				<height>90</height>
+				<label>$VAR[PVRHeading]</label>
+				<font>ctouch30</font>
+				<wrapmultiline>true</wrapmultiline>
+				<aligny>top</aligny>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<top>3</top>	
+				<!-- Number of files -->
+				<width max="120">auto</width>
+				<height>68</height>
+				<label> $INFO[Container.NumItems,,]</label>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+		</control>
+		<control type="label">
+			<top>20</top>
+			<centerleft>50%</centerleft>
+			<!-- Number of files -->
+			<width max="250">auto</width>
+			<height>68</height>
+			<font>ctouch22</font>
+			<label>$INFO[Container.NumItems,,] Canales</label>
+			<textcolor>midgrey</textcolor>
+			<visible>Control.IsVisible(50)</visible>
+		</control>
+		<include file="View-PVR.xml">PVRListView</include>
+		<include>touch-controls</include>
+		<include>hora</include>		
+		<include>PVRChannelNumberInput</include>
+
+		<control type="group">
+			<!-- Screen Settings Menu -->
+			<left>0</left>
+			<top>1080</top>
+			<include>screen-settings</include>
+			<include>fadebackground</include>
+			<control type="image">
+				<include>fullscreenimage</include>
+				<texture colordiffuse="mask-background">background-mask.png</texture>
+				<aspectratio>scale</aspectratio>
+			</control>
+			<control type="button">
+				<!-- Touch mouse close button -->
+				<right>15</right>
+				<top>990</top>
+				<width>180</width>
+				<height>75</height>
+				<texturefocus colordiffuse="$VAR[AccentColor]">backtransparent.png</texturefocus>
+				<texturenofocus colordiffuse="midgrey">backtransparent.png</texturenofocus>
+				<onclick>Dialog.Close(MyPVRChannels)</onclick>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>Cerrar</label>
+				<font>ctouch19</font>
+				<visible>Skin.HasSetting(menulittle)</visible>
+			</control>
+			<control type="grouplist" id="9000">
+				<defaultcontrol>3</defaultcontrol>
+				<left>675</left>
+				<top>225</top>
+				<width>564</width>
+				<height>717</height>
+				<onright>ClearProperty(ShowScreenSettings,home)</onright>
+				<onright>50</onright>
+				<onleft>ClearProperty(ShowScreenSettings,home)</onleft>
+				<onleft>50</onleft>
+				<control type="button" id="3">
+					<!-- Sort by button -->
+					<width>564</width>
+					<height>69</height>
+					<font>ctouch22</font>
+					<label>$LOCALIZE[103]</label>
+					<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+					<texturenofocus border="9"></texturenofocus>									
+				</control>
+				<control type="togglebutton" id="4">
+					<!-- Sort direction button -->
+					<width>564</width>
+					<height>69</height>
+					<label>$LOCALIZE[21429]: $LOCALIZE[21430]</label>
+					<altlabel>$LOCALIZE[21429]: $LOCALIZE[21431]</altlabel>
+					<font>ctouch22</font>
+					<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+					<texturenofocus border="9"></texturenofocus>									
+				</control>
+				<control type="button" id="28">
+					<label/>
+					<!--Change Channel Groups-->
+					<width>564</width>
+					<height>69</height>
+					<font>ctouch22</font>
+					<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+					<texturenofocus border="9"></texturenofocus>									
+				</control>
+				<control type="radiobutton" id="31">
+					<!-- Filter -->
+					<width>564</width>
+					<height>69</height>
+					<label>$LOCALIZE[587]</label>
+					<font>ctouch22</font>
+					<selected>Container.Filtered</selected>
+					<onclick>right</onclick>
+					<visible>Window.IsActive(tvchannels) | Window.IsActive(radiochannels)</visible>
+					<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+					<texturenofocus border="9"></texturenofocus>									
+				</control>
+				<control type="radiobutton" id="5">
+					<!-- Group recordings by folder structure -->
+					<width>564</width>
+					<height>69</height>
+					<label>$LOCALIZE[19270]</label>
+					<font>ctouch22</font>
+					<visible>Window.IsActive(tvrecordings) | Window.IsActive(radiorecordings)</visible>
+					<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+					<texturenofocus border="9"></texturenofocus>									
+				</control>
+				<control type="radiobutton" id="6">
+					<!-- Show hidden channels -->
+					<width>564</width>
+					<height>69</height>
+					<label>$LOCALIZE[19051]</label>
+					<font>ctouch22</font>
+					<visible>Window.IsActive(tvchannels) | Window.IsActive(radiochannels)</visible>
+					<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+					<texturenofocus border="9"></texturenofocus>									
+				</control>
+				<control type="button" id="902">
+					<!-- Guide -->
+					<width>564</width>
+					<height>69</height>
+					<label>$LOCALIZE[22020]</label>
+					<font>ctouch22</font>
+					<onclick>SetFocus(50)</onclick>
+					<onclick condition="String.IsEqual(Window(home).Property(ShowScreenSettings),show)">ClearProperty(ShowScreenSettings,home)</onclick>
+					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvguide)</onclick>
+					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(radioguide)</onclick>
+					<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+					<texturenofocus border="9"></texturenofocus>									
+				</control>
+				<control type="button" id="903">
+					<!-- Recordings -->
+					<width>564</width>
+					<height>69</height>
+					<label>$LOCALIZE[19163]</label>
+					<font>ctouch22</font>
+					<onclick>SetFocus(50)</onclick>
+					<onclick condition="String.IsEqual(Window(home).Property(ShowScreenSettings),show)">ClearProperty(ShowScreenSettings,home)</onclick>
+					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvrecordings)</onclick>
+					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(radiorecordings)</onclick>
+					<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+					<texturenofocus border="9"></texturenofocus>									
+				</control>
+				<control type="button" id="904">
+					<!-- Search -->
+					<width>564</width>
+					<height>69</height>
+					<label>$LOCALIZE[137]</label>
+					<font>ctouch22</font>
+					<onclick>SetFocus(50)</onclick>
+					<onclick condition="String.IsEqual(Window(home).Property(ShowScreenSettings),show)">ClearProperty(ShowScreenSettings,home)</onclick>
+					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvsearch)</onclick>
+					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(radiosearch)</onclick>
+					<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+					<texturenofocus border="9"></texturenofocus>									
+				</control>
+				<control type="button" id="905">
+					<!-- Timers -->
+					<width>564</width>
+					<height>69</height>
+					<label>$LOCALIZE[19040]</label>
+					<font>ctouch22</font>
+					<onclick>SetFocus(50)</onclick>
+					<onclick condition="String.IsEqual(Window(home).Property(ShowScreenSettings),show)">ClearProperty(ShowScreenSettings,home)</onclick>
+					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvtimers)</onclick>
+					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(radiotimers)</onclick>
+					<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+					<texturenofocus border="9"></texturenofocus>									
+				</control>
+			</control>
+		</control>
+		<!-- Show a iOS style page indicator to show which focus group has the current focus -->
+		<!-- Focus group can be hidden or shown but is potentially focusable, that is it has not be disabled -->
+		<control type="group">
+			<include content="page-indicator">
+				<param name="indicatorleft" value="864" />
+				<param name="indicatortop" value="0" />
+				<param name="indicatorwidth" value="192" />
+				<param name="indicatorheight" value="48" />
+				<param name="indicatororientation" value="horizontal" />
+				<param name="grp1indicate" value="[ControlGroup(9000).HasFocus()|String.IsEqual(Window(home).Property(ShowScreenSettings),show)]" />
+				<param name="grp1visible" value="[!Skin.HasSetting(lock-screensettings)]" />
+				<param name="grp2indicate" value="[Control.HasFocus(50)]" />
+				<param name="grp2visible" value="[Control.IsVisible(50)]+[!Skin.HasSetting(lock-screensettings)|!String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31877])]" />
+				<param name="grp3indicate" value="[Control.HasFocus(27)]" />
+				<param name="grp3visible" value="[!String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31877])]" />
+			</include>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol>20</defaultcontrol>
+	<controls>
+		<include>background</include>
+		<control type="label">
+			<!-- Screen heading -->
+			<right>40</right>
+			<top>120</top>
+			<align>right</align>
+			<width max="800">auto</width>
+			<height>48</height>
+			<label>$LOCALIZE[10003]</label>
+			<font>ctouch25w</font>
+			<textcolor>$VAR[AccentColor]</textcolor>
+		</control>
+		<control type="image">
+			<left>590</left>
+			<top>611</top>
+			<width>737</width>
+			<height>10</height>
+			<texture>separator.png</texture>
+			<animation effect="rotate" center="auto" end="-90" condition="true">Conditional</animation>
+		</control>
+		<control type="image">
+			<left>10</left>
+			<top>240</top>
+			<width>99%</width>
+			<height>8</height>
+			<texture>separator.png</texture>
+		</control>
+		<control type="image">
+			<left>10</left>
+			<top>980</top>
+			<width>99%</width>
+			<height>8</height>
+			<texture>separator.png</texture>
+		</control>
+		<control type="list" id="20">
+			<left>30</left>
+			<top>265</top>
+			<width>900</width>
+			<height>700</height>
+			<onleft>21</onleft>
+			<onright>21</onright>
+			<onup>8000</onup>
+			<ondown>20</ondown>
+			<itemlayout width="870" height="68">
+				<control type="label">
+					<left>16</left>
+					<top>16</top>
+					<width>630</width>
+					<height>36</height>
+					<font>ctouch23</font>
+					<selectedcolor>listselected-text</selectedcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<textoffsetx>9</textoffsetx>
+				</control>
+				<control type="label">
+					<left>616</left>
+					<top>16</top>
+					<width>267</width>
+					<height>36</height>
+					<font>ctouch23</font>
+					<align>right</align>
+					<selectedcolor>listselected-text</selectedcolor>
+					<label>$INFO[ListItem.Label2]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout width="870" height="68">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>895</width>
+					<height>68</height>
+					<texture border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texture>
+					<visible>Control.HasFocus(20)</visible>
+				</control>
+				<control type="label">
+					<left>16</left>
+					<top>16</top>
+					<width>630</width>
+					<height>36</height>
+					<font>ctouch23</font>
+					<include condition="Skin.HasSetting(text-autoscroll)">scrolltext</include>
+					<label>$INFO[ListItem.Label]</label>
+					<textoffsetx>9</textoffsetx>
+				</control>
+				<control type="label">
+					<left>616</left>
+					<top>16</top>
+					<width>267</width>
+					<height>36</height>
+					<font>ctouch23</font>
+					<align>right</align>
+					<selectedcolor>listselected-text</selectedcolor>
+					<label>$INFO[ListItem.Label2]</label>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="list" id="21">
+			<left>980</left>
+			<top>265</top>
+			<width>900</width>
+			<height>700</height>
+			<onleft>20</onleft>
+			<onright>20</onright>
+			<onup>8000</onup>
+			<ondown>21</ondown>
+			<itemlayout width="870" height="68">
+				<control type="label">
+					<left>16</left>
+					<top>16</top>
+					<width>630</width>
+					<height>36</height>
+					<font>ctouch23</font>
+					<selectedcolor>listselected-text</selectedcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<textoffsetx>9</textoffsetx>
+				</control>
+				<control type="label">
+					<left>616</left>
+					<top>16</top>
+					<width>267</width>
+					<height>36</height>
+					<font>ctouch23</font>
+					<align>right</align>
+					<selectedcolor>listselected-text</selectedcolor>
+					<label>$INFO[ListItem.Label2]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout width="870" height="68">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>895</width>
+					<height>68</height>
+					<texture border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texture>
+					<visible>Control.HasFocus(21)</visible>
+				</control>
+				<control type="label">
+					<left>16</left>
+					<top>16</top>
+					<width>630</width>
+					<height>36</height>
+					<font>ctouch23</font>
+					<include condition="Skin.HasSetting(text-autoscroll)">scrolltext</include>
+					<label>$INFO[ListItem.Label]</label>
+					<textoffsetx>9</textoffsetx>
+				</control>
+				<control type="label">
+					<left>616</left>
+					<top>16</top>
+					<width>267</width>
+					<height>36</height>
+					<font>ctouch23</font>
+					<align>right</align>
+					<label>$INFO[ListItem.Label2]</label>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="fadelabel" id="101">
+			<!-- Current directory left -->
+			<left>57</left>
+			<top>190</top>
+			<width>900</width>
+			<height>36</height>
+			<font>ctouch23w</font>
+		</control>
+		<control type="fadelabel" id="102">
+			<!-- Current directory right -->
+			<left>990</left>
+			<top>190</top>
+			<width>900</width>
+			<height>36</height>
+			<font>ctouch23w</font>
+		</control>
+		<control type="label" id="12">
+			<!-- Number of files left list -->
+			<left>57</left>
+			<top>1000</top>
+			<width>900</width>
+			<height>36</height>
+			<font>ctouch20w</font>
+		</control>
+		<control type="label" id="13">
+			<!-- Number of files right list -->
+			<left>1032</left>
+			<top>1000</top>
+			<width>900</width>
+			<height>36</height>
+			<font>ctouch20w</font>
+		</control>
+		<include>touch-controls</include>
+		<include>touch-controlsl</include>
+		<include>hora</include>		
+	</controls>
+</window>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addon id="skin.ctouch"  version="3.8" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="3.9" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>		
 	</requires>
@@ -11,23 +11,24 @@
 		<summary lang="en_GB">Skin Wizard para Kodi 21 Omega</summary>				
 		<description lang="es_ES">Cristal Touch es un mod del skin AppTV realizado por STVA.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV, TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>
 		<description lang="en_GB">Cristal Touch es un mod del skin AppTV realizado por STVA.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV, TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>		
-		<disclaimer lang="en_GB">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]Web y Foro: stva.es</disclaimer>
-		<disclaimer lang="es_ES">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]Web y Foro: stva.es</disclaimer>		
+		<disclaimer lang="en_GB">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]</disclaimer>
+		<disclaimer lang="es_ES">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]</disclaimer>		
 		<platform>all</platform>
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 3.8 - 7/9/24
-- Reparados todos los enlaces de Cristal Azul
-- Eliminado addon Magellan (item TV Premium) del skin
-- Cambiados widgets de series del addon Alfa
+		<news>Versión 3.9 - 20/10/24
+- Cristal Azul eliminado del skin
+- Luar eliminado del Skin
+- Inicio e items de deportes eliminados
+- Modificaciones necesarias para eliminar referencias a los addons eliminados
+- Ultima actualización del skin
 </news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
 			<screenshot>resources/screenshot001.jpg</screenshot>
 			<screenshot>resources/screenshot002.jpg</screenshot>
-			<screenshot>resources/screenshot006.jpg</screenshot>
 			<screenshot>resources/screenshot003.jpg</screenshot>
 			<screenshot>resources/screenshot004.jpg</screenshot>
 			<screenshot>resources/screenshot005.jpg</screenshot>

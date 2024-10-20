@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol always="true">11</defaultcontrol>
+	<coordinates>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<control type="image">
+				<!-- Dialog background -->
+				<left>0</left>
+				<top>0</top>
+				<width>650</width>
+				<height>100%</height>
+				<texture border="14" colordiffuse="black">backtransparent.png</texture>
+			</control>
+			<control type="button">
+				<!-- Touch mouse close button -->
+				<right>15</right>
+				<bottom>15</bottom>
+				<width>180</width>
+				<height>75</height>
+				<texturefocus colordiffuse="$VAR[AccentColor]">backtransparent.png</texturefocus>
+				<texturenofocus colordiffuse="midgrey">backtransparent.png</texturenofocus>
+				<onclick>Dialog.Close(PVROSDChannels)</onclick>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>Cerrar</label>
+				<font>ctouch19</font>
+				<visible>Skin.HasSetting(menulittle)</visible>
+			</control>
+			<control type="grouplist">
+				<left>20</left>
+				<top>20</top>
+				<width>620</width>
+				<height>60</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<orientation>horizontal</orientation>
+				<control type="label">
+				<itemgap>5</itemgap>
+					<!-- Video screen heading -->
+					<width>620</width>
+					<height>25</height>
+					<label>$VAR[PVRChannelOSDHeading]  $INFO[Container(11).NumItems,(,)]</label>
+					<font>ctouch19</font>
+					<aligny>top</aligny>
+					<alignx>left</alignx>
+				</control>
+			</control>
+			<control type="label">
+				<!-- Header -->
+				<left>20</left>
+				<top>80</top>
+				<width>620</width>
+				<height>25</height>
+				<font>ctouch18</font>
+				<label>$INFO[System.Date(DDD)], $INFO[System.Date(d)] $INFO[System.Date(mmm)] $INFO[System.Date(yyyy)] • $INFO[System.Time]</label>
+				<align>left</align>
+			</control>
+			<control type="image">
+				<left>20</left>
+				<top>115</top>
+				<width>620</width>
+				<height>12</height>
+				<texture flipx="true">sep2.png</texture>
+			</control>
+			<control type="list" id="11">
+				<left>0</left>
+				<top>145</top>
+				<width>650</width>
+				<height>920</height>
+				<onright>60</onright>
+				<onleft>close</onleft>
+				<movement>4</movement>
+				<focusposition>4</focusposition>
+				<pagecontrol>60</pagecontrol>
+				<itemlayout height="115" width="630">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>630</width>
+						<height>120</height>
+						<texture/>
+					</control>
+					<control type="label">
+						<left>15</left>
+						<top>18</top>
+						<width>65</width>
+						<height>36</height>
+						<font>ctouch19</font>
+						<label>$INFO[ListItem.ChannelNumberLabel]</label>
+						<visible>$EXP[isEmptyPVRIcon]</visible>
+					</control>
+					<control type="image">
+						<left>15</left>
+						<top>18</top>
+						<width>65</width>
+						<height>65</height>
+						<texture>$VAR[PVRIcon]</texture>
+						<visible>$EXP[isnotEmptyPVRIcon]</visible>
+					</control>
+					<control type="label">
+						<left>100</left>
+						<top>15</top>
+						<width>525</width>
+						<height>36</height>
+						<font>ctouch18</font>
+						<label>$INFO[ListItem.Title]</label>
+					</control>
+					<control type="label">
+						<left>100</left>
+						<top>57</top>
+						<width>120</width>
+						<height>36</height>
+						<font>ctouch18</font>
+						<selectedcolor>button-text</selectedcolor>
+						<label>$INFO[ListItem.StartTime]</label>
+						<visible>ListItem.HasEpg</visible>
+					</control>
+					<control type="progress">
+						<left>225</left>
+						<top>72</top>
+						<width>271</width>
+						<height>12</height>
+						<info colordiffuse="white">ListItem.Progress</info>
+						<visible>ListItem.HasEpg</visible>
+					</control>
+					<control type="label">
+						<left>505</left>
+						<top>57</top>
+						<width>130</width>
+						<height>36</height>
+						<font>ctouch18</font>
+						<selectedcolor>button-text</selectedcolor>
+						<label>$INFO[ListItem.EndTime]</label>
+						<visible>ListItem.HasEpg</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="115" width="650">
+					<control type="image">
+						<left>-5</left>
+						<top>0</top>
+						<width>670</width>
+						<height>120</height>
+						<texture border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texture>
+						<visible>Control.HasFocus(11)</visible>
+					</control>
+					<control type="label">
+						<left>15</left>
+						<top>18</top>
+						<width>65</width>
+						<height>36</height>
+						<font>ctouch19</font>
+						<label>$INFO[ListItem.ChannelNumberLabel]</label>
+						<visible>$EXP[isEmptyPVRIcon]</visible>
+					</control>
+					<control type="image">
+						<left>15</left>
+						<top>18</top>
+						<width>65</width>
+						<height>65</height>
+						<texture>$VAR[PVRIcon]</texture>
+						<visible>$EXP[isnotEmptyPVRIcon]</visible>
+					</control>
+					<control type="label">
+						<left>100</left>
+						<top>15</top>
+						<width>525</width>
+						<height>36</height>
+						<font>ctouch18</font>
+						<label>$INFO[ListItem.Title]</label>
+					</control>
+					<control type="label">
+						<left>100</left>
+						<top>57</top>
+						<width>120</width>
+						<height>36</height>
+						<font>ctouch18</font>
+						<selectedcolor>button-text</selectedcolor>
+						<label>$INFO[ListItem.StartTime]</label>
+						<visible>ListItem.HasEpg</visible>
+					</control>
+					<control type="progress">
+						<left>225</left>
+						<top>72</top>
+						<width>271</width>
+						<height>12</height>
+						<info>ListItem.Progress</info>
+						<colordiffuse>white</colordiffuse>
+						<visible>ListItem.HasEpg</visible>
+					</control>
+					<control type="label">
+						<left>505</left>
+						<top>57</top>
+						<width>130</width>
+						<height>36</height>
+						<font>ctouch18</font>
+						<selectedcolor>button-text</selectedcolor>
+						<label>$INFO[ListItem.EndTime]</label>
+						<visible>ListItem.HasEpg</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>655</left>
+				<top>180</top>
+				<width>12</width>
+				<height>900</height>
+				<onleft>11</onleft>
+				<onright>close</onright>
+				<animation condition="!Control.HasFocus(60) + !Container.Scrolling + !String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31875])" effect="fade" start="100" end="0" time="200" reversible="true">Conditional</animation>
+				<visible>$EXP[isEnabledScrollbar]</visible>
+			</control>
+		</control>
+		<include>PVRChannelNumberInput</include>
+	</controls>
+</window>

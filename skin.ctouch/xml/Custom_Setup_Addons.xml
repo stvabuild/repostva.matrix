@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window id="1130">
+    <defaultcontrol>323</defaultcontrol>
+    <controls>
+		<include>background</include>
+		<control type="image">
+			<include>fullscreenimage</include>
+			<texture>background-iconhome.jpg</texture>
+			<aspectratio>scale</aspectratio>
+		</control>
+		<control type="image">
+			<include>fullscreenimage</include>
+			<texture>vignette.png</texture>
+			<aspectratio>scale</aspectratio>
+		</control>
+		<control type="image">
+			<right>30</right>
+			<top>10</top>
+			<width>150</width>
+			<height>150</height>
+			<texture background="true">special://skin/resources/icon.png</texture>
+		</control>	
+		<control type="label">
+			<centerleft>50%</centerleft>
+			<width>1300</width>
+			<height>50</height>
+			<top>60</top>
+			<shadowcolor>black</shadowcolor>
+			<font>ctouch25w</font>
+			<align>center</align>
+			<label>Instalación de addons</label>
+			<textcolor>$VAR[AccentColor]</textcolor>
+		</control>
+		<control type="textbox">
+			<centerleft>50%</centerleft>
+			<width>1400</width>
+			<height>550</height>
+			<top>130</top>
+			<shadowcolor>black</shadowcolor>
+			<pagecontrol>3000</pagecontrol>
+			<font>font14</font>
+			<align>center</align>
+			<label>Instala los siguientes addons que nutrirán de contenido y otras funciones al Skin.
+[B][COLOR aqua]Si tu dispositivo es Windows[/B][/COLOR], pulsa de nuevo en Horus para que descargue los módulos Acestream para poder ver sus enlaces.
+[B][COLOR aqua]Si tu dispositivo es Android[/B][/COLOR], descarga Acestream desde el PlayStore.
+Los addons MoesTV, Palantir3 y Duffyou requieren abrir una primera vez para funcionar.</label>
+		</control>
+		<control type="image">
+			<centerleft>50%</centerleft>
+			<top>370</top>
+			<align>center</align>
+			<width>1400</width>
+			<height>20</height>
+			<texture flipy="true">sep2.png</texture>
+		</control>	
+		<control type="image">
+			<centerleft>50%</centerleft>
+			<bottom>70</bottom>
+			<align>center</align>
+			<width>1400</width>
+			<height>20</height>
+			<texture>sep2.png</texture>
+		</control>	
+		<control type="group">
+			<centerleft>50%</centerleft>
+			<top>200</top>
+			<height>900</height>
+			<width>1330</width>
+			<control type="grouplist" id="9000">
+				<orientation>vertical</orientation>
+				<left>0</left>
+				<itemgap>7</itemgap>
+				<top>80</top>
+				<width>1330</width>
+				<align>center</align>
+				<font>font14</font>
+				<ondown>308</ondown>
+				<control type="radiobutton" id="323">
+					<radioposx>1220</radioposx>
+					<font>font14</font>
+					<height>60</height>
+					<label>Palantir3 $INFO[System.AddonVersion(plugin.video.palantir3),(,)][COLOR grey] - Películas, Series, Documentales, Dibujos y Novelas[/COLOR]</label>
+					<radiowidth>100</radiowidth>
+					<radioheight>100</radioheight>
+					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+					<onclick condition="!Skin.HasSetting(hpalantir)">ActivateWindow(1146)</onclick>																		
+					<onclick condition="Skin.HasSetting(hpalantir) + !System.HasAddon(repository.Palantir)">InstallAddon(repository.Palantir3)</onclick>																		
+					<onclick condition="Skin.HasSetting(hpalantir) + !System.HasAddon(plugin.video.palantir3)">InstallAddon(plugin.video.palantir3)</onclick>																		
+					<onclick condition="Skin.HasSetting(hpalantir) + System.HasAddon(plugin.video.palantir3)">ActivateWindow(10025,&quot;plugin://plugin.video.palantir3/&quot;,return)</onclick>
+					<texturenofocus/>
+					<selected>System.HasAddon(plugin.video.palantir3)</selected>
+					
+				</control>
+				<control type="radiobutton" id="324">
+					<radioposx>1220</radioposx>
+					<font>font14</font>
+					<label>Alfa $INFO[System.AddonVersion(plugin.video.alfa),(,)][COLOR grey] - Pelis, Series, Documentales[/COLOR]</label>
+					<height>60</height>
+					<radiowidth>100</radiowidth>
+					<radioheight>100</radioheight>
+					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+					<onclick condition="!System.HasAddon(repository.alfa-addon)">InstallAddon(repository.alfa-addon)</onclick>																		
+					<onclick condition="!System.HasAddon(plugin.video.alfa)">InstallAddon(plugin.video.alfa)</onclick>																		
+					<texturenofocus/>
+					<selected>System.HasAddon(plugin.video.alfa)</selected>
+					
+				</control>
+				<control type="radiobutton" id="326">
+					<radioposx>1220</radioposx>
+					<font>font14</font>
+					<height>60</height>
+					<label>Image Studio Icons $INFO[System.AddonVersion(resource.images.studios.coloured),(,)][COLOR grey] - Iconos de Estudios y Plataformas[/COLOR]</label>
+					<radiowidth>100</radiowidth>
+					<radioheight>100</radioheight>
+					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+					<onclick condition="!System.HasAddon(resource.images.studios.coloured)">InstallAddon(resource.images.studios.coloured)</onclick>																		
+					<texturenofocus/>
+					<selected>System.HasAddon(resource.images.studios.coloured)</selected>
+					
+				</control>
+				<control type="radiobutton" id="325">
+					<font>font14</font>
+					<label>The Movie Database Helper $INFO[System.AddonVersion(plugin.video.themoviedb.helper),(,)][COLOR grey] - Arte e info de Películas y Series[/COLOR]</label>
+					<radioposx>1220</radioposx>
+					<height>60</height>
+					<radiowidth>100</radiowidth>
+					<radioheight>100</radioheight>
+					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+					<onclick>Skin.ToggleSetting(autotrailer)</onclick>
+					<onclick>Skin.ToggleSetting(clearlogo_on)</onclick>
+					<onclick condition="!System.HasAddon(repository.jurialmunkey)">InstallAddon(repository.jurialmunkey)</onclick>																		
+					<onclick condition="!System.HasAddon(plugin.video.themoviedb.helper)">InstallAddon(plugin.video.themoviedb.helper)</onclick>																		
+					<selected>System.HasAddon(plugin.video.themoviedb.helper)</selected>
+					<texturenofocus/>
+¡				</control>
+				<control type="radiobutton" id="327">
+					<radioposx>1220</radioposx>
+					<font>font14</font>
+					<height>60</height>
+					<label>Moe's TV $INFO[System.AddonVersion(plugin.video.moestv),(,)][COLOR grey] - Plataformas TV[/COLOR]</label>
+					<radiowidth>100</radiowidth>
+					<radioheight>100</radioheight>
+					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+					<onclick condition="!System.HasAddon(plugin.video.moestv)">InstallAddon(plugin.video.moestv)</onclick>																		
+					<onclick condition="System.HasAddon(plugin.video.moestv)">ActivateWindow(10025,&quot;plugin://plugin.video.moestv/&quot;,return)</onclick>
+					<texturenofocus/>
+					<selected>System.HasAddon(plugin.video.moestv)</selected>
+					
+				</control>
+				<control type="radiobutton" id="328">
+					<font>font14</font>
+					<radioposx>1220</radioposx>
+					<height>60</height>
+					<label>Horus $INFO[System.AddonVersion(script.horus),(,)][COLOR grey] - Necesario para reproducciones en acestream[/COLOR]</label>
+					<radiowidth>100</radiowidth>
+					<radioheight>100</radioheight>
+					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+					<onclick condition="!System.HasAddon(script.module.horus)">InstallAddon(script.module.horus)</onclick>																		
+					<onclick condition="System.HasAddon(script.module.horus)">ActivateWindow(10025,&quot;plugin://script.module.horus/&quot;,return)</onclick>
+					<texturenofocus/>
+					<selected>System.HasAddon(script.module.horus)</selected>
+					
+				</control>
+				<control type="radiobutton" id="329">
+					<font>font14</font>
+					<radioposx>1220</radioposx>
+					<height>60</height>
+					<label>Youtube $INFO[System.AddonVersion(plugin.video.youtube),(,)][COLOR grey] - Necesario para ver trailers[/COLOR]</label>
+					<radiowidth>100</radiowidth>
+					<radioheight>100</radioheight>
+					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+					<onclick condition="!System.HasAddon(plugin.video.youtube)">InstallAddon(plugin.video.youtube)</onclick>																		
+					<texturenofocus/>
+					<selected>System.HasAddon(plugin.video.youtube)</selected>
+					
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<centerleft>50%</centerleft>
+			<bottom>10</bottom>
+			<width>300</width>
+			<height>60</height>
+			<control type="button" id="308">
+				<label>Continuar</label>
+				<font>font14</font>
+				<textoffsetx>30</textoffsetx>
+				<onclick>Close</onclick>
+				<onclick>ActivateWindow(5111)</onclick>
+				<onclick>Skin.SetBool(FirstRunSetup,true)</onclick>
+				<align>center</align>
+				<onup>329</onup>
+			</control>		
+		</control>
+	</controls>
+</window>

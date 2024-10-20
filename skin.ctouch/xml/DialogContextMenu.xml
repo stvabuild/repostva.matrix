@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol>1000</defaultcontrol>
+	<coordinates>
+		<origin x="0" y="0" />
+	</coordinates>
+	<controls>
+		<control type="image">
+			<include>fullscreenimage</include>
+			<texture colordiffuse="mask-background">background-mask.png</texture>
+			<aspectratio>scale</aspectratio>
+		</control>
+	   <control type="group">
+		<control type="grouplist" id="996">
+			<!-- Grouplist for context buttons -->
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<width>720</width>
+			<height min="72" max="700">auto</height>
+			<itemgap>0</itemgap>
+			<onback>Dialog.Close(contextmenu)</onback>
+			<onleft>Dialog.Close(contextmenu)</onleft>
+			<onright>Dialog.Close(contextmenu)</onright>
+			<control type="button" id="1000">
+				<!-- Button template -->
+				<left>0</left>
+				<top>0</top>
+				<width>700</width>
+				<height>72</height>
+				<font>ctouch22</font>			
+				<align>center</align>
+				<aligny>center</aligny>
+				<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+				<texturenofocus border="9"></texturenofocus>				
+			</control>
+			<control type="button" id="101">
+				<left>0</left>
+				<top>0</top>
+				<width>700</width>
+				<height>72</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>Ver Trailer</label>
+				<font>ctouch22</font>
+				<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+				<texturenofocus border="9"></texturenofocus>				
+				<onclick>PlayMedia($INFO[Window(Home).Property(TMDbHelper.ListItem.Trailer)],1)</onclick>
+				<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trailer)</visible>
+			</control>	
+			<control type="button" id="100"><!-- Custom skin button -->
+				<left>0</left>
+				<top>0</top>
+				<width>700</width>
+				<height>72</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[31887]</label>
+				<font>ctouch22</font>
+				<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+				<texturenofocus border="9"></texturenofocus>				
+				<onclick>SetProperty(ItemPath,$VAR[ListItemShortcut],home)</onclick>
+				<onclick>SetProperty(ItemName,$ESCINFO[ListItem.Label],home)</onclick>
+				<onclick>SetProperty(ItemIcon,$ESCINFO[ListItem.Icon],home)</onclick>
+				<onclick>SetProperty(ItemList,$VAR[ListItemShortcutlist],home)</onclick>								
+				<onclick>ActivateWindow(1152)</onclick>
+			</control>									
+		</control>
+	   </control>
+	</controls>
+</window>

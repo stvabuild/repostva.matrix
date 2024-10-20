@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol>50</defaultcontrol>
+	<views>50,52,59,55</views>
+	<onload>ClearProperty(ShowScreenSettings,home)</onload>
+	<onunload>ClearProperty(ShowScreenSettings,home)</onunload>
+	<menucontrol>9000</menucontrol>
+	<include>window-openclose</include>
+	<controls>
+		<visible>!Window.IsVisible(movieinformation)</visible>
+		<include>background</include>
+		<include>maskfadebackground</include>
+		<include>vignette-views</include>
+		<control type="image" id="1">
+			<!-- Dialog background -->
+			<left>0</left>
+			<top>-300</top>
+			<height>1080</height>
+			<width>1920</width>
+			<texture flipy="true" colordiffuse="ff000000">grandient_overlay_osd.png</texture>
+		</control>
+		<control type="grouplist">
+			<left>1170</left>
+			<top>30</top>
+			<width>auto</width>
+			<height>108</height>
+			<align>left</align>
+			<aligny>top</aligny>
+			<orientation>horizontal</orientation>
+		</control>
+		<control type="group">
+			<!-- Various Views of Video library node -->
+			<visible>![String.IsEmpty(ListItem.Label) + String.IsEmpty(ListItem(1).Label)]</visible>
+			<include file="View-Video.xml">VideoListView</include>
+			<include file="View-Video.xml">VideoIconView</include>
+			<include file="View-Video.xml">VideoPaisajeView</include>			
+			<include file="View-Video.xml">VideoSquareView</include>	
+		</control>
+		<control type="group">
+			<!-- No Label tag means video addon is busy pulling in content, so show a busy animation -->
+			<visible>String.IsEmpty(ListItem.Label) + String.IsEmpty(ListItem(1).Label) + System.IdleTime(1) + !Window.IsVisible(busydialog)</visible>
+			<include>fadebackground</include>
+			<control type="image">
+				<include>fullscreenimage</include>
+				<texture colordiffuse="mask-background">background-mask.png</texture>
+				<aspectratio>scale</aspectratio>
+			</control>
+			<control type="image">
+				<!-- Busy animation -->
+				<left>864</left>
+				<top>435</top>
+				<width>150</width>
+				<height>150</height>
+				<colordiffuse>blue</colordiffuse>
+				<texture colordiffuse="$VAR[AccentColor]">busy_bg.png</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="image">
+				<!-- Busy animation -->
+				<left>864</left>
+				<top>435</top>
+				<width>150</width>
+				<height>150</height>
+				<colordiffuse>blue</colordiffuse>
+				<texture colordiffuse="$VAR[AccentColor]">busy.png</texture>
+				<aspectratio>keep</aspectratio>
+				<include>busy-spin</include>
+			</control>
+		</control>
+		<control type="group">
+			<control type="image">
+				<include>fullscreenimage</include>
+				<texture>background-mask-set.png</texture>
+				<aspectratio>scale</aspectratio>
+				<visible>Window.IsVisible(1136)</visible>
+			</control>		
+			<include>touch-controls</include>
+			<include>hora</include>	
+		</control>
+		<control type="group">
+			<!-- Screen Settings Menu -->
+			<left>0</left>
+			<top>1080</top>
+			<include>screen-settings</include>
+			<control type="image">
+				<include>fullscreenimage</include>
+				<texture colordiffuse="mask-background">background-mask.png</texture>
+				<aspectratio>scale</aspectratio>
+			</control>
+			<control type="button">
+				<!-- Touch mouse close button -->
+				<right>15</right>
+				<top>990</top>
+				<width>180</width>
+				<height>75</height>
+				<texturefocus colordiffuse="$VAR[AccentColor]">backtransparent.png</texturefocus>
+				<texturenofocus colordiffuse="midgrey">backtransparent.png</texturenofocus>
+				<onclick condition="!String.IsEqual(Window(home).Property(ShowScreenSettings),show)">SetProperty(ShowScreenSettings,show,home)</onclick>
+				<onclick condition="String.IsEqual(Window(home).Property(ShowScreenSettings),show)">ClearProperty(ShowScreenSettings,home)</onclick>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>Cerrar</label>
+				<font>ctouch19</font>
+				<visible>Skin.HasSetting(menulittle)</visible>
+			</control>
+			<control type="grouplist" id="9000">
+				<defaultcontrol>2</defaultcontrol>
+				<left>680</left>
+				<top>200</top>
+				<width>540</width>
+				<height>759</height>
+				<itemgap>0</itemgap>
+				<onright>ClearProperty(ShowScreenSettings,home)</onright>
+				<onright>50</onright>
+				<onleft>ClearProperty(ShowScreenSettings,home)</onleft>
+				<onleft>50</onleft>
+				<control type="button" id="2">
+					<!-- View as button -->
+					<align>center</align>
+					<width>500</width>
+					<height>69</height>
+					<font>ctouch22</font>
+					<label>$LOCALIZE[100]</label>
+					<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+					<texturenofocus border="9"></texturenofocus>									
+				</control>	
+				<control type="button" id="1194">
+					<!-- Bloquear Vista -->
+					<align>center</align>
+					<width>500</width>
+					<height>69</height>
+					<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+					<texturenofocus border="9"></texturenofocus>									
+					<label>$VAR[Items_LockUnlock_Label,,]</label>
+					<font>ctouch22</font>
+					<include>Items_LockUnlock</include>
+					<onclick condition="[Container.Content() + String.IsEmpty(Skin.String(Skin.ForcedView.))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<onclick condition="[Container.Content(tags) + String.IsEmpty(Skin.String(Skin.ForcedView.tags))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<onclick condition="[Container.Content(years) + String.IsEmpty(Skin.String(Skin.ForcedView.years))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<onclick condition="[Container.Content(genres) + String.IsEmpty(Skin.String(Skin.ForcedView.genres))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<onclick condition="[Container.Content(countries) + String.IsEmpty(Skin.String(Skin.ForcedView.countries))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<onclick condition="[Container.Content(studios) + String.IsEmpty(Skin.String(Skin.ForcedView.studios))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<onclick condition="[Container.Content(playlists) + String.IsEmpty(Skin.String(Skin.ForcedView.playlists))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<onclick condition="[Container.Content(movies) + String.IsEmpty(Skin.String(Skin.ForcedView.movies))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<onclick condition="[Container.Content(sets) + String.IsEmpty(Skin.String(Skin.ForcedView.sets))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<onclick condition="[Container.Content(tvshows) + String.IsEmpty(Skin.String(Skin.ForcedView.tvshows))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<onclick condition="[Container.Content(seasons) + String.IsEmpty(Skin.String(Skin.ForcedView.seasons))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<onclick condition="[Container.Content(episodes) + String.IsEmpty(Skin.String(Skin.ForcedView.episodes))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<onclick condition="[Container.Content(artists) + String.IsEmpty(Skin.String(Skin.ForcedView.artists))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<onclick condition="[Container.Content(albums) + String.IsEmpty(Skin.String(Skin.ForcedView.albums))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<onclick condition="[Container.Content(songs) + String.IsEmpty(Skin.String(Skin.ForcedView.songs))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<onclick condition="[Container.Content(musicvideos) + String.IsEmpty(Skin.String(Skin.ForcedView.musicvideos))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<onclick condition="[Container.Content(addons) + String.IsEmpty(Skin.String(Skin.ForcedView.addons))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<onclick condition="[Container.Content(actors) + String.IsEmpty(Skin.String(Skin.ForcedView.actors))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<onclick condition="[Container.Content(directors) + String.IsEmpty(Skin.String(Skin.ForcedView.directors))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<onclick condition="[Container.Content(files) + String.IsEmpty(Skin.String(Skin.ForcedView.files))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<onclick condition="[Container.Content(mixed) + String.IsEmpty(Skin.String(Skin.ForcedView.mixed))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<onclick condition="[Container.Content(images) + String.IsEmpty(Skin.String(Skin.ForcedView.images))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<onclick condition="[Container.Content(games) + String.IsEmpty(Skin.String(Skin.ForcedView.games))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<onclick condition="[Container.Content(unknown) + String.IsEmpty(Skin.String(Skin.ForcedView.unknown))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<onclick condition="[Container.Content(videos) + String.IsEmpty(Skin.String(Skin.ForcedView.videos))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+					<visible>Window.IsVisible(MyVideoNav.xml) | Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(MyPics.xml) | Window.IsVisible(MyPrograms.xml)</visible>
+					<visible>!Skin.HasSetting(global.kioskmode)</visible>
+				</control>				
+				<control type="button" id="1195">
+					<!-- List view idle animantion delay -->
+					<align>center</align>
+					<width>500</width>
+					<height>69</height>
+					<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+					<texturenofocus border="9"></texturenofocus>										
+					<label>Ajustes del addon</label>
+					<font>ctouch22</font>
+					<onclick>Addon.OpenSettings($INFO[Container.PluginName])</onclick>
+				</control>
+				<control type="radiobutton" id="101"><!-- Custom skin button -->
+					<label>Trailer automático</label>
+					<align>center</align>
+					<font>ctouch22</font>
+					<width>500</width>
+					<height>69</height>
+					<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+					<texturenofocus border="9"></texturenofocus>															
+					<selected>Skin.HasSetting(autotrailer)</selected>
+					<radioposx>450</radioposx>
+					<radiowidth>40</radiowidth>
+					<radioheight>40</radioheight>
+					<onclick>Skin.ToggleSetting(autotrailer)</onclick>
+					<visible>Control.IsVisible(57) | Control.IsVisible(54) | Control.IsVisible(554) | Control.IsVisible(58)</visible>
+				</control>									
+				<control type="radiobutton" id="97">
+					<align>center</align>
+					<font>ctouch22</font>
+					<width>500</width>
+					<height>69</height>
+					<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+					<texturenofocus border="9"></texturenofocus>															
+					<label>Ocultar menu</label>
+					<onclick>Skin.ToggleSetting(menuoculto)</onclick>
+					<selected>Skin.HasSetting(menuoculto)</selected>
+					<radioposx>450</radioposx>
+					<radiowidth>40</radiowidth>
+					<radioheight>40</radioheight>
+					<visible>!Skin.HasSetting(menulittle)</visible>
+				</control>
+				<control type="radiobutton" id="96">
+					<align>center</align>
+					<font>ctouch22</font>
+					<width>500</width>
+					<height>69</height>
+					<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+					<texturenofocus border="9"></texturenofocus>															
+					<label>Títulos Items Visibles</label>
+					<onclick>Skin.ToggleSetting(etiquetas-vistas-visibles)</onclick>
+					<selected>Skin.HasSetting(etiquetas-vistas-visibles)</selected>
+					<radioposx>450</radioposx>
+					<radiowidth>40</radiowidth>
+					<radioheight>40</radioheight>
+				</control>
+				<control type="button" id="3">
+					<!-- Sort by button -->
+					<align>center</align>
+					<width>500</width>
+					<height>69</height>
+					<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+					<texturenofocus border="9"></texturenofocus>															
+					<font>ctouch22</font>
+					<label>$LOCALIZE[103]</label>
+				</control>
+				<control type="togglebutton" id="4">
+					<!-- Sort direction button -->
+					<align>center</align>
+					<width>500</width>
+					<height>69</height>
+					<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+					<texturenofocus border="9"></texturenofocus>															
+					<label>$LOCALIZE[21429]: $LOCALIZE[21430]</label>
+					<altlabel>$LOCALIZE[21429]: $LOCALIZE[21431]</altlabel>
+					<font>ctouch22</font>
+				</control>
+				<control type="button" id="10">
+					<!-- Watched toggle button -->
+					<align>center</align>
+					<width>500</width>
+					<height>69</height>
+					<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+					<texturenofocus border="9"></texturenofocus>															
+					<font>ctouch22</font>
+				</control>
+				<control type="button" id="8">
+					<!-- Search button -->
+					<align>center</align>
+					<width>500</width>
+					<height>69</height>
+					<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+					<texturenofocus border="9"></texturenofocus>															
+					<label>$LOCALIZE[137]</label>
+					<font>ctouch22</font>
+				</control>
+				<control type="edit" id="19">
+					<!-- Filter -->
+					<width>564</width>
+					<height>69</height>
+					<font>ctouch22</font>
+					<label>$LOCALIZE[587]</label>
+					<disabledcolor>disabled-text</disabledcolor>
+					<textwidth>510</textwidth>
+					<textoffsetx>15</textoffsetx>
+					<texturenofocus/>
+					<visible>!Container.CanFilterAdvanced</visible>
+				</control>
+				<control type="radiobutton" id="98">
+					<!-- Advanced filter button -->
+					<align>center</align>
+					<width>500</width>
+					<height>69</height>
+					<label>$LOCALIZE[587]</label>
+					<font>ctouch22</font>
+					<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+					<texturenofocus border="9"></texturenofocus>															
+					<selected>Container.Filtered</selected>
+					<onclick>Filter</onclick>
+					<radioposx>450</radioposx>
+					<radiowidth>40</radiowidth>
+					<radioheight>40</radioheight>
+					<visible>Container.CanFilterAdvanced</visible>
+				</control>
+				<control type="button" id="16">
+					<!-- Party mode button -->
+					<align>center</align>
+					<width>500</width>
+					<height>69</height>
+					<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+					<texturenofocus border="9"></texturenofocus>															
+					<label>$LOCALIZE[589]</label>
+					<font>ctouch22</font>
+					<visible>Container.Content(musicvideos)</visible>
+				</control>
+				<control type="radiobutton" id="11">
+					<!-- Unlock shares button -->
+					<align>center</align>
+					<label>$LOCALIZE[20336]</label>
+					<width>500</width>
+					<height>69</height>
+					<font>ctouch22</font>
+					<texturefocus border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texturefocus>
+					<texturenofocus border="9"></texturenofocus>															
+					<onclick>Mastermode</onclick>
+					<selected>system.ismaster</selected>
+					<radioposx>495</radioposx>
+					<visible>system.haslocks</visible>
+				</control>
+			</control>
+		</control>
+		<!-- Show a iOS style page indicator to show which focus group has the current focus -->
+		<!-- Focus group can be hidden or shown but is potentially focusable, that is it has not be disabled -->
+		<control type="group">
+			<visible>![String.IsEmpty(Container().ListItem.Label) + String.IsEmpty(Container().ListItem(1).Label)]</visible>
+			<!-- Don't show markers until we have some content to show -->
+			<control type="group">
+				<visible>Control.IsVisible(50) | Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(58)</visible>
+				<include content="page-indicator">
+					<param name="indicatorleft" value="864" />
+					<param name="indicatortop" value="0" />
+					<param name="indicatorwidth" value="192" />
+					<param name="indicatorheight" value="48" />
+					<param name="indicatororientation" value="horizontal" />
+					<param name="grp1indicate" value="[ControlGroup(9000).HasFocus()|String.IsEqual(Window(home).Property(ShowScreenSettings),show)]" />
+					<param name="grp1visible" value="[!Skin.HasSetting(lock-screensettings)]" />
+					<param name="grp2indicate" value="[Control.HasFocus(5050)|Control.HasFocus(5058)]" />
+					<param name="grp2visible" value="[[Control.IsVisible(50)|Control.IsVisible(58)]+Container.Content(sets)+!ListItem.IsParentFolder]" />
+					<param name="grp3indicate" value="[Control.HasFocus(50)|Control.HasFocus(52)|Control.HasFocus(53)|Control.HasFocus(58)]" />
+					<param name="grp3visible" value="[Control.IsVisible(50)|Control.IsVisible(52)|Control.IsVisible(53)|Control.IsVisible(58)]+[!Skin.HasSetting(lock-screensettings)|!String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31877])]" />
+					<param name="grp4indicate" value="[Control.HasFocus(1240)|Control.HasFocus(1242)|Control.HasFocus(1243)|Control.HasFocus(1248)|Control.HasFocus(1260)|Control.HasFocus(1262)|Control.HasFocus(1263)|Control.HasFocus(1268)]" />
+					<param name="grp4visible" value="[Skin.HasSetting(show-letterbar)+[Container.Content(sets)|Container.Content(movies)|Container.Content(tvshows)|Container.Content(musicvideos)]]" />
+					<param name="grp5indicate" value="[Control.HasFocus(1250)|Control.HasFocus(1252)|Control.HasFocus(1253)|Control.HasFocus(1258)]" />
+					<param name="grp5visible" value="[!String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31877])]" />
+				</include>
+			</control>
+		</control>
+	</controls>
+</window>

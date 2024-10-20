@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window id="1138">
+	<defaultcontrol>9000</defaultcontrol>
+	<controls>
+		<include>background</include>
+		<include>touch-controls</include>
+		<control type="label">
+			<!-- Settings label line 1 -->
+			<left>190</left>
+			<top>75</top>
+			<width>664</width>
+			<height>75</height>
+			<label>Personalizar Widgets de Inicio</label>
+			<font>ctouch25</font>
+		</control>
+		<control type="image">
+			<left>110</left>
+			<top>170</top>
+			<width>1700</width>
+			<height>14</height>
+			<texture>divider.png</texture>
+		</control>				
+		<!-- Show apropriate home menu -->
+		<control type="group" id="9000">
+			<onup>8000</onup>
+			<control type="group" id="9020">
+				<!-- Icon Home Menu -->
+				<!-- Markers for off screen menu items -->
+				<control type="panel" id="9023">
+					<!-- Home menu icon panel -->
+					<animation condition="true" effect="zoom" start="100" end="80" center="auto">Conditional</animation>
+					<width>1890</width>
+					<height>870</height>
+					<top>160</top>
+					<left>220</left>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>8000</onup>
+					<ondown>noop</ondown>
+					<itemlayout height="150" width="1400">
+						<control type="image">
+							<!-- Icon image -->
+							<left>50</left>
+							<width>1200</width>
+							<height>90</height>
+							<aspectratio>scale</aspectratio>
+							<texture>button-default.png</texture>
+						</control>
+						<control type="label">
+							<centerleft>50%</centerleft>
+							<left>50</left>
+							<width>1200</width>
+							<height>90</height>
+							<align>center</align>
+							<label fallback="Widget Personal">$INFO[ListItem.Label]</label>
+							<font>ctouch22</font>
+						</control>
+					</itemlayout>
+					<focusedlayout height="150" width="1400">
+						<control type="group">
+							<control type="image">
+								<left>50</left>
+								<!-- Icon image -->
+								<width>1200</width>
+								<height>90</height>
+								<aspectratio>scale</aspectratio>
+								<texture colordiffuse="$VAR[AccentColor]">button-default-white.png</texture>
+							</control>
+							<control type="label">
+								<left>50</left>
+								<centerleft>50%</centerleft>
+								<width>1200</width>
+								<height>90</height>
+								<align>center</align>
+								<label fallback="Widget Personal">$INFO[ListItem.Label]</label>
+								<font>ctouch22</font>
+							</control>
+						</control>
+					</focusedlayout>
+					<content>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomWidget.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomWidget.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomWidget.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomWidget.1.Path))" />
+							<param name="itemmenuid" value="9023" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomWidget.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomWidget.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomWidget.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomWidget.2.Path))" />
+							<param name="itemmenuid" value="9023" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomWidget.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomWidget.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomWidget.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomWidget.3.Path))" />
+							<param name="itemmenuid" value="9023" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomWidget.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomWidget.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomWidget.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomWidget.4.Path))" />
+							<param name="itemmenuid" value="9023" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomWidget.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomWidget.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomWidget.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomWidget.5.Path))" />
+							<param name="itemmenuid" value="9023" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomWidget.6" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomWidget.6.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomWidget.6.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomWidget.6.Path))" />
+							<param name="itemmenuid" value="9023" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomWidget.7" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomWidget.7.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomWidget.7.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomWidget.7.Path))" />
+							<param name="itemmenuid" value="9023" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomWidget.8" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomWidget.8.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomWidget.8.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomWidget.8.Path))" />
+							<param name="itemmenuid" value="9023" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomWidget.9" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomWidget.9.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomWidget.9.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomWidget.9.Path))" />
+							<param name="itemmenuid" value="9023" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomWidget.10" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomWidget.10.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomWidget.10.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomWidget.10.Path))" />
+							<param name="itemmenuid" value="9023" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomWidget.11" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomWidget.11.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomWidget.11.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomWidget.11.Path))" />
+							<param name="itemmenuid" value="9023" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomWidget.12" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomWidget.12.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomWidget.12.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomWidget.12.Path))" />
+							<param name="itemmenuid" value="9023" />
+						</include>
+					</content>
+				</control>
+			</control>
+		</control>	
+		<control type="textbox">
+			<!-- Settings description area -->
+			<left>15</left>
+			<top>1020</top>
+			<width>1890</width>
+			<height>60</height>
+			<font>ctouch20</font>
+			<align>center</align>
+			<label>$VAR[SkinSettingHelp]</label>
+		</control>			
+	</controls>
+</window>

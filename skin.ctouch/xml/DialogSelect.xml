@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol>1000</defaultcontrol>
+	<coordinates>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<include>fullscreenimage</include>
+			<texture colordiffuse="mask-background">background-mask.png</texture>
+			<aspectratio>scale</aspectratio>
+		</control>
+		<control type="image">
+			<!-- Dialog background image -->
+			<centerleft>50%</centerleft>
+			<top>130</top>
+			<width>800</width>
+			<height>805</height>
+			<texture border="14">button-menu-background.png</texture>
+		</control>
+		<control type="grouplist">
+			<centerleft>50%</centerleft>
+			<top>144</top>
+			<width>800</width>
+			<height>52</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<orientation>horizontal</orientation>
+			<control type="label" id="1">
+				<!-- Dialog heading -->
+				<width max="750">auto</width>
+				<height>52</height>
+				<wrapmultiline>true</wrapmultiline>
+				<aligny>top</aligny>
+				<font>ctouch23w</font>
+			</control>
+		</control>
+		<control type="image">
+			<centerleft>50%</centerleft>
+			<top>210</top>
+			<width>750</width>
+			<height>10</height>
+			<texture flipy="true">sep2.png</texture>
+		</control>
+		<control type="group" id="1000">
+			<control type="list" id="3">
+				<!-- Type 3 Select -->
+				<centerleft>50%</centerleft>
+				<top>236</top>
+				<width>750</width>
+				<height>672</height>
+				<onleft condition="String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31877])">noop</onleft>
+				<onleft condition="!String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31877])">23</onleft>
+				<onright condition="!Control.IsVisible(5)">7</onright>
+				<onright condition="Control.IsVisible(5)">5</onright>
+				<ondown condition="!Control.IsVisible(5)">7</ondown>
+				<ondown condition="Control.IsVisible(5)">5</ondown>
+				<pagecontrol>23</pagecontrol>
+				<itemlayout width="750" height="116">
+					<control type="label">
+						<left>105</left>
+						<top>20</top>
+						<width>750</width>
+						<height>40</height>
+						<font>ctouch20</font>
+						<label>$INFO[ListItem.Label] [I]$INFO[ListItem.Label2, - ] [/I]</label>
+					</control>
+					<control type="image">
+						<left>5</left>
+						<top>8</top>
+						<height>68</height>
+						<width>68</width>
+						<texture fallback="DefaultFile.png">$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+				</itemlayout>
+				<focusedlayout width="750" height="116">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>750</width>
+						<height>96</height>
+						<texture border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texture>
+						<animation condition="!Control.HasFocus(3)" effect="fade" start="100" end="60">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>5</left>
+						<top>8</top>
+						<height>68</height>
+						<width>68</width>
+						<texture fallback="DefaultFile.png">$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="label">
+						<left>105</left>
+						<top>20</top>
+						<width>750</width>
+						<height>40</height>
+						<font>ctouch20</font>
+						<label>$INFO[ListItem.Label] [I]$INFO[ListItem.Label2, - ] [/I]</label>
+						<include>scrolltext</include>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="list" id="6">
+				<!-- Type 6 Select -->
+				<centerleft>50%</centerleft>
+				<top>240</top>
+				<width>750</width>
+				<height>665</height>
+				<onleft condition="String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31877])">noop</onleft>
+				<onleft condition="!String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31877])">26</onleft>
+				<onright condition="!Control.IsVisible(5)">7</onright>
+				<onright condition="Control.IsVisible(5)">5</onright>
+				<ondown condition="!Control.IsVisible(5)">7</ondown>
+				<ondown condition="Control.IsVisible(5)">5</ondown>
+				<pagecontrol>26</pagecontrol>
+				<itemlayout width="750" height="110">
+					<control type="image">
+						<left>5</left>
+						<top>8</top>
+						<height>68</height>
+						<width>68</width>
+						<texture fallback="DefaultFile.png">$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="label">
+						<left>95</left>
+						<top>20</top>
+						<width>650</width>
+						<height>40</height>
+						<font>ctouch20</font>
+						<label>$INFO[ListItem.Label] [I]$INFO[ListItem.Label2, - ] [/I]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout width="750" height="110">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>750</width>
+						<height>84</height>
+						<texture border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texture>
+						<animation condition="!Control.HasFocus(6)" effect="fade" start="100" end="60">Conditional</animation>
+					</control>
+					<control type="image">
+						<left>5</left>
+						<top>8</top>
+						<height>68</height>
+						<width>68</width>
+						<texture fallback="DefaultFile.png">$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="label">
+						<left>95</left>
+						<top>20</top>
+						<width>650</width>
+						<height>40</height>
+						<font>ctouch20</font>
+						<label>$INFO[ListItem.Label] [I]$INFO[ListItem.Label2, - ] [/I]</label>
+						<include>scrolltext</include>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+		<control type="scrollbar" id="23">
+			<left>571</left>
+			<top>236</top>
+			<width>14</width>
+			<height>672</height>
+			<onright>3</onright>
+			<animation condition="!Control.HasFocus(23) + !Container.Scrolling + !String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31875])" effect="fade" start="100" end="0" time="200" reversible="true">Conditional</animation>
+			<visible>Control.IsVisible(3) + !String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31877])</visible>
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(6)</visible>
+			<control type="scrollbar" id="26">
+				<left>571</left>
+				<top>236</top>
+				<width>14</width>
+				<height>672</height>
+				<onright>6</onright>
+				<animation condition="!Control.HasFocus(26) + !Container.Scrolling + !String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31875])" effect="fade" start="100" end="0" time="200" reversible="true">Conditional</animation>
+				<visible>$EXP[isEnabledScrollbar]</visible>
+			</control>
+		</control>
+		<control type="button" id="5">
+			<!-- Manual -->
+			<left>975</left>
+			<top>940</top>
+			<width>370</width>
+			<height>74</height>
+			<font>ctouch20</font>
+			<label>$LOCALIZE[186]</label>
+			<align>center</align>
+			<onleft>7</onleft>
+			<onup condition="Control.IsVisible(3)">3</onup>
+			<onup condition="Control.IsVisible(6)">6</onup>
+			<texturenofocus colordiffuse="backgrey">button-default-white.png</texturenofocus>
+		</control>
+		<control type="button" id="7">
+			<!-- Cancel -->
+			<left>575</left>
+			<top>940</top>
+			<width>370</width>
+			<height>74</height>
+			<font>ctouch20</font>
+			<align>center</align>
+			<onright>5</onright>
+			<onup condition="Control.IsVisible(3)">3</onup>
+			<onup condition="Control.IsVisible(6)">6</onup>
+			<texturenofocus colordiffuse="backgrey">button-default-white.png</texturenofocus>
+			<visible>Skin.HasSetting(menulittle)</visible>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+ 	<visible>Player.ShowInfo | Player.Forwarding | Player.Rewinding</visible>
+	<animation effect="fade" end="0" time="500">WindowClose</animation>
+  	<controls>
+		<control type="group" id="1">
+			<visible>[Player.ShowInfo | Window.IsActive(videoosd)]</visible>
+			<control type="image" id="1">
+				<!-- Dialog background -->
+				<left>0</left>
+				<top>0</top>
+				<height>1080</height>
+				<width>1920</width>
+				<texture>diffuse/background_mask.png</texture>
+			</control>
+			<control type="image" id="10001">
+				<!-- Dialog background -->
+				<left>0</left>
+				<top>-130</top>
+				<height>1080</height>
+				<width>1920</width>
+				<texture flipy="true">diffuse/background_mask.png</texture>
+			</control>
+			<control type="label" id="1">
+				<!-- Title of currently playing video -->
+				<left>30</left>
+				<top>25</top>
+				<width>1600</width>
+				<height>38</height>
+				<font>ctouch23</font>
+				<label>[B]$INFO[VideoPlayer.Title][/B]</label>
+				<align>left</align>
+				<visible>!VideoPlayer.Content(LiveTV)</visible>
+				<visible>!Window.IsVisible(sliderdialog)</visible>
+			</control>
+			<control type="label" id="1">
+				<!-- Title of currently playing video -->
+				<right>30</right>
+				<top>25</top>
+				<width>300</width>
+				<height>38</height>
+				<font>ctouch25</font>
+				<label>$INFO[System.Time(hh:mm)]</label>
+				<align>right</align>
+				<visible>!Window.IsVisible(sliderdialog)</visible>
+			</control>
+			<control type="grouplist" id="1">
+				<!-- Details of Live TV Program -->
+				<visible>VideoPlayer.Content(LiveTV)</visible>
+				<orientation>horizontal</orientation>
+				<left>30</left>
+				<top>25</top>
+				<height>45</height>
+				<width>100%</width>
+				<align>left</align>
+				<itemgap>20</itemgap>
+				<control type="label" id="1">
+					<!-- TV Channel Name -->
+					<width>auto</width>
+					<height>45</height>
+					<font>ctouch25</font>
+					<label>[B]$INFO[VideoPlayer.ChannelName][/B]</label>
+					<align>left</align>
+				</control>
+				<control type="label" id="1">
+					<!-- Title of Live TV Program -->
+					<width>auto</width>
+					<height>45</height>
+					<font>ctouch18</font>
+					<label>[B]$INFO[VideoPlayer.Title,$LOCALIZE[19030]: ,][/B]</label>
+					<align>left</align>			
+				</control>
+				<control type="label" id="1">
+					<!-- Tv Show title up next -->
+					<width>auto</width>
+					<height>45</height>
+					<font>ctouch18</font>
+					<label>- [B]$INFO[VideoPlayer.NextTitle,$LOCALIZE[19031]: ,][/B]</label>
+					<align>left</align>
+					<textcolor>disabled-text</textcolor>
+				</control>
+			</control>
+			<control type="grouplist" id="1">
+				<!-- Media flags -->
+				<left>1470</left>
+				<top>990</top>
+				<width>420</width>
+				<height>60</height>
+				<align>center</align>
+				<orientation>horizontal</orientation>
+				<itemgap>-3</itemgap>
+				<animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>
+				<control type="image" id="1">
+					<!-- Audio Channels -->
+					<width>80</width>
+					<height>60</height>
+					<texture background="true">$INFO[VideoPlayer.AudioChannels,special://skin/extras/images/audio/,.png]</texture>
+				</control>
+				<control type="image" id="1">
+					<!-- Audio Codec -->
+					<width>86</width>
+					<height>60</height>
+					<texture background="true">$INFO[VideoPlayer.AudioCodec,special://skin/extras/images/audio/,.png]</texture>
+					<visible>!Player.ChannelPreviewActive</visible>
+				</control>
+				<control type="image" id="1">
+					<!-- Video Codec -->
+					<width>86</width>
+					<height>60</height>
+					<texture background="true">$INFO[VideoPlayer.VideoCodec,special://skin/extras/images/video/,.png]</texture>
+					<visible>!Player.ChannelPreviewActive</visible>
+				</control>
+				<control type="image" id="1">
+					<!-- Video Aspect Ratio -->
+					<width>86</width>
+					<height>60</height>
+					<texture background="true">$INFO[VideoPlayer.VideoAspect,special://skin/extras/images/aspectratio/,.png]</texture>
+					<visible>!Player.ChannelPreviewActive</visible>
+				</control>
+				<control type="image" id="1">
+					<!-- Video Resolution -->
+					<width>86</width>
+					<height>60</height>
+					<texture background="true">$INFO[VideoPlayer.VideoResolution,special://skin/extras/images/resolution/,.png]</texture>
+					<visible>!Player.ChannelPreviewActive</visible>
+				</control>
+			</control>
+			<control type="group" id="1">
+				<visible>[Window.IsVisible(fullscreenvideo)] + ![Window.IsVisible(sliderdialog) | Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks)]</visible>
+				<control type="group" id="1">
+					<visible>!VideoPlayer.Content(LiveTV)</visible>
+					<control type="label" id="1">
+						<left>26</left>
+						<top>1020</top>
+						<width>345</width>
+						<height>30</height>
+						<font>ctouch20</font>
+						<label></label>
+						<align>left</align>
+					</control>
+					<control type="label" id="1">
+						<left>1550</left>
+						<top>1020</top>
+						<width>345</width>
+						<height>30</height>
+						<font>ctouch20</font>
+						<label></label>
+						<align>right</align>
+					</control>
+				</control>
+				<control type="group" id="1">
+					<visible>VideoPlayer.Content(LiveTV)</visible>
+					<control type="label" id="1">
+						<left>26</left>
+						<top>1020</top>
+						<width>345</width>
+						<height>30</height>
+						<font>ctouch20</font>
+						<label></label>
+						<align>left</align>
+					</control>
+					<control type="label" id="1">
+						<left>1550</left>
+						<top>1020</top>
+						<width>345</width>
+						<height>30</height>
+						<font>ctouch20</font>
+						<label></label>
+						<align>right</align>
+					</control>
+				</control>
+				<control type="group" id="1">
+					<visible>![Window.IsVisible(seekbar)] + ![Window.IsVisible(videoosd)]</visible>
+					<control type="ranges">
+						<left>717</left>
+						<top>1040</top>
+						<width>870</width>
+						<height>12</height>
+						<texturebg colordiffuse="00FFFFFF" border="8,0,8,0">progress-bar.png</texturebg>
+						<midtexture colordiffuse="FFFF0000" border="8,0,8,0">progress-bar-focus.png</midtexture>
+						<info>Player.Cutlist</info>
+					</control>
+					<control type="progress" id="1">
+						<left>25</left>
+						<top>960</top>
+						<width>1870</width>
+						<height>12</height>
+						<info>Player.ProgressCache</info>
+						<colordiffuse>CacheBarColor</colordiffuse>
+						<visible>!Pvr.IsPlayingTv</visible>
+					</control>
+					<control type="progress" id="1">
+						<left>25</left>
+						<top>960</top>
+						<width>1870</width>
+						<height>12</height>
+						<info>Player.Progress</info>
+						<visible>!Pvr.IsPlayingTv</visible>
+					</control>
+					<control type="slider" id="1">
+						<left>25</left>
+						<top>960</top>
+						<width>1870</width>
+						<height>12</height>
+						<colordiffuse>white</colordiffuse>
+						<textureslidernib>progress-bar-focus.png</textureslidernib>
+						<textureslidernibfocus>progress-bar-focus.png</textureslidernibfocus>
+						<visible>!Pvr.IsPlayingTv</visible>
+					</control>
+					<control type="progress" id="1">
+						<left>25</left>
+						<top>960</top>
+						<width>1870</width>
+						<height>12</height>
+						<info>PVR.EpgEventProgress</info>
+						<visible>Pvr.IsPlayingTv</visible>
+					</control>
+				</control>
+			</control>
+		<!-- Aspect Ratio / Zoom Info Overlay -->
+		<control type="group">
+			<left>0</left>
+			<top>100</top>
+			<width>100%</width>
+			<height>275</height>
+			<!-- Row 1 label -->
+			<control type="label" id="10">
+				<left>50</left>
+				<top>20</top>
+				<width>70%</width>
+				<height>50</height>
+				<font>ctouch20</font>
+			</control>
+			<!-- Row 2 label -->
+			<control type="label" id="11">
+				<left>50</left>
+				<top>110</top>
+				<width>70%</width>
+				<height>50</height>
+				<font>ctouch20</font>
+			</control>
+			<!-- Row 3 label -->
+			<control type="label" id="12">
+				<left>50</left>
+				<top>200</top>
+				<width>70%</width>
+				<height>50</height>
+				<font>ctouch20</font>
+			</control>
+		</control>
+		</control>
+	</controls>
+</window>

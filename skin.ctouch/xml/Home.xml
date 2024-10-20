@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol>8000</defaultcontrol>
+	<onload condition="!Skin.HasSetting(FirstRunSetup)">ActivateWindow(1130)</onload> 	
+	<onload condition="Skin.HasSetting(FirstRunSetup) + !Skin.HasSetting(SetupInicio)">ActivateWindow(5111)</onload> 	
+	<onload condition="Skin.HasSetting(FirstRunSetup) + Skin.HasSetting(SetupInicio) + !Skin.HasSetting(consejo)">AlarmClock(consejo,ReplaceWindow(1140),00:20,silent)</onload>
+	<onup>Control.SetFocus(80008,$INFO[Container(9000).Position])</onup>
+	<onload>Skin.SetBool(TMDbHelper.Service)</onload>
+	<include>zoom-openclose</include>
+	<controls>
+		<!-- Use Widgets Home menu-->
+		<include condition="Skin.HasSetting(homemenu-widgets)" file="Includes_WidgetsHome.xml">WidgetsHomeMenu</include>
+		<!-- Use Icon Home menu-->
+		<include condition="Skin.HasSetting(homemenu-icon)" file="Includes_IconHome.xml">IconHomeMenu</include>	
+		<control type="group">
+			<control type="image">
+				<include>fullscreenimage</include>
+				<texture>background-mask-set.png</texture>
+				<aspectratio>scale</aspectratio>
+				<visible>Window.IsVisible(1136)</visible>
+			</control>		
+			<include>touch-controls</include>
+			<include>hora</include>	
+		</control>
+	</controls>
+</window>

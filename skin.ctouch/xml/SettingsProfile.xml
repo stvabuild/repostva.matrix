@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol always="true">2</defaultcontrol>
+	<menucontrol>9000</menucontrol>
+	<onload>ClearProperty(ShowScreenSettings,home)</onload>
+	<onunload>ClearProperty(ShowScreenSettings,home)</onunload>
+	<controls>
+		<include>background</include>
+		<control type="label">
+			<!-- Screen heading -->
+			<left>60</left>
+			<top>120</top>
+			<width>464</width>
+			<height>45</height>
+			<label>$LOCALIZE[31555]</label>
+			<font>ctouch30w</font>
+			<textcolor>$VAR[AccentColor]</textcolor>
+		</control>
+		<control type="list" id="2">
+			<left>1074</left>
+			<top>250</top>
+			<width>796</width>
+			<height>675</height>
+			<onleft condition="Skin.HasSetting(lock-screensettings)">noop</onleft>
+			<onleft condition="!Skin.HasSetting(lock-screensettings)">9000</onleft>
+			<onright condition="String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31877])">noop</onright>
+			<onright condition="!String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31877])">23</onright>
+			<onup>8000</onup>
+			<ondown>2</ondown>
+			<itemgap>10</itemgap>
+			<viewtype label="31941">list</viewtype>
+			<pagecontrol>23</pagecontrol>
+			<itemlayout height="100">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>756</width>
+					<height>84</height>
+					<texture/>
+				</control>
+				<control type="label">
+					<left>32</left>
+					<top>0</top>
+					<width>756</width>
+					<height>84</height>
+					<font>ctouch23</font>
+					<selectedcolor>listselected-text</selectedcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="100">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>756</width>
+					<height>84</height>
+					<texture border="14">button-default-focus_back.png</texture>
+					<colordiffuse>$VAR[AccentColor]</colordiffuse>
+					<visible>!Control.HasFocus(4)</visible>
+				</control>
+				<control type="label">
+					<left>32</left>
+					<top>0</top>
+					<width>670</width>
+					<height>84</height>
+					<font>ctouch23</font>
+					<selectedcolor>listselected-text</selectedcolor>
+					<include condition="Skin.HasSetting(text-autoscroll)">scrolltext</include>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="scrollbar" id="23">
+			<left>1870</left>
+			<top>168</top>
+			<width>18</width>
+			<height>675</height>
+			<onleft>2</onleft>
+			<animation condition="!Control.HasFocus(23) + !Container.Scrolling + !String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31875])" effect="fade" start="100" end="0" time="200" reversible="true">Conditional</animation>
+			<visible>$EXP[isEnabledScrollbar]</visible>
+		</control>
+		<control type="image">
+			<left>297</left>
+			<top>200</top>
+			<width>480</width>
+			<height>480</height>
+			<texture fallback="DefaultUser.png" diffuse="mask-rect.png">$INFO[Container(2).ListItem.Icon]</texture>
+			<aspectratio>keep</aspectratio>
+		</control>
+		<control type="fadelabel" id="3">
+			<!-- Last loaded profile -->
+			<left>15</left>
+			<top>700</top>
+			<width>1044</width>
+			<height>60</height>
+			<label>$LOCALIZE[13204] $INFO[System.ProfileName]</label>
+			<font>ctouch20</font>
+			<align>center</align>
+		</control>
+		<control type="label">
+			<!-- Profile to auto login -->
+			<left>15</left>
+			<top>750</top>
+			<width>1044</width>
+			<height>60</height>
+			<font>ctouch20</font>
+			<align>center</align>
+			<label>$LOCALIZE[31982]: $INFO[System.ProfileAutoLogin]</label>
+			<visible>!System.HasLoginScreen + !String.IsEmpty(System.ProfileAutoLogin)</visible>
+		</control>
+		<include>touch-controls</include>		
+		<include>hora</include>		
+		<control type="group">
+			<!-- Screen Settings Menu -->
+			<top>1080</top>
+			<include>screen-settings</include>
+			<control type="image">
+				<include>fullscreenimage</include>
+				<texture colordiffuse="mask-background">background-mask.png</texture>
+				<aspectratio>scale</aspectratio>
+			</control>
+			<control type="button">
+				<!-- Touch mouse close button -->
+				<left>1730</left>
+				<top>990</top>
+				<width>180</width>
+				<height>75</height>
+				<texturefocus colordiffuse="$VAR[AccentColor]">backtransparent.png</texturefocus>
+				<texturenofocus colordiffuse="midgrey">backtransparent.png</texturenofocus>
+				<onclick>Dialog.Close(SettingsProfile.xml)</onclick>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>Cerrar</label>
+				<font>ctouch19</font>
+				<visible>Skin.HasSetting(menulittle)</visible>
+			</control>
+			<control type="grouplist" id="9000">
+				<defaultcontrol>4</defaultcontrol>
+				<centerleft>50%</centerleft>
+				<top>428</top>
+				<width>700</width>
+				<height>225</height>
+				<onleft>ClearProperty(ShowScreenSettings,home)</onleft>
+				<onleft>2</onleft>
+				<onright>ClearProperty(ShowScreenSettings,home)</onright>
+				<onright>2</onright>
+				<onback>SetFocus(2)</onback>
+				<control type="radiobutton" id="4">
+					<!-- Enable login screen -->
+					<width>700</width>
+					<height>75</height>
+					<label>$LOCALIZE[20096]</label>
+					<font>ctouch20</font>
+					<aligny>top</aligny>
+					<textoffsety>12</textoffsety>
+					<radioposx>620</radioposx>
+					<texturenofocus/>
+				</control>
+				<control type="button" id="5">
+					<!-- Choose auto login user -->
+					<width>700</width>
+					<height>75</height>
+					<textoffsety>12</textoffsety>
+					<label>$LOCALIZE[31982]</label>
+					<label2>$INFO[System.ProfileAutoLogin]</label2>
+					<font>ctouch20</font>
+					<aligny>top</aligny>
+					<texturenofocus/>
+					<enable>!System.HasLoginScreen</enable>
+				</control>
+			</control>
+		</control>
+		<!-- Show a iOS style page indicator to show which focus group has the current focus -->
+		<!-- Focus group can be hidden or shown but is potentially focusable, that is it has not be disabled -->
+		<control type="group">
+			<include content="page-indicator">
+				<param name="indicatorleft" value="864" />
+				<param name="indicatortop" value="0" />
+				<param name="indicatorwidth" value="192" />
+				<param name="indicatorheight" value="48" />
+				<param name="indicatororientation" value="horizontal" />
+				<param name="grp1indicate" value="[ControlGroup(9000).HasFocus()|String.IsEqual(Window(home).Property(ShowScreenSettings),show)]" />
+				<param name="grp1visible" value="[!Skin.HasSetting(lock-screensettings)]" />
+				<param name="grp2indicate" value="[Control.HasFocus(2)]" />
+				<param name="grp2visible" value="[Control.IsVisible(2)]+[!Skin.HasSetting(lock-screensettings)|!String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31877])]" />
+				<param name="grp3indicate" value="[Control.HasFocus(23)]" />
+				<param name="grp3visible" value="[!String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31877])]" />
+			</include>
+		</control>
+	</controls>
+</window>

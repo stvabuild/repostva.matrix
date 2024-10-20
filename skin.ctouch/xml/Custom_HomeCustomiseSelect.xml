@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window id="1152">
+	<defaultcontrol>1999</defaultcontrol>
+	<controls>
+		<control type="image">
+			<animation effect="fade" delay="5000" start="0" end="100" time="1000" condition="true">Conditional</animation>
+			<include>fullscreenimage</include>
+			<texture colordiffuse="mask-background">background-mask.png</texture>
+			<aspectratio>scale</aspectratio>
+		</control>
+		<control type="button">
+			<!-- Touch mouse close button -->
+			<right>15</right>
+			<bottom>15</bottom>
+			<width>180</width>
+			<height>75</height>
+			<texturefocus colordiffuse="$VAR[AccentColor]">backtransparent.png</texturefocus>
+			<texturenofocus colordiffuse="midgrey">backtransparent.png</texturenofocus>
+			<onclick>Dialog.Close(1152)</onclick>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>Cerrar</label>
+			<font>ctouch19</font>
+			<visible>Skin.HasSetting(menulittle)</visible>
+		</control>
+		<control type="panel" id="1999">
+			<centerleft>50%</centerleft>
+			<centertop>51%</centertop>
+			<width>540</width>
+			<height>350</height>
+			<onleft>Close</onleft>
+			<onright>Close</onright>
+			<aligny>top</aligny>
+			<itemlayout width="540" height="75">
+				<control type="label">
+					<centerleft>50%</centerleft>
+					<align>center</align>
+					<top>20</top>
+					<width>540</width>
+					<height>36</height>
+					<font>ctouch22</font>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout width="540" height="75">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>540</width>
+					<height>75</height>
+					<texture border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texture>
+				</control>
+				<control type="label">
+					<centerleft>50%</centerleft>
+					<align>center</align>
+					<top>20</top>
+					<width>540</width>
+					<height>36</height>
+					<font>ctouch22</font>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+			<content>
+				<item>
+					<label>Añadir como Ítem</label>
+					<onclick>Dialog.Close(all)</onclick>
+					<onclick>ActivateWindow(1137)</onclick>
+				</item>
+				<item>
+					<label>Añadir como Widget</label>
+					<onclick>Dialog.Close(all)</onclick>
+					<onclick>ActivateWindow(1138)</onclick>
+					</item>
+				<item>
+					<label>Añadir como Buscador</label>
+					<onclick>Dialog.Close(all)</onclick>
+					<onclick>ActivateWindow(1143)</onclick>
+					</item>
+			</content>
+		</control>
+	</controls>
+</window>

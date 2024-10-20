@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1136">
+	<defaultcontrol>1999</defaultcontrol>
+	<coordinates>
+		<right>0</right>
+		<top>0</top>
+	</coordinates>
+	<controls>
+		<control type="button">
+			<!-- Touch mouse close button -->
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<texturefocus/>
+			<texturenofocus/>
+			<onclick>Dialog.Close(1136)</onclick>
+		</control>
+		<control type="image">
+			<right>10</right>
+			<top>100</top>
+			<width>490</width>
+			<height>435</height>
+			<texture background="true" border="14">diffuse/bigposter_shadow.png</texture>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+		</control>	
+		<control type="image">
+			<!-- Dialog background image -->
+			<right>30</right>
+			<top>110</top>
+			<width>450</width>
+			<height>405</height>
+			<texture border="14">button-default.png</texture>
+		</control>
+		<control type="panel" id="1999">
+			<right>30</right>
+			<top>125</top>
+			<width>450</width>
+			<height>405</height>
+			<onleft>Close</onleft>
+			<onright>Close</onright>
+			<aligny>top</aligny>
+			<itemlayout width="450" height="75">
+				<control type="label">
+					<top>20</top>
+					<right>105</right>
+					<width>450</width>
+					<height>36</height>
+					<font>ctouch21</font>
+					<align>right</align>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="image">
+					<align>right</align>
+					<top>5</top>
+					<width>65</width>
+					<height>65</height>
+					<right>20</right>
+					<texture>$INFO[ListItem.Art(thumb)]</texture>
+				</control>	
+			</itemlayout>
+			<focusedlayout width="450" height="75">
+				<control type="image">
+					<top>0</top>
+					<width>450</width>
+					<height>75</height>
+					<texture border="9" colordiffuse="$VAR[AccentColor]">button-default-white-long.png</texture>
+				</control>
+				<control type="label">
+					<align>right</align>
+					<right>105</right>
+					<top>20</top>
+					<width>450</width>
+					<height>36</height>
+					<font>ctouch21</font>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="image">
+					<align>right</align>
+					<right>20</right>
+					<top>5</top>
+					<width>65</width>
+					<height>65</height>
+					<texture>$INFO[ListItem.Art(thumb)]</texture>
+				</control>	
+			</focusedlayout>
+			<content>
+				<item>
+					<thumb>icons/skinsettings.png</thumb>
+					<label>Ajustes de Skin</label>
+					<onclick>Dialog.Close(all)</onclick>
+					<onclick>ActivateWindow(SkinSettings)</onclick> 
+				</item>
+				<item>
+					<thumb>icons/apps.png</thumb>
+					<label>Addons</label>
+					<onclick>Dialog.Close(all)</onclick>
+					<onclick>ActivateWindow(1155)</onclick> 
+				</item>
+<!--				<item>
+					<thumb>icons/luarsettings.png</thumb>
+					<label>Luar</label>
+					<onclick>Dialog.Close(all)</onclick>
+					<onclick condition="!System.HasAddon(script.luar)">InstallAddon(script.luar)</onclick>
+					<onclick>ActivateWindow(10001,&quot;plugin://script.luar/&quot;,return)</onclick>
+				</item> -->
+				<item>
+					<thumb>icons/cstva.png</thumb>
+					<label>Complemento STVA</label>
+					<onclick>Dialog.Close(all)</onclick>
+					<onclick condition="!System.HasAddon(script.script.stva)">InstallAddon(script.stva)</onclick>
+					<onclick>RunAddon(script.stva)</onclick>
+				</item>
+				<item>
+					<thumb>icons/settings.png</thumb>
+					<label>Ajustes de Kodi</label>
+					<onclick>Dialog.Close(all)</onclick>
+					<onclick>ActivateWindow(settings)</onclick> 
+				</item>
+				<item>
+					<thumb>icons/quit.png</thumb>
+					<label>Menú Apagado</label>
+					<onclick>Dialog.Close(all)</onclick>
+					<onclick>ActivateWindow(shutdownmenu)</onclick> 
+				</item>
+			</content>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+ <defaultcontrol>8999</defaultcontrol>
+  <controls>
+	<include>background</include>
+	<include>maskfadebackground</include>
+	<control type="label">
+	 <!-- Screen heading -->
+	  <left>60</left>
+	  <top>120</top>
+	  <width>465</width>
+	  <height>48</height>
+	  <label>$LOCALIZE[5]</label>
+	  <font>ctouch30w</font>
+	  <textcolor>$VAR[AccentColor]</textcolor>
+	</control>
+		<!-- Markers for control area items -->
+	<include content="page-offscreen-vertical">
+		<param name="indicator1left" value="1512"/>
+		<param name="indicator1top" value="135"/>
+		<param name="indicator2left" value="1512"/>
+		<param name="indicator2top" value="990"/>
+		<param name="indicatorsize" value="36"/>
+		<param name="indicatorcontainer" value="8999"/>
+		<param name="indicatorcontainer" value="89991"/>
+		<param name="indicatorcontainer" value="89992"/>
+	</include>
+	<control type="group">
+	  <left>25</left>
+	  <top>160</top>
+	  <control type="list" id="8999">
+		<left>0</left>
+		<top>7</top>
+		<width>1880</width>
+		<height>100%</height>
+		<onup>Control.SetFocus(8000,$INFO[Container(8999).Position])</onup>
+		<ondown>Control.SetFocus(89991,$INFO[Container(8999).Position])</ondown>
+		<orientation>horizontal</orientation>
+		<scrolltime>0</scrolltime>
+		<viewtype>list</viewtype>				
+		<defaultcontrol>2</defaultcontrol>
+		<itemlayout width="310" height="310">
+		  <control type="group">
+			<top>20</top>
+			<left>20</left>
+			<control type="image">
+			  <width>280</width>
+			  <height>255</height>
+			  <aspectratio>stretch</aspectratio>
+			  <texture border="9" colordiffuse="lightgrey">button-default.png</texture>							
+			</control>
+			<control type="image">
+			  <width>210</width>
+			  <height>210</height>
+			  <aspectratio>scale</aspectratio>
+			  <centertop>35%</centertop>
+			  <centerleft>48%</centerleft>			  			  
+			  <texture colordiffuse="white">$INFO[ListItem.Icon]</texture>
+			</control>
+			<control type="label">
+			  <bottom>65</bottom>
+			  <width>280</width>
+			  <height>20</height>
+			  <label>$INFO[ListItem.Label]</label>
+			  <align>center</align>
+			  <font>ctouch16</font>
+			  <textcolor>white</textcolor>
+			  <scroll>true</scroll>
+			</control>
+		  </control>			
+		</itemlayout>
+		<focusedlayout height="310" width="310">
+		  <control type="group">
+			<top>20</top>
+			<left>20</left>
+			<control type="image">
+			  <width>280</width>
+			  <height>255</height>
+			  <aspectratio>stretch</aspectratio>
+			  <texture border="9" colordiffuse="lightgrey">button-default.png</texture>							
+			</control>
+			<control type="image">
+			  <width>280</width>
+			  <height>255</height>
+			  <texture colordiffuse="$VAR[AccentColor]" border="9">button-default-white.png</texture>
+			  <visible>Control.HasFocus(8999)</visible>
+			</control>
+			<control type="image">
+			  <width>210</width>
+			  <height>210</height>
+			  <aspectratio>scale</aspectratio>
+			  <centertop>35%</centertop>
+			  <centerleft>48%</centerleft>			  			  
+			  <texture>$INFO[ListItem.Icon]</texture>
+			</control>
+			<control type="label">
+			  <bottom>65</bottom>
+			  <width>280</width>
+			  <height>20</height>
+			  <label>$INFO[ListItem.Label]</label>
+			  <align>center</align>
+			  <font>ctouch16</font>
+			  <textcolor>white</textcolor>
+			  <scroll>true</scroll>
+			</control>
+		  </control>
+		</focusedlayout>
+		<content>
+		  <item>
+			<label>Ajustes de Skin</label>
+			<onclick>ActivateWindow(SkinSettings)</onclick>
+			<icon>icons/paintbrush.png</icon>
+		  </item>			´		
+		  <item>
+			<label>Interfaz</label>
+			<onclick>ActivateWindow(InterfaceSettings)</onclick>
+			<thumb>icons/skinsettings.png</thumb>
+		  </item>
+		  <item>
+			<label>Servicios</label>
+			<onclick>activatewindow(servicesettings)</onclick>
+			<icon>icons/network.png</icon>
+		  </item>
+          <item>
+            <label>Reproductor</label>
+            <onclick>ActivateWindow(playersettings)</onclick>
+            <thumb>icons/tv.png</thumb>
+          </item>		  
+          <item>
+            <label>PVR &amp; TV en vivo</label>
+            <onclick>ActivateWindow(PVRSettings)</onclick>
+            <icon>icons/pvr.png</icon>
+          </item>
+		  <item>
+			<label>Sistema</label>
+			<onclick>ActivateWindow(SystemSettings)</onclick>
+			<icon>icons/settings.png</icon>
+		  </item>	
+		</content>				
+	  </control>
+	  <control type="list" id="89991">
+		<left>0</left>
+		<top>300</top>
+		<width>100%</width>
+		<height>100%</height>
+		<onup>Control.SetFocus(8999,$INFO[Container(89991).Position])</onup>
+		<ondown>Control.SetFocus(89992,$INFO[Container(89991).Position])</ondown>
+		<orientation>horizontal</orientation>
+		<scrolltime>0</scrolltime>
+		<defaultcontrol>2</defaultcontrol>
+		<viewtype>list</viewtype>
+		<itemlayout width="310" height="310">
+		  <control type="group">
+			<top>20</top>
+			<left>20</left>
+			<control type="image">
+			  <width>280</width>
+			  <height>255</height>
+			  <aspectratio>stretch</aspectratio>
+			  <texture border="9" colordiffuse="lightgrey">button-default.png</texture>							
+			</control>
+			<control type="image">
+			  <width>210</width>
+			  <height>210</height>
+			  <aspectratio>scale</aspectratio>
+			  <centertop>35%</centertop>
+			  <centerleft>48%</centerleft>			  			  
+			  <texture colordiffuse="white">$INFO[ListItem.Icon]</texture>
+			</control>
+			<control type="label">
+			  <bottom>65</bottom>
+			  <width>280</width>
+			  <height>20</height>
+			  <label>$INFO[ListItem.Label]</label>
+			  <align>center</align>
+			  <font>ctouch16</font>
+			  <textcolor>white</textcolor>
+			  <scroll>true</scroll>
+			</control>
+		  </control>			
+		</itemlayout>
+		<focusedlayout height="310" width="310">
+		  <control type="group">
+			<top>20</top>
+			<left>20</left>
+			<control type="image">
+			  <width>280</width>
+			  <height>255</height>
+			  <aspectratio>stretch</aspectratio>
+			  <texture border="9" colordiffuse="lightgrey">button-default.png</texture>							
+			</control>
+			<control type="image">
+			  <width>280</width>
+			  <height>255</height>
+			  <texture colordiffuse="$VAR[AccentColor]" border="9">button-default-white.png</texture>
+			  <visible>Control.HasFocus(89991)</visible>
+			</control>
+			<control type="image">
+			  <width>210</width>
+			  <height>210</height>
+			  <aspectratio>scale</aspectratio>
+			  <centertop>35%</centertop>
+			  <centerleft>48%</centerleft>			  			  
+			  <texture>$INFO[ListItem.Icon]</texture>
+			</control>
+			<control type="label">
+			  <bottom>65</bottom>
+			  <width>280</width>
+			  <height>20</height>
+			  <label>$INFO[ListItem.Label]</label>
+			  <align>center</align>
+			  <font>ctouch16</font>
+			  <textcolor>white</textcolor>
+			  <scroll>true</scroll>
+			</control>
+		  </control>
+		</focusedlayout>
+		<content>
+		  <item>
+			<label>Gestor de Archivos</label>
+			<onclick>ActivateWindow(filemanager)</onclick>
+			<icon>icons/filemanager.png</icon>
+		  </item>			
+          <item>
+            <label>Colección</label>
+            <onclick>ActivateWindow(MediaSettings)</onclick>
+            <thumb>icons/bookmark.png</thumb>
+          </item>
+          <item>
+            <label>Perfiles</label>
+            <onclick>ActivateWindow(Profiles)</onclick>
+            <thumb>icons/profiles.png</thumb>
+          </item>	  		  		  
+		  <item>
+			<label>Log</label>
+			<onclick condition="!System.HasAddon(script.stva)">InstallAddon(script.stva)</onclick>
+			<onclick condition="System.HasAddon(script.stva)">PlayMedia(&quot;plugin://script.stva/?mode=viewerrorlog&quot;)</onclick>
+			<thumb>icons/console.png</thumb>
+		  </item>			  		  		    		  
+          <item>
+            <label>Libreelec</label>
+            <onclick>RunScript(service.libreelec.settings)</onclick>
+            <thumb>icons/libreelec.png</thumb>
+            <visible>System.HasAddon(service.libreelec.settings) | System.HasAddon(service.coreelec.settings) | System.HasAddon(service.openelec.settings)</visible>
+         </item>
+		</content>				
+	  </control>
+	  <control type="list" id="89992">
+		<left>0</left>
+		<top>590</top>
+		<width>100%</width>
+		<height>100%</height>
+		<onup>Control.SetFocus(89991,$INFO[Container(89992).Position])</onup>
+		<ondown>Control.SetFocus(8999,$INFO[Container(89992).Position])</ondown>
+		<orientation>horizontal</orientation>
+		<scrolltime>0</scrolltime>
+		<defaultcontrol>2</defaultcontrol>
+		<viewtype>list</viewtype>
+		<itemlayout width="310" height="310">
+		  <control type="group">
+			<top>20</top>
+			<left>20</left>
+			<control type="image">
+			  <width>280</width>
+			  <height>255</height>
+			  <aspectratio>stretch</aspectratio>
+			  <texture border="9" colordiffuse="lightgrey">button-default.png</texture>							
+			</control>
+			<control type="image">
+			  <width>210</width>
+			  <height>210</height>
+			  <aspectratio>scale</aspectratio>
+			  <centertop>35%</centertop>
+			  <centerleft>48%</centerleft>			  			  
+			  <texture colordiffuse="white">$INFO[ListItem.Icon]</texture>
+			</control>
+			<control type="label">
+			  <bottom>65</bottom>
+			  <width>280</width>
+			  <height>20</height>
+			  <label>$INFO[ListItem.Label]</label>
+			  <align>center</align>
+			  <font>ctouch16</font>
+			  <textcolor>white</textcolor>
+			  <scroll>true</scroll>
+			</control>
+		  </control>			
+		</itemlayout>
+		<focusedlayout height="310" width="310">
+		  <control type="group">
+			<top>20</top>
+			<left>20</left>
+			<control type="image">
+			  <width>280</width>
+			  <height>255</height>
+			  <aspectratio>stretch</aspectratio>
+			  <texture border="9" colordiffuse="lightgrey">button-default.png</texture>							
+			</control>
+			<control type="image">
+			  <width>280</width>
+			  <height>255</height>
+			  <texture colordiffuse="$VAR[AccentColor]" border="9">button-default-white.png</texture>
+			  <visible>Control.HasFocus(89992)</visible>
+			</control>
+			<control type="image">
+			  <width>210</width>
+			  <height>210</height>
+			  <aspectratio>scale</aspectratio>
+			  <centertop>35%</centertop>
+			  <centerleft>48%</centerleft>			  			  
+			  <texture>$INFO[ListItem.Icon]</texture>
+			</control>
+			<control type="label">
+			  <bottom>65</bottom>
+			  <width>280</width>
+			  <height>20</height>
+			  <label>$INFO[ListItem.Label]</label>
+			  <align>center</align>
+			  <font>ctouch16</font>
+			  <textcolor>white</textcolor>
+			  <scroll>true</scroll>
+			</control>
+		  </control>
+		</focusedlayout>
+		<content>
+		  <item>
+			<label>Addons</label>
+			<onclick>ActivateWindow(addonbrowser)</onclick>
+			<thumb>icons/apps.png</thumb>
+		  </item>
+          <item>
+			<label>Addons de Video</label>
+			<onclick>ActivateWindow(Videos,Addons,return)</onclick>
+			<thumb>icons/video-addons.png</thumb>
+          </item>
+          <item>
+            <label>Addons de Programa</label>
+            <onclick>ActivateWindow(Programs,Addons,return)</onclick>
+            <thumb>icons/addons.png</thumb>
+          </item>		  
+          <item>
+            <label>Dependencias</label>
+            <onclick>ActivateWindow(10040,addons://dependencies/)</onclick>
+            <icon>icons/bigbox.png</icon>
+          </item>		  		  
+		  <item>
+			<label>Informacion</label>
+			<onclick>ActivateWindow(systeminfo)</onclick>
+			<icon>icons/sysinfo.png</icon>
+		  </item>
+		</content>				
+	  </control>				
+	</control>
+	<include>touch-controls</include>	
+	<include>hora</include>	
+  </controls>
+</window>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window id="1143">
+	<defaultcontrol>9000</defaultcontrol>
+	<controls>
+		<include>background</include>
+		<include>touch-controls</include>
+		<control type="label">
+			<!-- Settings label line 1 -->
+			<left>190</left>
+			<top>75</top>
+			<width>664</width>
+			<height>75</height>
+			<label>Añadir Buscadores</label>
+			<font>ctouch25</font>
+		</control>
+		<control type="image">
+			<left>110</left>
+			<top>170</top>
+			<width>1700</width>
+			<height>14</height>
+			<texture>divider.png</texture>
+		</control>				
+		<!-- Show apropriate home menu -->
+		<control type="group" id="9000">
+			<onup>8000</onup>
+			<control type="group" id="9020">
+				<!-- Icon Home Menu -->
+				<!-- Markers for off screen menu items -->
+				<control type="panel" id="9022">
+					<!-- Home menu icon panel -->
+					<animation condition="true" effect="zoom" start="100" end="80" center="auto">Conditional</animation>
+					<width>1890</width>
+					<height>870</height>
+					<top>160</top>
+					<left>220</left>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>8000</onup>
+					<ondown>noop</ondown>
+					<itemlayout height="150" width="1400">
+						<control type="image">
+							<!-- Icon image -->
+							<left>50</left>
+							<width>1200</width>
+							<height>90</height>
+							<aspectratio>scale</aspectratio>
+							<texture>button-default.png</texture>
+						</control>
+						<control type="label">
+							<centerleft>50%</centerleft>
+							<left>50</left>
+							<width>1200</width>
+							<height>90</height>
+							<align>center</align>
+							<label fallback="Buscador Personal">$INFO[ListItem.Label]</label>
+							<font>ctouch22</font>
+						</control>
+					</itemlayout>
+					<focusedlayout height="150" width="1400">
+						<control type="group">
+							<control type="image">
+								<left>50</left>
+								<!-- Icon image -->
+								<width>1200</width>
+								<height>90</height>
+								<aspectratio>scale</aspectratio>
+								<texture colordiffuse="$VAR[AccentColor]">button-default-white.png</texture>
+							</control>
+							<control type="label">
+								<left>50</left>
+								<centerleft>50%</centerleft>
+								<width>1200</width>
+								<height>90</height>
+								<align>center</align>
+								<label fallback="Buscador Personal">$INFO[ListItem.Label]</label>
+								<font>ctouch22</font>
+							</control>
+						</control>
+					</focusedlayout>
+					<content>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomSearch.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomSearch.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomSearch.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomSearch.1.Path))" />
+							<param name="itemmenuid" value="9022" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomSearch.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomSearch.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomSearch.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomSearch.2.Path))" />
+							<param name="itemmenuid" value="9022" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomSearch.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomSearch.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomSearch.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomSearch.3.Path))" />
+							<param name="itemmenuid" value="9022" />
+						</include>
+					</content>
+				</control>
+			</control>
+		</control>	
+		<control type="textbox">
+			<!-- Settings description area -->
+			<left>15</left>
+			<top>1020</top>
+			<width>1890</width>
+			<height>60</height>
+			<font>ctouch20</font>
+			<align>center</align>
+			<label>$VAR[SkinSettingHelp]</label>
+		</control>			
+	</controls>
+</window>

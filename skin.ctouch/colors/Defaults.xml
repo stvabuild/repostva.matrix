@@ -1,0 +1,57 @@
+<colors>
+			<!-- Masks -->
+	<color name="mask-background">f2121314</color>
+	<color name="customsettings-background">f0101010</color>	
+	<color name="mask-background-black">f0101314</color>	
+			<!-- Text -->
+	<color name="info-text">FF0080b2</color>
+	<color name="disabled-text">FF7A7A7A</color>
+	<color name="button-text">FFFFFFFF</color>
+	<color name="shadow-text">D0000000</color>
+	<color name="warning-text">FFAA0000</color>
+	<color name="invalid-text">FFAA0000</color>
+	<color name="tab-text">FFFFFFFF</color>
+	<color name="tab-hilite">FFFFFFFF</color>
+	<color name="tab-shadow">D0000000</color>
+	<color name="rss-headline-text">FFFFFFFF</color>
+	<color name="rss-title-text">FF0080b2</color>
+	<color name="listselected-text">FF0080b2</color>
+	<color name="kai-text-alpha">55FFFFFF</color>
+	<color name="kai-text">FFFF0000</color>
+	<color name="keyboard-focus-text">FF000000</color>
+	<color name="keyboard-unfocus-text">FFFFFFFF</color>
+	<color name="keyboard-shadow-text">FFFFFFFF</color>
+	<color name="keyboard-special-focus-text">FFFFFFFF</color>
+	<color name="keyboard-special-unfocus-text">FF000000</color>
+	<color name="lightgrey">ff8f8f8f</color>
+	<color name="darkgrey">ff0f0f0f</color>	
+	<color name="midgrey">ff5f5f5f</color>	
+	<color name="backgrey">FF2F2F2F</color>
+	
+	<!-- main focused colors -->
+	<color name="accent">ff0080b2</color>
+
+			<!-- Media Flags -->
+	<color name="StarDiffuse">D0F6E802</color>
+	<color name="DropShadow">FF000000</color>
+
+			<!-- Icon/Thumb -->
+	<color name="UnFocusedPosters">C0A0A0A0</color>
+	<color name="UnFocusedCovers">C0A0A0A0</color>
+	<color name="SecondaryCovers">FF707070</color>
+	<color name="IconGlow">A0FFFFFF</color>
+	<color name="MiddleDistance">FFA0A0A0</color>
+	<color name="LongDistance">FF606060</color>
+
+			<!-- GUI elements -->
+	<color name="ScrollBarColor">FF0080b2</color>
+	<color name="ProgressBarColor">FF0080b2</color>
+	<color name="CacheBarColor">FF014058</color>
+	<color name="HideControl">00FFFFFF</color>
+	<color name="context_color">ff1a1a1a</color>
+
+			<!-- Backgrounds -->
+	<color name="LowBgnVisibity">90FFFFFF</color>
+	<color name="MedBgnVisibity">40FFFFFF</color>
+	<color name="HighBgnVisibity">10FFFFFF</color>
+</colors>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1140">
+	<coordinates>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	<onunload>Skin.SetBool(consejo)</onunload>
+	<controls>
+		<control type="image">
+			<include>fullscreenimage</include>
+			<texture>background-mask-black.png</texture>
+			<aspectratio>scale</aspectratio>
+		</control>
+		<control type="button">
+			<!-- Touch mouse close button -->
+			<right>15</right>
+			<bottom>15</bottom>
+			<width>180</width>
+			<height>75</height>
+			<texturefocus colordiffuse="$VAR[AccentColor]">backtransparent.png</texturefocus>
+			<texturenofocus colordiffuse="midgrey">backtransparent.png</texturenofocus>
+			<onclick>Dialog.Close(1140)</onclick>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>Cerrar</label>
+			<font>ctouch19</font>
+			<visible>Skin.HasSetting(menulittle)</visible>
+		</control>
+		<control type="group">
+			<centerleft>50%</centerleft>
+			<width>800</width>
+			<top>300</top>
+			<height>1080</height>
+			<control type="group">
+				<onright>Dialog.close</onright>
+				<onleft>Dialog.close</onleft>
+				<onup>Dialog.close</onup>
+				<ondown>Dialog.close</ondown>
+				<control type="image">
+					<width>152</width>
+					<height>500</height>
+					<texture>ok.png</texture>
+				</control>
+				<control type="textbox">
+					<left>180</left>
+					<width>600</width>
+					<height max="401">auto</height>
+					<autoscroll>false</autoscroll>
+					<align>justify</align>
+					<top>100</top>
+					<font>font14</font>
+					<label>Deja pulsado el OK o Botón central de tu mando sobre una película o serie para acceder a más opciones[CR][CR]
+Depende de si lo haces en el Inicio o en otra ventana, aparecerán unas opciones u otras, como añadir a la Videoteca, Buscar Similares...</label>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

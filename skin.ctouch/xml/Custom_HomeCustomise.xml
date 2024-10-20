@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window id="1137">
+	<defaultcontrol>9000</defaultcontrol>
+	<controls>
+		<include>background</include>
+		<include>touch-controls</include>
+		<control type="label">
+			<!-- Settings label line 1 -->
+			<left>190</left>
+			<top>75</top>
+			<width>564</width>
+			<height>75</height>
+			<label>Personalizar Ítems de Inicio</label>
+			<font>ctouch25</font>
+		</control>
+		<control type="image">
+			<left>110</left>
+			<top>170</top>
+			<width>1700</width>
+			<height>14</height>
+			<texture>divider.png</texture>
+		</control>				
+		<!-- Show apropriate home menu -->
+		<control type="group" id="9000">
+			<onup>8000</onup>
+			<control type="group" id="9020">
+				<!-- Icon Home Menu -->
+				<!-- Markers for off screen menu items -->
+				<control type="panel" id="9021">
+					<!-- Home menu icon panel -->
+					<animation condition="true" effect="zoom" start="100" end="80" center="auto">Conditional</animation>
+					<width>1890</width>
+					<height>950</height>
+					<top>160</top>
+					<left>30</left>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>8000</onup>
+					<ondown>noop</ondown>
+					<itemlayout height="315" width="470">
+						<control type="image">
+							<!-- Icon image -->
+							<left>39</left>
+							<top>15</top>
+							<width>350</width>
+							<height>210</height>
+							<aspectratio>scale</aspectratio>
+							<texture fallback="special://skin/extras/homeicons/fallback.png">$INFO[ListItem.Art(thumb)]</texture>
+							<animation effect="fade" start="100" end="35" condition="!ListItem.Property(isActive)">Conditional</animation>
+							<bordersize>5</bordersize>
+						</control>
+						<control type="image">
+							<!-- Icon visible -->
+							<left>130</left>
+							<top>30</top>
+							<width>170</width>
+							<height>170</height>
+							<aspectratio>scale</aspectratio>
+							<texture colordiffuse="lightgrey">desactivado.png</texture>
+							<visible>[!String.IsEmpty(ListItem.thumb) + !ListItem.Property(isActive)] | Control.HasFocus(402) | Control.HasFocus(403)</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout height="315" width="470">
+						<control type="group">
+							<control type="image">
+								<!-- Focused non settings icon image -->
+								<top>15</top>
+								<left>39</left>
+								<width>350</width>
+								<height>210</height>
+								<aspectratio>scale</aspectratio>
+								<bordertexture colordiffuse="$VAR[AccentColor]">homeiconlite_landscape.png</bordertexture>								
+								<texture fallback="special://skin/extras/homeicons/fallback.png">$INFO[ListItem.Art(thumb)]</texture>
+								<bordersize>5</bordersize>
+							</control>
+							<control type="image">
+								<!-- Icon visible -->
+								<left>130</left>
+								<top>30</top>
+								<width>170</width>
+								<height>170</height>
+								<aspectratio>scale</aspectratio>
+								<texture colordiffuse="lightgrey">desactivado.png</texture>
+								<visible>[!String.IsEmpty(ListItem.thumb) + !ListItem.Property(isActive)] | Control.HasFocus(402) | Control.HasFocus(403)</visible>
+							</control>
+							<control type="label">
+								<left>39</left>
+								<top>240</top>
+								<width>350</width>
+								<height>34</height>
+								<align>center</align>
+								<label fallback="Item Personal">$INFO[ListItem.Label]</label>
+								<font>ctouch22</font>
+							</control>															
+						</control>
+					</focusedlayout>
+					<content>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMovies.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMovies.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMovies.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMovies.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMovies.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMovies.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMovies.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMovies.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMovies.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMovies.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMovies.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMovies.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMovies.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMovies.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMovies.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMovies.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMovies.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMovies.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMovies.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMovies.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTVShow.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTVShow.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTVShow.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTVShow.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTVShow.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTVShow.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTVShow.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTVShow.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTVShow.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTVShow.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTVShow.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTVShow.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTVShow.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTVShow.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTVShow.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTVShow.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTVShow.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTVShow.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTVShow.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTVShow.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTV.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTV.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTV.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTV.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTV.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTV.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTV.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTV.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTV.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTV.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTV.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTV.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTV.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTV.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTV.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTV.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomTV.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomTV.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomTV.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomTV.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomRadio.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomRadio.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomRadio.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomRadio.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomRadio.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomRadio.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomRadio.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomRadio.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomRadio.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomRadio.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomRadio.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomRadio.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomRadio.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomRadio.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomRadio.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomRadio.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomRadio.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomRadio.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomRadio.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomRadio.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomFav.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomFav.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomFav.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomFav.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomFav.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomFav.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomFav.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomFav.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomFav.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomFav.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomFav.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomFav.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomFav.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomFav.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomFav.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomFav.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomFav.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomFav.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomFav.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomFav.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMusic.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMusic.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMusic.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMusic.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMusic.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMusic.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMusic.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMusic.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMusic.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMusic.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMusic.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMusic.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMusic.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMusic.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMusic.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMusic.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomMusic.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomMusic.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomMusic.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomMusic.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomAddon.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomAddon.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomAddon.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomAddon.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomAddon.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomAddon.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomAddon.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomAddon.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomAddon.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomAddon.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomAddon.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomAddon.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomAddon.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomAddon.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomAddon.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomAddon.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomAddon.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomAddon.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomAddon.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomAddon.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomGame.1" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomGame.1.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomGame.1.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomGame.1.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomGame.2" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomGame.2.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomGame.2.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomGame.2.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomGame.3" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomGame.3.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomGame.3.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomGame.3.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomGame.4" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomGame.4.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomGame.4.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomGame.4.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+						<include content="listpanelitems">
+							<param name="itemcustombase" value="CustomGame.5" />
+							<param name="itemthumb" value="$INFO[Skin.String(CustomGame.5.Icon)]" />
+							<param name="itemlabel" value="$INFO[Skin.String(CustomGame.5.Label)]" />
+							<param name="itemcondition" value="!String.IsEmpty(Skin.String(CustomGame.5.Path))" />
+							<param name="itemmenuid" value="9021" />
+						</include>
+					</content>
+				</control>
+			</control>
+		</control>	
+		<control type="textbox">
+			<!-- Settings description area -->
+			<left>15</left>
+			<top>1020</top>
+			<width>1890</width>
+			<height>60</height>
+			<font>ctouch20</font>
+			<align>center</align>
+			<label>$VAR[SkinSettingHelp]</label>
+		</control>			
+	</controls>
+</window>

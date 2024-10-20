@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol always="true">450</defaultcontrol>
+	<coordinates>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<include>fullscreenimage</include>
+			<texture colordiffuse="mask-background">background-mask.png</texture>
+			<aspectratio>scale</aspectratio>
+		</control>
+		<control type="image" id="1">
+			<!-- Background image -->
+			<centerleft>50%</centerleft>
+			<top>130</top>
+			<width>800</width>
+			<height>805</height>
+			<texture border="14">button-menu-background.png</texture>
+		</control>
+		<control type="label" id="411">
+			<!-- Heading label -->
+			<centerleft>50%</centerleft>
+			<top>-300</top>
+			<width>750</width>
+			<height>45</height>
+			<label>$LOCALIZE[1023]</label>
+			<align>center</align>
+			<visible>false</visible>
+			<font>ctouch30w</font>
+		</control>
+		<control type="grouplist">
+			<centerleft>50%</centerleft>
+			<top>162</top>
+			<width>750</width>
+			<height>45</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<orientation>horizontal</orientation>
+			<control type="label">
+				<!-- Heading label -->
+				<width max="750">auto</width>
+				<height>45</height>
+				<label>$INFO[Control.GetLabel(411)]</label>
+			</control>
+		</control>
+		<control type="image">
+			<centerleft>50%</centerleft>
+			<top>220</top>
+			<width>750</width>
+			<height>10</height>
+			<texture flipy="true">sep2.png</texture>
+		</control>
+		<control type="list" id="450">
+			<centerleft>50%</centerleft>
+			<top>237</top>
+			<width>750</width>
+			<height>672</height>
+			<onright condition="String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31877])">noop</onright>
+			<onright condition="!String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31877])">23</onright>
+			<ondown>460</ondown>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<onleft>460</onleft>
+			<pagecontrol>23</pagecontrol>
+			<itemlayout height="78">
+				<control type="label">
+					<left>34</left>
+					<top>0</top>
+					<width>750</width>
+					<height>68</height>
+					<font>ctouch21</font>
+					<selectedcolor>listselected-text</selectedcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="78">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>750</width>
+					<height>68</height>
+					<texture border="9" colordiffuse="$VAR[AccentColor]">button-default-white.png</texture>
+					<animation effect="fade" start="100" end="60" condition="ControlGroup(460).HasFocus() | Control.HasFocus(23)">Conditional</animation>
+				</control>
+				<control type="label">
+					<left>34</left>
+					<top>0</top>
+					<width>750</width>
+					<height>68</height>
+					<font>ctouch21</font>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="image">
+			<left>150</left>
+			<bottom>165</bottom>
+			<height>384</height>
+			<width>384</width>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.Icon]</texture>
+		</control>
+		<control type="group" id="460">
+			<left>570</left>
+			<top>945</top>
+			<control type="button" id="413">
+				<!-- OK button -->
+				<left>0</left>
+				<top>0</top>
+				<width>250</width>
+				<height>75</height>
+				<align>center</align>
+				<label>$LOCALIZE[186]</label>
+				<font>ctouch20</font>
+				<onup>450</onup>
+				<ondown>450</ondown>
+				<onright>414</onright>
+				<onleft>415</onleft>
+				<texturenofocus colordiffuse="backgrey">button-default-white.png</texturenofocus>
+			</control>
+			<control type="button" id="414">
+				<!-- Cancel button -->
+				<left>265</left>
+				<top>0</top>
+				<width>250</width>
+				<height>75</height>
+				<align>center</align>
+				<label>$LOCALIZE[222]</label>
+				<font>ctouch20</font>
+				<onup>450</onup>
+				<ondown>450</ondown>
+				<onleft>413</onleft>
+				<onright>415</onright>
+				<texturenofocus colordiffuse="backgrey">button-default-white.png</texturenofocus>
+			</control>
+			<control type="button" id="415">
+				<!-- Create folder button -->
+				<left>530</left>
+				<top>0</top>
+				<width>250</width>
+				<height>75</height>
+				<align>center</align>
+				<label>$LOCALIZE[119]</label>
+				<font>ctouch20</font>
+				<ondown>450</ondown>
+				<onup>450</onup>
+				<onleft>414</onleft>
+				<onright>413</onright>
+				<texturenofocus colordiffuse="backgrey">button-default-white.png</texturenofocus>
+			</control>
+		</control>
+		<control type="label" id="412">
+			<!-- Path label -->
+			<left>30</left>
+			<top>1025</top>
+			<width>1590</width>
+			<height>36</height>
+			<align>left</align>
+			<colordiffuse>midgrey</colordiffuse>
+			<font>ctouch19</font>
+			<haspath>true</haspath>
+		</control>
+		<control type="scrollbar" id="23">
+			<left>1338</left>
+			<top>228</top>
+			<width>12</width>
+			<height>626</height>
+			<onleft>450</onleft>
+			<animation condition="!Control.HasFocus(23) + !Container.Scrolling + !String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31875])" effect="fade" start="100" end="0" time="200" reversible="true">Conditional</animation>
+			<visible>Control.IsVisible(450) + !String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31877])</visible>
+		</control>
+	</controls>
+</window>
