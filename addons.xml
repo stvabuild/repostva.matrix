@@ -1,39 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.program.kodileiawizard.matrix" name="[COLOR white]Kodileia Wizard [COLOR chartreuse]Matrix[/COLOR]" version="1.0" provider-name="Grupo Kodileia">
-    <requires>
-        <import addon="xbmc.python" version="3.0.0" />
-        <import addon="script.module.requests" />
-        <import addon="script.module.six" />
-        <import addon="script.kodi.android.update" optional="true" version="1.1.7" />
-    </requires>
-
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>executable</provides>
-    </extension>
-
-	<extension point="xbmc.addon.repository" name="repofamilyleia">
-        <info>https://raw.githubusercontent.com/Leia18/repofamilyleia/master/Repositorio/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/Leia18/repofamilyleia/master/Repositorio/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.githubusercontent.com/Leia18/repofamilyleia/master/Repositorio/</datadir>
-    </extension>
-
-    <extension point="xbmc.service" library="startup.py" start="startup" />
-
-    <extension point="xbmc.addon.metadata">
-    <summary lang="en">Wizard</summary>
-    <description lang="en">Grupo Kodileia. Consultas en telegram @kodi18.</description>
-        <platform>all</platform>
-        <reuselanguageinvoker>false</reuselanguageinvoker>
-
-
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-    </extension>
-</addon>
-
 <addon id="plugin.video.alfa" name="Alfa" version="3.9.28" provider-name="Alfa Addon">
     <requires>
         <import addon="script.module.requests" />
@@ -100,49 +66,6 @@
         </assets>
     </extension>
     <extension point="xbmc.service" library="videolibrary_service.py" start="login|startup"></extension>
-</addon>
-
-<addon id="plugin.video.cristalazul" name="[B][/B][COLOR aqua]CRISTAL AZUL 3.0.10[/COLOR]" version="3.0.10" provider-name="PICAPAU, LOURDES, SUPERTOPO, LUISMA, GEORGE">
-    <requires>
-        <import addon="script.module.simplecache"/>
-        <import addon="script.module.six"/>
-        <import addon="script.module.kodi-six"/>
-        <import addon="script.module.requests"/>
-        <import addon="script.module.youtube.dl" optional="true" />
-        <import addon="plugin.video.youtube" />
-		<import addon="plugin.video.duffyou" optional="true" />
-        <import addon="script.module.dateutil" optional="true" />
-        <import addon="script.module.resolveurl" optional="true" />
-        <import addon="script.module.cloudscraper" optional="true" />
-        <import addon="script.module.inputstreamhelper" />
-        <import addon="script.module.pycryptodome" optional="true" />
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-    </extension>
-
-    <extension point="xbmc.service" library="autoexec.py" start="autoexec" />
-
-    <extension point="xbmc.addon.repository" name="Mi repositorio">
-       <dir minversion="18.9.0">
-            <info compressed="false">https://raw.githubusercontent.com/picapaujulen/repositorio/master/Repositorio/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/picapaujulen/repositorio/master/Repositorio/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/picapaujulen/repositorio/master/Repositorio/</datadir>
-       </dir>
-    </extension>
-
-
-    <extension point="xbmc.addon.metadata">
-        <summary>creado por picapau, lourdes, supertopo y luisma</summary>
-        <description>ESTE ADDON NO CONTIENE ENLACES PROPIOS,SON RECOPILACIONES DE LA RED, SOLO SE FACILITA EL ACESSO A ESAS WEBS, ESTAS WEBS SON LAS RESPONSABLES DE LOS CONTENIDOS
-        </description>
-		<disclaimer>Este es un software [COLOR red][B]gratuito[/B][/COLOR][CR][COLOR red][B]Pero no se permite[/B][/COLOR] su distribuición preinstalada en ningún tipo de dispositivo ni tampoco su inclusión total o parcial en cualquier paquete de software y/o hardware por el que el usuario final deba [COLOR red][B]pagar o hacer una donación[/B][/COLOR], por su adquisición, por su uso o por recibir asistencia.[CR]Si cree que alguna de estas normas no se está cumpliendo póngase en contacto con nosotros.</disclaimer>
-        <platform>all</platform>
-        <assets>
-            <icon>icon.gif</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-    </extension>
 </addon>
 
 <addon id="plugin.video.duffyou" name="Duff You" version="0.2.1" provider-name="La Taberna">
@@ -522,25 +445,6 @@ provider-name="jurialmunkey">
 	</extension>
 </addon>
 
-<addon id="repository.palantir3" name="[COLOR gold]Repositorio Palantir 3[/COLOR]" version="2.0.3" provider-name="TierraMedia">
-    <extension point="xbmc.addon.repository" name="Palantir 3 official Repo">
-    	<dir minversion="18.9.0">
-    	    <info compressed="false">https://raw.githubusercontent.com/Palantiraddon/Repo/master/Palantir/addons.xml</info>
-		    <checksum>https://raw.githubusercontent.com/Palantiraddon/Repo/master/Palantir/addons.xml.md5</checksum>
-		    <datadir zip="true">https://raw.githubusercontent.com/Palantiraddon/repo/master/Palantir/</datadir>
-	    </dir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary></summary>
-   		<description lang="en">[COLOR gold]Instala Palantir 3[/COLOR]</description>
-		<platform>all</platform>
-		<assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.gif</fanart>
-        </assets>
-	</extension>
-</addon>
-
 <addon id="repository.resolveurl" name="ResolveURL Repository" provider-name="gujal" version="1.0.0">
   <extension point="xbmc.addon.repository" name="ResolveURL Repository">
     <dir>
@@ -643,34 +547,6 @@ provider-name="jurialmunkey">
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
-</addon>
-
-<addon id="script.luar"
-  version="0.9.10"
-  name="Luar"
-  provider-name="The Dreamers">
-  <requires>
-    <import addon="script.module.six" version="1.11.0"/>
-    <import addon="script.module.requests"/>
-    <import addon="resource.language.es_es"/>
-    <import addon="script.module.pycryptodome" optional="true"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>executable</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <summary lang="es">Script instalador de complementos para Kodi.</summary>
-    <description lang="es">Selecciona, instala y disfruta.</description>
-    <disclaimer>Este es un software [COLOR red][B]gratuito[/B][/COLOR][CR]No obstante, [COLOR red][B]no se permite[/B][/COLOR] su distribuición preinstalada en ningún tipo de dispositivo ni tampoco su inclusión total o parcial en cualquier paquete de software y/o hardware por el que el usuario final deba [COLOR red][B]pagar o hacer una donación[/B][/COLOR], por su adquisición, uso o asistencia.[CR]Si cree que alguna de estas normas no se está cumpliendo póngase en contacto con nosotros.</disclaimer>
-    <assets>
-      <icon>icon.gif</icon>
-      <fanart>fanart.jpg</fanart>
-      <screenshot>resources/screenshot000.jpg</screenshot>
-      <screenshot>resources/screenshot001.jpg</screenshot>
-      <screenshot>resources/screenshot002.jpg</screenshot>
-    </assets>
-  </extension>
 </addon>
 
 <addon id="script.module.addon.signals"
@@ -927,7 +803,7 @@ Addon basado en el addon wizard kodileia, agradecimientos al grupo</description>
     </extension>
 </addon>
 
-<addon id="skin.ctouch"  version="3.8" name="Cristal Touch" provider-name="STVA">
+<addon id="skin.ctouch"  version="3.9" name="Cristal Touch" provider-name="STVA">
 	<requires>
 		<import addon="resource.language.es_es" version="0.0.0"/>
 	</requires>
@@ -939,23 +815,24 @@ Addon basado en el addon wizard kodileia, agradecimientos al grupo</description>
 		<summary lang="en_GB">Skin Wizard para Kodi 21 Omega</summary>
 		<description lang="es_ES">Cristal Touch es un mod del skin AppTV realizado por STVA.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV, TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>
 		<description lang="en_GB">Cristal Touch es un mod del skin AppTV realizado por STVA.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV, TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>
-		<disclaimer lang="en_GB">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]Web y Foro: stva.es</disclaimer>
-		<disclaimer lang="es_ES">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]Web y Foro: stva.es</disclaimer>
+		<disclaimer lang="en_GB">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]</disclaimer>
+		<disclaimer lang="es_ES">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]</disclaimer>
 		<platform>all</platform>
 		<license></license>
 		<website />
 		<email />
-		<news>Versión 3.8 - 7/9/24
-- Reparados todos los enlaces de Cristal Azul
-- Eliminado addon Magellan (item TV Premium) del skin
-- Cambiados widgets de series del addon Alfa
+		<news>Versión 3.9 - 20/10/24
+- Cristal Azul eliminado del skin
+- Luar eliminado del Skin
+- Inicio e items de deportes eliminados
+- Modificaciones necesarias para eliminar referencias a los addons eliminados
+- Ultima actualización del skin
 </news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
 			<screenshot>resources/screenshot001.jpg</screenshot>
 			<screenshot>resources/screenshot002.jpg</screenshot>
-			<screenshot>resources/screenshot006.jpg</screenshot>
 			<screenshot>resources/screenshot003.jpg</screenshot>
 			<screenshot>resources/screenshot004.jpg</screenshot>
 			<screenshot>resources/screenshot005.jpg</screenshot>
